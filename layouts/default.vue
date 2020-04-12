@@ -37,9 +37,9 @@
 			</v-btn>
 		</v-app-bar>
 		<v-content>
-			<v-container>
-				<nuxt />
-			</v-container>
+			<!-- <v-container> -->
+			<nuxt />
+			<!-- </v-container> -->
 		</v-content>
 		<v-navigation-drawer v-model="rightDrawer" :right="right" temporary fixed>
 			<v-list>
@@ -90,7 +90,7 @@ export default {
 			miniVariant: false,
 			right: true,
 			rightDrawer: false,
-			title: this.$store.state.name
+			title: "go" + this.$store.state.city + "i"
 		};
 	}
 };
