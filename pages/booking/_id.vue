@@ -19,19 +19,21 @@
 				</v-flex>
 				<v-flex xs12>
 					<h2>Rooms</h2>
-					<v-layout row wrap>
-						<v-flex xs4 v-for="(item, index) in data.rooms" :key="index">
-							<v-card>
-								<v-card-title primary-title>{{item.roomType}}</v-card-title>
-								<v-card-title primary-title>EURO {{item.price}}</v-card-title>
-								<v-card-text>
-									{{item.bedType}}
-									<br />
-									Persons {{item.persons}}
-								</v-card-text>
-							</v-card>
-						</v-flex>
-					</v-layout>
+					<v-container grid-list-lg>
+						<v-layout row wrap>
+							<v-flex xs12 sm6 md3 v-for="(item, index) in data.rooms" :key="index">
+								<v-card>
+									<v-card-title primary-title>{{item.roomType}}</v-card-title>
+									<v-card-title primary-title>EURO {{item.price}}</v-card-title>
+									<v-card-text>
+										{{item.bedType}}
+										<br />
+										Persons {{item.persons}}
+									</v-card-text>
+								</v-card>
+							</v-flex>
+						</v-layout>
+					</v-container>
 				</v-flex>
 			</v-layout>
 		</v-container>
