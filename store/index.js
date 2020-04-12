@@ -2,6 +2,7 @@ import axios from "axios"
 export const state = () => ({
 
     name: "goBorshi",
+    city: "Borsh",
 
     //CURRENCIES  
     defaultCurrency: 'GBP',

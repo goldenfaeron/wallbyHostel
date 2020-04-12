@@ -14,15 +14,22 @@
 		</v-navigation-drawer>
 		<v-app-bar :clipped-left="clipped" fixed app>
 			<v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-			<v-btn icon @click.stop="miniVariant = !miniVariant">
+
+			<!-- Mini Icon -->
+			<!-- <v-btn icon @click.stop="miniVariant = !miniVariant">
 				<v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
-			</v-btn>
-			<v-btn icon @click.stop="clipped = !clipped">
+			</v-btn>-->
+
+			<!-- Screen Icon -->
+			<!-- <v-btn icon @click.stop="clipped = !clipped">
 				<v-icon>mdi-application</v-icon>
-			</v-btn>
-			<v-btn icon @click.stop="fixed = !fixed">
+			</v-btn>-->
+
+			<!-- Minus Icon -->
+			<!-- <v-btn icon @click.stop="fixed = !fixed">
 				<v-icon>mdi-minus</v-icon>
-			</v-btn>
+			</v-btn>-->
+
 			<v-toolbar-title v-text="title" />
 			<v-spacer />
 			<v-btn icon @click.stop="rightDrawer = !rightDrawer">
@@ -59,24 +66,24 @@ export default {
 			fixed: false,
 			items: [
 				{
-					icon: "mdi-apps",
+					icon: "mdi-home",
 					title: "Home",
 					to: "/"
 				},
 
 				{
-					icon: "mdi-home",
-					title: "Booking",
+					icon: "mdi-key-variant",
+					title: this.$store.state.city + " Hotels",
 					to: "/booking"
 				},
 				{
-					icon: "mdi-home",
-					title: "Bars",
+					icon: "mdi-beer",
+					title: this.$store.state.city + " Bars",
 					to: "/bars"
 				},
 				{
-					icon: "mdi-home",
-					title: "Instagram",
+					icon: "mdi-instagram",
+					title: this.$store.state.city + " on Instagram",
 					to: "/instagram"
 				}
 			],
