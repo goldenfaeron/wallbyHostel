@@ -12,8 +12,6 @@
 							<v-img v-else height="600" src="/img/placeholder.jpg"></v-img>
 						</v-flex>
 						<v-flex>
-							<!-- <v-img :src="data.image"></v-img> -->
-
 							<h1>{{data.title}}</h1>
 							<h2>{{data.categoryName}}</h2>
 							<googleMap :props="data.address"></googleMap>
@@ -26,6 +24,7 @@
 											<b>{{item.day}}</b>
 										</v-list-item-title>
 									</v-list-item-action>
+									<div></div>
 									<v-list-item-content>
 										<v-list-item-title v-text="item.hours" />
 									</v-list-item-content>
@@ -77,25 +76,6 @@ export default {
 		};
 	},
 
-	methods: {
-		// sortReviews(reviews) {
-		// 	const reviewsClone = [...reviews];
-		// 	let arr = [];
-		// 	//Check if has text and push to new array
-		// 	reviewsClone.forEach(element => {
-		// 		if (element.text) {
-		// 			element.text = element.text.replace("(Translated by Google)", "");
-		// 			arr.push(element);
-		// 		}
-		// 	});
-		// 	//Sort arr
-		// 	function sortByLength(array) {
-		// 		return array.sort((x, y) => x.text.length - y.text.length);
-		// 	}
-		// 	return sortByLength(arr).reverse();
-		// }
-	},
-
 	computed: {
 		sortReviews() {
 			let reviewsClone = this.reviews;
@@ -114,22 +94,6 @@ export default {
 			}
 			return sortByLength(arr).reverse();
 		}
-
-		// sortLength() {
-		// 	let arr = [];
-		// 	//Check if has text and push to new array
-		// 	this.data.reviews.forEach(element => {
-		// 		if (element.text) {
-		// 			element.text = element.text.replace("(Translated by Google)", "");
-		// 			arr.push(element);
-		// 		}
-		// 	});
-		// 	//Sort arr
-		// 	function sortByLength(array) {
-		// 		return array.sort((x, y) => x.text.length - y.text.length);
-		// 	}
-		// 	return sortByLength(arr).reverse();
-		// }
 	}
 };
 </script>
