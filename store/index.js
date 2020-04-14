@@ -3,6 +3,7 @@ export const state = () => ({
 
     name: "goBorshi",
     city: "Borsh",
+    developer: { name: "Sam", location: "Borsh, Albania" },
 
     //CURRENCIES  
     defaultCurrency: 'GBP',

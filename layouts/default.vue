@@ -52,7 +52,10 @@
 			</v-list>
 		</v-navigation-drawer>
 		<v-footer :fixed="fixed" app>
-			<span>Sam &copy; {{ new Date().getFullYear() }}</span>
+			<span>
+				<nuxt-link :to="'/'+developer.name">{{developer.name}}</nuxt-link>
+				&copy; {{ new Date().getFullYear() }}
+			</span>
 		</v-footer>
 	</v-app>
 </template>
@@ -90,7 +93,8 @@ export default {
 			miniVariant: false,
 			right: true,
 			rightDrawer: false,
-			title: "go" + this.$store.state.city + "i"
+			title: "go" + this.$store.state.city + "i",
+			developer: this.$store.state.developer
 		};
 	}
 };
