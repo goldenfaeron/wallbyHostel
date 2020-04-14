@@ -10,7 +10,7 @@
 							<v-layout align-content-space-between justify-space-between>
 								<v-flex>
 									<v-img v-if="item.imageUrls" max-height="200" :src="item.imageUrls[0]"></v-img>
-									<v-img v-else max-height="200" :src="'/img/placeholder.jpg'"></v-img>
+									<v-img v-else max-height="200" :src="'/img/placeholder.svg'"></v-img>
 
 									<p class="headline d-flex">{{item.title }}</p>
 								</v-flex>
@@ -23,9 +23,9 @@
 							{{item.phone}}
 						</v-card-text>
 
-						<div class="text-xs-center">
+						<!-- <div class="text-xs-center">
 							<v-rating color="red" :value="item.totalScore" half-increments readonly></v-rating>
-						</div>
+						</div>-->
 
 						<v-card-actions>
 							<v-btn color="secondary">
@@ -44,8 +44,9 @@
 export default {
 	data() {
 		return {
-			title: "Bars in " + this.$store.state.city,
-			preview: "See all the best bars in " + this.$store.state.city
+			type: "Bars",
+			title: this.type + " in " + this.$store.state.city,
+			preview: "See all the best " + this.type + " in " + this.$store.state.city
 		};
 	},
 

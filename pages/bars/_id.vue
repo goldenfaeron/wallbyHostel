@@ -9,7 +9,7 @@
 							<v-carousel height="600" v-if="data.imageUrls && data.imageUrls.length > 0">
 								<v-carousel-item :src="item" v-for="(item, index) in data.imageUrls" :key="index"></v-carousel-item>
 							</v-carousel>
-							<v-img v-else height="600" src="/img/placeholder.jpg"></v-img>
+							<v-img v-else height="600" src="/img/placeholder.svg"></v-img>
 						</v-flex>
 						<v-flex>
 							<h1>{{data.title}}</h1>
