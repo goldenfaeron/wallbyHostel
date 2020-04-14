@@ -33,7 +33,7 @@
 			<v-toolbar-title v-text="title" />
 			<v-spacer />
 			<v-btn icon @click.stop="rightDrawer = !rightDrawer">
-				<v-icon>mdi-menu</v-icon>
+				<v-icon>mdi-account</v-icon>
 			</v-btn>
 		</v-app-bar>
 		<v-content>
@@ -41,15 +41,8 @@
 			<nuxt />
 			<!-- </v-container> -->
 		</v-content>
-		<v-navigation-drawer v-model="rightDrawer" :right="right" temporary fixed>
-			<v-list>
-				<v-list-item @click.native="right = !right">
-					<v-list-item-action>
-						<v-icon light>mdi-repeat</v-icon>
-					</v-list-item-action>
-					<v-list-item-title>Switch drawer (click me)</v-list-item-title>
-				</v-list-item>
-			</v-list>
+		<v-navigation-drawer width="500" v-model="rightDrawer" :right="right" temporary fixed>
+			<DrawerAnnouncement></DrawerAnnouncement>
 		</v-navigation-drawer>
 		<v-footer :fixed="fixed" app>
 			<span>
@@ -62,6 +55,9 @@
 
 <script>
 export default {
+	components: {
+		DrawerAnnouncement: () => import("@/components/DrawerAnnouncement")
+	},
 	data() {
 		return {
 			clipped: false,
