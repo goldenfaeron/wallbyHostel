@@ -15,6 +15,13 @@ export const state = () => ({
     amazonProducts: [],
     borshBars: [],
     borshInstagram: [],
+    borshAirbnb: [],
+
+
+    //Cockpit
+    collectionsToken: 'fc6c7faa21c0678f849f0d34e6f664',
+    assetRoot: "https://cms.hackmylanguage.com/storage/uploads",
+    webRoot: "https://cms.hackmylanguage.com",
 
 
 
@@ -36,6 +43,9 @@ export const mutations = {
     },
     setBorshInstagram(state, list) {
         state.borshInstagram = list;
+    },
+    setBorshAirbnb(state, list) {
+        state.borshAirbnb = list;
     },
 
 
@@ -94,6 +104,15 @@ export const actions = {
             return res;
         });
         await commit('setBorshInstagram', borshinstagram);
+
+        //Airbnb
+        let files5 = await require.context('~/assets/json/airbnb', false, /\.json$/);
+        let borshAirbnb = files5.keys().map(key => {
+            let res = files5(key);
+            res.slug = key.slice(2, -5);
+            return res;
+        });
+        await commit('setBorshAirbnb', borshAirbnb);
     },
 
 }
