@@ -42,6 +42,15 @@
 			<!-- </v-container> -->
 		</v-content>
 		<v-navigation-drawer width="500" v-model="rightDrawer" :right="right" temporary fixed>
+			<v-list @click.native="rightDrawer = !rightDrawer">
+				<v-list-item>
+					<v-list-item-action>
+						<v-icon>mdi-close</v-icon>
+					</v-list-item-action>
+					<v-list-item-title>Klikoni për t'u mbyllur</v-list-item-title>
+				</v-list-item>
+			</v-list>
+
 			<DrawerAnnouncement></DrawerAnnouncement>
 		</v-navigation-drawer>
 		<v-footer :fixed="fixed" app>
@@ -88,7 +97,7 @@ export default {
 			],
 			miniVariant: false,
 			right: true,
-			rightDrawer: false,
+			rightDrawer: true,
 			title: "go" + this.$store.state.city + "i",
 			developer: this.$store.state.developer
 		};
