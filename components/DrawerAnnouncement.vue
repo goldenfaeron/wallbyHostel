@@ -7,8 +7,7 @@
 				<h3>Hej atje të dashur miq të dashur në Borsh</h3>
 				<br />Ne të gjithë e dimë se kohërat janë të vështira ekonomikisht tani me ndikimin e bllokimit të Coronavirus.
 				Unë kam krijuar këtë faqe interneti dhe aplikacion
-				<br />
-				<br />për të promovuar fshatin Borsh për vizitorët dhe turistët dhe për të ndihmuar bizneset vendore të bashkëpunojnë dhe reklamojnë së bashku.
+				për të promovuar fshatin Borsh për vizitorët dhe turistët dhe për të ndihmuar bizneset vendore të bashkëpunojnë dhe reklamojnë së bashku.
 				<br />
 				<br />Qëllimi është që të kemi një faqe në internet,
 				<br />ku vizitorët mund të shohin se borsh është e hapur dhe e gjallë me njerëz miqësorë, hotele cilësore, aktivitete argëtuese verore dhe kafene të njohura.
@@ -28,6 +27,8 @@
 
 				<br />Argëtohu
 				<br />
+				<br />
+				<i>Ju lutem mbani mend. Kjo faqe në internet aktualisht është në fazat e hershme të zhvillimit dhe nuk është lëshuar zyrtarisht. Disa funksione në uebfaqe mund të mos funksionojnë ose të duken të papërfunduara. Sajti do të rritet dhe ndryshon çdo ditë pasi unë dhe ekipi im profesional bëjmë punën që duam.</i>
 				<nuxt-link :to="'/'+$store.state.developer.name">
 					<i>{{$store.state.developer.name}}i</i>
 				</nuxt-link>
