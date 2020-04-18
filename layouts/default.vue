@@ -84,7 +84,12 @@ export default {
 					icon: "mdi-instagram",
 					title: this.$store.state.city + " on Instagram",
 					to: "/instagram"
-				}
+				},
+				{
+					icon: "mdi-airplane-takeoff",
+					title: "Airbnb",
+					to: "/airbnb"
+				},
 			],
 			miniVariant: false,
 			right: true,

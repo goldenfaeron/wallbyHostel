@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<h1 class="primary--text main-title" style="text-align: center;">Hotels in Borsh</h1>
+		<h1 class="primary--text main-title" style="text-align: center;">Vacation in Borsh</h1>
 		<!-- <h1>{{$store.state.borshHotels[0][0].order}}</h1> -->
 		<!-- {{$store.state.borshHotels}} -->
 		<v-container grid-list-lg>
@@ -29,7 +29,7 @@
 							<v-rating color="red" :value="item.rating/2" half-increments readonly></v-rating>
 						</div>
 
-						<!-- v-if="!item.inCart"-->
+						v-if="!item.inCart"
 						<v-card-actions>
 							<v-btn color="secondary">
 								<nuxt-link :to="'/booking/'+index" class="accent--text">Read more</nuxt-link>

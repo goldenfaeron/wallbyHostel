@@ -10,9 +10,11 @@
 							<v-layout align-content-space-between justify-space-between>
 								<v-flex>
 									<v-img v-if="item.imageUrls" max-height="200" :src="item.imageUrls[0]"></v-img>
-									<v-img v-else max-height="200" :src="'/img/placeholder.svg'"></v-img>
+									<!--<v-img v-else max-height="200" :src="'/img/placeholder'+placeholder+'.svg'"></v-img>-->
+									<v-img v-else max-height="200" :src="'/img/placeholder'+placeholder2+'.svg'"></v-img>
 
 									<p class="headline d-flex">{{item.title }}</p>
+									<p>{{placeholder(index)}}</p>
 								</v-flex>
 							</v-layout>
 						</v-card-title>
@@ -41,12 +43,20 @@
 </template>
 
 <script>
+
 export default {
+	methods: {
+	placeholder(index) {
+			return index * 5;
+		},
+},
 	data() {
 		return {
 			type: "Bars",
 			title: this.type + " in " + this.$store.state.city,
-			preview: "See all the best " + this.type + " in " + this.$store.state.city
+			preview:
+				"See all the best " + this.type + " in " + this.$store.state.city,
+			placeholder2: Math.floor(Math.random() * 2)
 		};
 	},
 
@@ -70,6 +80,7 @@ export default {
 			description: this.preview,
 			keywords: "bars"
 		};
-	}
+	},
+	
 };
 </script>
