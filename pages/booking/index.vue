@@ -24,7 +24,7 @@
 							<br />
 							{{item.price}}
 						</v-card-text>
-						{{item.rating /2}}
+						
 						<div class="text-xs-center">
 							<v-rating color="red" :value="item.rating/2" half-increments readonly></v-rating>
 						</div>

@@ -5,26 +5,24 @@
 		<v-container grid-list-lg>
 			<v-layout row wrap>
 				<v-flex xs12 sm12 md6 lg3 v-for="(item, index) in $store.state.borshBars[0]" :key="index">
-					<v-card>
+					<v-card height="100%">
 						<v-card-title primary-title>
 							<v-layout align-content-space-between justify-space-between>
 								<v-flex>
 									<v-img v-if="item.imageUrls" max-height="200" :src="item.imageUrls[0]"></v-img>
 									<!--<v-img v-else max-height="200" :src="'/img/placeholder'+placeholder+'.svg'"></v-img>-->
-									<v-img v-else max-height="200" :src="'/img/placeholder'+placeholder2+'.svg'"></v-img>
+									<v-img v-else max-height="200" :src="'/img/placeholder'+placeholder(index)+'.svg'"></v-img>
 
 									<p class="headline d-flex">{{item.title }}</p>
-									<p>{{placeholder(index)}}</p>
 								</v-flex>
 							</v-layout>
 						</v-card-title>
-
+					<v-layout align-end>
 						<v-card-text>
 							{{item.address}}
 							<br />
 							{{item.phone}}
 						</v-card-text>
-
 						<!-- <div class="text-xs-center">
 							<v-rating color="red" :value="item.totalScore" half-increments readonly></v-rating>
 						</div>-->
@@ -35,6 +33,7 @@
 							</v-btn>
 							<v-btn color="success">Read {{item.reviewsCount}} Reviews</v-btn>
 						</v-card-actions>
+					</v-layout>
 					</v-card>
 				</v-flex>
 			</v-layout>
@@ -47,7 +46,7 @@
 export default {
 	methods: {
 	placeholder(index) {
-			return index * 5;
+			return index % 2;
 		},
 },
 	data() {
