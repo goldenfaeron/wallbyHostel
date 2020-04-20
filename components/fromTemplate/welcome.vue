@@ -1,6 +1,6 @@
 
 <template>
-	<section id="hero">
+	<div id="hero">
 		<v-row no-gutters>
 			<v-img
 				:min-height="'calc(100vh - ' + $vuetify.application.top + 'px)'"
@@ -31,5 +31,5 @@
 				</v-theme-provider>
 			</v-img>
 		</v-row>
-	</section>
+	</div>
 </template>
