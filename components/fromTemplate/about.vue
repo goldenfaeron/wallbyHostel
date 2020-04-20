@@ -23,7 +23,7 @@
 			<div></div>
 
 			<v-btn color="grey" href="https://vuetifyjs.com" outlined large>
-				<span class="grey--text text--darken-1 font-weight-bold">Vuetify Documentation</span>
+				<span class="grey--text text--darken-1 font-weight-bold">{{$store.state.name}}</span>
 			</v-btn>
 		</v-container>
 

@@ -3,7 +3,9 @@
 		<div class="py-12"></div>
 
 		<v-container>
-			<h2 class="display-2 font-weight-bold mb-3 text-uppercase text-center">Blog</h2>
+			<h2
+				class="display-2 font-weight-bold mb-3 text-uppercase text-center"
+			>Whats happening in {{$store.state.city}}</h2>
 
 			<v-responsive class="mx-auto mb-12" width="56">
 				<v-divider class="mb-1"></v-divider>
@@ -33,12 +35,12 @@ export default {
 		return {
 			articles: [
 				{
-					title: "Mobile first & Responsive",
+					title: "Classy hotels for the wealthy",
 					text:
 						"Phasellus lorem enim, luctus ut velit eget, convallis egestas eros. Sed ornare ligula eget tortor tempor, quis porta tellus dictum."
 				},
 				{
-					title: "Think outside the box",
+					title: "Swimming pools by the beach",
 					text:
 						"Nam ut leo ipsum. Maecenas pretium aliquam feugiat. Aenean vel tempor est, vitae tincidunt risus. Sed sodales vestibulum nibh."
 				},

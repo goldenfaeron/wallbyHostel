@@ -3,11 +3,9 @@
 		<div class="py-12"></div>
 
 		<v-container class="text-center">
-			<h2 class="display-2 font-weight-bold mb-3">VUETIFY FEATURES</h2>
+			<h2 class="display-2 font-weight-bold mb-3">This is life in {{$store.state.city}}</h2>
 
 			<v-responsive class="mx-auto mb-12" width="56">
-				<v-divider class="mb-1"></v-divider>
-
 				<v-divider></v-divider>
 			</v-responsive>
 
@@ -38,13 +36,13 @@ export default {
 			features: [
 				{
 					image: "mdi-account-group-outline",
-					title: "Vibrant Community",
+					title: "Clean and friendly service",
 					text:
 						"Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto cupiditate sint possimus quidem atque harum excepturi nemo velit tempora! Enim inventore fuga, qui ipsum eveniet facilis obcaecati corrupti asperiores nam"
 				},
 				{
 					image: "mdi-update",
-					title: "Frequent Updates",
+					title: "Swimming everyday by the pool",
 					text:
 						"Sed ut elementum justo. Suspendisse non justo enim. Vestibulum cursus mauris dui, a luctus ex blandit. Lorem ipsum dolor sit amet consectetur adipisicing elit. qui ipsum eveniet facilis obcaecati corrupti consectetur adipisicing elit."
 				},

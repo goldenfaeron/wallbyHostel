@@ -1,7 +1,7 @@
 
 <template>
 	<div id="hero">
-		<v-row no-gutters>
+		<v-row>
 			<v-img
 				:min-height="'calc(100vh - ' + $vuetify.application.top + 'px)'"
 				:src="'/img/'+$store.state.city +'2.jpg'"
