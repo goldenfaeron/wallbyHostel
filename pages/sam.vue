@@ -5,6 +5,7 @@
 		<aboutMe></aboutMe>
 		<stuff></stuff>
 		<knowledge></knowledge>
+		<dark></dark>
 	</div>
 </template>
 <script>
@@ -13,6 +14,7 @@ import myWork from "~/components/sam/myWork.vue";
 import aboutMe from "~/components/sam/aboutMe.vue";
 import stuff from "~/components/sam/stuff.vue";
 import knowledge from "~/components/sam/knowledge.vue";
+import dark from "~/components/sam/anarchist.vue";
 export default {
 	data() {
 		return {
@@ -25,7 +27,8 @@ export default {
 		splash,
 		aboutMe,
 		stuff,
-		knowledge
+		knowledge,
+		dark
 	}
 };
 </script>
