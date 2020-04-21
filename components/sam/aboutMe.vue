@@ -33,7 +33,7 @@
 						<div class="v-responsive__sizer" style="padding-bottom: 66.75%;"></div>
 						<div
 							class="v-image__image v-image__image--cover"
-							style="background-image: url(https://lh3.googleusercontent.com/KyHvCM6JXYcp9Q5JHRAekNu-FuSTcXEFiFBPqU13kXz8BkK6KDhXoSefWDfsMtadFkrctjw=s128); background-position: center center;"
+							style="background-image: url(https://tobias.mreich.de/img/IMG_2356.png); background-position: center center;"
 						></div>
 						<div class="v-responsive__content" style="width: 400px;"></div>
 					</div>

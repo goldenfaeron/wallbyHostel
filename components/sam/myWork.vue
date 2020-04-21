@@ -62,7 +62,7 @@
 											data-v-8f31a7c4
 											tabindex="0"
 											class="white--text overflow-hidden v-card v-card--hover v-card--link v-sheet theme--dark"
-											style="height: 300px; background: url(https://lh3.googleusercontent.com/BwlFicwc381f475sJDtnG-fxJPTXhHTjBFUhr8X0mIvI6Cyo7shFwOspazVycWGkWWq0dQ=s127) center center / cover no-repeat;"
+											style="height: 300px; background: url(https://alpha-creative.vuetifyjs.com/static/project1.png) center center / cover no-repeat;"
 										>
 											<!---->
 											<!---->
@@ -73,7 +73,7 @@
 											data-v-8f31a7c4
 											tabindex="0"
 											class="white--text overflow-hidden v-card v-card--hover v-card--link v-sheet theme--dark"
-											style="height: 300px; background: url(https://lh3.googleusercontent.com/7DhpJvOAJhJCGrjmMaWROmxa_4OV5296nyjCaQthomr7Jaj2H31xx2vQd8qWazzNHR9N52s=s129) center center / cover no-repeat;"
+											style="height: 300px; background: url(https://alpha-creative.vuetifyjs.com/static/project2.png) center center / cover no-repeat;"
 										>
 											<!---->
 											<!---->
@@ -84,7 +84,7 @@
 											data-v-8f31a7c4
 											tabindex="0"
 											class="white--text overflow-hidden v-card v-card--hover v-card--link v-sheet theme--dark"
-											style="height: 300px; background: url(https://lh3.googleusercontent.com/5HaKEcU3IpCopBFEbSiPAS2PXm872P8GH2c5kRZSbkqOR8JS7tQe6aUDXVF7S48kgPgbPA=s126) center center / cover no-repeat;"
+											style="height: 300px; background: url(https://alpha-creative.vuetifyjs.com/static/project4.png) center center / cover no-repeat;"
 										>
 											<!---->
 											<!---->
@@ -95,7 +95,7 @@
 											data-v-8f31a7c4
 											tabindex="0"
 											class="white--text overflow-hidden v-card v-card--hover v-card--link v-sheet theme--dark"
-											style="height: 300px; background: url(https://lh3.googleusercontent.com/BTNvZCRzFM6UtXbaX-PpwEhxFYrCNA2uCMzNLZTCMgRaE5aTG2K63XjhfCM7LDJ3k4-CLA=s128) center center / cover no-repeat;"
+											style="height: 300px; background: url(https://alpha-creative.vuetifyjs.com/static/project5.png) center center / cover no-repeat;"
 										>
 											<!---->
 											<!---->
@@ -106,7 +106,7 @@
 											data-v-8f31a7c4
 											tabindex="0"
 											class="white--text overflow-hidden v-card v-card--hover v-card--link v-sheet theme--dark"
-											style="height: 300px; background: url(https://lh3.googleusercontent.com/YzjjNRHtfOsaQIkZfxwNfUc16uZkNg4FukK7vSktN5v8UAIS1D-whw5PXHmWyndtZVvVhA=s127) center center / cover no-repeat;"
+											style="height: 300px; background: url(https://alpha-creative.vuetifyjs.com/static/project6.png) center center / cover no-repeat;"
 										></div>
 									</div>
 								</div>
