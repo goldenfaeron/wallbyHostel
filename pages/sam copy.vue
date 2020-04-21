@@ -205,7 +205,7 @@
 	</div>
 </template>
 <script>
-	import splash from "~/components/sam/splash.vue";
+	import splash from "~/components/sam/anarchist.vue";
 export default {
 	data() {
 		return {
