@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<h1 class="primary--text main-title" style="text-align: center;">{{title}}</h1>
+		<h1 class="primary--text main-title" style="text-align: center;">Bars in {{$store.state.city}}</h1>
 
 		<v-container grid-list-lg>
 			<v-layout row wrap>
@@ -13,15 +13,17 @@
 									<!--<v-img v-else max-height="200" :src="'/img/placeholder'+placeholder+'.svg'"></v-img>-->
 									<v-img v-else max-height="200" :src="'/img/placeholder'+placeholder(index)+'.svg'"></v-img>
 
-									<p class="headline d-flex">{{item.title }}</p>
+									<p class="headline d-flex" style="overflow-wrap: anywhere; word-wrap: break-word; word-break: normal; hyphens: auto;">{{item.title }}</p>
 								</v-flex>
 							</v-layout>
 						</v-card-title>
-					<v-layout align-end>
+
 						<v-card-text>
 							{{item.address}}
 							<br />
 							{{item.phone}}
+							<br />
+							<v-icon>mdi-square-edit-outline</v-icon>Read {{item.reviewsCount}} reviews
 						</v-card-text>
 						<!-- <div class="text-xs-center">
 							<v-rating color="red" :value="item.totalScore" half-increments readonly></v-rating>
@@ -31,9 +33,7 @@
 							<v-btn color="secondary">
 								<nuxt-link :to="'/bars/'+index" class="accent--text">Read more</nuxt-link>
 							</v-btn>
-							<v-btn color="success">Read {{item.reviewsCount}} Reviews</v-btn>
 						</v-card-actions>
-					</v-layout>
 					</v-card>
 				</v-flex>
 			</v-layout>
@@ -42,13 +42,12 @@
 </template>
 
 <script>
-
 export default {
 	methods: {
-	placeholder(index) {
+		placeholder(index) {
 			return index % 2;
-		},
-},
+		}
+	},
 	data() {
 		return {
 			type: "Bars",
@@ -79,7 +78,6 @@ export default {
 			description: this.preview,
 			keywords: "bars"
 		};
-	},
-	
+	}
 };
 </script>

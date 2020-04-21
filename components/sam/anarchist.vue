@@ -65,6 +65,67 @@ export default {
 					<v-img :src="'/img/anarchist/4.png'"></v-img>
 				</v-flex>
 			</v-layout>
+
+			<v-flex d-flex lg12 ma-2>
+				<v-img :src="'/img/anarchist/8.png'"></v-img>
+			</v-flex>
+
+			<v-layout row wrap>
+				<v-flex d-flex lg5 my-2>
+					<v-img :src="'/img/anarchist/9.png'"></v-img>
+				</v-flex>
+				<v-flex d-flex lg7 my-2>
+					<v-img :src="'/img/anarchist/10.png'"></v-img>
+				</v-flex>
+			</v-layout>
+			<v-layout row wrap>
+				<v-flex d-flex lg8 my-2>
+					<v-img :src="'/img/anarchist/11.png'"></v-img>
+				</v-flex>
+				<v-flex d-flex lg4 my-2>
+					<v-img :src="'/img/anarchist/12.png'"></v-img>
+				</v-flex>
+			</v-layout>
+			<v-layout row wrap>
+				<v-flex d-flex lg5 my-2>
+					<v-img :src="'/img/anarchist/13.png'"></v-img>
+				</v-flex>
+				<v-flex d-flex lg7 my-2>
+					<v-img :src="'/img/anarchist/14.png'"></v-img>
+				</v-flex>
+			</v-layout>
+			<v-layout row wrap>
+				<v-flex d-flex lg7 my-2>
+					<v-img :src="'/img/anarchist/15.png'"></v-img>
+				</v-flex>
+				<v-flex d-flex lg5 my-2>
+					<v-img :src="'/img/anarchist/16.png'"></v-img>
+				</v-flex>
+			</v-layout>
+			<v-flex d-flex lg12 ma-2>
+				<v-img :src="'/img/anarchist/17.png'"></v-img>
+			</v-flex>
+			<v-layout row wrap>
+				<v-flex d-flex lg6 my-2>
+					<v-img :src="'/img/anarchist/18.png'"></v-img>
+				</v-flex>
+				<v-flex d-flex lg5 my-2>
+					<v-img :src="'/img/anarchist/19.png'"></v-img>
+				</v-flex>
+			</v-layout>
+			<v-flex d-flex lg12 ma-2>
+				<v-img :src="'/img/anarchist/20.png'"></v-img>
+			</v-flex>
+			<v-layout row wrap>
+				<v-flex d-flex lg6 my-2>
+					
+				</v-flex>
+				<v-flex d-flex lg6 my-2>
+					<v-img :src="'/img/anarchist/21.png'"></v-img>
+				</v-flex>
+			</v-layout>
+			
+			
 		</v-container>
 	</v-content>
 </template>
