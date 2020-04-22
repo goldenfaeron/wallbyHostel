@@ -93,11 +93,16 @@ export default {
 					icon: "mdi-instagram",
 					title: this.$store.state.city + " on Instagram",
 					to: "/instagram"
+				},
+				{
+					icon: "mdi-heart-circle",
+					title: this.$store.state.city + "Bunker camping",
+					to: "/bunkers"
 				}
 			],
 			miniVariant: false,
 			right: true,
-			rightDrawer: true,
+			rightDrawer: false,
 			title: "go" + this.$store.state.city + "i",
 			developer: this.$store.state.developer
 		};
