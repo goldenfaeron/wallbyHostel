@@ -1,119 +1,63 @@
 <template>
-	<div>
-		<v-img :src="'/img/'+$store.state.city +'.jpg'"></v-img>
-		<v-container>
-			<v-layout column justify-center align-center>
-				<v-flex xs12 sm8 md6>
-					<v-card>
-						<h1>LET’S GIVE PARADISE A NEW NAME: {{$store.state.city.toUpperCase()}}</h1>
-						<br />
-						<h2>Borsh Beach is quite simply one of the most tranquil coastlines on the Southern Riviera</h2>
-						<br />
-						<p>
-							A picture-perfect paradise to spend your summer days the right way.
-							Imagine if you will, the most stunning shades of ultramarine and turquoise that a sea could possibly possess.
-							Now, frame this shimmering seascape with olive groves. Listen to the sounds of the waves softly hitting the pebbles on the shore.
-							Take a deep breath and smell the calming scent of the salt of the sea. Look in front of you. You are at one of the most idyllic beaches in
-							Albania: Borsh, on the Southern Coast.
-						</p>
-					</v-card>
-				</v-flex>
-				<!-- INSTAGRAM -->
-				<v-flex xs12 sm8 md6 mt-5>
-					<h1>{{$store.state.city}} ON INSTAGRAM</h1>
-					<v-card>
-						<v-container grid-list-lg>
-							<v-layout row wrap>
-								<v-flex
-									xs12
-									sm12
-									md6
-									lg3
-									v-for="(item, index) in $store.state.borshInstagram[0].slice(0,4) "
-									:key="index"
-								>
-									<v-card>
-										<!-- <v-img :src="$store.state.assetRoot + item.image.path" max-height="10cm"></v-img> -->
+	<div class="text-xs-center">
+		<h1>Aktuelle projekte mit {{this.$route.query.s}}</h1>
 
-										<v-img max-height="200" :src="item.imageUrl"></v-img>
+		<v-dialog v-model="dialog" width="100%" height="810px">
+			<template v-slot:activator="{ on }">
+				<v-container grid-list-lg>
+					<v-layout row wrap justify-center=" " align-center>
+						<v-flex xs12>
+							<v-btn color="red lighten-2" dark v-on="on">Click Me</v-btn>
+						</v-flex>
+					</v-layout>
+				</v-container>
+			</template>
 
-										<v-card-text>
-											{{item.firstComment}}
-											<br />
-											<v-icon>mdi-cards-heart</v-icon>
-											{{item.likesCount}}
-										</v-card-text>
+			<v-card>
+				<v-card-title class="headline grey lighten-2" primary-title>
+					<v-icon>mdi-ghost</v-icon>
+					A creative work from
+					{{$store.state.developer.name}}
+				</v-card-title>
 
-										<!-- v-if="!item.inCart" -->
-										<v-card-actions></v-card-actions>
-									</v-card>
-								</v-flex>
-							</v-layout>
-						</v-container>
-					</v-card>
-				</v-flex>
+				<v-card-text>
+					<br />Graphic Design
+					Development and design go hand in hand.
+					If you are the creative type then you will want your website, platform or project to unique and expressive. After all, it's your brainchild.
+					We teach you the latest design programs, technologies and practice for colorful minds to kick-start their own brands and designs.
+					You will be making fly designs in no time which can be transformed into websites, social media, business cards, posters and marketing videos and campaigns.
+				</v-card-text>
+				<iframe
+					width="100%"
+					height="400px"
+					src="https://miro.com/app/embed/o9J_kt8HHpE=/?&pres=1&animate=1"
+					frameborder="0"
+					scrolling="no"
+					allowfullscreen
+				></iframe>
+				<v-divider></v-divider>
 
-				<!-- BOOKING -->
-				<v-flex xs12 sm8 md6 mt-5>
-					<h1>{{$store.state.city}} HOTELS</h1>
-					<v-card>
-						<v-container grid-list-lg>
-							<v-layout row wrap>
-								<v-flex
-									xs12
-									sm12
-									md6
-									lg3
-									v-for="(item, index) in $store.state.borshHotels[0].slice(0,4) "
-									:key="index"
-								>
-									<v-card>
-										<!-- <v-img :src="$store.state.assetRoot + item.image.path" max-height="10cm"></v-img> -->
-
-										<v-card-title primary-title>
-											<v-layout align-content-space-between justify-space-between>
-												<v-flex>
-													<p class="headline d-flex">{{item.name }}</p>
-												</v-flex>
-											</v-layout>
-										</v-card-title>
-
-										<v-img max-height="200" :src="item.image"></v-img>
-
-										<v-card-text>
-											<br />
-											From {{item.price}} Euro per night
-										</v-card-text>
-
-										<div class="text-xs-center">
-											<v-rating color="red" :value="item.rating/2" half-increments readonly></v-rating>
-										</div>
-
-										<!-- v-if="!item.inCart" -->
-										<v-card-actions>
-											<v-btn color="secondary">
-												<nuxt-link :to="'/booking/'+index" class="accent--text">Read more</nuxt-link>
-											</v-btn>
-										</v-card-actions>
-									</v-card>
-								</v-flex>
-							</v-layout>
-						</v-container>
-					</v-card>
-				</v-flex>
-			</v-layout>
-		</v-container>
+				<v-card-actions>
+					<v-spacer></v-spacer>
+					<v-btn color="primary" flat @click="dialog = false">
+						<v-icon>mdi-thumb-up</v-icon>Awesome
+					</v-btn>
+				</v-card-actions>
+			</v-card>
+		</v-dialog>
 	</div>
 </template>
 
-<script>
-import Logo from "~/components/Logo.vue";
-import VuetifyLogo from "~/components/VuetifyLogo.vue";
 
+<script>
 export default {
-	components: {
-		Logo,
-		VuetifyLogo
+	data() {
+		return {
+			dialog: false,
+			felix:
+				"Felix und ich arbeiten jetzt zusammen an der ganzen App Design zusammenarbeiten. Felix mit seinem 'kreatives Talent und seine künstlerischen Fähigkeiten nutzen, um einige wirklich coole Seiten auf der Website zu erstellen, um meine Kunst und seine Kunst zu zeigen und auch um eine wirklich zu schaffen wirklich schön aussehende Website, die Charakter und Stil hat",
+			henk: ""
+		};
 	}
 };
 </script>
