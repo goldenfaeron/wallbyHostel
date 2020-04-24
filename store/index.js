@@ -20,8 +20,8 @@ export const state = () => ({
 
     //Cockpit
     collectionsToken: '641a6e0c88f94f7d2adadd184752e1',
-    assetRoot: "http://cockpit.goborshi.hackmylanguage.com/storage/uploads",
-    webRoot: "http://cockpit.goborshi.hackmylanguage.com",
+    assetRoot: "https://cockpit.goborshi.hackmylanguage.com/storage/uploads",
+    webRoot: "https://cockpit.goborshi.hackmylanguage.com",
 
 
 
