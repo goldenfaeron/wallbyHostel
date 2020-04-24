@@ -19,9 +19,11 @@ export const state = () => ({
 
 
     //Cockpit
-    collectionsToken: 'fc6c7faa21c0678f849f0d34e6f664',
-    assetRoot: "https://cms.hackmylanguage.com/storage/uploads",
-    webRoot: "https://cms.hackmylanguage.com",
+    collectionsToken: '641a6e0c88f94f7d2adadd184752e1',
+    assetRoot: "http://cockpit.goborshi.hackmylanguage.com/storage/uploads",
+    webRoot: "http://cockpit.goborshi.hackmylanguage.com",
+
+
 
 
 
