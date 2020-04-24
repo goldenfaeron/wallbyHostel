@@ -1,5 +1,6 @@
 <template>
 	<div class="text-xs-center">
+		<v-img height="300" width="400" :src="require('@/static/img/putin.jpg')"></v-img>
 		<h1>Aktuelle projekte mit {{this.$route.query.s}}</h1>
 
 		<v-dialog v-model="dialog" width="100%" height="810px">
