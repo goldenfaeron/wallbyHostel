@@ -32,7 +32,7 @@
 						<!-- v-if="!item.inCart" -->
 						<v-card-actions>
 							<v-btn color="secondary">
-								<nuxt-link :to="'/booking/featured/'+item.slug" class="accent--text">Read more</nuxt-link>
+								<nuxt-link :to="'/featured_hotels/'+item.slug" class="accent--text">Read more</nuxt-link>
 							</v-btn>
 						</v-card-actions>
 					</v-card>
