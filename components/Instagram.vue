@@ -1,4 +1,5 @@
 	<template>
+	<section id="instagram">
 	<div>
 		<h1>{{$store.state.city}} ON INSTAGRAM</h1>
 		<v-responsive class="mx-auto mb-12" width="56">
@@ -17,7 +18,7 @@
 							v-for="(item, index) in $store.state.borshInstagram[0].slice(0,4) "
 							:key="index"
 						>
-							<v-card>
+							<v-card height="100%">
 								<!-- <v-img :src="$store.state.assetRoot + item.image.path" max-height="10cm"></v-img> -->
 
 								<v-img max-height="200" :src="item.imageUrl"></v-img>
@@ -37,8 +38,13 @@
 				</v-container>
 				<!-- </v-card> -->
 			</v-layout>
+			<br />
+			<v-layout justify-center>
+				<v-btn color="primary" href="/instagram">See More</v-btn>
+			</v-layout>
 		</v-container>
 	</div>
+	</section>
 </template>
 
 </script>

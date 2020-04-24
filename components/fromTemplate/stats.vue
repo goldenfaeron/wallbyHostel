@@ -1,4 +1,5 @@
 <template>
+
 	<section id="stats">
 		<v-parallax
 			:height="$vuetify.breakpoint.smAndDown ? 700 : 500"
@@ -6,12 +7,12 @@
 		>
 			<v-container fill-height>
 				<v-row class="mx-auto">
-					<v-col v-for="[value, title] of stats" :key="title" cols="12" md="3">
+					<v-col v-for="[value, title, link] of stats" :key="title" cols="12" md="3">
 						<div class="text-center">
 							<div class="display-3 font-weight-black mb-4" v-text="value"></div>
 
 							<div class="title font-weight-regular text-uppercase">
-								<v-btn color="primary">{{title}}</v-btn>
+								<v-btn color="primary" @click="$vuetify.goTo('#'+link)">{{title}}</v-btn>
 							</div>
 						</div>
 					</v-col>
@@ -26,11 +27,13 @@ export default {
 	data() {
 		return {
 			stats: [
-				["4k", "Instagram posts"],
-				["25", "Hotels"],
-				["30", "Airbnbs"],
-				["40", "Cafes and bars"]
-			]
+				[this.$store.state.borshInstagram[0].length, "Instagram posts", 'instagram'],
+				[this.$store.state.borshHotels[0].length, "Hotels", 'booking'],
+				[this.$store.state.borshAirbnb[0].length, "Airbnbs", 'airbnb'],
+				[this.$store.state.borshBars[0].length, "Cafes and bars", 'bars']
+			],
+
+			
 		};
 	}
 };

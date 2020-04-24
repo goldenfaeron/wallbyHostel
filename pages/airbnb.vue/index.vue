@@ -5,10 +5,31 @@
 		<!-- {{$store.state.borshHotels}} -->
 		<v-container grid-list-lg>
 			<v-layout row wrap>
-				<v-flex xs12 sm12 md6 lg3 v-for="(item, index) in $store.state.borshAirbnb[0]" :key="index">
-					<v-card>
-						<!-- <v-img :src="$store.state.assetRoot + item.image.path" max-height="10cm"></v-img> -->
-						{{item}}
+				<v-flex xs12 sm12 md6 lg4 v-for="(item, index) in $store.state.borshAirbnb[0]" :key="index">
+					<v-card style="height: 100%;">
+						<v-card-title primary-title>
+							<v-layout align-content-space-between justify-space-between>
+								<v-flex>
+									<p class="headline d-flex">{{item.name }}</p>
+								</v-flex>
+							</v-layout>
+						</v-card-title>
+						<v-img v-if="item.photos" max-height="200" :src="item.photos[0].large"></v-img>
+						<v-img v-else max-height="200" :src="'/img/placeholder'+placeholder(index)+'.svg'"></v-img>
+						<v-card-text>
+							<p style="font-weight: bold;">{{item.sectionedDescription.description | truncate(230)}}</p>
+							<br />
+							Room Type: {{item.roomType}}
+							<br />
+							<v-icon>mdi-square-edit-outline</v-icon>
+							Read {{item.reviews.length}} reviews
+						</v-card-text>
+						<div class="text-xs-center">
+							<v-rating color="red" :value="item.stars" half-increments readonly></v-rating>
+						</div>
+
+						<v-btn color="primary" ><nuxt-link :to="'/airbnb/'+index" class="accent--text">Read more</nuxt-link></v-btn>
+						<v-btn color="success" :href="'https://airbnb.com/rooms/'+item.id">book on airbnb.com</v-btn>
 						<!-- <v-card-title primary-title>
 							<v-layout align-content-space-between justify-space-between>
 								<v-flex>
@@ -44,5 +65,16 @@
 </template>
 
 <script>
-export default {};
+export default {
+	methods: {
+		placeholder(index) {
+			return index % 2;
+		}
+	},
+	filters: {
+		truncate(string, value) {
+			return (string || "").substring(0, value);
+		}
+	}
+};
 </script>

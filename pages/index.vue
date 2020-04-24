@@ -5,8 +5,13 @@
 		<features></features>
 		<stats></stats>
 		<blog></blog>
-		<booking></booking>
 		<instagram></instagram>
+		<br />
+		<booking></booking>
+		<br />
+		<airbnb></airbnb>
+		<br />
+		<bars></bars>
 	</v-content>
 </template>
 
@@ -19,6 +24,8 @@ import stats from "~/components/fromTemplate/stats.vue";
 import blog from "~/components/fromTemplate/blog.vue";
 import booking from "~/components/Booking.vue";
 import instagram from "~/components/Instagram.vue";
+import airbnb from "~/components/airbnb.vue";
+import bars from "~/components/bars.vue";
 
 export default {
 	components: {
@@ -28,7 +35,9 @@ export default {
 		stats,
 		blog,
 		booking,
-		instagram
+		instagram,
+		airbnb,
+		bars
 	}
 };
 </script>

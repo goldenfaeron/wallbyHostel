@@ -1,4 +1,5 @@
 		<template>
+		<section id="booking">
 	<v-container grid-list-lg>
 		<h1>{{$store.state.city}} HOTELS</h1>
 		<v-responsive class="mx-auto mb-12" width="56">
@@ -15,7 +16,7 @@
 						v-for="(item, index) in $store.state.borshHotels[0].slice(0,4) "
 						:key="index"
 					>
-						<v-card>
+						<v-card height="100%">
 							<!-- <v-img :src="$store.state.assetRoot + item.image.path" max-height="10cm"></v-img> -->
 
 							<v-card-title primary-title>
@@ -26,7 +27,7 @@
 								</v-layout>
 							</v-card-title>
 
-							<v-img max-height="200" :src="item.image"></v-img>
+							<v-img height="200" :src="item.image"></v-img>
 
 							<v-card-text>
 								<br />
@@ -48,7 +49,12 @@
 				</v-layout>
 			</v-container>
 		</v-layout>
+		<br />
+		<v-layout justify-center>
+			<v-btn color="primary" href="/booking">See More</v-btn>
+		</v-layout>
 	</v-container>
+	</section>
 </template>
 
 </script>

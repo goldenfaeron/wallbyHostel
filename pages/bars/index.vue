@@ -10,7 +10,6 @@
 							<v-layout align-content-space-between justify-space-between>
 								<v-flex>
 									<v-img v-if="item.imageUrls" max-height="200" :src="item.imageUrls[0]"></v-img>
-									<!--<v-img v-else max-height="200" :src="'/img/placeholder'+placeholder+'.svg'"></v-img>-->
 									<v-img v-else max-height="200" :src="'/img/placeholder'+placeholder(index)+'.svg'"></v-img>
 
 									<p class="headline d-flex" style="overflow-wrap: anywhere; word-wrap: break-word; word-break: normal; hyphens: auto;">{{item.title }}</p>
