@@ -15,11 +15,19 @@
 			</template>
 
 			<v-card>
-				<v-card-title class="headline grey lighten-2" primary-title>{{$store.state.name}}</v-card-title>
+				<v-card-title class="headline secondary lighten-2" primary-title>{{$store.state.name}} Concept</v-card-title>
 
 				<iframe width="100%" height="600" :src="props" frameborder="0" scrolling="no" allowfullscreen></iframe>
 				<v-divider></v-divider>
-
+				<v-card-title primary-title>
+					<v-icon>mdi-projector-screen</v-icon>Click the box to activate Miro preview
+				</v-card-title>
+				<v-card-text>
+					<p>
+						This is a demonstration made on the application Realtime Board which I use for collaborative teaching, graphic design, project managment and workflow visualisation, among many other things. The application allows us to easily draw, write, add images, create diagrams and much more, all on an endless scalable canvas.
+						Pretty cool huh? and I'm sure it got your interest, so get in contact and let's start learning!
+					</p>
+				</v-card-text>
 				<v-card-actions>
 					<v-spacer></v-spacer>
 					<v-btn color="primary" flat @click="dialog = false">Close</v-btn>
