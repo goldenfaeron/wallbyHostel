@@ -17,7 +17,7 @@
 						<v-img v-if="item.photos" max-height="200" :src="item.photos[0].large"></v-img>
 						<v-img v-else max-height="200" :src="'/img/placeholder'+placeholder(index)+'.svg'"></v-img>
 						<v-card-text>
-							<p style="font-weight: bold;">{{item.sectionedDescription.description | truncate(230)}}</p>
+							<p style="font-weight: bold;" class="truncate-overflow">{{item.sectionedDescription.description}}</p>
 							<br />
 							Room Type: {{item.roomType}}
 							<br />
@@ -49,6 +49,31 @@ export default {
 		truncate(string, value) {
 			return (string || "").substring(0, value);
 		}
-	}
+	},
 };
 </script>
+<style > 
+.truncate-overflow {
+	--lh: 1.4rem;
+	line-height: var(--lh);
+	--max-lines: 3;
+	position: relative;
+	height: calc(var(--lh) * var(--max-lines));
+	overflow: hidden;
+	padding-right: 1rem; /* space for ellipsis */
+}
+.truncate-overflow::before {
+	position: absolute;
+	content: "...";
+	inset-block-end: 0; /* "bottom" */
+	inset-inline-end: 0; /* "right" */
+}
+.truncate-overflow::after {
+	content: "";
+	position: absolute;
+	inset-inline-end: 0; /* "right" */
+	width: 1rem;
+	height: 1rem;
+	background: white;
+}
+</style>

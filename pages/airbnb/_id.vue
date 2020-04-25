@@ -41,7 +41,7 @@
 						<br />
 						<p class="font-weight-medium">Amneties</p>
 						<v-layout row wrap>
-							<v-flex lg6 v-for="(item, index) in data.listingAmenities.slice(-6)" :key="index">
+							<v-flex lg6 xs12 v-for="(item, index) in data.listingAmenities.slice(-6)" :key="index">
 								<p v-if="item.isPresent == true">
 									<v-icon color="green">mdi-check</v-icon>
 									{{item.name}}
@@ -89,6 +89,12 @@
 						<v-divider></v-divider>
 						<br />
 						<p class="font-weight-medium">Sleeping arrangements</p>
+
+						<ul>
+							<li v-for="(item, index) in data.listingRooms" :key="index">
+								<p id="sleep">{{item.beds[0].quantity}} x {{item.beds[0].type}}</p>
+							</li>
+						</ul>
 					</v-flex>
 					<v-flex lg5>
 						<p class="display-1 bold font-weight-bold">Description</p>
@@ -108,6 +114,12 @@ export default {
 			data: this.$store.state.borshAirbnb[0][this.$route.params.id],
 			dialog: false
 		};
+	},
+	filters: {
+		truncate(string, value) {
+			return (string || "").substring(0, value);
+		}
 	}
 };
 </script>
+
