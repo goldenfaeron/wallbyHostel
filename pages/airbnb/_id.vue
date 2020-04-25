@@ -93,7 +93,7 @@
 					<v-flex lg5>
 						<p class="display-1 bold font-weight-bold">Description</p>
 						<br />
-						<p>{{data.sectionedDescription.description}}</p>
+						<pre style="white-space: pre-wrap;">{{data.sectionedDescription.description}}</pre>
 					</v-flex>
 				</v-layout>
 			</span>
