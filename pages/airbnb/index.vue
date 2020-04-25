@@ -30,33 +30,7 @@
 
 						<v-btn color="primary" ><nuxt-link :to="'/airbnb/'+index" class="accent--text">Read more</nuxt-link></v-btn>
 						<v-btn color="success" :href="'https://airbnb.com/rooms/'+item.id">book on airbnb.com</v-btn>
-						<!-- <v-card-title primary-title>
-							<v-layout align-content-space-between justify-space-between>
-								<v-flex>
-									<p class="headline d-flex">{{item.name }}</p>
-								</v-flex>
-							</v-layout>
-						</v-card-title>
-
-						<v-img :src="item.image"></v-img>
-
-						<v-card-text>
-							{{item.description}}
-							<br />
-							{{item.price}}
-						</v-card-text>
-						{{item.rating /2}}
-						<div class="text-xs-center">
-							<v-rating color="red" :value="item.rating/2" half-increments readonly></v-rating>
-						</div>
-
-						v-if="!item.inCart"
-						<v-card-actions>
-							<v-btn color="secondary">
-								<nuxt-link :to="'/booking/'+index" class="accent--text">Read more</nuxt-link>
-							</v-btn>
-							<v-btn color="success">Read Reviews</v-btn>
-						</v-card-actions>-->
+						
 					</v-card>
 				</v-flex>
 			</v-layout>
