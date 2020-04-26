@@ -98,6 +98,11 @@ export default {
 					icon: "mdi-heart-circle",
 					title: this.$store.state.city + "Bunker camping",
 					to: "/bunkers"
+				},
+				{
+					icon: "mdi-heart-circle",
+					title: this.$store.state.name + "Concept",
+					to: "/concept"
 				}
 			],
 			miniVariant: false,
