@@ -52,7 +52,7 @@
 			</v-layout>
             <br />
 			<v-layout justify-center>
-				<v-btn color="primary" href="/booking">See More</v-btn>
+				<v-btn color="primary" href="/bars">See More</v-btn>
 			</v-layout>
 		</v-container>
 	</section>

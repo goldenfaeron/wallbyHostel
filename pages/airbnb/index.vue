@@ -5,7 +5,7 @@
 		<!-- {{$store.state.borshHotels}} -->
 		<v-container grid-list-lg>
 			<v-layout row wrap>
-				<v-flex xs12 sm12 md6 lg4 v-for="(item, index) in $store.state.borshAirbnb[0]" :key="index">
+				<v-flex xs12 sm6 md6 lg4 v-for="(item, index) in $store.state.borshAirbnb[0]" :key="index">
 					<v-card style="height: 100%;">
 						<v-card-title primary-title>
 							<v-layout align-content-space-between justify-space-between>
@@ -64,7 +64,7 @@ export default {
 }
 .truncate-overflow::before {
 	position: absolute;
-	content: "...";
+	content: "";
 	inset-block-end: 0; /* "bottom" */
 	inset-inline-end: 0; /* "right" */
 }
