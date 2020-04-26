@@ -3,7 +3,6 @@
 		<v-carousel>
 			<v-carousel-item v-for="(item, index) in data.photos" :key="index" :src="item.large"></v-carousel-item>
 		</v-carousel>
-
 		<v-container grid-list-xs>
 			<span class="grey--text text--darken-3">
 				<v-layout row justify-space-between>
@@ -90,12 +89,41 @@
 						<br />
 						<p class="font-weight-medium">Sleeping arrangements</p>
 
-						<ul>
-							<li v-for="(item, index) in data.listingRooms" :key="index">
-								<p id="sleep">{{item.beds[0].quantity}} x {{item.beds[0].type}}</p>
+						<ol>
+							<li v-for="(item, index) in data.hometourRooms" :key="index">
+								<p class="font-weight-medium">{{item.nameWithType}}</p>
+								<p id="sleep">{{item.highlightsHometour[0]}}</p>
 							</li>
-						</ul>
+						</ol>
+						<br />
+						<v-divider></v-divider>
+						<br />
+						<p class="font-weight-medium">Reviews</p>
+						<v-layout row justify-space-between>
+							<v-flex lg5 xs12 v-for="(item, index) in data.reviewDetailsInterface.reviewSummary" :key="index">
+								<p>{{item.label}}</p>
+								<v-progress-linear :value="item.percentage*100"></v-progress-linear>
+							</v-flex>
+						</v-layout>
+						<br />
+						<v-layout row wrap>
+							<v-flex lg12 v-for="(item, index) in data.reviews.slice(0,3)" :key="index">
+								<br />
+								<v-divider></v-divider>
+								<br />
+								<p>
+									<v-avatar class="mr-2" size="32">
+										<v-img :src="item.author.pictureUrl"></v-img>
+									</v-avatar>
+									{{item.author.firstName}}
+								</p>
+								<p>{{item.comments}}</p>
+							</v-flex>
+						</v-layout>
+						<br>
+						<br>
 					</v-flex>
+					
 					<v-flex lg5>
 						<p class="display-1 bold font-weight-bold">Description</p>
 						<br />

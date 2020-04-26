@@ -17,7 +17,10 @@
 						<v-img v-if="item.photos" max-height="200" :src="item.photos[0].large"></v-img>
 						<v-img v-else max-height="200" :src="'/img/placeholder'+placeholder(index)+'.svg'"></v-img>
 						<v-card-text>
-							<p style="font-weight: bold;" class="truncate-overflow">{{item.sectionedDescription.description}}</p>
+							<p
+								style="font-weight: bold;"
+								class="truncate-overflow"
+							>{{item.sectionedDescription.description}}</p>
 							<br />
 							Room Type: {{item.roomType}}
 							<br />
@@ -27,10 +30,12 @@
 						<div class="text-xs-center">
 							<v-rating color="red" :value="item.stars" half-increments readonly></v-rating>
 						</div>
-
-						<v-btn color="primary" ><nuxt-link :to="'/airbnb/'+index" class="accent--text">Read more</nuxt-link></v-btn>
-						<v-btn color="success" :href="'https://airbnb.com/rooms/'+item.id">book on airbnb.com</v-btn>
-						
+						<v-card-actions>
+							<v-btn color="primary">
+								<nuxt-link :to="'/airbnb/'+index" class="accent--text">Read more</nuxt-link>
+							</v-btn>
+							<v-btn color="success" :href="'https://airbnb.com/rooms/'+item.id">book on airbnb.com</v-btn>
+						</v-card-actions>
 					</v-card>
 				</v-flex>
 			</v-layout>
@@ -49,10 +54,10 @@ export default {
 		truncate(string, value) {
 			return (string || "").substring(0, value);
 		}
-	},
+	}
 };
 </script>
-<style > 
+<style >
 .truncate-overflow {
 	--lh: 1.4rem;
 	line-height: var(--lh);
