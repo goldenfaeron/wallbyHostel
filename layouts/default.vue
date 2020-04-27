@@ -90,7 +90,7 @@ export default {
 				{
 					icon: "",
 					img: "/img/airbnbLogo.png",
-					title: this.$store.state.city+" Airbnb",
+					title: this.$store.state.city + " Airbnb",
 					to: "/airbnb"
 				},
 				{
@@ -108,3 +108,4 @@ export default {
 	}
 };
 </script>
+
