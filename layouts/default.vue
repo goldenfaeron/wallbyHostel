@@ -86,12 +86,18 @@ export default {
 					title: this.$store.state.city + " on Instagram",
 					to: "/instagram"
 				},
+
 				{
-					icon:'',
-					img:'/img/airbnbLogo.png',
+					icon: "",
+					img: "/img/airbnbLogo.png",
 					title: "Airbnb",
 					to: "/airbnb"
 				},
+				{
+					icon: "mdi-account-box",
+					title: this.$store.state.name + " Team",
+					to: "/member"
+				}
 			],
 			miniVariant: false,
 			right: true,
@@ -101,5 +107,4 @@ export default {
 		};
 	}
 };
-
 </script>
