@@ -12,7 +12,10 @@
 									<v-img v-if="item.imageUrls" max-height="200" :src="item.imageUrls[0]"></v-img>
 									<v-img v-else max-height="200" :src="'/img/placeholder'+placeholder(index)+'.svg'"></v-img>
 
-									<p class="headline d-flex" style="overflow-wrap: anywhere; word-wrap: break-word; word-break: normal; hyphens: auto;">{{item.title }}</p>
+									<p
+										class="headline d-flex"
+										style="overflow-wrap: anywhere; word-wrap: break-word; word-break: normal; hyphens: auto;"
+									>{{item.title }}</p>
 								</v-flex>
 							</v-layout>
 						</v-card-title>
@@ -22,7 +25,8 @@
 							<br />
 							{{item.phone}}
 							<br />
-							<v-icon>mdi-square-edit-outline</v-icon>Read {{item.reviewsCount}} reviews
+							<v-icon>mdi-square-edit-outline</v-icon>
+							Read {{item.reviewsCount}} reviews
 						</v-card-text>
 						<!-- <div class="text-xs-center">
 							<v-rating color="red" :value="item.totalScore" half-increments readonly></v-rating>
@@ -50,15 +54,10 @@ export default {
 	data() {
 		return {
 			type: "Bars",
-<<<<<<< HEAD
-			title: "Bars" + " in " + this.$store.state.city,
-			preview: "See all the best " + this.type + " in " + this.$store.state.city
-=======
 			title: this.type + " in " + this.$store.state.city,
 			preview:
 				"See all the best " + this.type + " in " + this.$store.state.city,
 			placeholder2: Math.floor(Math.random() * 2)
->>>>>>> 624b40fe8ea20024b0063c17461fb7613336477b
 		};
 	},
 

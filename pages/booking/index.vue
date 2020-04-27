@@ -1,13 +1,8 @@
 <template>
 	<div>
-<<<<<<< HEAD
-		<h1 class="primary--text main-title" style="text-align: center;">Hotels in Borsh</h1>
-		<!-- {{featured}} -->
-=======
 		<h1 class="primary--text main-title" style="text-align: center;">Hotels in {{$store.state.city}}</h1>
 		<!-- <h1>{{$store.state.borshHotels[0][0].order}}</h1> -->
 		<!-- {{$store.state.borshHotels}} -->
->>>>>>> 624b40fe8ea20024b0063c17461fb7613336477b
 		<v-container grid-list-lg>
 			<!-- From cockpit -->
 			<h2>Featured Hotels</h2>
@@ -62,7 +57,6 @@
 						<v-img :src="item.image" height="300px"></v-img>
 
 						<v-card-text>
-
 							<p class="truncate-overflow">{{item.description}}</p>
 							<br />
 							<br />
@@ -88,29 +82,10 @@
 </template>
 
 <script>
-<<<<<<< HEAD
-export default {
-	asyncData({ params, store, $axios, route }) {
-		let collection = "hotels";
-		return $axios
-			.post(
-				store.state.webRoot +
-					"/api/collections/get/" +
-					collection +
-					"?token=" +
-					store.state.collectionsToken
-			)
-			.then(res => {
-				return { featured: res.data.entries.reverse() };
-			});
-	}
-};
-</script>
-=======
 export default {};
 </script>
 <style lang="css">
-	.truncate-overflow {
+.truncate-overflow {
 	--lh: 1.4rem;
 	line-height: var(--lh);
 	--max-lines: 10;
@@ -134,4 +109,3 @@ export default {};
 	background: white;
 }
 </style>
->>>>>>> 624b40fe8ea20024b0063c17461fb7613336477b
