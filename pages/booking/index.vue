@@ -72,7 +72,6 @@
 							<v-btn color="secondary">
 								<nuxt-link :to="'/booking/'+index" class="accent--text">Read more</nuxt-link>
 							</v-btn>
-							<v-btn color="success">Read Reviews</v-btn>
 						</v-card-actions>
 					</v-card>
 				</v-flex>

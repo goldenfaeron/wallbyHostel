@@ -5,7 +5,7 @@
 		<!-- {{$store.state.borshHotels}} -->
 		<v-container grid-list-lg>
 			<v-layout row wrap>
-				<v-flex xs12 sm6 md6 lg4 v-for="(item, index) in $store.state.borshAirbnb[0]" :key="index">
+				<v-flex xs12 sm6 md6 lg4 v-for="(item, index) in $store.state.borshAirbnb[0].slice(0,24)" :key="index">
 					<v-card style="height: 100%;">
 						<v-card-title primary-title>
 							<v-layout align-content-space-between justify-space-between>
