@@ -24,7 +24,11 @@
 								<p>{{data.bathroomLabel}}</p>
 							</v-flex>
 						</v-layout>
-						<br />
+				
+						<v-layout justify-space-around="">
+						<v-btn v-if="this.imageHeight" color="success" @click="$vuetify.goTo('#descr')">Go to description</v-btn>
+						</v-layout>
+						<br>
 						<v-divider></v-divider>
 						<br />
 						<span v-for="(item, index) in data.highlights" :key="index">
@@ -100,7 +104,12 @@
 						<br />
 						<p class="font-weight-medium">Reviews</p>
 						<v-layout row justify-space-between>
-							<v-flex lg5 xs12 v-for="(item, index) in data.reviewDetailsInterface.reviewSummary" :key="index">
+							<v-flex
+								lg5
+								xs12
+								v-for="(item, index) in data.reviewDetailsInterface.reviewSummary"
+								:key="index"
+							>
 								<p>{{item.label}}</p>
 								<v-progress-linear :value="item.percentage*100"></v-progress-linear>
 							</v-flex>
@@ -120,12 +129,12 @@
 								<p>{{item.comments}}</p>
 							</v-flex>
 						</v-layout>
-						<br>
-						<br>
+						<br />
+						<br />
 					</v-flex>
-					
+
 					<v-flex lg5>
-						<p class="display-1 bold font-weight-bold">Description</p>
+						<p id="descr" class="display-1 bold font-weight-bold">Description</p>
 						<br />
 						<pre style="white-space: pre-wrap;">{{data.sectionedDescription.description}}</pre>
 					</v-flex>
@@ -146,6 +155,17 @@ export default {
 	filters: {
 		truncate(string, value) {
 			return (string || "").substring(0, value);
+		}
+	},
+	computed: {
+		imageHeight() {
+			switch (this.$vuetify.breakpoint.name) {
+				case "xs":
+					return true;
+				case "sm":
+					return true;
+				
+			}
 		}
 	}
 };
