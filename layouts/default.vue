@@ -1,10 +1,11 @@
 <template>
-	<v-app dark>
+	<v-app>
 		<v-navigation-drawer v-model="drawer" :mini-variant="miniVariant" :clipped="clipped" fixed app>
 			<v-list>
 				<v-list-item v-for="(item, i) in items" :key="i" :to="item.to" router exact>
 					<v-list-item-action>
-						<v-icon>{{ item.icon }}</v-icon>
+						<v-icon v-if="item.icon">{{ item.icon }}</v-icon>
+						<v-img height="32" width="24" v-else :src="item.img"></v-img>
 					</v-list-item-action>
 					<v-list-item-content>
 						<v-list-item-title v-text="item.title" />
@@ -42,15 +43,6 @@
 			<!-- </v-container> -->
 		</v-content>
 		<v-navigation-drawer width="500" v-model="rightDrawer" :right="right" temporary fixed>
-			<v-list @click.native="rightDrawer = !rightDrawer">
-				<v-list-item>
-					<v-list-item-action>
-						<v-icon>mdi-close</v-icon>
-					</v-list-item-action>
-					<v-list-item-title>Klikoni për t'u mbyllur</v-list-item-title>
-				</v-list-item>
-			</v-list>
-
 			<DrawerAnnouncement></DrawerAnnouncement>
 		</v-navigation-drawer>
 		<v-footer :fixed="fixed" app>
@@ -95,15 +87,11 @@ export default {
 					to: "/instagram"
 				},
 				{
-					icon: "mdi-heart-circle",
-					title: this.$store.state.city + "Bunker camping",
-					to: "/bunkers"
+					icon:'',
+					img:'/img/airbnbLogo.png',
+					title: "Airbnb",
+					to: "/airbnb"
 				},
-				{
-					icon: "mdi-heart-circle",
-					title: this.$store.state.name + "Concept",
-					to: "/concept"
-				}
 			],
 			miniVariant: false,
 			right: true,
@@ -113,4 +101,5 @@ export default {
 		};
 	}
 };
+
 </script>
