@@ -16,6 +16,7 @@
     "nuxt-jsonld": "^1.4.5"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
     "@nuxtjs/vuetify": "^1.0.0"
   }
 }

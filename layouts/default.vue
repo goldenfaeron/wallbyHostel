@@ -1,10 +1,11 @@
 <template>
-	<v-app dark>
+	<v-app>
 		<v-navigation-drawer v-model="drawer" :mini-variant="miniVariant" :clipped="clipped" fixed app>
 			<v-list>
 				<v-list-item v-for="(item, i) in items" :key="i" :to="item.to" router exact>
 					<v-list-item-action>
-						<v-icon>{{ item.icon }}</v-icon>
+						<v-icon v-if="item.icon">{{ item.icon }}</v-icon>
+						<v-img height="32" width="24" v-else :src="item.img"></v-img>
 					</v-list-item-action>
 					<v-list-item-content>
 						<v-list-item-title v-text="item.title" />
@@ -84,6 +85,18 @@ export default {
 					icon: "mdi-instagram",
 					title: this.$store.state.city + " on Instagram",
 					to: "/instagram"
+				},
+
+				{
+					icon: "",
+					img: "/img/airbnbLogo.png",
+					title: "Airbnb",
+					to: "/airbnb"
+				},
+				{
+					icon: "mdi-account-box",
+					title: this.$store.state.name + " Team",
+					to: "/member"
 				}
 			],
 			miniVariant: false,

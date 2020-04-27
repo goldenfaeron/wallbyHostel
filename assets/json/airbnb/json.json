@@ -1,0 +1,3499 @@
+[
+    {
+        "url": "https://api.airbnb.com/v2/pdp_listing_details/27457175?_format=for_native",
+        "name": "OniRana Cosy Apartment 5",
+        "stars": 5,
+        "numberOfGuests": 4,
+        "address": "Borsh, Albania",
+        "roomType": "Entire apartment",
+        "location": {
+            "lat": 40.05553,
+            "lng": 19.86608
+        },
+        "reviews": [
+            {
+                "author": {
+                    "firstName": "Corrie",
+                    "hasProfilePic": true,
+                    "id": 44010658,
+                    "pictureUrl": "https://a0.muscache.com/im/users/44010658/profile_pic/1442073207/original.jpg?aki_policy=profile_x_medium",
+                    "smartName": "Corrie",
+                    "thumbnailUrl": "https://a0.muscache.com/im/users/44010658/profile_pic/1442073207/original.jpg?aki_policy=profile_small"
+                },
+                "authorId": 44010658,
+                "canBeEdited": false,
+                "comments": "We had a great stay here! The apartment was beautiful and clean, just as described. Fully stocked kitchen and towels provided. They also gave us some salt lol and we bbq in the outdoor oven. The garden is beautiful and very well taken care of! Hosts were very welcoming and accommodating!",
+                "createdAt": "2019-06-16T14:57:53Z",
+                "id": 470638477,
+                "idStr": "470638477",
+                "listingId": 27457175,
+                "recipientId": 200840426,
+                "collectionTag": null,
+                "listing": {
+                    "id": 27457175,
+                    "name": "OniRana Cosy Apartment 5"
+                },
+                "rating": 5,
+                "recipient": {
+                    "firstName": "Joana",
+                    "hasProfilePic": true,
+                    "id": 200840426,
+                    "pictureUrl": "https://a0.muscache.com/im/pictures/user/20d3006e-e1ce-4530-a17b-2248a82c5791.jpg?aki_policy=profile_x_medium",
+                    "smartName": "Joana",
+                    "thumbnailUrl": "https://a0.muscache.com/im/pictures/user/20d3006e-e1ce-4530-a17b-2248a82c5791.jpg?aki_policy=profile_small"
+                },
+                "response": "Dear Corrie thank you so much! It was a pleasure for us. All the best!",
+                "role": "guest",
+                "language": "en",
+                "userFlag": null
+            },
+            {
+                "author": {
+                    "firstName": "Samuel",
+                    "hasProfilePic": true,
+                    "id": 94086575,
+                    "pictureUrl": "https://a0.muscache.com/im/pictures/user/cdb9dbf3-c6c1-4b60-8464-768e7ad1e853.jpg?aki_policy=profile_x_medium",
+                    "smartName": "Samuel",
+                    "thumbnailUrl": "https://a0.muscache.com/im/pictures/user/cdb9dbf3-c6c1-4b60-8464-768e7ad1e853.jpg?aki_policy=profile_small"
+                },
+                "authorId": 94086575,
+                "canBeEdited": false,
+                "comments": "If you’re coming to Borsh, stop by OniRana apartments!",
+                "createdAt": "2019-04-27T11:30:35Z",
+                "id": 443973892,
+                "idStr": "443973892",
+                "listingId": 27457175,
+                "recipientId": 200840426,
+                "collectionTag": null,
+                "listing": {
+                    "id": 27457175,
+                    "name": "OniRana Cosy Apartment 5"
+                },
+                "rating": 5,
+                "recipient": {
+                    "firstName": "Joana",
+                    "hasProfilePic": true,
+                    "id": 200840426,
+                    "pictureUrl": "https://a0.muscache.com/im/pictures/user/20d3006e-e1ce-4530-a17b-2248a82c5791.jpg?aki_policy=profile_x_medium",
+                    "smartName": "Joana",
+                    "thumbnailUrl": "https://a0.muscache.com/im/pictures/user/20d3006e-e1ce-4530-a17b-2248a82c5791.jpg?aki_policy=profile_small"
+                },
+                "response": "",
+                "role": "guest",
+                "language": "en",
+                "userFlag": null
+            },
+            {
+                "author": {
+                    "firstName": "David",
+                    "hasProfilePic": true,
+                    "id": 52849489,
+                    "pictureUrl": "https://a0.muscache.com/im/pictures/user/4ba67def-0697-4896-a64f-87203b28ada7.jpg?aki_policy=profile_x_medium",
+                    "smartName": "David",
+                    "thumbnailUrl": "https://a0.muscache.com/im/pictures/user/4ba67def-0697-4896-a64f-87203b28ada7.jpg?aki_policy=profile_small"
+                },
+                "authorId": 52849489,
+                "canBeEdited": false,
+                "comments": "The place has a great view, is quiet and located around 5 minutes from the beach. We were there in July and the beach wasn’t too full. We really enjoyed staying there. Would recommend it!",
+                "createdAt": "2019-07-19T12:50:15Z",
+                "id": 490786199,
+                "idStr": "490786199",
+                "listingId": 27457175,
+                "recipientId": 200840426,
+                "collectionTag": null,
+                "listing": {
+                    "id": 27457175,
+                    "name": "OniRana Cosy Apartment 5"
+                },
+                "rating": 5,
+                "recipient": {
+                    "firstName": "Joana",
+                    "hasProfilePic": true,
+                    "id": 200840426,
+                    "pictureUrl": "https://a0.muscache.com/im/pictures/user/20d3006e-e1ce-4530-a17b-2248a82c5791.jpg?aki_policy=profile_x_medium",
+                    "smartName": "Joana",
+                    "thumbnailUrl": "https://a0.muscache.com/im/pictures/user/20d3006e-e1ce-4530-a17b-2248a82c5791.jpg?aki_policy=profile_small"
+                },
+                "response": "",
+                "role": "guest",
+                "language": "en",
+                "userFlag": null
+            },
+            {
+                "author": {
+                    "firstName": "Ornela",
+                    "hasProfilePic": true,
+                    "id": 236251067,
+                    "pictureUrl": "https://a0.muscache.com/im/pictures/user/f661eeef-3c14-4d0e-8d4a-557c1ecf4ec0.jpg?aki_policy=profile_x_medium",
+                    "smartName": "Ornela",
+                    "thumbnailUrl": "https://a0.muscache.com/im/pictures/user/f661eeef-3c14-4d0e-8d4a-557c1ecf4ec0.jpg?aki_policy=profile_small"
+                },
+                "authorId": 236251067,
+                "canBeEdited": false,
+                "comments": "The place is located just 1km away from the center. They have parking spots and a very comfortable pillows.\nThe garden and the view were amazing. \nOnly thing we wanted to add was that there was no shampoo or soap in the bathroom. (Maybe the guys forgot, and we hadn't time to ask for that) \nOverall it was great. Great value :) \nWould go back there",
+                "createdAt": "2019-04-29T12:30:38Z",
+                "id": 445391326,
+                "idStr": "445391326",
+                "listingId": 27457175,
+                "recipientId": 200840426,
+                "collectionTag": null,
+                "listing": {
+                    "id": 27457175,
+                    "name": "OniRana Cosy Apartment 5"
+                },
+                "rating": 4,
+                "recipient": {
+                    "firstName": "Joana",
+                    "hasProfilePic": true,
+                    "id": 200840426,
+                    "pictureUrl": "https://a0.muscache.com/im/pictures/user/20d3006e-e1ce-4530-a17b-2248a82c5791.jpg?aki_policy=profile_x_medium",
+                    "smartName": "Joana",
+                    "thumbnailUrl": "https://a0.muscache.com/im/pictures/user/20d3006e-e1ce-4530-a17b-2248a82c5791.jpg?aki_policy=profile_small"
+                },
+                "response": "Thank you for your good words Ornela. It was not a problem for us to give you shampoo, simply you did not let us know even though I informed you that for whatever you needed I would help you. However thank you again, best regards!",
+                "role": "guest",
+                "language": "en",
+                "userFlag": null
+            },
+            {
+                "author": {
+                    "firstName": "Charley",
+                    "hasProfilePic": true,
+                    "id": 59356188,
+                    "pictureUrl": "https://a0.muscache.com/im/pictures/user/d1c3f6eb-0b9a-49ae-8be2-81550b1f15e3.jpg?aki_policy=profile_x_medium",
+                    "smartName": "Charley",
+                    "thumbnailUrl": "https://a0.muscache.com/im/pictures/user/d1c3f6eb-0b9a-49ae-8be2-81550b1f15e3.jpg?aki_policy=profile_small"
+                },
+                "authorId": 59356188,
+                "canBeEdited": false,
+                "comments": "We had a very pleasant stay here. Would definitely recommend this place! Joana and her family are kind and helpfull. In comparison to most places at the Rivera, Borsch is a more quite place with beautiful beaches in the neighboirhood.  The appartment has a beautiful view from the balcony. Also, the appartment is very clean and there is everything you need for a nice stay! ",
+                "createdAt": "2018-08-19T13:35:49Z",
+                "id": 310214373,
+                "idStr": "310214373",
+                "listingId": 27457175,
+                "recipientId": 200840426,
+                "collectionTag": null,
+                "listing": {
+                    "id": 27457175,
+                    "name": "OniRana Cosy Apartment 5"
+                },
+                "rating": 5,
+                "recipient": {
+                    "firstName": "Joana",
+                    "hasProfilePic": true,
+                    "id": 200840426,
+                    "pictureUrl": "https://a0.muscache.com/im/pictures/user/20d3006e-e1ce-4530-a17b-2248a82c5791.jpg?aki_policy=profile_x_medium",
+                    "smartName": "Joana",
+                    "thumbnailUrl": "https://a0.muscache.com/im/pictures/user/20d3006e-e1ce-4530-a17b-2248a82c5791.jpg?aki_policy=profile_small"
+                },
+                "response": "Dear Charley thank you very much for your nice words! :)\nIt gives us a great pleasure to know that you enjoyed your stay :)",
+                "role": "guest",
+                "language": "en",
+                "userFlag": null
+            },
+            {
+                "author": {
+                    "firstName": "Михайло",
+                    "hasProfilePic": true,
+                    "id": 285694099,
+                    "pictureUrl": "https://a0.muscache.com/im/pictures/user/449db1c3-15fb-487a-87b6-39662f5ee4f3.jpg?aki_policy=profile_x_medium",
+                    "smartName": "Михайло",
+                    "thumbnailUrl": "https://a0.muscache.com/im/pictures/user/449db1c3-15fb-487a-87b6-39662f5ee4f3.jpg?aki_policy=profile_small"
+                },
+                "authorId": 285694099,
+                "canBeEdited": false,
+                "comments": "Ви отримаєте: море, горе, чисте повітря, прекрасних господарів, дружню атмосферу, прекрасний вид......",
+                "createdAt": "2019-09-21T13:55:33Z",
+                "id": 533271981,
+                "idStr": "533271981",
+                "listingId": 27457175,
+                "recipientId": 200840426,
+                "collectionTag": null,
+                "listing": {
+                    "id": 27457175,
+                    "name": "OniRana Cosy Apartment 5"
+                },
+                "rating": 5,
+                "recipient": {
+                    "firstName": "Joana",
+                    "hasProfilePic": true,
+                    "id": 200840426,
+                    "pictureUrl": "https://a0.muscache.com/im/pictures/user/20d3006e-e1ce-4530-a17b-2248a82c5791.jpg?aki_policy=profile_x_medium",
+                    "smartName": "Joana",
+                    "thumbnailUrl": "https://a0.muscache.com/im/pictures/user/20d3006e-e1ce-4530-a17b-2248a82c5791.jpg?aki_policy=profile_small"
+                },
+                "response": "",
+                "role": "guest",
+                "language": "uk",
+                "userFlag": null
+            },
+            {
+                "author": {
+                    "firstName": "Галина",
+                    "hasProfilePic": true,
+                    "id": 174952129,
+                    "pictureUrl": "https://a0.muscache.com/im/pictures/user/12ae9161-0911-428b-a264-79942cd16ad3.jpg?aki_policy=profile_x_medium",
+                    "smartName": "Галина",
+                    "thumbnailUrl": "https://a0.muscache.com/im/pictures/user/12ae9161-0911-428b-a264-79942cd16ad3.jpg?aki_policy=profile_small"
+                },
+                "authorId": 174952129,
+                "canBeEdited": false,
+                "comments": "Комфортабельные апартаменты в очень красивом тихом месте посёлка. У отеля большая территория, где удобно детям играть или гостям общаться вечером. Гозяева - очень милая гостеприимная семья, всегда готовы к компромиссу. В апартаментах было все необходимое для комфортного проживания! ",
+                "createdAt": "2018-08-26T14:57:10Z",
+                "id": 314179034,
+                "idStr": "314179034",
+                "listingId": 27457175,
+                "recipientId": 200840426,
+                "collectionTag": null,
+                "listing": {
+                    "id": 27457175,
+                    "name": "OniRana Cosy Apartment 5"
+                },
+                "rating": 5,
+                "recipient": {
+                    "firstName": "Joana",
+                    "hasProfilePic": true,
+                    "id": 200840426,
+                    "pictureUrl": "https://a0.muscache.com/im/pictures/user/20d3006e-e1ce-4530-a17b-2248a82c5791.jpg?aki_policy=profile_x_medium",
+                    "smartName": "Joana",
+                    "thumbnailUrl": "https://a0.muscache.com/im/pictures/user/20d3006e-e1ce-4530-a17b-2248a82c5791.jpg?aki_policy=profile_small"
+                },
+                "response": "Thank you very much for your good words Halyna! \nIt gives us a great pleasure to know that you enjoyed your stay at our place!\nBest regards!",
+                "role": "guest",
+                "language": "ru",
+                "userFlag": null
+            }
+        ],
+        "listingAmenities": [
+            {
+                "description": "",
+                "id": 5,
+                "isPresent": true,
+                "name": "Air conditioning"
+            },
+            {
+                "description": "Towels, bed sheets, soap, and toilet paper",
+                "id": 40,
+                "isPresent": true,
+                "name": "Essentials"
+            },
+            {
+                "description": "Central heating or a heater in the listing",
+                "id": 30,
+                "isPresent": true,
+                "name": "Heating"
+            },
+            {
+                "description": "",
+                "id": 77,
+                "isPresent": true,
+                "name": "Hot water"
+            },
+            {
+                "description": "",
+                "id": 46,
+                "isPresent": true,
+                "name": "Iron"
+            },
+            {
+                "description": "",
+                "id": 1,
+                "isPresent": true,
+                "name": "TV"
+            },
+            {
+                "description": "In the building, free or for a fee",
+                "id": 33,
+                "isPresent": true,
+                "name": "Washer"
+            },
+            {
+                "description": "Continuous access in the listing",
+                "id": 4,
+                "isPresent": true,
+                "name": "Wifi"
+            },
+            {
+                "description": "",
+                "id": 9,
+                "isPresent": true,
+                "name": "Free parking on premises"
+            },
+            {
+                "description": "",
+                "id": 90,
+                "isPresent": true,
+                "name": "Coffee maker"
+            },
+            {
+                "description": "",
+                "id": 93,
+                "isPresent": true,
+                "name": "Dishes and silverware"
+            },
+            {
+                "description": "Space where guests can cook their own meals",
+                "id": 8,
+                "isPresent": true,
+                "name": "Kitchen"
+            },
+            {
+                "description": "",
+                "id": 91,
+                "isPresent": true,
+                "name": "Refrigerator"
+            },
+            {
+                "description": "",
+                "id": 96,
+                "isPresent": true,
+                "name": "Stove"
+            },
+            {
+                "description": "",
+                "id": 129,
+                "isPresent": true,
+                "name": "Host greets you"
+            },
+            {
+                "description": "",
+                "id": 57,
+                "isPresent": false,
+                "name": "Private entrance"
+            },
+            {
+                "description": "For guests' convenience when they have early arrival or late departure",
+                "id": 103,
+                "isPresent": true,
+                "name": "Luggage dropoff allowed"
+            },
+            {
+                "description": "Allow stay for 28 days or more",
+                "id": 104,
+                "isPresent": true,
+                "name": "Long term stays allowed"
+            },
+            {
+                "description": "",
+                "id": 85,
+                "isPresent": true,
+                "name": "Bed linens"
+            },
+            {
+                "description": "",
+                "id": 86,
+                "isPresent": true,
+                "name": "Extra pillows and blankets"
+            },
+            {
+                "description": "",
+                "id": 45,
+                "isPresent": true,
+                "name": "Hair dryer"
+            },
+            {
+                "description": "",
+                "id": 44,
+                "isPresent": true,
+                "name": "Hangers"
+            },
+            {
+                "description": "",
+                "id": 41,
+                "isPresent": false,
+                "name": "Shampoo"
+            },
+            {
+                "description": "",
+                "id": 99,
+                "isPresent": true,
+                "name": "BBQ grill"
+            },
+            {
+                "description": "",
+                "id": 100,
+                "isPresent": true,
+                "name": "Patio or balcony"
+            },
+            {
+                "description": "",
+                "id": 101,
+                "isPresent": true,
+                "name": "Garden or backyard"
+            },
+            {
+                "description": "The host hasn't reported a carbon monoxide detector on the property.",
+                "id": 36,
+                "isPresent": false,
+                "name": "Carbon monoxide alarm"
+            },
+            {
+                "description": "The host hasn't reported a smoke detector on the property.",
+                "id": 35,
+                "isPresent": false,
+                "name": "Smoke alarm"
+            }
+        ],
+        "rootAmenitySections": [
+            {
+                "id": "available_amenities",
+                "title": "Amenities",
+                "subtitle": "",
+                "amenityIds": [
+                    5,
+                    40,
+                    30,
+                    77
+                ]
+            },
+            {
+                "id": "unavailable_safety_amenities",
+                "title": "Amenities",
+                "subtitle": "The host hasn't reported smoke or carbon monoxide detectors on the property.",
+                "amenityIds": [
+                    35,
+                    36
+                ]
+            }
+        ],
+        "seeAllAmenitySections": [
+            {
+                "id": "pdp_basic",
+                "title": "Basic",
+                "subtitle": "",
+                "amenityIds": [
+                    5,
+                    40,
+                    30,
+                    77,
+                    46,
+                    1,
+                    33,
+                    4
+                ]
+            },
+            {
+                "id": "pdp_facility",
+                "title": "Facilities",
+                "subtitle": "",
+                "amenityIds": [
+                    9
+                ]
+            },
+            {
+                "id": "pdp_dining",
+                "title": "Dining",
+                "subtitle": "",
+                "amenityIds": [
+                    90,
+                    93,
+                    8,
+                    91,
+                    96
+                ]
+            },
+            {
+                "id": "pdp_guest_access",
+                "title": "Guest access",
+                "subtitle": "",
+                "amenityIds": [
+                    129
+                ]
+            },
+            {
+                "id": "pdp_logistics",
+                "title": "Logistics",
+                "subtitle": "",
+                "amenityIds": [
+                    103,
+                    104
+                ]
+            },
+            {
+                "id": "pdp_bed_bath",
+                "title": "Bed and bath",
+                "subtitle": "",
+                "amenityIds": [
+                    85,
+                    86,
+                    45,
+                    44
+                ]
+            },
+            {
+                "id": "pdp_outdoor",
+                "title": "Outdoor",
+                "subtitle": "",
+                "amenityIds": [
+                    99,
+                    100,
+                    101
+                ]
+            },
+            {
+                "id": "pdp_unavailable",
+                "title": "Not included",
+                "subtitle": "",
+                "amenityIds": [
+                    57,
+                    41,
+                    36,
+                    35
+                ]
+            }
+        ],
+        "bathroomLabel": "1 bath",
+        "bedLabel": "2 beds",
+        "bedroomLabel": "1 bedroom",
+        "hasHouseRules": true,
+        "id": 27457175,
+        "isNewListing": false,
+        "listingRooms": [
+            {
+                "beds": [
+                    {
+                        "id": "24238214/sofa_bed",
+                        "quantity": 1,
+                        "type": "sofa_bed"
+                    }
+                ],
+                "id": 24238214,
+                "roomNumber": 0
+            },
+            {
+                "beds": [
+                    {
+                        "id": "24238213/king_bed",
+                        "quantity": 1,
+                        "type": "king_bed"
+                    }
+                ],
+                "id": 24238213,
+                "roomNumber": 1
+            }
+        ],
+        "p3SummaryAddress": "Borsh, Albania",
+        "photos": [
+            {
+                "caption": "",
+                "id": 552042445,
+                "large": "https://a0.muscache.com/im/pictures/d60a2eea-2248-4376-a501-9d432aa30316.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAECAIAAADJUWIXAAAAS0lEQVQIHQFAAL//AW2v8/b6Afv6AP38/gD8/QFacn8lQ2v1+gD39//99/sBFhwTZ2lvHxcS/gcP/vz+AbOupA4G/uDo4/T8+v378qxJJkEWoLSSAAAAAElFTkSuQmCC",
+                "scrimColor": "#121A0F",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.3333333333333333
+            },
+            {
+                "caption": "",
+                "id": 552032167,
+                "large": "https://a0.muscache.com/im/pictures/074f547e-ee82-4aaf-b54c-b17214503567.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAECAIAAADJUWIXAAAAS0lEQVQIHQFAAL//Ac7i/BcRAxMKAAL9++bj5AFXU0uIjJMcHB6EgIXJx8oBPTkoExgc7/D3AwQa9vb9ATA0PgEDAAUEFfz9//Lw6mEjG8KQFYJqAAAAAElFTkSuQmCC",
+                "scrimColor": "#0E100D",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.3333333333333333
+            },
+            {
+                "caption": "",
+                "id": 560935294,
+                "large": "https://a0.muscache.com/im/pictures/b0fcc384-e849-4128-bc96-b93e75491955.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAECAIAAADJUWIXAAAAS0lEQVQIHQFAAL//AaedlR0iJub3Bf8A/Mq/tQGDb14GFB4IGy/29PPk3NgBg3xgCQ8I6fP77+3+7+z4AYGEQeLk+gMBBxMPDQ4HDvQ4HhPmHT3aAAAAAElFTkSuQmCC",
+                "scrimColor": "#393B30",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.3333333333333333
+            },
+            {
+                "caption": "",
+                "id": 552032234,
+                "large": "https://a0.muscache.com/im/pictures/66ea2b0e-8d96-481b-8a7c-2d77e811192b.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAECAIAAADJUWIXAAAAS0lEQVQIHQFAAL//Ac7T1hIJBt7YyeXi2y9AWQHX2tvJubw1OSq/sZ77BxUB087DCgkRBAgKp5B07vgCAayjjhATIvv+BdXIs9zf4RJWIErdb+7VAAAAAElFTkSuQmCC",
+                "scrimColor": "#503D2C",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.3333333333333333
+            },
+            {
+                "caption": "",
+                "id": 552042273,
+                "large": "https://a0.muscache.com/im/pictures/3b763ba8-2a8f-4ce2-a0f1-54206b5fe3e2.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAECAIAAADJUWIXAAAAS0lEQVQIHQFAAL//AXSa0PoDEff3/Pj4/Fcw9AEcHx1HXIMSGSP3+QVXPAoBVVRTQj07DAT/8fX0ODc2AY6DgBoYFeHEsR4lJjAvJ6bBGgGTvF8rAAAAAElFTkSuQmCC",
+                "scrimColor": "#0F110E",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.3333333333333333
+            },
+            {
+                "caption": "",
+                "id": 552042124,
+                "large": "https://a0.muscache.com/im/pictures/2505b723-3fd2-4ee9-9937-1b2fa147495e.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAECAIAAADJUWIXAAAAS0lEQVQIHQFAAL//AVBfaRoVC///AkZWdO7q6wGim5cBAQAXEQwB/fvx/gcBr5J9BvzzDxEQBAkR9AUSAZ54XRMgLRUcIS0uKs7Y4RNDF2CAH9lbAAAAAElFTkSuQmCC",
+                "scrimColor": "#292A25",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.3333333333333333
+            },
+            {
+                "caption": "",
+                "id": 552041585,
+                "large": "https://a0.muscache.com/im/pictures/0ac5e17f-b201-4b86-8fa5-6fce0756cbe6.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAECAIAAADJUWIXAAAASUlEQVQIHWP0dzT8/+9fcpADOzv79z//GF0stVWVlHT0rTn4RL69v8dopqusraNnZ2OnoqXPy8fFaKKtoG1gHuXnKq+h/5uRAwCt+xIt0QyXtQAAAABJRU5ErkJggg==",
+                "scrimColor": "#0F0B08",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.3333333333333333
+            },
+            {
+                "caption": "",
+                "id": 552042012,
+                "large": "https://a0.muscache.com/im/pictures/32c80fa3-60bc-49ea-a943-8d7f30470204.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAECAIAAADJUWIXAAAAS0lEQVQIHQFAAL//ARgOCzg8LfEMDtbE0yYbEQEYFhdbVkwyNDepsrggFAEBOzk6dGteNDk+mZ2c0cjDAYt8aQgSJGlubbW1tce/r2gGFtJfODN8AAAAAElFTkSuQmCC",
+                "scrimColor": "#0C0A0B",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.3333333333333333
+            },
+            {
+                "caption": "",
+                "id": 552041742,
+                "large": "https://a0.muscache.com/im/pictures/b17c4d21-f579-4b0e-abd7-18c8acd51764.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAECAIAAADJUWIXAAAAS0lEQVQIHQFAAL//AX11YzMrIB0eJfr+Afb28gGbjXj+/PwSGCH7/Pzv8PABrpiB/gMO5uvwAAcMw8bHAdvUzcm/vunk48PQ1+Tl6EQ4JjnMutKqAAAAAElFTkSuQmCC",
+                "scrimColor": "#1B1716",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.3333333333333333
+            },
+            {
+                "caption": "",
+                "id": 552041856,
+                "large": "https://a0.muscache.com/im/pictures/7d6606b4-93bf-4880-8203-bfbd4601b592.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAECAIAAADJUWIXAAAAS0lEQVQIHQFAAL//Aero3QECCA0NDQIEBuDh3gHKyb7a2uIoIhbt8fcDBwwBmpSE3NnlJCEZ9/wAEx0mAXltXPz/DBMVFfP3/BkTBXguG1MsQ7ddAAAAAElFTkSuQmCC",
+                "scrimColor": "#292524",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.3333333333333333
+            },
+            {
+                "caption": "",
+                "id": 552042572,
+                "large": "https://a0.muscache.com/im/pictures/7404e7bd-d2bf-4de8-b523-f7ab1b773043.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAECAIAAADJUWIXAAAAS0lEQVQIHQFAAL//AaWafwMGDPnz7AkKEgIA+AGroooHCQwHCRAwNUTXzroBkHdkBx0lFRINExYd+u7fATw6MjE/QQgaGiD/9yQJ8ZzXFKigjqgUAAAAAElFTkSuQmCC",
+                "scrimColor": "#2A0F08",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.3333333333333333
+            },
+            {
+                "caption": "",
+                "id": 552042737,
+                "large": "https://a0.muscache.com/im/pictures/292968a9-8ae5-4fe6-a233-60dd47ad8df6.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAECAIAAADJUWIXAAAAS0lEQVQIHQFAAL//AZhqTyFVbBUTFauHfDIgEAGSYEQbTFwaFhazhn0pGwwBlWJH7xwtIyMk1J6SJRwNAZtpTsb6FzErIuawpSYZCWdYFCaVNiKZAAAAAElFTkSuQmCC",
+                "scrimColor": "#092660",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.3333333333333333
+            },
+            {
+                "caption": "",
+                "id": 560937092,
+                "large": "https://a0.muscache.com/im/pictures/6a11f113-12aa-4344-8418-2be1e3f9f2ff.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAECAIAAADJUWIXAAAAS0lEQVQIHQFAAL//AWudyQ8B9a2OdgYNEAkGBAF1e5gzJhkWCfzf4Nfj7ewBJR4eBAT8CwcK6O7w//34AQ4NCwEA/wAAAP8AAAIAAgHrFo3DILBpAAAAAElFTkSuQmCC",
+                "scrimColor": "#0F0E0A",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.3333333333333333
+            },
+            {
+                "caption": "",
+                "id": 560937754,
+                "large": "https://a0.muscache.com/im/pictures/45cdc7fe-ceea-4b10-b9bb-3f69221e9fed.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAECAIAAADJUWIXAAAAS0lEQVQIHQFAAL//Aa2npuvx7Jqfmuvr5/n5/QF/dXbj7vPq6ugCAPwICgwBe3yDGRkbCAYA7Ovq5+fmAWxscBUVFQoKCAMDAv38+7KTIDX637gsAAAAAElFTkSuQmCC",
+                "scrimColor": "#0F100A",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.3333333333333333
+            }
+        ],
+        "primaryHost": {
+            "about": "",
+            "badges": [
+                {
+                    "count": 14,
+                    "id": "reviews",
+                    "label": "14 Reviews",
+                    "link": "/users/show/200840426#reviews"
+                }
+            ],
+            "firstName": "Joana",
+            "id": 200840426,
+            "isSuperhost": true,
+            "memberSinceFullStr": "Joined in July 2018",
+            "name": "Joana",
+            "languages": [
+                "English",
+                "Ελληνικά"
+            ],
+            "pictureUrl": "https://a0.muscache.com/im/pictures/user/20d3006e-e1ce-4530-a17b-2248a82c5791.jpg?aki_policy=profile_x_medium",
+            "responseRateWithoutNa": "100%",
+            "responseTimeWithoutNa": "within an hour",
+            "hasInclusionBadge": false,
+            "pictureLargeUrl": "https://a0.muscache.com/im/pictures/user/20d3006e-e1ce-4530-a17b-2248a82c5791.jpg?aki_policy=profile_large",
+            "hostIntroTags": [
+                "14 reviews"
+            ]
+        },
+        "roomTypeCategory": "entire_home",
+        "sectionedDescription": {
+            "authorType": "human",
+            "description": "Hi!\n\nI'm Joana and my family and me offer several apartments for you to enjoy your holiday in.\n\nThe house is surrounded by olive trees and a wonderful big garden, which has a lot of flowers 🌻🌸🌼🥀🌺⚘🌷🍃. Next to it a relaxing area with tables and a grill, where you can spend your free time and enjoy the view\n\n• Apartment size - 40m2\n• Kitchen is fully equipped and with a fridge\n• Living area with sofa bed \n• Dining table with 4 chairs\n• Balcony with sea view \n• Bathroom with shower\n• Bedroom with double bed, wardrobe and a mirror\n• Towels and sheets included \n• Flat-screen TV\n\nIf you want an extra bed we can help you with a removable bed.\n\nFree Wi-Fi in all the rooms and outside. \n\nFree private secured parking is available. \n\nThe center is 700 m away where you can visit a local market, local restaurant or take a coffee.\n\nThe beach is just 5 minutes away by car, with enough parking space. Pristine beaches joined by little bars and restaurants. The beach of Borsh is relatively one of the untouched beaches of the Riviera.\n\nWe would love to welcome you here and come stay for the peace, fresh air, beautiful view and comfortable apartments!\n\n• The apartment has a private bedroom, private bathroom, living room and a balcony. The bedroom have a king bed. The living room has a sofa bed. ✅\n\n• The apartment is equipped with a flat-screen TV, a fully equipped kitchen with a fridge, free Wi-Fi and Air Conditioning. ✅\n\n• There is a barbeque in the garden to grill whatever you want. ✅\n\n• Free private parking is guaranteed. ✅\n\n• Washing machine is available ✅\n\nMy family and I are Albanian and we are from Borsh. My father builed the apartments himself! We are friendly open-minded people and love to open up our house to people from all over the world.\n\nYou can text or call me for everything that you need 😊\n\nWe hope to meet you soon!\n\nWe just have a few neighbours near. The surrounding is very quiet. There is a little bar just 100 meter away, where you can have nice coffee while enjoying the view.\n\nThe best option is to have your own private car.\n\n=> On September,October,April, May and June we offer breakfast, lunch and dinner with traditional food! ( with pay )",
+            "interaction": "My family and I are Albanian and we are from Borsh. My father builed the apartments himself! We are friendly open-minded people and love to open up our house to people from all over the world.\n\nYou can text or call me for everything that you need 😊\n\nWe hope to meet you soon!",
+            "locale": "en",
+            "localizedLanguageName": "English",
+            "name": "OniRana Cosy Apartment 5",
+            "neighborhoodOverview": "We just have a few neighbours near. The surrounding is very quiet. There is a little bar just 100 meter away, where you can have nice coffee while enjoying the view.",
+            "notes": "=> On September,October,April, May and June we offer breakfast, lunch and dinner with traditional food! ( with pay )",
+            "space": "• The apartment has a private bedroom, private bathroom, living room and a balcony. The bedroom have a king bed. The living room has a sofa bed. ✅\n\n• The apartment is equipped with a flat-screen TV, a fully equipped kitchen with a fridge, free Wi-Fi and Air Conditioning. ✅\n\n• There is a barbeque in the garden to grill whatever you want. ✅\n\n• Free private parking is guaranteed. ✅\n\n• Washing machine is available ✅",
+            "summary": "Hi!\n\nI'm Joana and my family and me offer several apartments for you to enjoy your holiday in.\n\nThe house is surrounded by olive trees and a wonderful big garden, which has a lot of flowers 🌻🌸🌼🥀🌺⚘🌷🍃. Next to it a relaxing area with tables and a grill, where you can spend your free time and enjoy the view\n\n• Apartment size - 40m2\n• Kitchen is fully equipped and with a fridge\n• Living area with sofa bed \n• Dining table with 4 chairs\n• Balcony with sea view \n• Bathroom with shower\n• Bedroom with double bed, wardrobe and a mirror\n• Towels and sheets included \n• Flat-screen TV\n\nIf you want an extra bed we can help you with a removable bed.\n\nFree Wi-Fi in all the rooms and outside. \n\nFree private secured parking is available. \n\nThe center is 700 m away where you can visit a local market, local restaurant or take a coffee.\n\nThe beach is just 5 minutes away by car, with enough parking space. Pristine beaches joined by little bars and restaurants. The beach of Borsh is relatively one of the untouched beaches of the Riviera.\n\nWe would love to welcome you here and come stay for the peace, fresh air, beautiful view and comfortable apartments!",
+            "transit": "The best option is to have your own private car."
+        },
+        "tierId": 0,
+        "guestControls": {
+            "allowsChildren": false,
+            "allowsEvents": false,
+            "allowsInfants": false,
+            "allowsPets": false,
+            "allowsSmoking": false,
+            "personCapacity": 4,
+            "structuredHouseRules": [
+                "No pets"
+            ],
+            "structuredHouseRulesWithTips": [
+                {
+                    "key": "are_pets_allowed_as_host",
+                    "text": "No pets",
+                    "airmojiKey": "house_rules_no_pets"
+                }
+            ],
+            "allowsNonChinaUsers": true
+        },
+        "hasSpecialOffer": false,
+        "maxNights": 1125,
+        "minNights": 1,
+        "priceDetails": [
+            {
+                "label": "Extra people",
+                "value": "No Charge",
+                "attributeType": "EXTRA_PEOPLE"
+            }
+        ],
+        "hasWeWorkLocation": false,
+        "isBusinessTravelReady": false,
+        "additionalHosts": [],
+        "isHostedBySuperhost": true,
+        "hometourRooms": [
+            {
+                "details": [],
+                "highlightsHometour": [
+                    "1 king bed"
+                ],
+                "highlightsPreview": [],
+                "isShared": true,
+                "id": 24238213,
+                "name": "",
+                "nameWithType": "Bedroom 1",
+                "photos": [],
+                "roomTypeId": 1,
+                "icons": [
+                    {
+                        "type": "king_bed",
+                        "url": ""
+                    }
+                ]
+            },
+            {
+                "details": [],
+                "highlightsHometour": [
+                    "1 sofa bed"
+                ],
+                "highlightsPreview": [],
+                "isShared": true,
+                "id": 24238214,
+                "name": "",
+                "nameWithType": "Common spaces",
+                "photos": [],
+                "roomTypeId": 7,
+                "icons": [
+                    {
+                        "type": "sofa_bed",
+                        "url": ""
+                    }
+                ]
+            }
+        ],
+        "hometourSections": [],
+        "descriptionLocale": "en",
+        "initialDescriptionAuthorType": "human",
+        "localizedCheckOutTime": "",
+        "city": "Borsh",
+        "country": "Albania",
+        "countryCode": "AL",
+        "hasHostGuidebook": false,
+        "hasLocalAttractions": false,
+        "neighborhoodCommunityTags": [],
+        "paidGrowthRemarketingListingIds": [
+            17509109
+        ],
+        "hasCommercialHostInfo": false,
+        "reviewDetailsInterface": {
+            "reviewCount": 7,
+            "reviewSummary": [
+                {
+                    "value": 10,
+                    "label": "Accuracy",
+                    "localizedRating": "5.0",
+                    "percentage": 1
+                },
+                {
+                    "value": 10,
+                    "label": "Communication",
+                    "localizedRating": "5.0",
+                    "percentage": 1
+                },
+                {
+                    "value": 10,
+                    "label": "Cleanliness",
+                    "localizedRating": "5.0",
+                    "percentage": 1
+                },
+                {
+                    "value": 10,
+                    "label": "Location",
+                    "localizedRating": "5.0",
+                    "percentage": 1
+                },
+                {
+                    "value": 10,
+                    "label": "Check-in",
+                    "localizedRating": "5.0",
+                    "percentage": 1
+                },
+                {
+                    "value": 10,
+                    "label": "Value",
+                    "localizedRating": "4.9",
+                    "percentage": 0.9720000000000001
+                }
+            ]
+        },
+        "reviewsOrder": "language_country",
+        "hostQuote": "",
+        "hostSignatureFont": {
+            "url": "https://a0.muscache.com/airbnb/static/temp-fonts/HandsomePro-Normal.otf"
+        },
+        "nearbyAirportDistanceDescriptions": [],
+        "propertyTypeInCity": "",
+        "renderTierId": 0,
+        "isHotel": false,
+        "showReviewTag": false,
+        "isRepresentativeInventory": false,
+        "localizedCity": "Borsh",
+        "highlights": [
+            {
+                "type": "LISTING_ENTIRE_HOME_PROPERTY_TYPE",
+                "message": "You’ll have the apartment to yourself.",
+                "headline": "Entire home",
+                "position": "0",
+                "icon": "accomodation_home"
+            },
+            {
+                "type": "LISTING_SPARKLING_CLEAN",
+                "message": "4 recent guests said this place was sparkling clean.",
+                "headline": "Sparkling clean",
+                "position": "1",
+                "icon": "core_cleaning"
+            },
+            {
+                "type": "LISTING_SUPER_HOST",
+                "message": "Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.",
+                "headline": "Joana is a Superhost",
+                "position": "2",
+                "icon": "core_superhost"
+            },
+            {
+                "type": "LISTING_LOCATION_REVIEW_RATING",
+                "message": "100% of recent guests gave the location a 5-star rating.",
+                "headline": "Great location",
+                "position": "3",
+                "icon": "core_map_pin"
+            }
+        ],
+        "highlightsImpressionId": "d525b4d3-c41a-4ee2-541c-6ebb5bd893b6",
+        "categorizedPreviewAmenities": [
+            {
+                "category": "Standard",
+                "amenities": "Air conditioning, Essentials, Heating, Hot water, Iron, and 12 more"
+            },
+            {
+                "category": "Other highlights",
+                "amenities": "Free parking on premises, Host greets you, Long term stays allowed, Extra pillows and blankets, BBQ grill, and 2 more"
+            }
+        ],
+        "pointOfInterests": [],
+        "chinaPointsOfInterestMatcha": {},
+        "pageViewType": "DEFAULT",
+        "previewTags": [],
+        "seeAllHometourSections": [],
+        "educationModules": {},
+        "enableHighlightsVoting": false,
+        "listingExpectations": [],
+        "localizedListingExpectations": [],
+        "heroModule": {
+            "categorizedPhotos": []
+        },
+        "reviewsModule": {
+            "localizedOverallRating": "4.86",
+            "appreciationTags": [
+                {
+                    "localizedText": "Sparkling clean",
+                    "localizedCountString": "4",
+                    "icon": "IconIndicatorTub"
+                },
+                {
+                    "localizedText": "Outstanding hospitality",
+                    "localizedCountString": "4",
+                    "icon": "IconIndicatorHeart"
+                },
+                {
+                    "localizedText": "Quick responses",
+                    "localizedCountString": "3",
+                    "icon": "IconIndicatorChatBubble"
+                }
+            ]
+        },
+        "availabilityModule": {},
+        "additionalHouseRules": "",
+        "sortedReviews": [],
+        "sections": [],
+        "metadata": {},
+        "p3ImpressionId": "d525b4d3-c41a-4ee2-541c-6ebb5bd893b6"
+    },
+    {
+        "url": "https://api.airbnb.com/v2/pdp_listing_details/33937843?_format=for_native",
+        "name": "Qeparo Pano Rooms 1",
+        "stars": 4.5,
+        "numberOfGuests": 3,
+        "address": "Qeparo, Albania",
+        "roomType": "Entire apartment",
+        "location": {
+            "lat": 40.05189,
+            "lng": 19.83089
+        },
+        "reviews": [
+            {
+                "author": {
+                    "firstName": "Xenia",
+                    "hasProfilePic": true,
+                    "id": 13356451,
+                    "pictureUrl": "https://a0.muscache.com/im/pictures/user/0cbe76dd-2d18-44aa-a51d-eb93c7ed6e7b.jpg?aki_policy=profile_x_medium",
+                    "smartName": "Xenia",
+                    "thumbnailUrl": "https://a0.muscache.com/im/pictures/user/0cbe76dd-2d18-44aa-a51d-eb93c7ed6e7b.jpg?aki_policy=profile_small"
+                },
+                "authorId": 13356451,
+                "canBeEdited": false,
+                "comments": "We had a lovely stay at Xristinas apartment. It’s a beautiful view and the esplanade of Qeparo in one of my favorite. Xristinas partents are unobstrusive and kind hosts. We were treated with something from the garden or kitchen every morning :) The only thing I would criticize was the smell of the apartment as it smells a bit musty.",
+                "createdAt": "2019-09-07T14:11:40Z",
+                "id": 525184803,
+                "idStr": "525184803",
+                "listingId": 33937843,
+                "recipientId": 89445594,
+                "collectionTag": null,
+                "listing": {
+                    "id": 33937843,
+                    "name": "Qeparo Pano Rooms 1"
+                },
+                "rating": 5,
+                "recipient": {
+                    "firstName": "Xristina",
+                    "hasProfilePic": true,
+                    "id": 89445594,
+                    "pictureUrl": "https://a0.muscache.com/im/pictures/user/0cf9e59d-6e6e-4a77-af2e-6eb535262e5f.jpg?aki_policy=profile_x_medium",
+                    "smartName": "Xristina",
+                    "thumbnailUrl": "https://a0.muscache.com/im/pictures/user/0cf9e59d-6e6e-4a77-af2e-6eb535262e5f.jpg?aki_policy=profile_small"
+                },
+                "response": "",
+                "role": "guest",
+                "language": "en",
+                "userFlag": null
+            },
+            {
+                "author": {
+                    "firstName": "Emanuele",
+                    "hasProfilePic": true,
+                    "id": 74971044,
+                    "pictureUrl": "https://a0.muscache.com/im/pictures/user/b2c925a8-0969-4097-bf93-a93d21055d08.jpg?aki_policy=profile_x_medium",
+                    "smartName": "Emanuele",
+                    "thumbnailUrl": "https://a0.muscache.com/im/pictures/user/b2c925a8-0969-4097-bf93-a93d21055d08.jpg?aki_policy=profile_small"
+                },
+                "authorId": 74971044,
+                "canBeEdited": false,
+                "comments": "When we arrived Christina’s parents were very kind.  I recommend pano room for those who want to relax in the village of Qeparo.",
+                "createdAt": "2019-08-24T13:12:49Z",
+                "id": 516355274,
+                "idStr": "516355274",
+                "listingId": 33937843,
+                "recipientId": 89445594,
+                "collectionTag": null,
+                "listing": {
+                    "id": 33937843,
+                    "name": "Qeparo Pano Rooms 1"
+                },
+                "rating": 5,
+                "recipient": {
+                    "firstName": "Xristina",
+                    "hasProfilePic": true,
+                    "id": 89445594,
+                    "pictureUrl": "https://a0.muscache.com/im/pictures/user/0cf9e59d-6e6e-4a77-af2e-6eb535262e5f.jpg?aki_policy=profile_x_medium",
+                    "smartName": "Xristina",
+                    "thumbnailUrl": "https://a0.muscache.com/im/pictures/user/0cf9e59d-6e6e-4a77-af2e-6eb535262e5f.jpg?aki_policy=profile_small"
+                },
+                "response": "",
+                "role": "guest",
+                "language": "en",
+                "userFlag": null
+            },
+            {
+                "author": {
+                    "firstName": "Michael",
+                    "hasProfilePic": true,
+                    "id": 88984900,
+                    "pictureUrl": "https://a0.muscache.com/im/pictures/user/0c654a86-99be-4c1f-b5e6-efd864ee91ca.jpg?aki_policy=profile_x_medium",
+                    "smartName": "Michael",
+                    "thumbnailUrl": "https://a0.muscache.com/im/pictures/user/0c654a86-99be-4c1f-b5e6-efd864ee91ca.jpg?aki_policy=profile_small"
+                },
+                "authorId": 88984900,
+                "canBeEdited": false,
+                "comments": "We very much enjoyed our stay at Qeparo and Christina’s place \nVery handy to several Beaches especially if you have a car.\nChristina’s father is amazing!\nHe greeted us and made sure everything was OK .\nThere are 240 steps down to the beach , which is good exercise !!",
+                "createdAt": "2019-06-16T13:07:27Z",
+                "id": 470464339,
+                "idStr": "470464339",
+                "listingId": 33937843,
+                "recipientId": 89445594,
+                "collectionTag": null,
+                "listing": {
+                    "id": 33937843,
+                    "name": "Qeparo Pano Rooms 1"
+                },
+                "rating": 4,
+                "recipient": {
+                    "firstName": "Xristina",
+                    "hasProfilePic": true,
+                    "id": 89445594,
+                    "pictureUrl": "https://a0.muscache.com/im/pictures/user/0cf9e59d-6e6e-4a77-af2e-6eb535262e5f.jpg?aki_policy=profile_x_medium",
+                    "smartName": "Xristina",
+                    "thumbnailUrl": "https://a0.muscache.com/im/pictures/user/0cf9e59d-6e6e-4a77-af2e-6eb535262e5f.jpg?aki_policy=profile_small"
+                },
+                "response": "",
+                "role": "guest",
+                "language": "en",
+                "userFlag": null
+            },
+            {
+                "author": {
+                    "firstName": "Rebecca",
+                    "hasProfilePic": true,
+                    "id": 59205042,
+                    "pictureUrl": "https://a0.muscache.com/im/pictures/user/ff8ae524-a3e7-45e3-8efd-66ce08fa46b2.jpg?aki_policy=profile_x_medium",
+                    "smartName": "Rebecca",
+                    "thumbnailUrl": "https://a0.muscache.com/im/pictures/user/ff8ae524-a3e7-45e3-8efd-66ce08fa46b2.jpg?aki_policy=profile_small"
+                },
+                "authorId": 59205042,
+                "canBeEdited": false,
+                "comments": "Had a great stay here, awesome views from the apartment!",
+                "createdAt": "2019-05-06T11:30:35Z",
+                "id": 449159334,
+                "idStr": "449159334",
+                "listingId": 33937843,
+                "recipientId": 89445594,
+                "collectionTag": null,
+                "listing": {
+                    "id": 33937843,
+                    "name": "Qeparo Pano Rooms 1"
+                },
+                "rating": 5,
+                "recipient": {
+                    "firstName": "Xristina",
+                    "hasProfilePic": true,
+                    "id": 89445594,
+                    "pictureUrl": "https://a0.muscache.com/im/pictures/user/0cf9e59d-6e6e-4a77-af2e-6eb535262e5f.jpg?aki_policy=profile_x_medium",
+                    "smartName": "Xristina",
+                    "thumbnailUrl": "https://a0.muscache.com/im/pictures/user/0cf9e59d-6e6e-4a77-af2e-6eb535262e5f.jpg?aki_policy=profile_small"
+                },
+                "response": "",
+                "role": "guest",
+                "language": "en",
+                "userFlag": null
+            },
+            {
+                "author": {
+                    "firstName": "Adrien",
+                    "hasProfilePic": true,
+                    "id": 61966428,
+                    "pictureUrl": "https://a0.muscache.com/im/pictures/user/8fb2dc15-a649-4f65-a204-4508e9b43cf3.jpg?aki_policy=profile_x_medium",
+                    "smartName": "Adrien",
+                    "thumbnailUrl": "https://a0.muscache.com/im/pictures/user/8fb2dc15-a649-4f65-a204-4508e9b43cf3.jpg?aki_policy=profile_small"
+                },
+                "authorId": 61966428,
+                "canBeEdited": false,
+                "comments": "Super emplacement super terrasse et les hôtes sont adorables.\nUn peu plus cher que les logements similaires cependant. \nMerci pour tout",
+                "createdAt": "2019-08-02T13:24:26Z",
+                "id": 500497587,
+                "idStr": "500497587",
+                "listingId": 33937843,
+                "recipientId": 89445594,
+                "collectionTag": null,
+                "listing": {
+                    "id": 33937843,
+                    "name": "Qeparo Pano Rooms 1"
+                },
+                "rating": 4,
+                "recipient": {
+                    "firstName": "Xristina",
+                    "hasProfilePic": true,
+                    "id": 89445594,
+                    "pictureUrl": "https://a0.muscache.com/im/pictures/user/0cf9e59d-6e6e-4a77-af2e-6eb535262e5f.jpg?aki_policy=profile_x_medium",
+                    "smartName": "Xristina",
+                    "thumbnailUrl": "https://a0.muscache.com/im/pictures/user/0cf9e59d-6e6e-4a77-af2e-6eb535262e5f.jpg?aki_policy=profile_small"
+                },
+                "response": "",
+                "role": "guest",
+                "language": "fr",
+                "userFlag": null
+            },
+            {
+                "author": {
+                    "firstName": "Ingalill",
+                    "hasProfilePic": true,
+                    "id": 259823726,
+                    "pictureUrl": "https://a0.muscache.com/im/pictures/user/2d77d69c-7a86-47d8-b388-fec11b53cffd.jpg?aki_policy=profile_x_medium",
+                    "smartName": "Ingalill",
+                    "thumbnailUrl": "https://a0.muscache.com/im/pictures/user/2d77d69c-7a86-47d8-b388-fec11b53cffd.jpg?aki_policy=profile_small"
+                },
+                "authorId": 259823726,
+                "canBeEdited": false,
+                "comments": "Lugn och ro, enastående havsutsikt, idylliskt bysamhälle,  albansk vänlighet.",
+                "createdAt": "2019-05-20T13:27:10Z",
+                "id": 455838251,
+                "idStr": "455838251",
+                "listingId": 33937843,
+                "recipientId": 89445594,
+                "collectionTag": null,
+                "listing": {
+                    "id": 33937843,
+                    "name": "Qeparo Pano Rooms 1"
+                },
+                "rating": 5,
+                "recipient": {
+                    "firstName": "Xristina",
+                    "hasProfilePic": true,
+                    "id": 89445594,
+                    "pictureUrl": "https://a0.muscache.com/im/pictures/user/0cf9e59d-6e6e-4a77-af2e-6eb535262e5f.jpg?aki_policy=profile_x_medium",
+                    "smartName": "Xristina",
+                    "thumbnailUrl": "https://a0.muscache.com/im/pictures/user/0cf9e59d-6e6e-4a77-af2e-6eb535262e5f.jpg?aki_policy=profile_small"
+                },
+                "response": "",
+                "role": "guest",
+                "language": "sv",
+                "userFlag": null
+            },
+            {
+                "author": {
+                    "firstName": "Denise",
+                    "hasProfilePic": true,
+                    "id": 103959504,
+                    "pictureUrl": "https://a0.muscache.com/im/pictures/user/a7235718-63c5-48fa-adea-ace682530ce3.jpg?aki_policy=profile_x_medium",
+                    "smartName": "Denise",
+                    "thumbnailUrl": "https://a0.muscache.com/im/pictures/user/a7235718-63c5-48fa-adea-ace682530ce3.jpg?aki_policy=profile_small"
+                },
+                "authorId": 103959504,
+                "canBeEdited": false,
+                "comments": "Der Ausblick von der Unterkunft ist unschlagbar. Morgens konnte in der Sonne auf der Terrasse gefrühstückt werden. Die Unterkunft ist schlicht gestaltet, aber alles Notwendige war vorhanden, sodass wir uns sehr wohl dort gefühlt haben. Die Gastgeber waren sehr sehr nett und hilfsbereit. Wir würden die Unterkunft wieder buchen!",
+                "createdAt": "2019-05-03T14:18:09Z",
+                "id": 447329512,
+                "idStr": "447329512",
+                "listingId": 33937843,
+                "recipientId": 89445594,
+                "collectionTag": null,
+                "listing": {
+                    "id": 33937843,
+                    "name": "Qeparo Pano Rooms 1"
+                },
+                "rating": 5,
+                "recipient": {
+                    "firstName": "Xristina",
+                    "hasProfilePic": true,
+                    "id": 89445594,
+                    "pictureUrl": "https://a0.muscache.com/im/pictures/user/0cf9e59d-6e6e-4a77-af2e-6eb535262e5f.jpg?aki_policy=profile_x_medium",
+                    "smartName": "Xristina",
+                    "thumbnailUrl": "https://a0.muscache.com/im/pictures/user/0cf9e59d-6e6e-4a77-af2e-6eb535262e5f.jpg?aki_policy=profile_small"
+                },
+                "response": "",
+                "role": "guest",
+                "language": "de",
+                "userFlag": null
+            }
+        ],
+        "listingAmenities": [
+            {
+                "description": "",
+                "id": 5,
+                "isPresent": true,
+                "name": "Air conditioning"
+            },
+            {
+                "description": "Towels, bed sheets, soap, and toilet paper",
+                "id": 40,
+                "isPresent": true,
+                "name": "Essentials"
+            },
+            {
+                "description": "",
+                "id": 30,
+                "isPresent": false,
+                "name": "Heating"
+            },
+            {
+                "description": "",
+                "id": 77,
+                "isPresent": true,
+                "name": "Hot water"
+            },
+            {
+                "description": "A table or desk with space for a laptop and a chair that’s comfortable to work in",
+                "id": 47,
+                "isPresent": true,
+                "name": "Laptop-friendly workspace"
+            },
+            {
+                "description": "",
+                "id": 1,
+                "isPresent": true,
+                "name": "TV"
+            },
+            {
+                "description": "In the building, free or for a fee",
+                "id": 33,
+                "isPresent": true,
+                "name": "Washer"
+            },
+            {
+                "description": "Continuous access in the listing",
+                "id": 4,
+                "isPresent": true,
+                "name": "Wifi"
+            },
+            {
+                "description": "",
+                "id": 9,
+                "isPresent": true,
+                "name": "Free parking on premises"
+            },
+            {
+                "description": "",
+                "id": 23,
+                "isPresent": true,
+                "name": "Free street parking"
+            },
+            {
+                "description": "Pots and pans, oil, salt and pepper",
+                "id": 94,
+                "isPresent": true,
+                "name": "Cooking basics"
+            },
+            {
+                "description": "",
+                "id": 93,
+                "isPresent": true,
+                "name": "Dishes and silverware"
+            },
+            {
+                "description": "Space where guests can cook their own meals",
+                "id": 8,
+                "isPresent": true,
+                "name": "Kitchen"
+            },
+            {
+                "description": "",
+                "id": 91,
+                "isPresent": true,
+                "name": "Refrigerator"
+            },
+            {
+                "description": "",
+                "id": 95,
+                "isPresent": true,
+                "name": "Oven"
+            },
+            {
+                "description": "",
+                "id": 129,
+                "isPresent": true,
+                "name": "Host greets you"
+            },
+            {
+                "description": "Separate street or building entrance",
+                "id": 57,
+                "isPresent": true,
+                "name": "Private entrance"
+            },
+            {
+                "description": "For guests' convenience when they have early arrival or late departure",
+                "id": 103,
+                "isPresent": true,
+                "name": "Luggage dropoff allowed"
+            },
+            {
+                "description": "Allow stay for 28 days or more",
+                "id": 104,
+                "isPresent": true,
+                "name": "Long term stays allowed"
+            },
+            {
+                "description": "",
+                "id": 85,
+                "isPresent": true,
+                "name": "Bed linens"
+            },
+            {
+                "description": "",
+                "id": 45,
+                "isPresent": true,
+                "name": "Hair dryer"
+            },
+            {
+                "description": "",
+                "id": 44,
+                "isPresent": true,
+                "name": "Hangers"
+            },
+            {
+                "description": "",
+                "id": 41,
+                "isPresent": false,
+                "name": "Shampoo"
+            },
+            {
+                "description": "",
+                "id": 100,
+                "isPresent": true,
+                "name": "Patio or balcony"
+            },
+            {
+                "description": "",
+                "id": 101,
+                "isPresent": true,
+                "name": "Garden or backyard"
+            },
+            {
+                "description": "The host hasn't reported a carbon monoxide detector on the property.",
+                "id": 36,
+                "isPresent": false,
+                "name": "Carbon monoxide alarm"
+            },
+            {
+                "description": "The host hasn't reported a smoke detector on the property.",
+                "id": 35,
+                "isPresent": false,
+                "name": "Smoke alarm"
+            }
+        ],
+        "rootAmenitySections": [
+            {
+                "id": "available_amenities",
+                "title": "Amenities",
+                "subtitle": "",
+                "amenityIds": [
+                    5,
+                    40,
+                    77,
+                    47
+                ]
+            },
+            {
+                "id": "unavailable_safety_amenities",
+                "title": "Amenities",
+                "subtitle": "The host hasn't reported smoke or carbon monoxide detectors on the property.",
+                "amenityIds": [
+                    35,
+                    36
+                ]
+            }
+        ],
+        "seeAllAmenitySections": [
+            {
+                "id": "pdp_basic",
+                "title": "Basic",
+                "subtitle": "",
+                "amenityIds": [
+                    5,
+                    40,
+                    77,
+                    47,
+                    1,
+                    33,
+                    4
+                ]
+            },
+            {
+                "id": "pdp_facility",
+                "title": "Facilities",
+                "subtitle": "",
+                "amenityIds": [
+                    9,
+                    23
+                ]
+            },
+            {
+                "id": "pdp_dining",
+                "title": "Dining",
+                "subtitle": "",
+                "amenityIds": [
+                    94,
+                    93,
+                    8,
+                    91,
+                    95
+                ]
+            },
+            {
+                "id": "pdp_guest_access",
+                "title": "Guest access",
+                "subtitle": "",
+                "amenityIds": [
+                    129,
+                    57
+                ]
+            },
+            {
+                "id": "pdp_logistics",
+                "title": "Logistics",
+                "subtitle": "",
+                "amenityIds": [
+                    103,
+                    104
+                ]
+            },
+            {
+                "id": "pdp_bed_bath",
+                "title": "Bed and bath",
+                "subtitle": "",
+                "amenityIds": [
+                    85,
+                    45,
+                    44
+                ]
+            },
+            {
+                "id": "pdp_outdoor",
+                "title": "Outdoor",
+                "subtitle": "",
+                "amenityIds": [
+                    100,
+                    101
+                ]
+            },
+            {
+                "id": "pdp_unavailable",
+                "title": "Not included",
+                "subtitle": "",
+                "amenityIds": [
+                    30,
+                    41,
+                    36,
+                    35
+                ]
+            }
+        ],
+        "bathroomLabel": "1 bath",
+        "bedLabel": "2 beds",
+        "bedroomLabel": "Studio",
+        "hasHouseRules": true,
+        "id": 33937843,
+        "isNewListing": false,
+        "listingRooms": [
+            {
+                "beds": [
+                    {
+                        "id": "40888830/double_bed",
+                        "quantity": 1,
+                        "type": "double_bed"
+                    },
+                    {
+                        "id": "40888830/single_bed",
+                        "quantity": 1,
+                        "type": "single_bed"
+                    }
+                ],
+                "id": 40888830,
+                "roomNumber": 0
+            }
+        ],
+        "p3SummaryAddress": "Qeparo, Albania",
+        "photos": [
+            {
+                "caption": "",
+                "id": 732886816,
+                "large": "https://a0.muscache.com/im/pictures/eaf3093d-b89a-4e3b-bb11-a4b7ac09da67.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAECAIAAADJUWIXAAAAS0lEQVQIHQFAAL//AbO4txAZJv3678O+ufX19gHIwrfl6/fj4t/CxL31+fwBhHNf+vn86ezsxtLX9vr7AXxpUv39/+jr7PT29/r8/bxMMHKQ6UbfAAAAAElFTkSuQmCC",
+                "scrimColor": "#1E1F17",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.3333333333333333
+            },
+            {
+                "caption": "",
+                "id": 732886837,
+                "large": "https://a0.muscache.com/im/pictures/25a0df3d-13d1-4109-8a06-e6ad17390e14.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAECAIAAADJUWIXAAAAS0lEQVQIHQFAAL//AcPh8AH06O7n3b+2rQIKDgHEycPh0c35+POsurbv9PYBv7OhysnJzdjT4OPn6+31AW1gSNri4+fv8AP+Aubr8YOZLKm4uSq4AAAAAElFTkSuQmCC",
+                "scrimColor": "#161C10",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.3333333333333333
+            },
+            {
+                "caption": "",
+                "id": 732886853,
+                "large": "https://a0.muscache.com/im/pictures/2f2d1a23-b1c1-410a-afcc-888f6b0ef347.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAECAIAAADJUWIXAAAAS0lEQVQIHQFAAL//AaGTfRw9XPTv7vLy67q0rAGfk37w/QHq7v0KBgTi4NUBQTsn8vf7OC8tzNLWFhMTAR4cDvP3+hARChYRDwMBA2pYHaK0q2NNAAAAAElFTkSuQmCC",
+                "scrimColor": "#16180D",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.3333333333333333
+            },
+            {
+                "caption": "",
+                "id": 732886873,
+                "large": "https://a0.muscache.com/im/pictures/a9a47b69-f288-47b6-a031-8c2a3acb04b7.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAECAIAAADJUWIXAAAAS0lEQVQIHQFAAL//AYqZoQYQHQoF/vPy5u3l3wGMjYLX5wIB/wASEQ7h284Bw7CavMDJ/wME4N7eHyEhAVBCMf79/gYJCg0OD97k5+6VHpjrWHoQAAAAAElFTkSuQmCC",
+                "scrimColor": "#22211C",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.3333333333333333
+            },
+            {
+                "caption": "",
+                "id": 732886896,
+                "large": "https://a0.muscache.com/im/pictures/afee0957-070a-4ac6-b86d-0ccca2697594.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAECAIAAADJUWIXAAAAS0lEQVQIHQFAAL//AU1PSzFBUvL19wMGCeLh4gFDQj4OFBIxOkkUFxzPzM4BXlJFBQ4U/P4C+Pb59vf4AYVyYOHp8Pf9Aw0JBfj39DzeHYrDySgQAAAAAElFTkSuQmCC",
+                "scrimColor": "#131514",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.3333333333333333
+            },
+            {
+                "caption": "",
+                "id": 732886929,
+                "large": "https://a0.muscache.com/im/pictures/e6a6935d-5892-4b0d-8bff-ab5d3ea0bc5b.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAECAIAAADJUWIXAAAAS0lEQVQIHQFAAL//AVtcWAkZK9nRw/f9BPf26AFVW1wsNDodICjV09MICwwBSEM52OHjKCYuBgcNFRogAYJ0Zg8ZJ+jl3+Lf2xYTFDbTGLUFRDk9AAAAAElFTkSuQmCC",
+                "scrimColor": "#111310",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.3333333333333333
+            },
+            {
+                "caption": "",
+                "id": 732886951,
+                "large": "https://a0.muscache.com/im/pictures/62c00438-1a9b-41fb-96dd-9a71d7199c6a.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAECAIAAADJUWIXAAAAS0lEQVQIHQFAAL//AT05MQIBBDg/SMK9uv8A+wEwLSoTEhNwg4h+b28JCQMBLiooDQ0NcnVylJCT9/v+AS0qKAwNEBYbJerj1/T5+GozFn6q9tQ2AAAAAElFTkSuQmCC",
+                "scrimColor": "#161616",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.3333333333333333
+            },
+            {
+                "caption": "",
+                "id": 732886989,
+                "large": "https://a0.muscache.com/im/pictures/8d1544ff-5bf1-4e03-8c4b-9a13711b6428.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAECAIAAADJUWIXAAAASElEQVQIHWP0dLfn4uAUlZSvaenKL6pm9PF04mDnFpaQbursaGtsZ/Ryt+dg5xaXkk9MSVwwczqjj5cbNzcPJze/oJj84+tHAfT8EJCec6eWAAAAAElFTkSuQmCC",
+                "scrimColor": "#20252B",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.3333333333333333
+            },
+            {
+                "caption": "",
+                "id": 732889074,
+                "large": "https://a0.muscache.com/im/pictures/b523af73-9e2a-4ee6-b41e-4f272c81b4ec.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAECAIAAADJUWIXAAAAS0lEQVQIHQFAAL//AcXGxPr8/fX3AdzW0gkPEgGdoKAODhLn4+Xf29kMDg4BgoGB8u/x4ubjFREX9e7oAUMpGRUqOg4MDf/9/Obl4njRIioD3EthAAAAAElFTkSuQmCC",
+                "scrimColor": "#332620",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.3333333333333333
+            },
+            {
+                "caption": "",
+                "id": 732889223,
+                "large": "https://a0.muscache.com/im/pictures/a128114e-6be5-4638-b6ce-da6e14661e81.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAECAIAAADJUWIXAAAAS0lEQVQIHQFAAL//AYqZoQYQHQoF/vPy5u3l3wGMjYLX5wIB/wASEQ7h284Bw7CavMDJ/wME4N7eHyEhAVBCMf79/gYJCg0OD97k5+6VHpjrWHoQAAAAAElFTkSuQmCC",
+                "scrimColor": "#22211C",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.3333333333333333
+            },
+            {
+                "caption": "",
+                "id": 732889244,
+                "large": "https://a0.muscache.com/im/pictures/b67d2bbe-f370-467f-a665-7b97a468d45c.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAECAIAAADJUWIXAAAAS0lEQVQIHQFAAL//AU1PSzFBUvL19wMGCeLh4gFDQj4OFBIxOkkUFxzPzM4BXlJFBQ4U/P4C+Pb59vf4AYVyYOHp8Pf9Aw0JBfj39DzeHYrDySgQAAAAAElFTkSuQmCC",
+                "scrimColor": "#111312",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.3333333333333333
+            },
+            {
+                "caption": "",
+                "id": 732889263,
+                "large": "https://a0.muscache.com/im/pictures/a615f477-6123-4f2c-b52a-e2842a79c19f.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAECAIAAADJUWIXAAAAS0lEQVQIHQFAAL//AVtcWAkZK9nRw/f9BPf26AFVW1wsNDodICjV09MICwwBSEM52OHjKCYuBgcNFRogAYJ0Zg8ZJ+jl3+Lf2xYTFDbTGLUFRDk9AAAAAElFTkSuQmCC",
+                "scrimColor": "#0F110E",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.3333333333333333
+            },
+            {
+                "caption": "",
+                "id": 732889283,
+                "large": "https://a0.muscache.com/im/pictures/25b9b78d-5c4f-4089-9ab7-84fa66e00031.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAECAIAAADJUWIXAAAAS0lEQVQIHQFAAL//AT05MQIBBDg/SMK9uv8A+wEwLSoTEhNwg4h+b28JCQMBLiooDQ0NcnVylJCT9/v+AS0qKAwNEBYbJerj1/T5+GozFn6q9tQ2AAAAAElFTkSuQmCC",
+                "scrimColor": "#161616",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.3333333333333333
+            }
+        ],
+        "primaryHost": {
+            "about": "",
+            "badges": [
+                {
+                    "count": 24,
+                    "id": "reviews",
+                    "label": "24 Reviews",
+                    "link": "/users/show/89445594#reviews"
+                }
+            ],
+            "firstName": "Xristina",
+            "id": 89445594,
+            "isSuperhost": true,
+            "memberSinceFullStr": "Joined in August 2016",
+            "name": "Xristina",
+            "languages": [],
+            "pictureUrl": "https://a0.muscache.com/im/pictures/user/0cf9e59d-6e6e-4a77-af2e-6eb535262e5f.jpg?aki_policy=profile_x_medium",
+            "responseRateWithoutNa": "100%",
+            "responseTimeWithoutNa": "within an hour",
+            "hasInclusionBadge": false,
+            "pictureLargeUrl": "https://a0.muscache.com/im/pictures/user/0cf9e59d-6e6e-4a77-af2e-6eb535262e5f.jpg?aki_policy=profile_large",
+            "hostIntroTags": [
+                "24 reviews"
+            ]
+        },
+        "roomTypeCategory": "entire_home",
+        "sectionedDescription": {
+            "authorType": "human",
+            "description": "Only a step away from one of the most beautiful beaches of Albanian Riviera, Qeparo Pano Rooms is a  family owned property with a long experience in hospitality. The property is located in only 100 meters from the Hostoni Beach . It is also located on the central road and it is easily accessible.\n\nOur apartment is fully renovated in 2018 and it is characterised by the minimalistic architecture as well as the privacy offered to our guests. The apartment accommodates spacious  veranda, perfectly oriented towards the Ionian sea. The breathtaking view to the sea creates the ideal place to spend your vacation.\n\nWe are a four member family who live and work in Greece in the winter. Near us you can  find the smile, courtesy and warm care to your every need.  We are ready to welcome our guests and to help them discover the unique Qeparo. Our approach towards our guests is to create an environment where they feel that they are staying at a friend's home.\n\nThe property is  located on the central road and it is easily accessible. The Mini Market and Cafe Pashaj is opposite to our property.\n\nQeparo Pano Rooms is within short walking distance , only 4 minutes, of the Hostoni Beach. The Hostoni Beach is an organized beach with sunbeds and umbrellas. At Hostoni Beach you can find restaurants, cafes ,canoes  for hire and everything you need not to be bored at the beach. If you are not a fan of an organized beach, you can also take your own umbrella . As far as marketplaces, the Mini Market Pashaj is opposite to our property. Moreover there are cafes in a short distance from our property ( 1 minute) where you can enjoy your coffee. Last but not least, we strongly recommend you visit the Upper Qeparo to explore picturesque houses and traditional paths.",
+            "interaction": "We are a four member family who live and work in Greece in the winter. Near us you can  find the smile, courtesy and warm care to your every need.  We are ready to welcome our guests and to help them discover the unique Qeparo. Our approach towards our guests is to create an environment where they feel that they are staying at a friend's home.",
+            "locale": "el",
+            "localizedLanguageName": "Greek",
+            "name": "Qeparo Pano Rooms 1",
+            "neighborhoodOverview": "The property is  located on the central road and it is easily accessible. The Mini Market and Cafe Pashaj is opposite to our property.",
+            "space": "Our apartment is fully renovated in 2018 and it is characterised by the minimalistic architecture as well as the privacy offered to our guests. The apartment accommodates spacious  veranda, perfectly oriented towards the Ionian sea. The breathtaking view to the sea creates the ideal place to spend your vacation.",
+            "summary": "Only a step away from one of the most beautiful beaches of Albanian Riviera, Qeparo Pano Rooms is a  family owned property with a long experience in hospitality. The property is located in only 100 meters from the Hostoni Beach . It is also located on the central road and it is easily accessible.",
+            "transit": "Qeparo Pano Rooms is within short walking distance , only 4 minutes, of the Hostoni Beach. The Hostoni Beach is an organized beach with sunbeds and umbrellas. At Hostoni Beach you can find restaurants, cafes ,canoes  for hire and everything you need not to be bored at the beach. If you are not a fan of an organized beach, you can also take your own umbrella . As far as marketplaces, the Mini Market Pashaj is opposite to our property. Moreover there are cafes in a short distance from our property ( 1 minute) where you can enjoy your coffee. Last but not least, we strongly recommend you visit the Upper Qeparo to explore picturesque houses and traditional paths."
+        },
+        "tierId": 0,
+        "guestControls": {
+            "allowsChildren": true,
+            "allowsEvents": false,
+            "allowsInfants": true,
+            "allowsPets": false,
+            "allowsSmoking": true,
+            "personCapacity": 3,
+            "structuredHouseRules": [
+                "Check-in is anytime after 2PM and check out by 10AM"
+            ],
+            "structuredHouseRulesWithTips": [
+                {
+                    "key": "check_in_time_and_check_out_time",
+                    "text": "Check-in is anytime after 2PM and check out by 10AM",
+                    "airmojiKey": "accomodation_keys"
+                }
+            ],
+            "allowsNonChinaUsers": true
+        },
+        "hasSpecialOffer": false,
+        "maxNights": 1125,
+        "minNights": 1,
+        "priceDetails": [
+            {
+                "label": "Extra people",
+                "value": "No Charge",
+                "attributeType": "EXTRA_PEOPLE"
+            }
+        ],
+        "hasWeWorkLocation": false,
+        "isBusinessTravelReady": false,
+        "additionalHosts": [],
+        "isHostedBySuperhost": true,
+        "hometourRooms": [
+            {
+                "details": [],
+                "highlightsHometour": [
+                    "1 double bed",
+                    "1 single bed"
+                ],
+                "highlightsPreview": [],
+                "isShared": true,
+                "id": 40888830,
+                "name": "",
+                "nameWithType": "Common spaces",
+                "photos": [],
+                "roomTypeId": 7,
+                "icons": [
+                    {
+                        "type": "double_bed",
+                        "url": ""
+                    },
+                    {
+                        "type": "single_bed",
+                        "url": ""
+                    }
+                ]
+            }
+        ],
+        "hometourSections": [],
+        "descriptionLocale": "el",
+        "initialDescriptionAuthorType": "human",
+        "localizedCheckInTimeWindow": "After 2:00 PM",
+        "localizedCheckOutTime": "10:00 AM",
+        "city": "Qeparo",
+        "country": "Albania",
+        "countryCode": "AL",
+        "hasHostGuidebook": false,
+        "hasLocalAttractions": false,
+        "neighborhoodCommunityTags": [],
+        "paidGrowthRemarketingListingIds": [
+            24801325
+        ],
+        "hasCommercialHostInfo": false,
+        "reviewDetailsInterface": {
+            "reviewCount": 7,
+            "reviewSummary": [
+                {
+                    "value": 9,
+                    "label": "Accuracy",
+                    "localizedRating": "4.7",
+                    "percentage": 0.942
+                },
+                {
+                    "value": 9,
+                    "label": "Communication",
+                    "localizedRating": "4.7",
+                    "percentage": 0.942
+                },
+                {
+                    "value": 9,
+                    "label": "Cleanliness",
+                    "localizedRating": "4.4",
+                    "percentage": 0.8859999999999999
+                },
+                {
+                    "value": 10,
+                    "label": "Location",
+                    "localizedRating": "4.9",
+                    "percentage": 0.9720000000000001
+                },
+                {
+                    "value": 10,
+                    "label": "Check-in",
+                    "localizedRating": "5.0",
+                    "percentage": 1
+                },
+                {
+                    "value": 9,
+                    "label": "Value",
+                    "localizedRating": "4.7",
+                    "percentage": 0.942
+                }
+            ]
+        },
+        "reviewsOrder": "language_country",
+        "hostQuote": "",
+        "hostSignatureFont": {
+            "url": "https://a0.muscache.com/airbnb/static/temp-fonts/HandsomePro-Normal.otf"
+        },
+        "nearbyAirportDistanceDescriptions": [],
+        "propertyTypeInCity": "",
+        "renderTierId": 0,
+        "isHotel": false,
+        "showReviewTag": false,
+        "isRepresentativeInventory": false,
+        "localizedCity": "Qeparo",
+        "highlights": [
+            {
+                "type": "LISTING_ENTIRE_HOME_PROPERTY_TYPE",
+                "message": "You’ll have the apartment to yourself.",
+                "headline": "Entire home",
+                "position": "0",
+                "icon": "accomodation_home"
+            },
+            {
+                "type": "LISTING_SUPER_HOST",
+                "message": "Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.",
+                "headline": "Xristina is a Superhost",
+                "position": "1",
+                "icon": "core_superhost"
+            },
+            {
+                "type": "LISTING_CHECKIN_REVIEW_RATING",
+                "message": "100% of recent guests gave the check-in process a 5-star rating.",
+                "headline": "Great check-in experience",
+                "position": "2",
+                "icon": "accomodation_keys"
+            }
+        ],
+        "highlightsImpressionId": "3f274cbf-bdc4-00d5-8e32-5a17c9b7522e",
+        "categorizedPreviewAmenities": [
+            {
+                "category": "Standard",
+                "amenities": "Air conditioning, Essentials, Hot water, Laptop-friendly workspace, TV, and 12 more"
+            },
+            {
+                "category": "Other highlights",
+                "amenities": "Free parking on premises, Free street parking, Host greets you, Long term stays allowed, Patio or balcony, and 1 more"
+            }
+        ],
+        "pointOfInterests": [],
+        "chinaPointsOfInterestMatcha": {},
+        "pageViewType": "DEFAULT",
+        "previewTags": [],
+        "seeAllHometourSections": [],
+        "educationModules": {},
+        "enableHighlightsVoting": false,
+        "listingExpectations": [],
+        "localizedListingExpectations": [],
+        "heroModule": {
+            "categorizedPhotos": []
+        },
+        "reviewsModule": {
+            "localizedOverallRating": "4.71",
+            "appreciationTags": [
+                {
+                    "localizedText": "Outstanding hospitality",
+                    "localizedCountString": "5",
+                    "icon": "IconIndicatorHeart"
+                },
+                {
+                    "localizedText": "Quick responses",
+                    "localizedCountString": "3",
+                    "icon": "IconIndicatorChatBubble"
+                }
+            ]
+        },
+        "availabilityModule": {},
+        "additionalHouseRules": "",
+        "alternateSectionedDescriptionForP3": {
+            "authorType": "google_nmt",
+            "description": "Only a step away from one of the most beautiful beaches of Albanian Riviera, Qeparo Pano Rooms is a  family owned property with a long experience in hospitality. The property is located in only 100 meters from the Hostoni Beach . It is also located on the central road and it is easily accessible.\n\nWe are a four member family who live and work in Greece in the winter. Near us you can  find the smile, courtesy and warm care to your every need.  We are ready to welcome our guests and to help them discover the unique Qeparo. Our approach towards our guests is to create an environment where they feel that they are staying at a friend's home.\n\nThe property is  located on the central road and it is easily accessible. The Mini Market and Cafe Pashaj is opposite to our property.\n\nQeparo Pano Rooms is within short walking distance , only 4 minutes, of the Hostoni Beach. The Hostoni Beach is an organized beach with sunbeds and umbrellas. At Hostoni Beach you can find restaurants, cafes ,canoes  for hire and everything you need not to be bored at the beach. If you are not a fan of an organized beach, you can also take your own umbrella . As far as marketplaces, the Mini Market Pashaj is opposite to our property. Moreover there are cafes in a short distance from our property ( 1 minute) where you can enjoy your coffee. Last but not least, we strongly recommend you visit the Upper Qeparo to explore picturesque houses and traditional paths.",
+            "interaction": "We are a four member family who live and work in Greece in the winter. Near us you can  find the smile, courtesy and warm care to your every need.  We are ready to welcome our guests and to help them discover the unique Qeparo. Our approach towards our guests is to create an environment where they feel that they are staying at a friend's home.",
+            "locale": "en",
+            "localizedLanguageName": "English",
+            "name": "Qeparo Pano Rooms 1",
+            "neighborhoodOverview": "The property is  located on the central road and it is easily accessible. The Mini Market and Cafe Pashaj is opposite to our property.",
+            "summary": "Only a step away from one of the most beautiful beaches of Albanian Riviera, Qeparo Pano Rooms is a  family owned property with a long experience in hospitality. The property is located in only 100 meters from the Hostoni Beach . It is also located on the central road and it is easily accessible.",
+            "transit": "Qeparo Pano Rooms is within short walking distance , only 4 minutes, of the Hostoni Beach. The Hostoni Beach is an organized beach with sunbeds and umbrellas. At Hostoni Beach you can find restaurants, cafes ,canoes  for hire and everything you need not to be bored at the beach. If you are not a fan of an organized beach, you can also take your own umbrella . As far as marketplaces, the Mini Market Pashaj is opposite to our property. Moreover there are cafes in a short distance from our property ( 1 minute) where you can enjoy your coffee. Last but not least, we strongly recommend you visit the Upper Qeparo to explore picturesque houses and traditional paths."
+        },
+        "sortedReviews": [],
+        "sections": [],
+        "metadata": {},
+        "p3ImpressionId": "3f274cbf-bdc4-00d5-8e32-5a17c9b7522e"
+    },
+    {
+        "url": "https://api.airbnb.com/v2/pdp_listing_details/21311290?_format=for_native",
+        "name": "VillaMargarita",
+        "numberOfGuests": 3,
+        "address": "Borsh, Vlorë County, Albania",
+        "roomType": "Entire apartment",
+        "location": {
+            "lat": 40.06177,
+            "lng": 19.85498
+        },
+        "reviews": [
+            {
+                "author": {
+                    "firstName": "Paola",
+                    "hasProfilePic": true,
+                    "id": 92751546,
+                    "pictureUrl": "https://a0.muscache.com/im/pictures/user/c8be7329-ddfe-46ad-8920-38bb4090c20f.jpg?aki_policy=profile_x_medium",
+                    "smartName": "Paola",
+                    "thumbnailUrl": "https://a0.muscache.com/im/pictures/user/c8be7329-ddfe-46ad-8920-38bb4090c20f.jpg?aki_policy=profile_small"
+                },
+                "authorId": 92751546,
+                "canBeEdited": false,
+                "comments": "La mamma di Niko ci ha accolti con grande ospitalità e disponibilità. Siamo stati aiutati a portare i bagagli (il mio compagno aveva problemi alla schiena) fino al piccolo  appartamento al secondo piano da dove c'è una vista meravigliosa! Ci ha portato il miglior burek e il miglior bakava che io abbia mai assaggiato. Un'ospitalità eccezionale e un posto dove stare bene.",
+                "createdAt": "2020-01-08T12:18:32Z",
+                "id": 590288152,
+                "idStr": "590288152",
+                "listingId": 21311290,
+                "recipientId": 154239985,
+                "collectionTag": null,
+                "listing": {
+                    "id": 21311290,
+                    "name": "VillaMargarita"
+                },
+                "rating": 5,
+                "recipient": {
+                    "firstName": "Niko",
+                    "hasProfilePic": true,
+                    "id": 154239985,
+                    "pictureUrl": "https://a0.muscache.com/im/pictures/user/26abb951-df0a-497a-b2b2-bf3373de124e.jpg?aki_policy=profile_x_medium",
+                    "smartName": "Niko",
+                    "thumbnailUrl": "https://a0.muscache.com/im/pictures/user/26abb951-df0a-497a-b2b2-bf3373de124e.jpg?aki_policy=profile_small"
+                },
+                "response": "",
+                "role": "guest",
+                "language": "it",
+                "userFlag": null
+            }
+        ],
+        "listingAmenities": [
+            {
+                "description": "",
+                "id": 5,
+                "isPresent": true,
+                "name": "Air conditioning"
+            },
+            {
+                "description": "Towels, bed sheets, soap, and toilet paper",
+                "id": 40,
+                "isPresent": true,
+                "name": "Essentials"
+            },
+            {
+                "description": "",
+                "id": 30,
+                "isPresent": false,
+                "name": "Heating"
+            },
+            {
+                "description": "",
+                "id": 77,
+                "isPresent": true,
+                "name": "Hot water"
+            },
+            {
+                "description": "",
+                "id": 1,
+                "isPresent": true,
+                "name": "TV"
+            },
+            {
+                "description": "",
+                "id": 33,
+                "isPresent": false,
+                "name": "Washer"
+            },
+            {
+                "description": "Continuous access in the listing",
+                "id": 4,
+                "isPresent": true,
+                "name": "Wifi"
+            },
+            {
+                "description": "",
+                "id": 9,
+                "isPresent": true,
+                "name": "Free parking on premises"
+            },
+            {
+                "description": "",
+                "id": 93,
+                "isPresent": true,
+                "name": "Dishes and silverware"
+            },
+            {
+                "description": "Space where guests can cook their own meals",
+                "id": 8,
+                "isPresent": true,
+                "name": "Kitchen"
+            },
+            {
+                "description": "",
+                "id": 91,
+                "isPresent": true,
+                "name": "Refrigerator"
+            },
+            {
+                "description": "",
+                "id": 96,
+                "isPresent": true,
+                "name": "Stove"
+            },
+            {
+                "description": "",
+                "id": 129,
+                "isPresent": true,
+                "name": "Host greets you"
+            },
+            {
+                "description": "",
+                "id": 57,
+                "isPresent": false,
+                "name": "Private entrance"
+            },
+            {
+                "description": "For guests' convenience when they have early arrival or late departure",
+                "id": 103,
+                "isPresent": true,
+                "name": "Luggage dropoff allowed"
+            },
+            {
+                "description": "Allow stay for 28 days or more",
+                "id": 104,
+                "isPresent": true,
+                "name": "Long term stays allowed"
+            },
+            {
+                "description": "",
+                "id": 45,
+                "isPresent": false,
+                "name": "Hair dryer"
+            },
+            {
+                "description": "",
+                "id": 44,
+                "isPresent": true,
+                "name": "Hangers"
+            },
+            {
+                "description": "",
+                "id": 41,
+                "isPresent": false,
+                "name": "Shampoo"
+            },
+            {
+                "description": "",
+                "id": 99,
+                "isPresent": true,
+                "name": "BBQ grill"
+            },
+            {
+                "description": "",
+                "id": 100,
+                "isPresent": true,
+                "name": "Patio or balcony"
+            },
+            {
+                "description": "",
+                "id": 101,
+                "isPresent": true,
+                "name": "Garden or backyard"
+            },
+            {
+                "description": "The host hasn't reported a carbon monoxide detector on the property.",
+                "id": 36,
+                "isPresent": false,
+                "name": "Carbon monoxide alarm"
+            },
+            {
+                "description": "The host hasn't reported a smoke detector on the property.",
+                "id": 35,
+                "isPresent": false,
+                "name": "Smoke alarm"
+            }
+        ],
+        "rootAmenitySections": [
+            {
+                "id": "available_amenities",
+                "title": "Amenities",
+                "subtitle": "",
+                "amenityIds": [
+                    5,
+                    40,
+                    77,
+                    1
+                ]
+            },
+            {
+                "id": "unavailable_safety_amenities",
+                "title": "Amenities",
+                "subtitle": "The host hasn't reported smoke or carbon monoxide detectors on the property.",
+                "amenityIds": [
+                    35,
+                    36
+                ]
+            }
+        ],
+        "seeAllAmenitySections": [
+            {
+                "id": "pdp_basic",
+                "title": "Basic",
+                "subtitle": "",
+                "amenityIds": [
+                    5,
+                    40,
+                    77,
+                    1,
+                    4
+                ]
+            },
+            {
+                "id": "pdp_facility",
+                "title": "Facilities",
+                "subtitle": "",
+                "amenityIds": [
+                    9
+                ]
+            },
+            {
+                "id": "pdp_dining",
+                "title": "Dining",
+                "subtitle": "",
+                "amenityIds": [
+                    93,
+                    8,
+                    91,
+                    96
+                ]
+            },
+            {
+                "id": "pdp_guest_access",
+                "title": "Guest access",
+                "subtitle": "",
+                "amenityIds": [
+                    129
+                ]
+            },
+            {
+                "id": "pdp_logistics",
+                "title": "Logistics",
+                "subtitle": "",
+                "amenityIds": [
+                    103,
+                    104
+                ]
+            },
+            {
+                "id": "pdp_bed_bath",
+                "title": "Bed and bath",
+                "subtitle": "",
+                "amenityIds": [
+                    44
+                ]
+            },
+            {
+                "id": "pdp_outdoor",
+                "title": "Outdoor",
+                "subtitle": "",
+                "amenityIds": [
+                    99,
+                    100,
+                    101
+                ]
+            },
+            {
+                "id": "pdp_unavailable",
+                "title": "Not included",
+                "subtitle": "",
+                "amenityIds": [
+                    30,
+                    33,
+                    57,
+                    45,
+                    41,
+                    36,
+                    35
+                ]
+            }
+        ],
+        "bathroomLabel": "1 bath",
+        "bedLabel": "2 beds",
+        "bedroomLabel": "Studio",
+        "hasHouseRules": true,
+        "id": 21311290,
+        "isNewListing": false,
+        "listingRooms": [
+            {
+                "beds": [
+                    {
+                        "id": "12106512/double_bed",
+                        "quantity": 1,
+                        "type": "double_bed"
+                    },
+                    {
+                        "id": "12106512/single_bed",
+                        "quantity": 1,
+                        "type": "single_bed"
+                    }
+                ],
+                "id": 12106512,
+                "roomNumber": 0
+            }
+        ],
+        "p3SummaryAddress": "Borsh, Vlorë County, Albania",
+        "photos": [
+            {
+                "caption": "",
+                "id": 394001568,
+                "large": "https://a0.muscache.com/im/pictures/7fd78b2b-fb69-421f-9f28-72bf367031c7.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAADCAIAAADUVFKvAAAAOUlEQVQIHWOMSY2S1vf6zi4mKCDKxcXBmJXjq6DjcOa//NdfLH9/MTEGRRlysHLzSavfZJV//ocXAEuKDtDLvGYfAAAAAElFTkSuQmCC",
+                "scrimColor": "#323C22",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.7777777777777777
+            },
+            {
+                "caption": "",
+                "id": 394001477,
+                "large": "https://a0.muscache.com/im/pictures/080ffd3b-ce5d-47c6-b78e-4734d386c0d4.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAECAIAAADJUWIXAAAAS0lEQVQIHQFAAL//Aae79P8CA/z9//j4+vX39QGIp+gFBwII//QC+eXs4NQBeH+M/fXs9/f39PT09/byAWVjWPv6+AQDAP3+/fz9+2JtK8PRwXH1AAAAAElFTkSuQmCC",
+                "scrimColor": "#43423E",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.3333333333333333
+            },
+            {
+                "caption": "",
+                "id": 394001479,
+                "large": "https://a0.muscache.com/im/pictures/11c5cf35-f73b-4912-898a-e3e8b20698d0.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAECAIAAADJUWIXAAAAS0lEQVQIHQFAAL//AdjJ3vv+APTz8fjw7AsB/QHcxtoA/gHf18/s7eUVFh0BybjTGiAhsqaa7enfMC43Abq3yAT++ubg2fMBChQFDPraJBqU5356AAAAAElFTkSuQmCC",
+                "scrimColor": "#2E1211",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.3388429752066116
+            },
+            {
+                "caption": "",
+                "id": 394001482,
+                "large": "https://a0.muscache.com/im/pictures/62b62c86-71f1-48f5-8379-ba939eb55ac3.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAECAIAAADJUWIXAAAAS0lEQVQIHQFAAL//AbKUnMnMymtcWf36/e/v7AHbt8bBw7xNPj75+Pnp6+UB3LXH8u/nCgoJ8PL0t7+6AaV8f9Xk5ldudAP/8ejc22AQKnVAc7W0AAAAAElFTkSuQmCC",
+                "scrimColor": "#13060F",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.3388429752066116
+            },
+            {
+                "caption": "",
+                "id": 394001484,
+                "large": "https://a0.muscache.com/im/pictures/2cc5fa4a-4cab-4dab-be70-ccc4de2d075d.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAECAIAAADJUWIXAAAAS0lEQVQIHQFAAL//AbSjqNPOyPv17wD9/j5ESwGrk5Xd3NkMBwb29/tDREkBg2Zm+f8DNi4sytXgbIWBAVIzMgUDASUYEevy+YO1wGIDH/HlWlGnAAAAAElFTkSuQmCC",
+                "scrimColor": "#2A1011",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.3388429752066116
+            },
+            {
+                "caption": "",
+                "id": 394001489,
+                "large": "https://a0.muscache.com/im/pictures/6048598b-e116-4949-b989-6133fdd6269d.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAECAIAAADJUWIXAAAAS0lEQVQIHQFAAL//AfLj5P/7/efr5AD6Cf78+gHCnI4eJC79CQr9+Qv49vABlHp0DAUHJTEz4+Lw6+rkAZ+VmvXn3hQeJv0EDv4BBuc2IzLJ5ajQAAAAAElFTkSuQmCC",
+                "scrimColor": "#31140E",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.3388429752066116
+            },
+            {
+                "caption": "",
+                "id": 394001490,
+                "large": "https://a0.muscache.com/im/pictures/afab580e-eb7d-4369-a7c0-85c9336595ec.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAECAIAAADJUWIXAAAAS0lEQVQIHQFAAL//AUk8RwDu3w4JCEpkZvjx+gFlS1ECBQsEBwlHVUDo3vABUDtBCAAA+QYQTlFJ8+33ATUYGgkE/iEvQTlJT+rZzrN4FnR8XasfAAAAAElFTkSuQmCC",
+                "scrimColor": "#2C100F",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.3388429752066116
+            },
+            {
+                "caption": "",
+                "id": 394001491,
+                "large": "https://a0.muscache.com/im/pictures/3e94a418-776c-4932-a2a3-fb8ba47caef1.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAECAIAAADJUWIXAAAAS0lEQVQIHQFAAL//AVphISkFKFVzkrnNvN/czQFJRhYsFCcoPlvjAvjw7eABUU49/efl9gYJLD1C/PTkAVpaSvjq8fTo2/H19CkaHYyoH62IM8zFAAAAAElFTkSuQmCC",
+                "scrimColor": "#301003",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.3388429752066116
+            },
+            {
+                "caption": "",
+                "id": 394001493,
+                "large": "https://a0.muscache.com/im/pictures/52e16c4e-5054-4e0a-b1a1-f6201ca347ab.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAECAIAAADJUWIXAAAAS0lEQVQIHQFAAL//Ab+isgwMCP77+PLq5wgPEgGlhpjb4ttNQ0Pw6eYGDA8BcUlKRU9bEQ4Q0tDKERAQAUQYEBgiKFVleL+5sCQ2MKXjGZTKT3xMAAAAAElFTkSuQmCC",
+                "scrimColor": "#1A0406",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.3388429752066116
+            },
+            {
+                "caption": "",
+                "id": 394001496,
+                "large": "https://a0.muscache.com/im/pictures/72c2ef82-02ec-41fc-88c0-9e0d799b3409.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAECAIAAADJUWIXAAAASUlEQVQIHWMMzYnm4+Hh4+FkY/xrIS/OGJGXKMQvJCosIinEF2hlzRjibs0iLM7D8UGUj8fFLYUx2tPh/Y8Pui62nKwMr29cAwCK5g+m/bGvqAAAAABJRU5ErkJggg==",
+                "scrimColor": "#291306",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.3388429752066116
+            },
+            {
+                "caption": "",
+                "id": 394001497,
+                "large": "https://a0.muscache.com/im/pictures/57ecb8fd-9f44-4391-9e10-e03f32a503bb.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAECAIAAADJUWIXAAAAS0lEQVQIHQFAAL//AWRaVQQFCvX19Pn18fby8QFpZWokJB3j1s4pP1KqmI8BYGiGBfjbCP/9AhYp1MCtAU1BLQ4OBgsNC+rf3/Tw8+tAHptk7VdWAAAAAElFTkSuQmCC",
+                "scrimColor": "#280D06",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.3388429752066116
+            },
+            {
+                "caption": "",
+                "id": 394001498,
+                "large": "https://a0.muscache.com/im/pictures/fff6260d-9b8c-47a2-974c-3c9977b026c4.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAECAIAAADJUWIXAAAAS0lEQVQIHQFAAL//Adfg2vHp5w8VFAADBujo6QHa5d/OtbAyQDv08/oH+O0Bz9fSyq+pBgcDDxQYHhsUAXZ7fw4DAkVJUOjr3PAC5TJ/HrWzXhrRAAAAAElFTkSuQmCC",
+                "scrimColor": "#211312",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.3388429752066116
+            },
+            {
+                "caption": "",
+                "id": 394001499,
+                "large": "https://a0.muscache.com/im/pictures/52088ac0-6fd0-4251-94a0-4e11d52d5b0f.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAECAIAAADJUWIXAAAAS0lEQVQIHQFAAL//AXVXTPwEAevm5O/s7RYUGAGmoJ8uOTGfdm7RztMwS1gBaElBCgX+5uvw29faMElPAVFUcAQKDv/27/nr2+3k2dTkILSL0BswAAAAAElFTkSuQmCC",
+                "scrimColor": "#310E08",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.3388429752066116
+            },
+            {
+                "caption": "",
+                "id": 394001502,
+                "large": "https://a0.muscache.com/im/pictures/005f2e80-69bf-4f72-b293-2b007feceab0.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAECAIAAADJUWIXAAAAS0lEQVQIHQFAAL//AaGRgOL1+uX5Af/z7gnUxAGvm43V6/LQ2t8J+PAV59oBqZGH2+jo7woP+eLcAsi6AZiZmufq2vXs6/72+Qbq7F42K3uFSxIxAAAAAElFTkSuQmCC",
+                "scrimColor": "#09080E",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.3388429752066116
+            },
+            {
+                "caption": "",
+                "id": 394001557,
+                "large": "https://a0.muscache.com/im/pictures/04799003-33e9-4dc3-b2d9-e14b29a7aef0.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAADCAIAAADUVFKvAAAAO0lEQVQIHQEwAM//AbeTYh8ZEBsbDfz+As3U6AF6YkIhFAwtHQfn6vOdv+YBISIjBwUFFAcDAAAB6/j6pNIQ6bGxxQYAAAAASUVORK5CYII=",
+                "scrimColor": "#262425",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.7777777777777777
+            },
+            {
+                "caption": "",
+                "id": 394001561,
+                "large": "https://a0.muscache.com/im/pictures/0204e211-b495-479d-92de-0f31d83e9ea9.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAADCAIAAADUVFKvAAAAO0lEQVQIHQEwAM//Aaa3x/79/vb3+fL19+zw8wF6fnv2BRfy/AXy8/Xx9PUBrK2rAf/71NTR09jV6e70X1ojo/x0OzkAAAAASUVORK5CYII=",
+                "scrimColor": "#33362D",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.7777777777777777
+            },
+            {
+                "caption": "",
+                "id": 394001565,
+                "large": "https://a0.muscache.com/im/pictures/906c3055-3bbf-4b52-bdc9-2817f7e8a637.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAADCAIAAADUVFKvAAAAO0lEQVQIHQEwAM//AYOjxAoHBwYEAQ4F/v78+AF2k7AUBPX68uoA/Pfi7fMBXWtl+fDr///8BQT/AgH/Ii0Zapfadx4AAAAASUVORK5CYII=",
+                "scrimColor": "#454A36",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.7777777777777777
+            },
+            {
+                "caption": "",
+                "id": 394001567,
+                "large": "https://a0.muscache.com/im/pictures/f2847f20-35c8-4b09-bae1-354e186acd9c.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAADCAIAAADUVFKvAAAAOUlEQVQIHWNcvGCJGA+HEDcLP8d/LrbfjOl5xTwcbAJcHOws/9lZ/jPmpmf8ZWD6+5+R4T/Dh+8/ADn9EAWUJDI8AAAAAElFTkSuQmCC",
+                "scrimColor": "#3C3F44",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.7777777777777777
+            },
+            {
+                "caption": "",
+                "id": 394001569,
+                "large": "https://a0.muscache.com/im/pictures/3dbe8ff3-e70c-467b-b1b1-fb4405a22374.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAADCAIAAADUVFKvAAAAOUlEQVQIHWPs3/WQg52NhYWViZn57///jFn1rXw8PFwcjMzMLOx/3jLq6ihLSgupq/579uKPmqoWAEVjDj9wkkyBAAAAAElFTkSuQmCC",
+                "scrimColor": "#161815",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.7777777777777777
+            },
+            {
+                "caption": "",
+                "id": 394001571,
+                "large": "https://a0.muscache.com/im/pictures/63184ab5-dac7-48dc-aa3f-165a6d806743.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAADCAIAAADUVFKvAAAAOUlEQVQIHWNsnbtdko+NiYn5588fn75+Y8wvLGRkZv3zn5mF8c/nT28ZPXxseLnZZaTkxEXFJEREANycEMiLjjknAAAAAElFTkSuQmCC",
+                "scrimColor": "#3D422E",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.7777777777777777
+            },
+            {
+                "caption": "",
+                "id": 394001572,
+                "large": "https://a0.muscache.com/im/pictures/b7032811-d714-42f7-9c5c-84df27c0aec8.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAADCAIAAADUVFKvAAAAO0lEQVQIHQEwAM//AZnF7P//Afz9AP3/Afr8/QFZY18tNkANEBoDBQf6AAIBPUAh+Pj/CgcQHyEYExLsN3oTTWSt1VYAAAAASUVORK5CYII=",
+                "scrimColor": "#1E211A",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.7777777777777777
+            },
+            {
+                "caption": "",
+                "id": 394001573,
+                "large": "https://a0.muscache.com/im/pictures/585dd202-d024-408d-a061-fc417e860617.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAADCAIAAADUVFKvAAAAO0lEQVQIHQEwAM//AXmjzP737AoB+QD05vT39wFIWEsDAQULBwj3+Pf0+PcBmp2cCwoDAwP93eHS8PLuZSUZslwkfr0AAAAASUVORK5CYII=",
+                "scrimColor": "#324237",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.7777777777777777
+            },
+            {
+                "caption": "",
+                "id": 394001574,
+                "large": "https://a0.muscache.com/im/pictures/a1eb3d1c-e70c-4ed5-a36c-defdd969c5d1.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAADCAIAAADUVFKvAAAAO0lEQVQIHQEwAM//AY2esv39/R4UDN/h29bY0QFncHULBfv39/To6Ojs6OsBfH9xKyUl9vT8usDEzdbfxuEeZxIlKfQAAAAASUVORK5CYII=",
+                "scrimColor": "#212629",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.7777777777777777
+            },
+            {
+                "caption": "",
+                "id": 394001576,
+                "large": "https://a0.muscache.com/im/pictures/52b1b17c-da53-4bed-bb34-b4d1d34a9ed7.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAECAIAAADJUWIXAAAASUlEQVQIHWPce+gkPxe7EC87Px8XFw83Y2FbOyczIzvTf1E+Xj4uHsaQ2HAWxv////xlYmBkZ2FnzEmL5GJnYfjH/PnLD252LgDRgBAXld6MRgAAAABJRU5ErkJggg==",
+                "scrimColor": "#30302E",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.3394375408763899
+            },
+            {
+                "caption": "",
+                "id": 394001579,
+                "large": "https://a0.muscache.com/im/pictures/869bea95-5b1b-4ea9-a3a9-5f8c0409ca24.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAADCAIAAADUVFKvAAAAO0lEQVQIHQEwAM//AVhjXxIPCxsVFg0JCdHb2AFNXlIJBQYNCQz+/fv29/cBYGtd+fr6Af8B/vz/+ff1geAWNNGpwzQAAAAASUVORK5CYII=",
+                "scrimColor": "#2C3838",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.7777777777777777
+            },
+            {
+                "caption": "",
+                "id": 394001580,
+                "large": "https://a0.muscache.com/im/pictures/8a4a3de8-73b7-4574-84d0-b701788ab8f8.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAADCAIAAADUVFKvAAAAO0lEQVQIHQEwAM//AWuMoBEKBAfz2A8HAM/a0QFRVysJCRo3LzgAAf3y9+sBNDkf7ez8XlhX/gX209jKn2IUZ82JZQ8AAAAASUVORK5CYII=",
+                "scrimColor": "#22251A",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.7777777777777777
+            }
+        ],
+        "primaryHost": {
+            "about": "",
+            "badges": [
+                {
+                    "count": 2,
+                    "id": "reviews",
+                    "label": "2 Reviews",
+                    "link": "/users/show/154239985#reviews"
+                }
+            ],
+            "firstName": "Niko",
+            "id": 154239985,
+            "isSuperhost": false,
+            "memberSinceFullStr": "Joined in October 2017",
+            "name": "Niko",
+            "languages": [],
+            "pictureUrl": "https://a0.muscache.com/im/pictures/user/26abb951-df0a-497a-b2b2-bf3373de124e.jpg?aki_policy=profile_x_medium",
+            "responseRateWithoutNa": "100%",
+            "responseTimeWithoutNa": "within an hour",
+            "hasInclusionBadge": false,
+            "pictureLargeUrl": "https://a0.muscache.com/im/pictures/user/26abb951-df0a-497a-b2b2-bf3373de124e.jpg?aki_policy=profile_large",
+            "hostIntroTags": [
+                "2 reviews"
+            ]
+        },
+        "roomTypeCategory": "entire_home",
+        "sectionedDescription": {
+            "authorType": "human",
+            "description": "VillaMargarita is situated only 3klm from the very known Borshi Beach, on 2klm away you will find the very famous Borsh Castle and the main town Saranda is 35klm away",
+            "locale": "en",
+            "localizedLanguageName": "English",
+            "name": "VillaMargarita",
+            "summary": "VillaMargarita is situated only 3klm from the very known Borshi Beach, on 2klm away you will find the very famous Borsh Castle and the main town Saranda is 35klm away"
+        },
+        "tierId": 0,
+        "guestControls": {
+            "allowsChildren": true,
+            "allowsEvents": true,
+            "allowsInfants": true,
+            "allowsPets": true,
+            "allowsSmoking": true,
+            "personCapacity": 3,
+            "structuredHouseRules": [
+                "Check-in time is flexible and check out by 12PM (noon)"
+            ],
+            "structuredHouseRulesWithTips": [
+                {
+                    "key": "check_in_time_and_check_out_time",
+                    "text": "Check-in time is flexible and check out by 12PM (noon)",
+                    "airmojiKey": "accomodation_keys"
+                }
+            ],
+            "allowsNonChinaUsers": true
+        },
+        "hasSpecialOffer": false,
+        "maxNights": 30,
+        "minNights": 1,
+        "priceDetails": [
+            {
+                "label": "Cleaning Fee",
+                "value": "€5",
+                "attributeType": "CLEANING_FEE"
+            },
+            {
+                "label": "Extra people",
+                "value": "No Charge",
+                "attributeType": "EXTRA_PEOPLE"
+            }
+        ],
+        "hasWeWorkLocation": false,
+        "isBusinessTravelReady": false,
+        "additionalHosts": [],
+        "isHostedBySuperhost": false,
+        "hometourRooms": [
+            {
+                "details": [],
+                "highlightsHometour": [
+                    "1 double bed",
+                    "1 single bed"
+                ],
+                "highlightsPreview": [],
+                "isShared": true,
+                "id": 12106512,
+                "name": "",
+                "nameWithType": "Common spaces",
+                "photos": [],
+                "roomTypeId": 7,
+                "icons": [
+                    {
+                        "type": "double_bed",
+                        "url": ""
+                    },
+                    {
+                        "type": "single_bed",
+                        "url": ""
+                    }
+                ]
+            }
+        ],
+        "hometourSections": [],
+        "descriptionLocale": "en",
+        "initialDescriptionAuthorType": "human",
+        "localizedCheckInTimeWindow": "Flexible",
+        "localizedCheckOutTime": "12:00 PM",
+        "city": "Borsh",
+        "country": "Albania",
+        "countryCode": "AL",
+        "hasHostGuidebook": false,
+        "hasLocalAttractions": false,
+        "neighborhoodCommunityTags": [],
+        "state": "Vlorë County",
+        "paidGrowthRemarketingListingIds": [
+            21311290
+        ],
+        "hasCommercialHostInfo": false,
+        "reviewDetailsInterface": {
+            "reviewCount": 1,
+            "reviewSummary": [
+                {
+                    "value": 10,
+                    "label": "Accuracy",
+                    "localizedRating": "5.0",
+                    "percentage": 1
+                },
+                {
+                    "value": 10,
+                    "label": "Communication",
+                    "localizedRating": "5.0",
+                    "percentage": 1
+                },
+                {
+                    "value": 10,
+                    "label": "Cleanliness",
+                    "localizedRating": "5.0",
+                    "percentage": 1
+                },
+                {
+                    "value": 10,
+                    "label": "Location",
+                    "localizedRating": "5.0",
+                    "percentage": 1
+                },
+                {
+                    "value": 10,
+                    "label": "Check-in",
+                    "localizedRating": "5.0",
+                    "percentage": 1
+                },
+                {
+                    "value": 10,
+                    "label": "Value",
+                    "localizedRating": "5.0",
+                    "percentage": 1
+                }
+            ]
+        },
+        "reviewsOrder": "language_country",
+        "hostQuote": "",
+        "hostSignatureFont": {
+            "url": "https://a0.muscache.com/airbnb/static/temp-fonts/HandsomePro-Normal.otf"
+        },
+        "nearbyAirportDistanceDescriptions": [],
+        "propertyTypeInCity": "",
+        "renderTierId": 0,
+        "isHotel": false,
+        "showReviewTag": false,
+        "isRepresentativeInventory": false,
+        "localizedCity": "Borsh",
+        "highlights": [
+            {
+                "type": "LISTING_ENTIRE_HOME_PROPERTY_TYPE",
+                "message": "You’ll have the apartment to yourself.",
+                "headline": "Entire home",
+                "position": "0",
+                "icon": "accomodation_home"
+            }
+        ],
+        "highlightsImpressionId": "1661bc4a-d8ce-7ee9-ca44-d9a6fa5d2f7f",
+        "categorizedPreviewAmenities": [
+            {
+                "category": "Standard",
+                "amenities": "Air conditioning, Essentials, Hot water, TV, Wifi, and 6 more"
+            },
+            {
+                "category": "Other highlights",
+                "amenities": "Free parking on premises, Host greets you, Long term stays allowed, BBQ grill, Patio or balcony, and 1 more"
+            }
+        ],
+        "pointOfInterests": [],
+        "chinaPointsOfInterestMatcha": {},
+        "pageViewType": "DEFAULT",
+        "previewTags": [],
+        "seeAllHometourSections": [],
+        "educationModules": {},
+        "enableHighlightsVoting": false,
+        "listingExpectations": [
+            {
+                "addedDetails": "Dog, Cat, Sheep, Goat, Chicken",
+                "title": "Pet(s) live on property",
+                "type": "has_pets",
+                "airmojiKey": "house_rules_property_pet"
+            },
+            {
+                "addedDetails": "Animals",
+                "title": "Potential for noise",
+                "type": "potential_noise",
+                "airmojiKey": "house_rules_noise"
+            },
+            {
+                "title": "Must climb stairs",
+                "type": "requires_stairs",
+                "airmojiKey": "house_rules_stairs"
+            }
+        ],
+        "localizedListingExpectations": [
+            {
+                "addedDetails": "Dog, Cat, Sheep, Goat, Chicken",
+                "title": "Pet(s) live on property",
+                "type": "has_pets",
+                "airmojiKey": "house_rules_property_pet"
+            },
+            {
+                "addedDetails": "Animals",
+                "title": "Potential for noise",
+                "type": "potential_noise",
+                "airmojiKey": "house_rules_noise"
+            },
+            {
+                "title": "Must climb stairs",
+                "type": "requires_stairs",
+                "airmojiKey": "house_rules_stairs"
+            }
+        ],
+        "heroModule": {
+            "categorizedPhotos": []
+        },
+        "reviewsModule": {
+            "appreciationTags": []
+        },
+        "availabilityModule": {},
+        "additionalHouseRules": "",
+        "sortedReviews": [],
+        "sections": [],
+        "metadata": {},
+        "p3ImpressionId": "1661bc4a-d8ce-7ee9-ca44-d9a6fa5d2f7f"
+    },
+    {
+        "url": "https://api.airbnb.com/v2/pdp_listing_details/32667133?_format=for_native",
+        "name": "Our place is called Villa Giorgos Bitris.",
+        "numberOfGuests": 10,
+        "address": "Sarande, Albania",
+        "roomType": "Entire house",
+        "location": {
+            "lat": 40.02067,
+            "lng": 19.89196
+        },
+        "reviews": [],
+        "listingAmenities": [
+            {
+                "description": "",
+                "id": 5,
+                "isPresent": false,
+                "name": "Air conditioning"
+            },
+            {
+                "description": "Towels, bed sheets, soap, and toilet paper",
+                "id": 40,
+                "isPresent": true,
+                "name": "Essentials"
+            },
+            {
+                "description": "",
+                "id": 30,
+                "isPresent": false,
+                "name": "Heating"
+            },
+            {
+                "description": "",
+                "id": 46,
+                "isPresent": true,
+                "name": "Iron"
+            },
+            {
+                "description": "",
+                "id": 1,
+                "isPresent": false,
+                "name": "TV"
+            },
+            {
+                "description": "In the building, free or for a fee",
+                "id": 33,
+                "isPresent": true,
+                "name": "Washer"
+            },
+            {
+                "description": "",
+                "id": 4,
+                "isPresent": false,
+                "name": "Wifi"
+            },
+            {
+                "description": "Breakfast is provided",
+                "id": 16,
+                "isPresent": true,
+                "name": "Breakfast"
+            },
+            {
+                "description": "Space where guests can cook their own meals",
+                "id": 8,
+                "isPresent": true,
+                "name": "Kitchen"
+            },
+            {
+                "description": "Separate street or building entrance",
+                "id": 57,
+                "isPresent": true,
+                "name": "Private entrance"
+            },
+            {
+                "description": "",
+                "id": 45,
+                "isPresent": true,
+                "name": "Hair dryer"
+            },
+            {
+                "description": "",
+                "id": 44,
+                "isPresent": true,
+                "name": "Hangers"
+            },
+            {
+                "description": "",
+                "id": 41,
+                "isPresent": true,
+                "name": "Shampoo"
+            },
+            {
+                "description": "The host hasn't reported a carbon monoxide detector on the property.",
+                "id": 36,
+                "isPresent": false,
+                "name": "Carbon monoxide alarm"
+            },
+            {
+                "description": "The host hasn't reported a smoke detector on the property.",
+                "id": 35,
+                "isPresent": false,
+                "name": "Smoke alarm"
+            },
+            {
+                "description": "",
+                "id": 37,
+                "isPresent": true,
+                "name": "First aid kit"
+            }
+        ],
+        "rootAmenitySections": [
+            {
+                "id": "available_amenities",
+                "title": "Amenities",
+                "subtitle": "",
+                "amenityIds": [
+                    40,
+                    46,
+                    33,
+                    16
+                ]
+            },
+            {
+                "id": "unavailable_safety_amenities",
+                "title": "Amenities",
+                "subtitle": "The host hasn't reported smoke or carbon monoxide detectors on the property.",
+                "amenityIds": [
+                    35,
+                    36
+                ]
+            }
+        ],
+        "seeAllAmenitySections": [
+            {
+                "id": "pdp_basic",
+                "title": "Basic",
+                "subtitle": "",
+                "amenityIds": [
+                    40,
+                    46,
+                    33
+                ]
+            },
+            {
+                "id": "pdp_dining",
+                "title": "Dining",
+                "subtitle": "",
+                "amenityIds": [
+                    16,
+                    8
+                ]
+            },
+            {
+                "id": "pdp_guest_access",
+                "title": "Guest access",
+                "subtitle": "",
+                "amenityIds": [
+                    57
+                ]
+            },
+            {
+                "id": "pdp_bed_bath",
+                "title": "Bed and bath",
+                "subtitle": "",
+                "amenityIds": [
+                    45,
+                    44,
+                    41
+                ]
+            },
+            {
+                "id": "pdp_safety",
+                "title": "Safety features",
+                "subtitle": "",
+                "amenityIds": [
+                    37
+                ]
+            },
+            {
+                "id": "pdp_unavailable",
+                "title": "Not included",
+                "subtitle": "",
+                "amenityIds": [
+                    5,
+                    30,
+                    1,
+                    4,
+                    36,
+                    35
+                ]
+            }
+        ],
+        "bathroomLabel": "3 baths",
+        "bedLabel": "10 beds",
+        "bedroomLabel": "5 bedrooms",
+        "hasHouseRules": true,
+        "id": 32667133,
+        "isNewListing": false,
+        "listingRooms": [
+            {
+                "beds": [
+                    {
+                        "id": "36990214/sofa_bed",
+                        "quantity": 2,
+                        "type": "sofa_bed"
+                    }
+                ],
+                "id": 36990214,
+                "roomNumber": 0
+            },
+            {
+                "beds": [
+                    {
+                        "id": "36990215/double_bed",
+                        "quantity": 1,
+                        "type": "double_bed"
+                    }
+                ],
+                "id": 36990215,
+                "roomNumber": 1
+            },
+            {
+                "beds": [
+                    {
+                        "id": "36990212/single_bed",
+                        "quantity": 3,
+                        "type": "single_bed"
+                    }
+                ],
+                "id": 36990212,
+                "roomNumber": 2
+            },
+            {
+                "beds": [
+                    {
+                        "id": "36990211/double_bed",
+                        "quantity": 1,
+                        "type": "double_bed"
+                    }
+                ],
+                "id": 36990211,
+                "roomNumber": 3
+            },
+            {
+                "beds": [
+                    {
+                        "id": "36990216/double_bed",
+                        "quantity": 1,
+                        "type": "double_bed"
+                    }
+                ],
+                "id": 36990216,
+                "roomNumber": 4
+            },
+            {
+                "beds": [
+                    {
+                        "id": "36990213/single_bed",
+                        "quantity": 2,
+                        "type": "single_bed"
+                    }
+                ],
+                "id": 36990213,
+                "roomNumber": 5
+            }
+        ],
+        "p3SummaryAddress": "Sarande, Albania",
+        "photos": [
+            {
+                "caption": "",
+                "id": 689081909,
+                "large": "https://a0.muscache.com/im/pictures/81c83d3f-c5e1-4d45-b156-36991fda28dd.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAECAIAAADJUWIXAAAAS0lEQVQIHQFAAL//AVB5mC8N7ufTxS0tKBkfGQGosLIR9uC1vcUmJSDHztIBva+c7ebgq6uzCxMV6/P3AYl5ZhoXFfvy7bjI1PX7++Y3Im+jTDm4AAAAAElFTkSuQmCC",
+                "scrimColor": "#1F1C17",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.3333333333333333
+            },
+            {
+                "caption": "",
+                "id": 689082071,
+                "large": "https://a0.muscache.com/im/pictures/a7c2b42d-3f94-4966-b786-ccacc19394ca.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAMAAAAFCAIAAAAPE8H1AAAAPUlEQVQIHQEyAM3/Adrr9pmOidvY0AG3zO7HtZjn5uABbnJ/9/PmCgkFAS8xNCsnIvb49wFNUFELCAETFBLfjReVYkQA8gAAAABJRU5ErkJggg==",
+                "scrimColor": "#111113",
+                "isProfessional": false,
+                "pictureOrientation": "PORTRAIT",
+                "aspectRatio": 0.6
+            },
+            {
+                "caption": "",
+                "id": 689082177,
+                "large": "https://a0.muscache.com/im/pictures/efc820f1-82b7-4417-94b8-3826657449ec.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAMAAAAFCAIAAAAPE8H1AAAAPUlEQVQIHQEyAM3/AYWMiv/69hEfOQGFio0kHhLy+gkBWFdTRUA93+TgAX93dBQSDvj59gGYeHbx6+cBGhYuXRZEKqgSfAAAAABJRU5ErkJggg==",
+                "scrimColor": "#21201E",
+                "isProfessional": false,
+                "pictureOrientation": "PORTRAIT",
+                "aspectRatio": 0.6
+            },
+            {
+                "caption": "",
+                "id": 689082343,
+                "large": "https://a0.muscache.com/im/pictures/090d1735-6c7f-42b0-a07c-48367f2e8a29.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAMAAAAFCAIAAAAPE8H1AAAAPUlEQVQIHQEyAM3/Aay8vtja1hEUHAGtr7CjqacMBP8Bio6E9OjpEAT+AXt3cR0SEuXo4wFfXFg3NzPS1NVuNxf550vBqgAAAABJRU5ErkJggg==",
+                "scrimColor": "#202423",
+                "isProfessional": false,
+                "pictureOrientation": "PORTRAIT",
+                "aspectRatio": 0.6
+            },
+            {
+                "caption": "",
+                "id": 689082486,
+                "large": "https://a0.muscache.com/im/pictures/57d5ba80-2436-4064-a01f-25fbb062de39.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAMAAAAFCAIAAAAPE8H1AAAAPUlEQVQIHQEyAM3/Ac60mffy7e/v6AGvjmvf4usTGx0Bm3pk2NfW/gUDAbqOdOrl3+vx8wGifWTy8e/w8/MJ2x/ExIEEOQAAAABJRU5ErkJggg==",
+                "scrimColor": "#33251C",
+                "isProfessional": false,
+                "pictureOrientation": "PORTRAIT",
+                "aspectRatio": 0.6
+            },
+            {
+                "caption": "",
+                "id": 689082727,
+                "large": "https://a0.muscache.com/im/pictures/26ac2334-aef9-43b4-bf97-f7e8e9ba05ea.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAQAAAAFCAIAAADtz9qMAAAATElEQVQIHQFBAL7/AWNkWBIVIxQZHfz88gFnZmEdHy4THSz9/vABTkY+RkdUFB8t3NnGATYrHV1pfh0aGdnVxwFMPCEQHCkDBQfm4NfKgxZBH29LcgAAAABJRU5ErkJggg==",
+                "scrimColor": "#2D261C",
+                "isProfessional": false,
+                "pictureOrientation": "PORTRAIT",
+                "aspectRatio": 0.75
+            },
+            {
+                "caption": "",
+                "id": 689083235,
+                "large": "https://a0.muscache.com/im/pictures/b12c0d9d-d9c6-48f8-b8a0-127802bf58bb.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAMAAAAFCAIAAAAPE8H1AAAAPUlEQVQIHQEyAM3/AYmRiujw+ygeDgGTk47h7Pw0KRcBk46L0eX/TDsiAZiTjdLpDD0rCgF2b135AxIYFAxfExVFFQSgMAAAAABJRU5ErkJggg==",
+                "scrimColor": "#4A5B75",
+                "isProfessional": false,
+                "pictureOrientation": "PORTRAIT",
+                "aspectRatio": 0.6
+            },
+            {
+                "caption": "",
+                "id": 689083426,
+                "large": "https://a0.muscache.com/im/pictures/de68a600-2dd2-44de-af9c-a935f76f3b5f.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAMAAAAFCAIAAAAPE8H1AAAAPUlEQVQIHQEyAM3/AZ6qqQkLDuvs6wGcnZsXHSXGw7wBf3x5CBMX+vn1AX+BeQP//Pn/AQE/QzUrLi0PFRk4dRTFJUz7sgAAAABJRU5ErkJggg==",
+                "scrimColor": "#292A24",
+                "isProfessional": false,
+                "pictureOrientation": "PORTRAIT",
+                "aspectRatio": 0.6
+            },
+            {
+                "caption": "",
+                "id": 689083575,
+                "large": "https://a0.muscache.com/im/pictures/b96a5fdf-d111-4670-9e3d-9a7757cf85ac.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAMAAAAFCAIAAAAPE8H1AAAAPUlEQVQIHQEyAM3/AX+Ph/z6/P4CBAGMlZK+t7c7RkgBn6ansainPklLAZGXmLmspzVHSgGRpaPFsKgIEBJ9lRepEAVYSQAAAABJRU5ErkJggg==",
+                "scrimColor": "#372F2D",
+                "isProfessional": false,
+                "pictureOrientation": "PORTRAIT",
+                "aspectRatio": 0.6
+            },
+            {
+                "caption": "",
+                "id": 689083973,
+                "large": "https://a0.muscache.com/im/pictures/7ee66dca-8a82-4fbf-898f-8d3687cd7699.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAMAAAAFCAIAAAAPE8H1AAAAPUlEQVQIHQEyAM3/AXV9df77/fn//wFucG0TExgACAsBV1ZWHRQY7Pb3Adre45iYoM7IuQG1ubzJx8fP0cprnRrAr66npQAAAABJRU5ErkJggg==",
+                "scrimColor": "#1E2126",
+                "isProfessional": false,
+                "pictureOrientation": "PORTRAIT",
+                "aspectRatio": 0.6
+            },
+            {
+                "caption": "",
+                "id": 689084127,
+                "large": "https://a0.muscache.com/im/pictures/5cfcec5c-105a-4456-b14d-deb3eb638cee.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAMAAAAFCAIAAAAPE8H1AAAAO0lEQVQIHWOMKcqpLax4+PQlY6CPC7uA8F9GDkZPdxtRCSkrUwvGGVN7OVjZ//z7x9jd3cTJwfnn7z8AtuYSj6nl61MAAAAASUVORK5CYII=",
+                "scrimColor": "#212B22",
+                "isProfessional": false,
+                "pictureOrientation": "PORTRAIT",
+                "aspectRatio": 0.6
+            },
+            {
+                "caption": "",
+                "id": 689084377,
+                "large": "https://a0.muscache.com/im/pictures/89498fec-1e85-413a-86b8-4a12008b5434.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAADCAIAAADUVFKvAAAAO0lEQVQIHQEwAM//AVZxkA4fMxEfKwUFBvnv6QFCTkL7AgsOEBz2/gL37eIBmKChPjAoxMvQuO3+7/DymvsWCQHRKM0AAAAASUVORK5CYII=",
+                "scrimColor": "#2C3930",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.779935275080906
+            },
+            {
+                "caption": "",
+                "id": 689084496,
+                "large": "https://a0.muscache.com/im/pictures/190eab47-88ca-4dbe-a2d6-8e3b9f0b4b24.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAADCAIAAADUVFKvAAAAO0lEQVQIHQEwAM//AU9WOwMRLwQIERAZKgINHQGVkoP08PT6+fr1/v31AAcBv7OnBAUN7/4Gz9ne2uvzoDcWfpURijMAAAAASUVORK5CYII=",
+                "scrimColor": "#3B3E2D",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.7777777777777777
+            },
+            {
+                "caption": "",
+                "id": 689084622,
+                "large": "https://a0.muscache.com/im/pictures/04451027-5067-4390-a561-e10a37fe7e72.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAECAIAAADJUWIXAAAAS0lEQVQIHQFAAL//AXao2gUFBAABAPr37s+9lwGWttb/APvs4MXZy6sA9wQBf6OmFxcXNBcQCv719/XwAXeuqhYOChcIBxwKCwgB/tYdG6Es4c+2AAAAAElFTkSuQmCC",
+                "scrimColor": "#1E2716",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.3333333333333333
+            },
+            {
+                "caption": "",
+                "id": 689084839,
+                "large": "https://a0.muscache.com/im/pictures/62b45bd1-3ca5-494f-8de4-b1e845607edf.jpg?aki_policy=large",
+                "previewEncodedPng": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAECAIAAADJUWIXAAAASUlEQVQIHWNcs+UwOwcrLzebCD8HPy8b44YNm3m42Pi5WQV42AR52RkLMxL/MrNy83KLCPEpykkxTquMf/PlHwMbF5+oOAcXFwCXwAzd1iaf7QAAAABJRU5ErkJggg==",
+                "scrimColor": "#2F2A24",
+                "isProfessional": false,
+                "pictureOrientation": "LANDSCAPE",
+                "aspectRatio": 1.3317191283292977
+            }
+        ],
+        "primaryHost": {
+            "about": "Communicative, smiling, competent and always debatable as far as my professional transactions are concerned",
+            "badges": [],
+            "firstName": "Αnna",
+            "id": 245625444,
+            "isSuperhost": false,
+            "memberSinceFullStr": "Joined in February 2019",
+            "name": "Αnna",
+            "languages": [
+                "English",
+                "Ελληνικά",
+                "Sign Language"
+            ],
+            "pictureUrl": "https://a0.muscache.com/im/pictures/user/9aabdff2-f776-4d86-b1dc-16ccbe74e7b4.jpg?aki_policy=profile_x_medium",
+            "hasInclusionBadge": false,
+            "pictureLargeUrl": "https://a0.muscache.com/im/pictures/user/9aabdff2-f776-4d86-b1dc-16ccbe74e7b4.jpg?aki_policy=profile_large",
+            "hostIntroTags": []
+        },
+        "roomTypeCategory": "entire_home",
+        "sectionedDescription": {
+            "authorType": "human",
+            "description": "The space is spacious, comfortable, airy with lots of sun and lighting ... It includes a huge courtyard with beautiful trees and flowers and cute kittens .. The nearest beach from the house is 10 minutes away by car ... Always there is a person to serve you for whatever you need. Either to serve you breakfast or a meal or even a transport if you do not have your own means of transportation ... Everything is done after discussions\n\nOur house has a large courtyard and terrace that you can comfortably enjoy your breakfast or meal. Always includes hot water, towels, shampoos, hygienic items. The atmosphere in the room is very warm, friendly and quite hospitality. Above all absolute tranquility and magnificent sea view with perfect sunset of afternoon hours.\n\nOur house is immediately available but you can always contact us any time via mail :   annoulabt@gmail.com    for more information and how many rooms are available at a time....\n\nThe village center has some food shops or small shops to shop for you like milk, bread, butter and other items that may need you\n\nWe have a car that can be used as a taxi to ride on sightseeing or on a beach. Now if you have your own car, the closest beach is within ten minutes.The waters are blue and crystal clear ... The beach is very large, it has loungers, shops with good food and coffee and is good for family and friends. You are not afraid of whether something will happen ... All people are friendly and they visit it from different parts of the world",
+            "interaction": "Our house is immediately available but you can always contact us any time via mail :   annoulabt@gmail.com    for more information and how many rooms are available at a time....",
+            "locale": "en",
+            "localizedLanguageName": "English",
+            "name": "Our place is called Villa Giorgos Bitris.",
+            "neighborhoodOverview": "The village center has some food shops or small shops to shop for you like milk, bread, butter and other items that may need you",
+            "space": "Our house has a large courtyard and terrace that you can comfortably enjoy your breakfast or meal. Always includes hot water, towels, shampoos, hygienic items. The atmosphere in the room is very warm, friendly and quite hospitality. Above all absolute tranquility and magnificent sea view with perfect sunset of afternoon hours.",
+            "summary": "The space is spacious, comfortable, airy with lots of sun and lighting ... It includes a huge courtyard with beautiful trees and flowers and cute kittens .. The nearest beach from the house is 10 minutes away by car ... Always there is a person to serve you for whatever you need. Either to serve you breakfast or a meal or even a transport if you do not have your own means of transportation ... Everything is done after discussions",
+            "transit": "We have a car that can be used as a taxi to ride on sightseeing or on a beach. Now if you have your own car, the closest beach is within ten minutes.The waters are blue and crystal clear ... The beach is very large, it has loungers, shops with good food and coffee and is good for family and friends. You are not afraid of whether something will happen ... All people are friendly and they visit it from different parts of the world"
+        },
+        "tierId": 0,
+        "guestControls": {
+            "allowsChildren": true,
+            "allowsEvents": false,
+            "allowsInfants": true,
+            "allowsPets": true,
+            "allowsSmoking": true,
+            "personCapacity": 10,
+            "structuredHouseRules": [
+                "No parties or events",
+                "Check-in is flexible"
+            ],
+            "structuredHouseRulesWithTips": [
+                {
+                    "key": "are_events_allowed_as_host",
+                    "text": "No parties or events",
+                    "airmojiKey": "house_rules_no_party"
+                },
+                {
+                    "key": "check_in_time",
+                    "text": "Check-in is flexible",
+                    "airmojiKey": "accomodation_keys"
+                }
+            ],
+            "allowsNonChinaUsers": true
+        },
+        "hasSpecialOffer": false,
+        "maxNights": 600,
+        "minNights": 600,
+        "priceDetails": [
+            {
+                "label": "Extra people",
+                "value": "No Charge",
+                "attributeType": "EXTRA_PEOPLE"
+            }
+        ],
+        "hasWeWorkLocation": false,
+        "isBusinessTravelReady": false,
+        "additionalHosts": [],
+        "isHostedBySuperhost": false,
+        "hometourRooms": [
+            {
+                "details": [],
+                "highlightsHometour": [
+                    "1 double bed"
+                ],
+                "highlightsPreview": [],
+                "isShared": true,
+                "id": 36990215,
+                "name": "",
+                "nameWithType": "Bedroom 1",
+                "photos": [],
+                "roomTypeId": 1,
+                "icons": [
+                    {
+                        "type": "double_bed",
+                        "url": ""
+                    }
+                ]
+            },
+            {
+                "details": [],
+                "highlightsHometour": [
+                    "3 single beds"
+                ],
+                "highlightsPreview": [],
+                "isShared": true,
+                "id": 36990212,
+                "name": "",
+                "nameWithType": "Bedroom 2",
+                "photos": [],
+                "roomTypeId": 1,
+                "icons": [
+                    {
+                        "type": "single_bed",
+                        "url": ""
+                    },
+                    {
+                        "type": "single_bed",
+                        "url": ""
+                    },
+                    {
+                        "type": "single_bed",
+                        "url": ""
+                    }
+                ]
+            },
+            {
+                "details": [],
+                "highlightsHometour": [
+                    "1 double bed"
+                ],
+                "highlightsPreview": [],
+                "isShared": true,
+                "id": 36990211,
+                "name": "",
+                "nameWithType": "Bedroom 3",
+                "photos": [],
+                "roomTypeId": 1,
+                "icons": [
+                    {
+                        "type": "double_bed",
+                        "url": ""
+                    }
+                ]
+            },
+            {
+                "details": [],
+                "highlightsHometour": [
+                    "1 double bed"
+                ],
+                "highlightsPreview": [],
+                "isShared": true,
+                "id": 36990216,
+                "name": "",
+                "nameWithType": "Bedroom 4",
+                "photos": [],
+                "roomTypeId": 1,
+                "icons": [
+                    {
+                        "type": "double_bed",
+                        "url": ""
+                    }
+                ]
+            },
+            {
+                "details": [],
+                "highlightsHometour": [
+                    "2 single beds"
+                ],
+                "highlightsPreview": [],
+                "isShared": true,
+                "id": 36990213,
+                "name": "",
+                "nameWithType": "Bedroom 5",
+                "photos": [],
+                "roomTypeId": 1,
+                "icons": [
+                    {
+                        "type": "single_bed",
+                        "url": ""
+                    },
+                    {
+                        "type": "single_bed",
+                        "url": ""
+                    }
+                ]
+            },
+            {
+                "details": [],
+                "highlightsHometour": [
+                    "2 sofa beds"
+                ],
+                "highlightsPreview": [],
+                "isShared": true,
+                "id": 36990214,
+                "name": "",
+                "nameWithType": "Common spaces",
+                "photos": [],
+                "roomTypeId": 7,
+                "icons": [
+                    {
+                        "type": "sofa_bed",
+                        "url": ""
+                    },
+                    {
+                        "type": "sofa_bed",
+                        "url": ""
+                    }
+                ]
+            }
+        ],
+        "hometourSections": [],
+        "descriptionLocale": "en",
+        "initialDescriptionAuthorType": "human",
+        "localizedCheckInTimeWindow": "Flexible",
+        "localizedCheckOutTime": "",
+        "city": "Sarande",
+        "country": "Albania",
+        "countryCode": "AL",
+        "hasHostGuidebook": false,
+        "hasLocalAttractions": false,
+        "neighborhoodCommunityTags": [],
+        "paidGrowthRemarketingListingIds": [
+            32667133
+        ],
+        "hasCommercialHostInfo": false,
+        "reviewDetailsInterface": {
+            "reviewCount": 0,
+            "reviewSummary": []
+        },
+        "reviewsOrder": "language_country",
+        "hostQuote": "",
+        "hostSignatureFont": {
+            "url": "https://a0.muscache.com/airbnb/static/temp-fonts/HandsomePro-Normal.otf"
+        },
+        "nearbyAirportDistanceDescriptions": [],
+        "propertyTypeInCity": "",
+        "renderTierId": 0,
+        "isHotel": false,
+        "showReviewTag": false,
+        "isRepresentativeInventory": false,
+        "localizedCity": "Sarande",
+        "highlights": [
+            {
+                "type": "LISTING_ENTIRE_HOME_PROPERTY_TYPE",
+                "message": "You’ll have the house to yourself.",
+                "headline": "Entire home",
+                "position": "0",
+                "icon": "accomodation_home"
+            },
+            {
+                "type": "LISTING_POPULAR_AMENITY",
+                "message": "This is one of a few places in the area that has this feature.",
+                "headline": "Breakfast",
+                "position": "1",
+                "icon": "extras_star"
+            }
+        ],
+        "highlightsImpressionId": "2d009ded-e48a-6552-4f41-edfe7f748737",
+        "categorizedPreviewAmenities": [
+            {
+                "category": "Standard",
+                "amenities": "Essentials, Iron, Washer, Kitchen, Private entrance, and 3 more"
+            },
+            {
+                "category": "Other highlights",
+                "amenities": "Breakfast, First aid kit"
+            }
+        ],
+        "pointOfInterests": [],
+        "chinaPointsOfInterestMatcha": {},
+        "pageViewType": "DEFAULT",
+        "previewTags": [],
+        "seeAllHometourSections": [],
+        "educationModules": {},
+        "enableHighlightsVoting": false,
+        "listingExpectations": [
+            {
+                "addedDetails": "Dog and cats ",
+                "title": "Pet(s) live on property",
+                "type": "has_pets",
+                "airmojiKey": "house_rules_property_pet"
+            },
+            {
+                "addedDetails": "There is easy access to a car park within 5 minutes of the house.",
+                "title": "No parking on property",
+                "type": "limited_parking",
+                "airmojiKey": "house_rules_no_parking"
+            },
+            {
+                "addedDetails": "One floor about 15 steps",
+                "title": "Must climb stairs",
+                "type": "requires_stairs",
+                "airmojiKey": "house_rules_stairs"
+            },
+            {
+                "addedDetails": "The kitchen area",
+                "title": "Some spaces are shared",
+                "type": "shared_spaces",
+                "airmojiKey": "house_rules_shared_space"
+            }
+        ],
+        "localizedListingExpectations": [
+            {
+                "addedDetails": "Dog and cats ",
+                "title": "Pet(s) live on property",
+                "type": "has_pets",
+                "airmojiKey": "house_rules_property_pet"
+            },
+            {
+                "addedDetails": "There is easy access to a car park within 5 minutes of the house.",
+                "title": "No parking on property",
+                "type": "limited_parking",
+                "airmojiKey": "house_rules_no_parking"
+            },
+            {
+                "addedDetails": "One floor about 15 steps",
+                "title": "Must climb stairs",
+                "type": "requires_stairs",
+                "airmojiKey": "house_rules_stairs"
+            },
+            {
+                "addedDetails": "The kitchen area",
+                "title": "Some spaces are shared",
+                "type": "shared_spaces",
+                "airmojiKey": "house_rules_shared_space"
+            }
+        ],
+        "heroModule": {
+            "categorizedPhotos": []
+        },
+        "reviewsModule": {},
+        "availabilityModule": {},
+        "additionalHouseRules": "",
+        "sortedReviews": [],
+        "sections": [],
+        "metadata": {},
+        "p3ImpressionId": "2d009ded-e48a-6552-4f41-edfe7f748737"
+    }
+]

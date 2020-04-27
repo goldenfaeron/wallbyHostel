@@ -4,7 +4,6 @@
 		<v-container grid-list-xs>
 			<v-layout row wrap>
 				<v-flex xs12>
-					<!-- <v-img :src="data.image"></v-img> -->
 					<h1>{{data.name}}</h1>
 					<h3>{{data.type}}</h3>
 					<p>{{data.description}}</p>

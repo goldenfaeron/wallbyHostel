@@ -1,6 +1,7 @@
 import colors from 'vuetify/es5/util/colors'
 import axios from 'axios'
 
+
 export default {
   mode: 'universal',
   /*
@@ -49,6 +50,11 @@ export default {
   axios: {
     // proxyHeaders: false
   },
+  
+  server: {
+    port: 8000, // default: 3000
+    host: '0.0.0.0' // default: localhost
+  },
   /*
   ** vuetify module configuration
   ** https://github.com/nuxt-community/vuetify-module
@@ -56,7 +62,7 @@ export default {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: true,
+      dark: false,
       themes: {
         dark: {
           primary: colors.blue.darken2,
@@ -69,6 +75,11 @@ export default {
         }
       }
     }
+  },
+
+  server: {
+    port: 8000, // default: 3000     
+    host: '0.0.0.0', // default: localhost   
   },
   /*
   ** Build configuration

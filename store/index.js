@@ -3,6 +3,7 @@ export const state = () => ({
 
     name: "goBorshi",
     city: "Borsh",
+    country: "Albania",
     developer: { name: "Sam", location: "Borsh, Albania" },
 
     //CURRENCIES  
@@ -19,9 +20,11 @@ export const state = () => ({
 
 
     //Cockpit
-    collectionsToken: 'fc6c7faa21c0678f849f0d34e6f664',
-    assetRoot: "https://cms.hackmylanguage.com/storage/uploads",
-    webRoot: "https://cms.hackmylanguage.com",
+    collectionsToken: '641a6e0c88f94f7d2adadd184752e1',
+    assetRoot: "https://cockpit.goborshi.hackmylanguage.com/storage/uploads",
+    webRoot: "https://cockpit.goborshi.hackmylanguage.com",
+
+
 
 
 
