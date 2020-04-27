@@ -82,7 +82,22 @@
 </template>
 
 <script>
-export default {};
+export default {
+	asyncData({ params, store, $axios, route }) {
+		let collection = "hotels";
+		return $axios
+			.post(
+				store.state.webRoot +
+					"/api/collections/get/" +
+					collection +
+					"?token=" +
+					store.state.collectionsToken
+			)
+			.then(res => {
+				return { featured: res.data.entries.reverse() };
+			});
+	}
+};
 </script>
 <style lang="css">
 .truncate-overflow {
