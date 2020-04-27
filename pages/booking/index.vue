@@ -8,7 +8,7 @@
 			<h2>Featured Hotels</h2>
 			<v-layout row wrap>
 				<v-flex xs12 v-for="(item, index) in featured" :key="index">
-					<v-card>
+					<v-card height="100%">
 						<!-- <v-img :src="$store.state.assetRoot + item.image.path" max-height="10cm"></v-img> -->
 
 						<v-card-title primary-title>
@@ -43,7 +43,7 @@
 			<!-- From Booking.com  -->
 			<v-layout row wrap>
 				<v-flex xs12 sm12 md6 lg3 v-for="(item, index) in $store.state.borshHotels[0]" :key="index">
-					<v-card height="100%">
+					<v-card height="100%" flat>
 						<!-- <v-img :src="$store.state.assetRoot + item.image.path" max-height="10cm"></v-img> -->
 
 						<v-card-title primary-title>

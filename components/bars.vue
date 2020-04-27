@@ -16,7 +16,7 @@
 							v-for="(item, index) in $store.state.borshBars[0].slice(0,4) "
 							:key="index"
 						>
-							<v-card height="100%">
+							<v-card height="100%" flat>
 								<!-- <v-img :src="$store.state.assetRoot + item.image.path" max-height="10cm"></v-img> -->
 
 								<v-card-title primary-title>
@@ -50,7 +50,7 @@
 					</v-layout>
 				</v-container>
 			</v-layout>
-            <br />
+			<br />
 			<v-layout justify-center>
 				<v-btn color="primary" href="/bars">See More</v-btn>
 			</v-layout>

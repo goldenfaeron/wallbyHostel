@@ -1,5 +1,5 @@
 <template>
-	<v-content>
+	<div>
 		<welcome></welcome>
 		<about></about>
 		<features></features>
@@ -12,7 +12,7 @@
 		<airbnb></airbnb>
 		<br />
 		<bars></bars>
-	</v-content>
+	</div>
 </template>
 
 

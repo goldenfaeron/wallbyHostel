@@ -16,7 +16,7 @@
 						v-for="(item, index) in $store.state.borshHotels[0].slice(0,4) "
 						:key="index"
 					>
-						<v-card height="100%">
+						<v-card height="100%" flat>
 							<!-- <v-img :src="$store.state.assetRoot + item.image.path" max-height="10cm"></v-img> -->
 
 							<v-card-title primary-title>

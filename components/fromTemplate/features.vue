@@ -9,8 +9,8 @@
 				<v-divider></v-divider>
 			</v-responsive>
 
-			<v-row>
-				<v-col v-for="({ image, title, text }, i) in features" :key="i" cols="12" md="4">
+			<v-layout row wrap>
+				<v-flex xs12 lg4 v-for="({ image, title, text }, i) in features" :key="i" cols="12" md="4">
 					<v-card class="py-12 px-4" flat>
 						<v-theme-provider dark>
 							<div>
@@ -18,15 +18,17 @@
 							</div>
 						</v-theme-provider>
 
-						<v-card-title class="justify-center font-weight-black text-uppercase" v-text="title"></v-card-title>
+						<v-card-title
+							class="justify-center font-weight-black text-uppercase"
+							style="overflow-wrap: anywhere; word-wrap: break-word; word-break: normal; hyphens: auto;"
+							v-text="title"
+						></v-card-title>
 
 						<v-card-text class="subtitle-1" v-text="text"></v-card-text>
 					</v-card>
-				</v-col>
-			</v-row>
+				</v-flex>
+			</v-layout>
 		</v-container>
-
-		<div class="py-12"></div>
 	</section>
 </template>
 <script>
