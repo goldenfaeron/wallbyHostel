@@ -1,6 +1,5 @@
 <template>
 	<div>
-
 		<v-container grid-list-lg>
 			<v-layout row wrap>
 				<!-- Image + Information -->

@@ -24,11 +24,15 @@
 								<p>{{data.bathroomLabel}}</p>
 							</v-flex>
 						</v-layout>
-				
-						<v-layout justify-space-around="">
-						<v-btn v-if="this.imageHeight" color="success" @click="$vuetify.goTo('#descr')">Go to description</v-btn>
+
+						<v-layout justify-space-around>
+							<v-btn
+								v-if="this.imageHeight"
+								color="success"
+								@click="$vuetify.goTo('#descr')"
+							>Go to description</v-btn>
 						</v-layout>
-						<br>
+						<br />
 						<v-divider></v-divider>
 						<br />
 						<span v-for="(item, index) in data.highlights" :key="index">
@@ -164,7 +168,6 @@ export default {
 					return true;
 				case "sm":
 					return true;
-				
 			}
 		}
 	}
