@@ -94,6 +94,16 @@ export default {
 					to: "/airbnb"
 				},
 				{
+					icon: "mdi-youtube",
+					title: this.$store.state.city + " on Youtube",
+					to: "/youtube"
+				},
+				{
+					icon: "mdi-clipboard-plus",
+					title: "Covid-19 in " + this.$store.state.city,
+					to: "/corona"
+				},
+				{
 					icon: "mdi-account-box",
 					title: this.$store.state.name + " Team",
 					to: "/member"
