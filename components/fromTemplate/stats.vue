@@ -1,5 +1,4 @@
 <template>
-
 	<section id="stats">
 		<v-parallax
 			:height="$vuetify.breakpoint.smAndDown ? 700 : 500"
@@ -27,13 +26,16 @@ export default {
 	data() {
 		return {
 			stats: [
-				[this.$store.state.borshInstagram[0].length, "Instagram posts", 'instagram'],
-				[this.$store.state.borshHotels[0].length, "Hotels", 'booking'],
-				[this.$store.state.borshAirbnb[0].length, "Airbnbs", 'airbnb'],
-				[this.$store.state.borshBars[0].length, "Cafes and bars", 'bars']
-			],
-
-			
+				[
+					this.$store.state.borshInstagram[0].length,
+					"Instagram posts",
+					"instagram"
+				],
+				[this.$store.state.borshHotels[0].length, "Hotels", "booking"],
+				[this.$store.state.borshAirbnb[0].length, "Airbnbs", "airbnb"],
+				[this.$store.state.borshBars[0].length, "Cafes and bars", "bars"],
+				[this.$store.state.borshYoutube[0].length, "Videos", "youtube"]
+			]
 		};
 	}
 };
