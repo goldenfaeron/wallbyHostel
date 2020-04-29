@@ -1,10 +1,10 @@
 <template>
 	<div>
-		<v-parallax :src="data.image"></v-parallax>
+		<!--<v-parallax :src="data.image"></v-parallax>
 		<v-container grid-list-xs>
 			<v-layout row wrap>
 				<v-flex xs12>
-					<!-- <v-img :src="data.image"></v-img> -->
+					 <v-img :src="data.image"></v-img> 
 					<h1>{{data.name}}</h1>
 					<h3>{{data.type}}</h3>
 					<p>{{data.description}}</p>
@@ -34,7 +34,7 @@
 					</v-layout>
 				</v-flex>
 			</v-layout>
-		</v-container>
+		</v-container>-->
 	</div>
 </template>
 
