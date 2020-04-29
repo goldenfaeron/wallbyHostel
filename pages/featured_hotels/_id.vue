@@ -21,31 +21,33 @@
 				</v-flex>
 
 				<v-flex xs12 my-5>
-					<v-sheet color="primary lighten-2">
-						<v-container grid-list-lg>
-							<v-layout row wrap>
-								<v-flex xs12 sm6 md4 v-for="(room, index) in hotel.rooms" :key="index">
-									<CardRoom :details="room.value" :show="false"></CardRoom>
-								</v-flex>
-							</v-layout>
-						</v-container>
-					</v-sheet>
+					<!-- <v-sheet color="primary lighten-2">/ -->
+					<v-container grid-list-lg>
+						<v-layout row wrap>
+							<v-flex xs12 sm6 md4 v-for="(room, index) in hotel.rooms" :key="index">
+								<CardRoom :details="room.value" :show="false"></CardRoom>
+							</v-flex>
+						</v-layout>
+					</v-container>
+					<!-- </v-sheet>/ -->
 				</v-flex>
 			</v-layout>
-			<v-sheet elevation="4" class="secondary">
-				<v-layout row wrap>
-					<v-flex xs12 md4>
-						<CertificateCorona :props="hotel.name"></CertificateCorona>
-					</v-flex>
-					<v-flex xs12 md4>
-						<CertificateQuarantine :props="hotel.name"></CertificateQuarantine>
-					</v-flex>
-					<v-flex xs12 md4>
-						<CertificateCService :props="hotel.name"></CertificateCService>
-					</v-flex>
-				</v-layout>
-			</v-sheet>
+			<!-- <v-sheet elevation="4" class="secondary"> -->
+			<v-layout row wrap>
+				<v-flex xs12 md4>
+					<CertificateCorona :props="hotel.name"></CertificateCorona>
+				</v-flex>
+				<v-flex xs12 md4>
+					<CertificateQuarantine :props="hotel.name"></CertificateQuarantine>
+				</v-flex>
+				<v-flex xs12 md4>
+					<CertificateCService :props="hotel.name"></CertificateCService>
+				</v-flex>
+			</v-layout>
+			<!-- </v-sheet> -->
 		</v-container>
+
+		<JumbotronGradient></JumbotronGradient>
 	</div>
 </template>
 
@@ -78,6 +80,7 @@ export default {
 		};
 	},
 	components: {
+		JumbotronGradient: () => import("@/components/JumbotronGradient"),
 		ImageGallery: () => import("@/components/ImageGallery"),
 		SplashTitle: () => import("@/components/SplashTitle"),
 		CardRoom: () => import("@/components/CardRoom"),

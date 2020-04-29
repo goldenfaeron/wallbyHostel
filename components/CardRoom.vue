@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<v-card flat>
+		<v-card>
 			<!-- <v-img :src="$store.state.assetRoot + item.image.path" max-height="10cm"></v-img> -->
 
 			<v-card-title primary-title>
