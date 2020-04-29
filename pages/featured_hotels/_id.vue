@@ -1,9 +1,9 @@
 <template>
 	<div>
-		<v-parallax :src="$store.state.assetRoot + hotel.header_image.path"></v-parallax>
+		<SplashTitle :props="hotel"></SplashTitle>
 		<v-container grid-list-xs>
 			<v-layout row wrap>
-				<v-flex xs12>
+				<v-flex xs12 md6>
 					<h1>{{hotel.name}}</h1>
 					<!-- <h3>{{hotel.type}}</h3> -->
 					<p v-html="hotel.description"></p>
@@ -16,34 +16,20 @@
 					<v-divider></v-divider>
 					<!-- Address: {{hotel.address.full}} -->
 				</v-flex>
-
-				<v-flex xs12>
-					<v-carousel height="600">
-						<v-carousel-item
-							:src="$store.state.webRoot + item.path"
-							v-for="(item, index) in hotel.gallery"
-							:key="index"
-						></v-carousel-item>
-					</v-carousel>
+				<v-flex xs12 md6>
+					<ImageGallery :props="hotel.gallery"></ImageGallery>
 				</v-flex>
 
-				<v-flex xs12>
-					<h2>Rooms</h2>
-					<v-container grid-list-lg>
-						<v-layout row wrap>
-							<v-flex xs12 sm6 md3 v-for="(item, index) in hotel.rooms" :key="index">
-								<v-card>
-									<v-card-title primary-title>{{item.value.name}}</v-card-title>
-									<v-card-title primary-title>EURO {{item.value.price}}</v-card-title>
-									<v-card-text>
-										<!-- {{item.bedType}} -->
-										<br />
-										<!-- Persons {{item.persons}} -->
-									</v-card-text>
-								</v-card>
-							</v-flex>
-						</v-layout>
-					</v-container>
+				<v-flex xs12 my-5>
+					<v-sheet color="primary lighten-2">
+						<v-container grid-list-lg>
+							<v-layout row wrap>
+								<v-flex xs12 sm6 md4 v-for="(room, index) in hotel.rooms" :key="index">
+									<CardRoom :details="room.value" :show="false"></CardRoom>
+								</v-flex>
+							</v-layout>
+						</v-container>
+					</v-sheet>
 				</v-flex>
 			</v-layout>
 			<v-sheet elevation="4" class="secondary">
@@ -55,7 +41,7 @@
 						<CertificateQuarantine :props="hotel.name"></CertificateQuarantine>
 					</v-flex>
 					<v-flex xs12 md4>
-						<CertificateCSerivce :props="hotel.name"></CertificateCSerivce>
+						<CertificateCService :props="hotel.name"></CertificateCService>
 					</v-flex>
 				</v-layout>
 			</v-sheet>
@@ -92,6 +78,9 @@ export default {
 		};
 	},
 	components: {
+		ImageGallery: () => import("@/components/ImageGallery"),
+		SplashTitle: () => import("@/components/SplashTitle"),
+		CardRoom: () => import("@/components/CardRoom"),
 		CertificateCorona: () => import("@/components/CertificateCorona"),
 		CertificateCService: () => import("@/components/CertificateCService"),
 		CertificateQuarantine: () => import("@/components/CertificateQuarantine")
@@ -101,3 +90,4 @@ export default {
 	}
 };
 </script>
+
