@@ -26,13 +26,12 @@
 						></v-carousel-item>
 					</v-carousel>
 				</v-flex>
-				<!-- {{hotel.rooms[0]}} -->
-				{{hotel.rooms_details.value}}
+
 				<v-flex xs12>
 					<h2>Rooms</h2>
 					<v-container grid-list-lg>
 						<v-layout row wrap>
-							<v-flex xs12 sm6 md3 v-for="(item, index) in hotel.rooms_details" :key="index">
+							<v-flex xs12 sm6 md3 v-for="(item, index) in hotel.rooms" :key="index">
 								<v-card>
 									<v-card-title primary-title>{{item.value.name}}</v-card-title>
 									<v-card-title primary-title>EURO {{item.value.price}}</v-card-title>
@@ -47,6 +46,19 @@
 					</v-container>
 				</v-flex>
 			</v-layout>
+			<v-sheet elevation="4" class="secondary">
+				<v-layout row wrap>
+					<v-flex xs12 md4>
+						<CertificateCorona :props="hotel.name"></CertificateCorona>
+					</v-flex>
+					<v-flex xs12 md4>
+						<CertificateQuarantine :props="hotel.name"></CertificateQuarantine>
+					</v-flex>
+					<v-flex xs12 md4>
+						<CertificateCSerivce :props="hotel.name"></CertificateCSerivce>
+					</v-flex>
+				</v-layout>
+			</v-sheet>
 		</v-container>
 	</div>
 </template>
@@ -78,6 +90,11 @@ export default {
 			hotel: request1.data.entries[0],
 			featuredHotels: request2.data.entries
 		};
+	},
+	components: {
+		CertificateCorona: () => import("@/components/CertificateCorona"),
+		CertificateCService: () => import("@/components/CertificateCService"),
+		CertificateQuarantine: () => import("@/components/CertificateQuarantine")
 	},
 	data() {
 		return {};
