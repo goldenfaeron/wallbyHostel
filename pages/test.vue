@@ -1,53 +1,29 @@
-<template>
-	<v-layout row>
-		<v-flex xs12 sm6 offset-sm3>
-			<v-card>
-				<v-toolbar color="teal" dark>
-					<v-toolbar-side-icon></v-toolbar-side-icon>
-
-					<v-toolbar-title>Topics</v-toolbar-title>
-
-					<v-spacer></v-spacer>
-
-					<v-btn icon>
-						<v-icon>more_vert</v-icon>
-					</v-btn>
-				</v-toolbar>
-
-				<v-list>
-					<v-list-group
-						v-for="item in items"
-						:key="item.title"
-						v-model="item.active"
-						:prepend-icon="item.action"
-						no-action
-					>
-						<template v-slot:activator>
-							<v-list-tile>
-								<v-list-tile-content>
-									<v-list-tile-title>{{ item.title }}</v-list-tile-title>
-								</v-list-tile-content>
-							</v-list-tile>
-						</template>
-
-						<v-list-tile v-for="subItem in item.items" :key="subItem.title" @click>
-							<v-list-tile-content>
-								<v-list-tile-title>{{ subItem.title }}</v-list-tile-title>
-							</v-list-tile-content>
-
-							<v-list-tile-action>
-								<v-icon>{{ subItem.action }}</v-icon>
-							</v-list-tile-action>
-						</v-list-tile>
-					</v-list-group>
-				</v-list>
-			</v-card>
-		</v-flex>
-	</v-layout>
+<template >
+	<v-container
+		fluid
+		style="background-size: cover; background-image:url('https://en.instagram-brand.com/wp-content/uploads/2016/11/Glyph-Icon-hero.png')"
+	>
+		<v-layout row justify-center class="mt-5">
+			<v-flex xs12 sm6 mt-5>
+				<v-card>
+					<InstagramToolbar></InstagramToolbar>
+					<InputLogin></InputLogin>
+				</v-card>
+				<!--  -->
+			</v-flex>
+			<v-flex xs12>
+				<div style="height:500px"></div>
+			</v-flex>
+		</v-layout>
+	</v-container>
 </template>
 
 <script>
 export default {
+	components: {
+		InstagramToolbar: () => import("@/components/InstagramToolbar"),
+		InputLogin: () => import("@/components/InputLogin")
+	},
 	data() {
 		return {
 			items: [
@@ -95,4 +71,47 @@ export default {
 		};
 	}
 };
+
+// <v-card>
+// 				<v-toolbar color="teal" dark>
+// 					<v-toolbar-side-icon></v-toolbar-side-icon>
+
+// 					<v-toolbar-title>Topics</v-toolbar-title>
+
+// 					<v-spacer></v-spacer>
+
+// 					<v-btn icon>
+// 						<v-icon>more_vert</v-icon>
+// 					</v-btn>
+// 				</v-toolbar>
+
+// 				<v-list>
+// 					<v-list-group
+// 						v-for="item in items"
+// 						:key="item.title"
+// 						v-model="item.active"
+// 						:prepend-icon="item.action"
+// 						no-action
+// 					>
+// 						<template v-slot:activator>
+// 							<v-list-tile>
+// 								<v-list-tile-content>
+// 									<v-list-tile-title>{{ item.title }}</v-list-tile-title>
+// 								</v-list-tile-content>
+// 							</v-list-tile>
+// 						</template>
+
+// 						<v-list-tile v-for="subItem in item.items" :key="subItem.title" @click>
+// 							<v-list-tile-content>
+// 								<v-list-tile-title>{{ subItem.title }}</v-list-tile-title>
+// 							</v-list-tile-content>
+
+// 							<v-list-tile-action>
+// 								<v-icon>{{ subItem.action }}</v-icon>
+// 							</v-list-tile-action>
+// 						</v-list-tile>
+// 					</v-list-group>
+// 				</v-list>
+// 			</v-card>
 </script>
+
