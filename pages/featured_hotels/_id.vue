@@ -27,14 +27,15 @@
 					</v-carousel>
 				</v-flex>
 				<!-- {{hotel.rooms[0]}} -->
+				{{hotel.rooms_details.value}}
 				<v-flex xs12>
 					<h2>Rooms</h2>
 					<v-container grid-list-lg>
 						<v-layout row wrap>
-							<v-flex xs12 sm6 md3 v-for="(item, index) in hotel.rooms[0]" :key="index">
+							<v-flex xs12 sm6 md3 v-for="(item, index) in hotel.rooms_details" :key="index">
 								<v-card>
-									<v-card-title primary-title>{{item.name}}</v-card-title>
-									<v-card-title primary-title>EURO {{item.price}}</v-card-title>
+									<v-card-title primary-title>{{item.value.name}}</v-card-title>
+									<v-card-title primary-title>EURO {{item.value.price}}</v-card-title>
 									<v-card-text>
 										<!-- {{item.bedType}} -->
 										<br />
