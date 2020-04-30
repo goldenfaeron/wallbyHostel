@@ -156,7 +156,7 @@
 			<v-layout row wrap>
 				<v-flex lg5>
 					<div align="center" class="display-1 font-weight-bold">
-						<v-img width="300" height="300" src="/img/hashtag.png"></v-img>
+						<v-img width="300" height="300" src="/img/hashtag-min.png"></v-img>
 						<br />
 						<p>So easy</p>
 						<p>Just use Hashtag</p>
@@ -171,7 +171,7 @@
 					<v-layout row wrap>
 						<v-flex lg4>
 							<div align="center" class="headline">
-								<v-img src="/img/phoneHearth.png"></v-img>
+								<v-img src="/img/phoneHearth-min.png"></v-img>
 								<br />
 								<p>#ex ea commodo</p>
 								<p>#consequad</p>
@@ -180,11 +180,11 @@
 							</div>
 						</v-flex>
 						<v-flex lg4>
-							<v-img height="80%" src="/img/phoneGraph.png"></v-img>
+							<v-img height="80%" src="/img/phoneGraph-min.png"></v-img>
 						</v-flex>
 						<v-flex lg4>
 							<div align="center" class="headline">
-								<v-img src="/img/phoneHearth.png"></v-img>
+								<v-img src="/img/phoneHearth-min.png"></v-img>
 								<br />
 								<p>#ex ea commodo</p>
 								<p>#consequad</p>
@@ -201,8 +201,10 @@
 		<v-row>
 			<br />
 			<v-img
-				height="50%"
-				src="https://scontent-lax3-2.cdninstagram.com/v/t51.2885-15/e35/71120259_407137883324167_5249827130328437835_n.jpg?_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_cat=107&_nc_ohc=WsAK0vmB5TAAX-6LZB5&oh=bc6de3b34edc506b3d9a0c396f397076&oe=5EBA3982"
+				style="display: inline-block;
+    height: 600px;
+    overflow: hidden;"
+				src="/img/girl.jpg"
 			>
 				<v-container fill-height>
 					<v-row align="center" class="white--text mx-auto" justify="center">
@@ -227,17 +229,17 @@
 			<v-layout row wrap>
 				<v-flex lg4>
 					<div justify-center>
-						<v-img src="/img/phoneStar.png"></v-img>
+						<v-img src="/img/phoneStar-min.png"></v-img>
 					</div>
 				</v-flex>
 				<v-flex lg4>
 					<div justify-center>
-						<v-img src="/img/phoneImg.png"></v-img>
+						<v-img src="/img/phoneImg-min.png"></v-img>
 					</div>
 				</v-flex>
 				<v-flex lg4>
 					<div justify-center>
-						<v-img src="/img/phoneWww.png"></v-img>
+						<v-img src="/img/phoneWww-min.png"></v-img>
 					</div>
 				</v-flex>
 			</v-layout>
@@ -285,14 +287,14 @@
 					<div align="center" class="display-1 font-weight-bold">
 						<p>Show and Promote your menu and products</p>
 						<br />
-						<v-img src="/img/menu.png"></v-img>
+						<v-img src="/img/menu-min.png"></v-img>
 					</div>
 				</v-flex>
 				<v-flex lg6>
 					<div align="center" class="display-1 font-weight-bold">
 						<p>Get more web presence to get more customers</p>
 						<br />
-						<v-img src="/img/webPresence.png"></v-img>
+						<v-img src="/img/onlinePresence-min.png"></v-img>
 					</div>
 				</v-flex>
 			</v-layout>
@@ -309,13 +311,13 @@
 			<br />
 			<v-layout row wrap>
 				<v-flex lg4>
-					<v-img src="/img/mapsLogo.png"></v-img>
+					<v-img src="/img/mapsLogo-min.png"></v-img>
 				</v-flex>
 				<v-flex lg4>
-					<v-img src="/img/phoneMaps1.png"></v-img>
+					<v-img src="/img/phoneMaps1-min.png"></v-img>
 				</v-flex>
 				<v-flex lg4>
-					<v-img src="/img/phoneMaps2.png"></v-img>
+					<v-img src="/img/phoneMaps2-min.png"></v-img>
 				</v-flex>
 			</v-layout>
 			<br />
@@ -361,21 +363,21 @@
 			<v-layout row wrap>
 				<v-flex lg4>
 					<div align="center" class="headline">
-						<v-img src="/img/phoneGuestHouse1.png"></v-img>
+						<v-img src="/img/phoneGuestHouse1-min.png"></v-img>
 						<br />
 						<p>Get your own Beautiful Website</p>
 					</div>
 				</v-flex>
 				<v-flex lg4>
 					<div align="center" class="headline">
-						<v-img src="/img/phoneGuestHouse2.png"></v-img>
+						<v-img src="/img/phoneGuestHouse2-min.png"></v-img>
 						<br />
 						<p>Manage your content on Goborshi for free</p>
 					</div>
 				</v-flex>
 				<v-flex lg4>
 					<div align="center" class="headline">
-						<v-img src="/img/phoneGuestHouse3.png"></v-img>
+						<v-img src="/img/phoneGuestHouse3-min.png"></v-img>
 						<br />
 						<p>Find professional photographers and marketing professionals</p>
 					</div>
