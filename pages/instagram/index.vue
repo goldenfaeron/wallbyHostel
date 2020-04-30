@@ -2,7 +2,7 @@
 	<div>
 		<h1 class="primary--text main-title" style="text-align: center;">Borsh on Instagram</h1>
 		<welcome></welcome>
-		<preview></preview>
+		<Preview></Preview>
 	</div>
 </template>
 
