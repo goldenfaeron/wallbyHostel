@@ -2,7 +2,7 @@
 	<div>
 		<v-container grid-list-lg>
 			<v-layout>
-				<v-flex xs12>
+				<!-- <v-flex xs12>
 					<UserRegistrations></UserRegistrations>
 				</v-flex>
 			</v-layout>
@@ -23,7 +23,7 @@
 							</v-card-text>
 						</v-card>
 					</v-timeline-item>
-				</v-timeline>
+				</v-timeline>-->
 			</v-layout>
 		</v-container>
 	</div>

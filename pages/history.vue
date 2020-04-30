@@ -1,7 +1,7 @@
 <template>
 	<v-container>
 		<v-layout>
-			<v-timeline>
+			<!-- <v-timeline>
 				<v-timeline-item v-for="(year, i) in years" :key="i" :color="year.color" small>
 					<template v-slot:opposite>
 						<span :class="`headline font-weight-bold ${year.color}--text`" v-text="year.year"></span>
@@ -11,7 +11,7 @@
 						<div>Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.</div>
 					</div>
 				</v-timeline-item>
-			</v-timeline>
+			</v-timeline>-->
 		</v-layout>
 	</v-container>
 </template>

@@ -96,7 +96,7 @@ export default {
 				{
 					icon: "mdi-account-box",
 					title: this.$store.state.name + " Team",
-					to: "/member"
+					to: "/team/"
 				}
 			],
 			miniVariant: false,
