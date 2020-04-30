@@ -77,10 +77,7 @@ export default {
     }
   },
 
-  server: {
-    port: 8000, // default: 3000     
-    host: '0.0.0.0', // default: localhost   
-  },
+
 
   generate: {
     routes: function () {
@@ -139,6 +136,13 @@ export default {
     /*
     ** You can extend webpack config here
     */
+    loaders: {
+      vue: {
+        prettify: false
+      }
+    },
+    hardSource: true,
+    parallel: true,
     extend(config, ctx) {
     }
   }
