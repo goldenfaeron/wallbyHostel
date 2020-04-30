@@ -6,6 +6,9 @@
 		<stats></stats>
 		<blog></blog>
 		<instagram></instagram>
+		<v-layout justify-center>
+			<v-btn color="primary" href="/instagram">See More</v-btn>
+		</v-layout>
 		<br />
 		<booking></booking>
 		<br />
