@@ -50,7 +50,7 @@ export default {
   axios: {
     // proxyHeaders: false
   },
-  
+
   server: {
     port: 8000, // default: 3000
     host: '0.0.0.0' // default: localhost
@@ -80,6 +80,57 @@ export default {
   server: {
     port: 8000, // default: 3000     
     host: '0.0.0.0', // default: localhost   
+  },
+
+  generate: {
+    routes: function () {
+
+      let team = axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/team?token=641a6e0c88f94f7d2adadd184752e1",
+        {
+
+          fields: { slug: 1, _id: 0 }
+        })
+        .then((res) => {
+          return res.data.entries.map((entry) => {
+            return {
+              route: '/team/' + entry.slug
+            }
+
+          })
+        });
+      let hotels = axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/hotels?token=641a6e0c88f94f7d2adadd184752e1",
+        {
+
+          fields: { slug: 1, _id: 0 }
+        })
+        .then((res) => {
+          return res.data.entries.map((entry) => {
+            return {
+              route: '/featured_hotels/' + entry.slug
+            }
+
+          })
+        });
+      let corona = axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/corona?token=641a6e0c88f94f7d2adadd184752e1",
+        {
+
+          fields: { slug: 1, _id: 0 }
+        })
+        .then((res) => {
+          return res.data.entries.map((entry) => {
+            return {
+              route: '/corona/' + entry.slug
+            }
+
+          })
+        });
+
+
+      return Promise.all([team, hotels, corona]).then(values => {
+        return [...values[0], ...values[1], ...values[2]]
+      })
+    },
+
   },
   /*
   ** Build configuration
