@@ -10,6 +10,7 @@
 					<!-- <v-card> -->
 					<v-container grid-list-lg>
 						<v-layout row wrap>
+
 							<v-flex
 								xs12
 								sm12
@@ -22,16 +23,18 @@
 									<v-card height="100%" slot-scope="{ hover }">
 										<v-img max-height="200" :src="item.imageUrl">
 											<v-expand-transition>
-												<div
-													v-if="hover"
-													class="d-flex transition-fast-in-fast-out primary lighten-1 v-card--reveal white--text"
-													style="height: 100%; opacity: 0.5;"
-												>{{item.firstComment}}</div>
+												<div v-if="hover" style="height: 100%;">
+													<div
+														style="height: 100%; opacity: 0.5;"
+														class="d-flex transition-fast-in-fast-out primary lighten-1 v-card--reveal"
+													></div>
+													<div style="position: absolute; top: 0; color: #fff;">{{item.firstComment}}</div>
+												</div>
 											</v-expand-transition>
 										</v-img>
 
 										<v-card-text>
-											<v-icon>mdi-cards-heart</v-icon>
+											<v-icon color="red">mdi-cards-heart</v-icon>
 											{{item.likesCount}}
 										</v-card-text>
 

@@ -10,7 +10,7 @@
 					<v-row align="center" class="white--text mx-auto" justify="center">
 						<v-col class="white--text text-center" cols="12" tag="h1">
 							<v-layout justify-center>
-								<v-card color="grey" flat>
+								<v-card color="primary lighten-2" flat style="opacity: 0.5;">
 									<v-card-title primary-title style="word-break: normal;">
 										<span
 											class="font-weight-light font-weight-medium"

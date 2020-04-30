@@ -24,17 +24,17 @@
 		<br />
 		<v-container grid-list-lg>
 			<v-layout row wrap>
-				<v-flex lg4>
+				<v-flex lg4 xs4>
 					<div justify-center>
 						<v-img src="/img/phoneStar-min.png"></v-img>
 					</div>
 				</v-flex>
-				<v-flex lg4>
+				<v-flex lg4 xs4>
 					<div justify-center>
 						<v-img src="/img/phoneImg-min.png"></v-img>
 					</div>
 				</v-flex>
-				<v-flex lg4>
+				<v-flex lg4 xs4>
 					<div justify-center>
 						<v-img src="/img/phoneWww-min.png"></v-img>
 					</div>

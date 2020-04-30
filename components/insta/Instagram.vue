@@ -40,7 +40,7 @@
 					</div>
 					<br />
 					<v-layout row wrap>
-						<v-flex lg4>
+						<v-flex lg4 xs4>
 							<div align="center" class="headline">
 								<v-img src="/img/phoneHearth-min.png"></v-img>
 								<br />
@@ -50,10 +50,10 @@
 								<p>#irure</p>
 							</div>
 						</v-flex>
-						<v-flex lg4>
-							<v-img height="80%" src="/img/phoneGraph-min.png"></v-img>
+						<v-flex lg4 xs4>
+							<v-img :height="this.imageHeight" src="/img/phoneGraph-min.png"></v-img>
 						</v-flex>
-						<v-flex lg4>
+						<v-flex lg4 xs4>
 							<div align="center" class="headline">
 								<v-img src="/img/phoneHearth-min.png"></v-img>
 								<br />
@@ -69,3 +69,23 @@
 		</v-container>
 	</div>
 </template>
+<script>
+export default {
+	computed: {
+		imageHeight() {
+			switch (this.$vuetify.breakpoint.name) {
+				case "xs":
+					return "40%";
+				case "sm":
+					return "80%";
+				case "md":
+					return "80%";
+				case "lg":
+					return "80%";
+				case "xl":
+					return "80%";
+			}
+		}
+	}
+};
+</script>
