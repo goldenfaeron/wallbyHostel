@@ -16,7 +16,7 @@
 		<v-app-bar :clipped-left="clipped" fixed app>
 			<v-app-bar-nav-icon @click.stop="drawer = !drawer" />
 
-			<v-toolbar-title v-text="title" />
+			<v-toolbar-title style="cursor:pointer" @click="go('/')" v-text="title" />
 			<v-spacer />
 			<v-btn icon @click.stop="rightDrawer = !rightDrawer">
 				<v-icon>mdi-account</v-icon>
@@ -43,6 +43,11 @@
 export default {
 	components: {
 		DrawerAnnouncement: () => import("@/components/DrawerAnnouncement")
+	},
+	methods: {
+		go(route) {
+			this.$router.push(route);
+		}
 	},
 	data() {
 		return {
