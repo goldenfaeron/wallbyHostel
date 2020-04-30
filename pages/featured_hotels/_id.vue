@@ -5,23 +5,15 @@
 			<v-layout row wrap>
 				<v-flex xs12 md6>
 					<h1>{{hotel.name}}</h1>
-					<!-- <h3>{{hotel.type}}</h3> -->
+
 					<p v-html="hotel.description"></p>
 					<v-divider></v-divider>
-					<!-- Reviews {{hotel.reviews}} -->
-					<v-divider></v-divider>
-					<!-- Breakfast: {{hotel.breakfast}} -->
-					<v-divider></v-divider>
-					<!-- Check in from: {{hotel.checkInFrom}} until {{hotel.checkInTo}} -->
-					<v-divider></v-divider>
-					<!-- Address: {{hotel.address.full}} -->
 				</v-flex>
 				<v-flex xs12 md6>
 					<ImageGallery :props="hotel.gallery"></ImageGallery>
 				</v-flex>
 
 				<v-flex xs12 my-5>
-					<!-- <v-sheet color="primary lighten-2">/ -->
 					<v-container grid-list-lg>
 						<v-layout row wrap>
 							<v-flex xs12 sm6 md4 v-for="(room, index) in hotel.rooms" :key="index">
@@ -29,25 +21,31 @@
 							</v-flex>
 						</v-layout>
 					</v-container>
-					<!-- </v-sheet>/ -->
 				</v-flex>
 			</v-layout>
-			<!-- <v-sheet elevation="4" class="secondary"> -->
+
 			<v-layout row wrap>
-				<v-flex xs12 md4>
+				<v-flex xs12 sm6 md4>
 					<CertificateCorona :props="hotel.name"></CertificateCorona>
 				</v-flex>
-				<v-flex xs12 md4>
+				<v-flex xs12 sm6 md4>
 					<CertificateQuarantine :props="hotel.name"></CertificateQuarantine>
 				</v-flex>
-				<v-flex xs12 md4>
+				<v-flex xs12 sm6 md4>
 					<CertificateCService :props="hotel.name"></CertificateCService>
 				</v-flex>
 			</v-layout>
-			<!-- </v-sheet> -->
 		</v-container>
 
-		<JumbotronGradient></JumbotronGradient>
+		<CommentsParallax
+			:props="{comment: hotel.comment, title: hotel.name, subtitle: hotel.location.address}"
+		></CommentsParallax>
+		<CallToAction
+			:props="{
+             booking: hotel.booking_link, 
+             website: hotel.website_link,
+             airbnb: hotel.airbnb_link }"
+		></CallToAction>
 	</div>
 </template>
 
@@ -80,6 +78,8 @@ export default {
 		};
 	},
 	components: {
+		CallToAction: () => import("@/components/CallToAction"),
+		CommentsParallax: () => import("@/components/CommentsParallax"),
 		JumbotronGradient: () => import("@/components/JumbotronGradient"),
 		ImageGallery: () => import("@/components/ImageGallery"),
 		SplashTitle: () => import("@/components/SplashTitle"),
