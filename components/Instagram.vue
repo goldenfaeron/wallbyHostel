@@ -18,19 +18,28 @@
 								v-for="(item, index) in $store.state.borshInstagram[0].slice(0,4) "
 								:key="index"
 							>
-								<v-card height="100%">
-									<!-- <v-img :src="$store.state.assetRoot + item.image.path" max-height="10cm"></v-img> -->
+								<v-hover>
+									<v-card height="100%" slot-scope="{ hover }">
+										<v-img max-height="200" :src="item.imageUrl">
+											<v-expand-transition>
+												<div
+													v-if="hover"
+													class="d-flex transition-fast-in-fast-out primary lighten-1 v-card--reveal white--text"
+													style="height: 100%; opacity: 0.5;"
+												>{{item.firstComment}}</div>
+											</v-expand-transition>
+										</v-img>
 
-									<v-img max-height="200" :src="item.imageUrl"></v-img>
+										<v-card-text>
+											<v-icon>mdi-cards-heart</v-icon>
+											{{item.likesCount}}
+										</v-card-text>
 
-									<v-card-text>
-										<v-icon>mdi-cards-heart</v-icon>
-										{{item.likesCount}}
-									</v-card-text>
-
-									<!-- v-if="!item.inCart" -->
-									<v-card-actions></v-card-actions>
-								</v-card>
+										<!-- v-if="!item.inCart" -->
+										<v-card-actions></v-card-actions>
+									</v-card>
+								</v-hover>
+								<!-- <v-img :src="$store.state.assetRoot + item.image.path" max-height="10cm"></v-img> -->
 							</v-flex>
 						</v-layout>
 					</v-container>
