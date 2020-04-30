@@ -42,7 +42,7 @@
 
 			<!-- From Booking.com  -->
 			<v-layout row wrap>
-				<v-flex xs12 sm12 md6 lg3 v-for="(item, index) in $store.state.borshHotels[0]" :key="index">
+				<v-flex xs12 sm12 md6 lg3 v-for="(item, index) in hotels" :key="index">
 					<v-card height="100%" flat>
 						<!-- <v-img :src="$store.state.assetRoot + item.image.path" max-height="10cm"></v-img> -->
 
@@ -82,19 +82,26 @@
 
 <script>
 export default {
-	asyncData({ params, store, $axios, route }) {
+	async asyncData({ $axios, route, store }) {
 		let collection = "hotels";
-		return $axios
-			.post(
-				store.state.webRoot +
-					"/api/collections/get/" +
-					collection +
-					"?token=" +
-					store.state.collectionsToken
-			)
-			.then(res => {
-				return { featured: res.data.entries.reverse() };
-			});
+
+		//Get collection
+		let request1 = await $axios.get(
+			"https://api.apify.com/v2/datasets/RKyTw3dpkkdnNAqSd/items?format=json&clean=1"
+		);
+
+		let request2 = await $axios.post(
+			store.state.webRoot +
+				"/api/collections/get/" +
+				collection +
+				"?token=" +
+				store.state.collectionsToken,
+			{ sort: { _created: -1 } }
+		);
+		return {
+			hotels: request1.data,
+			featured: request2.data.entries
+		};
 	}
 };
 </script>

@@ -6,7 +6,7 @@
 		<v-container grid-list-lg>
 			<!-- <iframe width="420" height="315" src="https://www.youtube.com/embed/HWj0XkS091g?autoplay=1"></iframe> -->
 			<v-layout row wrap>
-				<v-flex xs12 sm12 md6 lg3 v-for="(item, index) in $store.state.borshInstagram[0]" :key="index">
+				<v-flex xs12 sm12 md6 lg3 v-for="(item, index) in featured" :key="index">
 					<v-card>
 						<!-- <v-img :src="$store.state.assetRoot + item.image.path" max-height="10cm"></v-img> -->
 
@@ -76,5 +76,15 @@
 </template>
 
 <script>
-export default {};
+export default {
+	asyncData({ params, store, $axios, route }) {
+		return $axios
+			.get(
+				"https://api.apify.com/v2/datasets/3zNTdwO5KsBSgJ4oA/items?format=json&clean=1"
+			)
+			.then(res => {
+				return { featured: res.data };
+			});
+	}
+};
 </script>
