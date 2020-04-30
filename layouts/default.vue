@@ -89,7 +89,7 @@ export default {
 					to: "/youtube"
 				},
 				{
-					icon: "mdi-clipboard-plus",
+					icon: "mdi-biohazard",
 					title: "Covid-19 in " + this.$store.state.city,
 					to: "/corona"
 				},
