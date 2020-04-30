@@ -10,7 +10,7 @@
 					<v-flex xs11 md11>
 						<baseheading>{{props.name}}</baseheading>
 						<basetext>{{props.page_welcome_text}}</basetext>
-						<nuxt-link :to="'member/'+props.slug">
+						<nuxt-link :to="''+props.slug" append>
 							<basebtn class="mt-4">{{props.page_button_0}}</basebtn>
 						</nuxt-link>
 					</v-flex>

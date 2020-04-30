@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<v-container grid-list-xs>
+		<v-container fluid grid-list-xs>
 			<v-layout mx-5 column wrap justify-space-between align-content-space-between>
 				<v-flex xs1 my-1>
 					<v-card>
