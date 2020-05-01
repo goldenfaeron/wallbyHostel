@@ -1,6 +1,7 @@
 import colors from 'vuetify/es5/util/colors'
 import axios from 'axios'
 
+import VuetifyLoaderPlugin from 'vuetify-loader/lib/plugin'
 
 export default {
   mode: 'universal',
@@ -139,6 +140,11 @@ export default {
   ** Build configuration
   */
   build: {
+
+    build: {
+      transpile: ['vuetify/lib'],
+      plugins: [new VuetifyLoaderPlugin()]
+    },
     /*
     ** You can extend webpack config here
     */

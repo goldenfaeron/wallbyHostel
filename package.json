@@ -11,12 +11,12 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.9.7",
+    "@nuxtjs/axios": "^5.10.3",
     "nuxt": "^2.0.0",
-    "nuxt-jsonld": "^1.4.5"
+    "nuxt-jsonld": "^1.4.9"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",
-    "@nuxtjs/vuetify": "^1.0.0"
+    "@nuxtjs/vuetify": "^1.11.2"
   }
 }
