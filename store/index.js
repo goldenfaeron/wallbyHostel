@@ -16,8 +16,8 @@ export const state = () => ({
     borshHotels: [],
     amazonProducts: [],
     borshBars: [],
-    // borshInstagram: []
-    // borshAirbnb: [],
+    borshInstagram: [],
+    borshAirbnb: [],
     borshYoutube: [],
 
 
@@ -47,12 +47,12 @@ export const mutations = {
     setBorshBars(state, list) {
         state.borshBars = list;
     },
-    // setBorshInstagram(state, list) {
-    //     state.borshInstagram = list;
-    // },
-    // setBorshAirbnb(state, list) {
-    //     state.borshAirbnb = list;
-    // },
+    setBorshInstagram(state, list) {
+        state.borshInstagram = list;
+    },
+    setBorshAirbnb(state, list) {
+        state.borshAirbnb = list;
+    },
     setBorshYoutube(state, list) {
         state.borshYoutube = list;
     },
@@ -106,22 +106,22 @@ export const actions = {
         await commit('setBorshBars', borshbars);
 
         //instagram
-        // let files4 = await require.context('~/assets/json/instagram', false, /\.json$/);
-        // let borshinstagram = files4.keys().map(key => {
-        //     let res = files4(key);
-        //     res.slug = key.slice(2, -5);
-        //     return res;
-        // });
-        // await commit('setBorshInstagram', borshinstagram);
+        let files4 = await require.context('~/assets/json/instagram', false, /\.json$/);
+        let borshinstagram = files4.keys().map(key => {
+            let res = files4(key);
+            res.slug = key.slice(2, -5);
+            return res;
+        });
+        await commit('setBorshInstagram', borshinstagram);
 
         //Airbnb
-        // let files5 = await require.context('~/assets/json/airbnb', false, /\.json$/);
-        // let borshAirbnb = files5.keys().map(key => {
-        //     let res = files5(key);
-        //     res.slug = key.slice(2, -5);
-        //     return res;
-        // });
-        // await commit('setBorshAirbnb', borshAirbnb);
+        let files5 = await require.context('~/assets/json/airbnb', false, /\.json$/);
+        let borshAirbnb = files5.keys().map(key => {
+            let res = files5(key);
+            res.slug = key.slice(2, -5);
+            return res;
+        });
+        await commit('setBorshAirbnb', borshAirbnb);
 
         //Youtube
         let files6 = await require.context('~/assets/json/youtube', false, /\.json$/);
