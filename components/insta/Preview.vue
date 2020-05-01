@@ -35,6 +35,12 @@
 										<v-icon color="red">mdi-cards-heart</v-icon>
 										{{item.likesCount}}
 									</v-card-text>
+									<v-card-actions>
+										<a
+											target="#"
+											:href="'https://www.instagram.com/'+item.ownerUsername"
+										>{{item.ownerUsername}}</a>
+									</v-card-actions>
 
 									<!-- v-if="!item.inCart" -->
 									<v-card-actions></v-card-actions>

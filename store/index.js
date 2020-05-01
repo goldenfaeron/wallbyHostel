@@ -20,6 +20,9 @@ export const state = () => ({
     borshAirbnb: [],
     borshYoutube: [],
 
+    //NAV
+
+
 
     //Cockpit
     collectionsToken: '641a6e0c88f94f7d2adadd184752e1',
@@ -137,6 +140,52 @@ export const actions = {
 
 export const getters = {
     getExchangeRate: state => state.exchangeRate,
+    getNavigation: state =>
+        [
+            {
+                icon: "mdi-home",
+                title: "Home",
+                to: "/"
+            },
+
+            {
+                icon: "mdi-key-variant",
+                title: state.city + " Hotels",
+                to: "/booking"
+            },
+            {
+                icon: "mdi-beer",
+                title: state.city + " Bars",
+                to: "/bars"
+            },
+            {
+                icon: "mdi-instagram",
+                title: state.city + " on Instagram",
+                to: "/instagram"
+            },
+
+            {
+                icon: "",
+                img: "/img/airbnbLogo.png",
+                title: state.city + " Airbnb",
+                to: "/airbnb"
+            },
+            {
+                icon: "mdi-youtube",
+                title: state.city + " on Youtube",
+                to: "/youtube"
+            },
+            {
+                icon: "mdi-biohazard",
+                title: "Covid-19 in " + state.city,
+                to: "/corona"
+            },
+            {
+                icon: "mdi-account-box",
+                title: state.name + " Team",
+                to: "/team/"
+            }
+        ],
 
 }
 

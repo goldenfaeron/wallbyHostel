@@ -2,7 +2,7 @@
 	<v-app>
 		<v-navigation-drawer v-model="drawer" :mini-variant="miniVariant" :clipped="clipped" fixed app>
 			<v-list>
-				<v-list-item v-for="(item, i) in items" :key="i" :to="item.to" router exact>
+				<v-list-item v-for="(item, i) in nav" :key="i" :to="item.to" router exact>
 					<v-list-item-action>
 						<v-icon v-if="item.icon">{{ item.icon }}</v-icon>
 						<v-img height="32" width="24" v-else :src="item.img"></v-img>
@@ -13,11 +13,19 @@
 				</v-list-item>
 			</v-list>
 		</v-navigation-drawer>
-		<v-app-bar :clipped-left="clipped" fixed app>
+		<v-app-bar :clipped-left="clipped" app fixed color="accent lighten-2 " type>
 			<v-app-bar-nav-icon @click.stop="drawer = !drawer" />
 
-			<v-toolbar-title style="cursor:pointer" @click="go('/')" v-text="title" />
+			<v-toolbar-title style="cursor:pointer" @click="go('/')">
+				<b>{{title}}</b>
+			</v-toolbar-title>
+			<v-icon color="accent" @click="go('/')" style="margin-left:10px">mdi-heart-multiple</v-icon>
+
+			<v-toolbar-title
+				class="ml-2 grey--text hidden-xs-only"
+			>Find what you need in {{$store.state.city}}, Albania</v-toolbar-title>
 			<v-spacer />
+
 			<v-btn icon @click.stop="rightDrawer = !rightDrawer">
 				<v-icon>mdi-account</v-icon>
 			</v-btn>
@@ -30,18 +38,21 @@
 		<v-navigation-drawer width="500" v-model="rightDrawer" :right="right" temporary fixed>
 			<DrawerAnnouncement></DrawerAnnouncement>
 		</v-navigation-drawer>
-		<v-footer :fixed="fixed" app>
-			<span>
-				<nuxt-link :to="'/'+developer.name">{{developer.name}}</nuxt-link>
-				&copy; {{ new Date().getFullYear() }}
-			</span>
-		</v-footer>
+		<Footer></Footer>
+		<GoBackButton></GoBackButton>
 	</v-app>
 </template>
 
 <script>
 export default {
+	computed: {
+		nav() {
+			return this.$store.getters.getNavigation;
+		}
+	},
 	components: {
+		GoBackButton: () => import("@/components/core/GoBackButton"),
+		Footer: () => import("@/components/core/Footer"),
 		DrawerAnnouncement: () => import("@/components/DrawerAnnouncement")
 	},
 	methods: {
@@ -54,51 +65,7 @@ export default {
 			clipped: false,
 			drawer: false,
 			fixed: false,
-			items: [
-				{
-					icon: "mdi-home",
-					title: "Home",
-					to: "/"
-				},
-
-				{
-					icon: "mdi-key-variant",
-					title: this.$store.state.city + " Hotels",
-					to: "/booking"
-				},
-				{
-					icon: "mdi-beer",
-					title: this.$store.state.city + " Bars",
-					to: "/bars"
-				},
-				{
-					icon: "mdi-instagram",
-					title: this.$store.state.city + " on Instagram",
-					to: "/instagram"
-				},
-
-				{
-					icon: "",
-					img: "/img/airbnbLogo.png",
-					title: this.$store.state.city + " Airbnb",
-					to: "/airbnb"
-				},
-				{
-					icon: "mdi-youtube",
-					title: this.$store.state.city + " on Youtube",
-					to: "/youtube"
-				},
-				{
-					icon: "mdi-biohazard",
-					title: "Covid-19 in " + this.$store.state.city,
-					to: "/corona"
-				},
-				{
-					icon: "mdi-account-box",
-					title: this.$store.state.name + " Team",
-					to: "/team/"
-				}
-			],
+			items: this.$store.state.nav_items,
 			miniVariant: false,
 			right: true,
 			rightDrawer: false,
