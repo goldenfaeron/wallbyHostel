@@ -27,31 +27,7 @@
 					<v-container grid-list-lg fluid>
 						<v-layout row wrap>
 							<v-flex xs12 sm6 md3 v-for="(item, index) in data.rooms" :key="index">
-								<v-card>
-									<v-btn absolute small dark fab top right color="primary ">€{{item.price}}</v-btn>
-									<v-sheet height="100" color="primary lighten-2">
-										<v-layout column justify-center align-center>
-											<v-flex mt-5>
-												<v-icon x-large color="white">mdi-bed-double</v-icon>
-											</v-flex>
-										</v-layout>
-									</v-sheet>
-									<v-card-title primary-title>{{item.roomType}}</v-card-title>
-									<v-card-text>
-										<v-icon>mdi-bed-double</v-icon>
-										{{item.bedType.replace("Choose your bed (if available)", "")}}
-										<br />
-										<v-icon>mdi-account-multiple</v-icon>
-										Persons {{item.persons}}
-									</v-card-text>
-									<v-card-actions>
-										<Dialog :props="{title: data.name + ' Amenities', buttonText: 'View Amenities'}">
-											<ul>
-												<li v-for="(item, index) in item.features" :key="index">{{item}}</li>
-											</ul>
-										</Dialog>
-									</v-card-actions>
-								</v-card>
+								<CardRoomBooking :props="item" :name="data.name + ' Amenities'" buttonText="View Amenities"></CardRoomBooking>
 							</v-flex>
 						</v-layout>
 					</v-container>
@@ -68,6 +44,7 @@
 <script>
 export default {
 	components: {
+		CardRoomBooking: () => import("@/components/CardRoomBooking"),
 		Dialog: () => import("@/components/Dialog"),
 		googleMapCoordinate: () => import("@/components/googleMapCoordinate"),
 		CallToAction: () => import("@/components/CallToAction")
