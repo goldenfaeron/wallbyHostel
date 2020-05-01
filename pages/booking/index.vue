@@ -17,7 +17,7 @@
 
 			<!-- From Booking.com  -->
 			<v-layout row wrap>
-				<v-flex xs12 sm12 md6 lg3 v-for="(item, index) in $store.state.borshHotels[0]" :key="index">
+				<v-flex xs6 sm4 lg3 v-for="(item, index) in $store.state.borshHotels[0]" :key="index">
 					<CardHotel :props="item" :index="index"></CardHotel>
 				</v-flex>
 			</v-layout>
