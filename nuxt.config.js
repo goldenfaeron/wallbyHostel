@@ -1,6 +1,7 @@
 import colors from 'vuetify/es5/util/colors'
 import axios from 'axios'
 
+
 import VuetifyLoaderPlugin from 'vuetify-loader/lib/plugin'
 
 export default {
@@ -33,7 +34,8 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '~/plugins/jsonld'
+    '~/plugins/jsonld',
+
   ],
   /*
   ** Nuxt.js dev-modules
@@ -78,7 +80,16 @@ export default {
     }
   },
 
+  // ------ REFACTOR AS ------
 
+  // axios.all([
+  //   axios.get('https://api.github.com/users/mapbox'),
+  //   axios.get('https://api.github.com/users/phantomjs')
+  // ])
+  // .then(axios.spread((user1, user2) => {
+  //   console.log('Date created: ', user1.data.created_at);
+  //   console.log('Date created: ', user2.data.created_at);
+  // }));
 
   generate: {
     routes() {
