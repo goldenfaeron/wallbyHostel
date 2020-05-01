@@ -3,7 +3,7 @@
         		<v-row>
 			<br />
 			<v-img
-				height="760"
+				height="500"
 				src="https://scontent-lax3-2.cdninstagram.com/v/t51.2885-15/e35/34726024_479116625858790_6962504533595389952_n.jpg?_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_cat=106&_nc_ohc=OeCb-yoFq_kAX88VbTr&oh=ceb2303a23cf563a4f002d831cf3abea&oe=5EBABCE8"
 			>
 				<v-container fill-height>
