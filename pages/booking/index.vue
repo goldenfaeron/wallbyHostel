@@ -1,16 +1,21 @@
 <template>
 	<div>
 		<h1 class="primary--text main-title" style="text-align: center;">Hotels in {{$store.state.city}}</h1>
-		<!-- <h1>{{$store.state.borshHotels[0][0].order}}</h1> -->
-		<!-- {{$store.state.borshHotels}} -->
+		<p
+			class="secondary--text"
+			style="text-align: center;"
+		>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla.</p>
+		<Mission></Mission>
+
 		<v-container grid-list-lg>
-			<!-- From cockpit -->
-			<h2>Featured Hotels</h2>
+			<!-- Featured -->
 			<v-layout row wrap>
-				<v-flex xs12 v-for="(item, index) in featured" :key="index">
+				<v-flex xs12 sm6 md4 v-for="(item, index) in featured" :key="index">
 					<v-card height="100%">
 						<!-- <v-img :src="$store.state.assetRoot + item.image.path" max-height="10cm"></v-img> -->
-
+						<v-btn absolute dark fab top right color="primary">
+							<v-icon>mdi-star</v-icon>
+						</v-btn>
 						<v-card-title primary-title>
 							<v-layout align-content-space-between justify-space-between>
 								<v-flex>
@@ -23,7 +28,9 @@
 
 						<v-card-text v-html="item.description">
 							<br />
-							<!-- {{item.price}} -->
+							<ul>
+								<li v-for="(item, index) in item.features" :key="index">{{item}}hello</li>
+							</ul>
 						</v-card-text>
 
 						<div class="text-xs-center">
@@ -59,8 +66,6 @@
 						<v-card-text>
 							<p class="truncate-overflow">{{item.description}}</p>
 							<br />
-							<br />
-							From {{item.price}} Euro per night
 						</v-card-text>
 
 						<div class="text-xs-center">
@@ -82,6 +87,11 @@
 
 <script>
 export default {
+	components: {
+		Assurance: () => import("@/components/Assurance"),
+		Mission: () => import("@/components/Mission")
+	},
+
 	asyncData({ params, store, $axios, route }) {
 		let collection = "hotels";
 		return $axios
