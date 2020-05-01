@@ -1,6 +1,9 @@
 <template>
 	<div>
-		<h1 class="primary--text main-title" style="text-align: center;">Bars in {{$store.state.city}}</h1>
+		<h1
+			class="primary--text main-title"
+			style="text-align: center;"
+		>The best bars in {{$store.state.city}}</h1>
 
 		<v-container grid-list-lg>
 			<v-layout row wrap>
