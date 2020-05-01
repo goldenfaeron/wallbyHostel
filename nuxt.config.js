@@ -142,14 +142,35 @@ export default {
 
 
   build: {
+
+    optimization: {
+      minimize: true,
+      minimizer: [
+        // terser-webpack-plugin
+        // optimize-css-assets-webpack-plugin
+      ],
+      splitChunks: {
+        chunks: 'all',
+        automaticNameDelimiter: '.',
+        name: undefined,
+        cacheGroups: {}
+      }
+    },
+
+    splitChunks: {
+      layouts: false,
+      pages: true,
+      commons: true
+    },
+
     extractCSS: true,
     // transpile: ['vuetify/lib'],
     // plugins: [new VuetifyLoaderPlugin()]
+    extend(config, ctx) {//make inside build!!!!!!
+    }
   },
   /*
   ** You can extend webpack config here
   */
-  extend(config, ctx) {
-  }
 
 }
