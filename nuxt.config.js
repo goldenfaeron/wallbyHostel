@@ -81,7 +81,7 @@ export default {
 
 
   generate: {
-    async routes() {
+    routes() {
 
       let team = axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/team?token=641a6e0c88f94f7d2adadd184752e1",
         {
@@ -149,12 +149,12 @@ export default {
         // terser-webpack-plugin
         // optimize-css-assets-webpack-plugin
       ],
-      splitChunks: {
-        chunks: 'all',
-        automaticNameDelimiter: '.',
-        name: undefined,
-        cacheGroups: {}
-      }
+      // splitChunks: {
+      //   chunks: 'all',
+      //   automaticNameDelimiter: '.',
+      //   name: undefined,
+      //   cacheGroups: {}
+      // }
     },
 
     splitChunks: {
