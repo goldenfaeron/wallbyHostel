@@ -149,12 +149,12 @@ export default {
         // terser-webpack-plugin
         // optimize-css-assets-webpack-plugin
       ],
-      // splitChunks: {
-      //   chunks: 'all',
-      //   automaticNameDelimiter: '.',
-      //   name: undefined,
-      //   cacheGroups: {}
-      // }
+      splitChunks: {
+        chunks: 'all',
+        automaticNameDelimiter: '.',
+        name: undefined,
+        cacheGroups: {}
+      }
     },
 
     splitChunks: {
