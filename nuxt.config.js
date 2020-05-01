@@ -1,6 +1,7 @@
 import colors from 'vuetify/es5/util/colors'
 import axios from 'axios'
 
+import VuetifyLoaderPlugin from 'vuetify-loader/lib/plugin'
 
 export default {
   mode: 'universal',
@@ -129,21 +130,47 @@ export default {
     },
 
   },
+
+
+  server: {
+    port: 8000, // default: 3000     
+    host: '0.0.0.0', // default: localhost   
+  },
   /*
   ** Build configuration
   */
+
+
   build: {
-    /*
-    ** You can extend webpack config here
-    */
-    loaders: {
-      vue: {
-        prettify: false
+
+    optimization: {
+      minimize: true,
+      minimizer: [
+        // terser-webpack-plugin
+        // optimize-css-assets-webpack-plugin
+      ],
+      splitChunks: {
+        chunks: 'all',
+        automaticNameDelimiter: '.',
+        name: undefined,
+        cacheGroups: {}
       }
     },
-    hardSource: true,
-    parallel: true,
-    extend(config, ctx) {
+
+    splitChunks: {
+      layouts: false,
+      pages: true,
+      commons: true
+    },
+
+    extractCSS: true,
+    // transpile: ['vuetify/lib'],
+    // plugins: [new VuetifyLoaderPlugin()]
+    extend(config, ctx) {//make inside build!!!!!!
     }
-  }
+  },
+  /*
+  ** You can extend webpack config here
+  */
+
 }
