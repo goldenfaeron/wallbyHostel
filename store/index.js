@@ -18,7 +18,7 @@ export const state = () => ({
     borshBars: [],
     borshInstagram: [],
     borshAirbnb: [],
-    borshYoutube: [],
+    // borshYoutube: [],
 
     //NAV
 
@@ -56,9 +56,9 @@ export const mutations = {
     setBorshAirbnb(state, list) {
         state.borshAirbnb = list;
     },
-    setBorshYoutube(state, list) {
-        state.borshYoutube = list;
-    },
+    // setBorshYoutube(state, list) {
+    //     state.borshYoutube = list;
+    // },
 
 
 
@@ -127,13 +127,13 @@ export const actions = {
         await commit('setBorshAirbnb', borshAirbnb);
 
         //Youtube
-        let files6 = await require.context('~/assets/json/youtube', false, /\.json$/);
-        let borshYoutube = files6.keys().map(key => {
-            let res = files6(key);
-            res.slug = key.slice(2, -5);
-            return res;
-        });
-        await commit('setBorshYoutube', borshYoutube);
+        //     let files6 = await require.context('~/assets/json/youtube', false, /\.json$/);
+        //     let borshYoutube = files6.keys().map(key => {
+        //         let res = files6(key);
+        //         res.slug = key.slice(2, -5);
+        //         return res;
+        //     });
+        //     await commit('setBorshYoutube', borshYoutube);
     },
 
 }

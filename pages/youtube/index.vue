@@ -7,7 +7,7 @@
 
 		<v-container grid-list-lg>
 			<v-layout row wrap>
-				<v-flex xs12 sm12 md6 lg3 v-for="(item, index) in $store.state.borshYoutube[0]" :key="index">
+				<v-flex xs12 sm12 md6 lg3 v-for="(item, index) in featured" :key="index">
 					<v-card height="100%" flat>
 						<iframe
 							width="100%"
@@ -56,6 +56,16 @@
 
 <script>
 export default {
+	asyncData({ params, store, $axios, route }) {
+		return $axios
+			.get(
+				"https://api.apify.com/v2/datasets/X7FaS3y0RYgf3sdaq/items?format=json&clean=1"
+			)
+			.then(res => {
+				return { featured: res.data };
+			});
+	},
+
 	methods: {
 		placeholder(index) {
 			return index % 2;
