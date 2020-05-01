@@ -11,74 +11,14 @@
 			<!-- Featured -->
 			<v-layout row wrap>
 				<v-flex xs12 sm6 md4 v-for="(item, index) in featured" :key="index">
-					<v-card height="100%">
-						<!-- <v-img :src="$store.state.assetRoot + item.image.path" max-height="10cm"></v-img> -->
-						<v-btn absolute dark fab top right color="primary">
-							<v-icon>mdi-star</v-icon>
-						</v-btn>
-						<v-card-title primary-title>
-							<v-layout align-content-space-between justify-space-between>
-								<v-flex>
-									<p class="headline d-flex">{{item.name }}</p>
-								</v-flex>
-							</v-layout>
-						</v-card-title>
-
-						<v-img :src="$store.state.assetRoot + item.header_image.path" max-height="10cm"></v-img>
-
-						<v-card-text v-html="item.description">
-							<br />
-							<ul>
-								<li v-for="(item, index) in item.features" :key="index">{{item}}hello</li>
-							</ul>
-						</v-card-text>
-
-						<div class="text-xs-center">
-							<v-rating color="red" :value="item.rating" half-increments readonly></v-rating>
-						</div>
-
-						<!-- v-if="!item.inCart" -->
-						<v-card-actions>
-							<v-btn color="secondary">
-								<nuxt-link :to="'/featured_hotels/'+item.slug" class="accent--text">Read more</nuxt-link>
-							</v-btn>
-						</v-card-actions>
-					</v-card>
+					<CardFeaturedHotel :props="item"></CardFeaturedHotel>
 				</v-flex>
 			</v-layout>
 
 			<!-- From Booking.com  -->
 			<v-layout row wrap>
 				<v-flex xs12 sm12 md6 lg3 v-for="(item, index) in $store.state.borshHotels[0]" :key="index">
-					<v-card height="100%" flat>
-						<!-- <v-img :src="$store.state.assetRoot + item.image.path" max-height="10cm"></v-img> -->
-
-						<v-card-title primary-title>
-							<v-layout align-content-space-between justify-space-between>
-								<v-flex>
-									<p class="headline d-flex">{{item.name }}</p>
-								</v-flex>
-							</v-layout>
-						</v-card-title>
-
-						<v-img :src="item.image" height="300px"></v-img>
-
-						<v-card-text>
-							<p class="truncate-overflow">{{item.description}}</p>
-							<br />
-						</v-card-text>
-
-						<div class="text-xs-center">
-							<v-rating color="red" :value="item.rating/2" half-increments readonly></v-rating>
-						</div>
-
-						<!-- v-if="!item.inCart" -->
-						<v-card-actions>
-							<v-btn color="secondary">
-								<nuxt-link :to="'/booking/'+index" class="accent--text">Read more</nuxt-link>
-							</v-btn>
-						</v-card-actions>
-					</v-card>
+					<CardHotel :props="item" :index="index"></CardHotel>
 				</v-flex>
 			</v-layout>
 		</v-container>
@@ -88,6 +28,8 @@
 <script>
 export default {
 	components: {
+		CardFeaturedHotel: () => import("@/components/CardFeaturedHotel"),
+		CardHotel: () => import("@/components/CardHotel"),
 		Assurance: () => import("@/components/Assurance"),
 		Mission: () => import("@/components/Mission")
 	},

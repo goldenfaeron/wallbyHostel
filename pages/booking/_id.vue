@@ -36,7 +36,6 @@
 											</v-flex>
 										</v-layout>
 									</v-sheet>
-
 									<v-card-title primary-title>{{item.roomType}}</v-card-title>
 									<v-card-text>
 										<v-icon>mdi-bed-double</v-icon>
@@ -44,12 +43,14 @@
 										<br />
 										<v-icon>mdi-account-multiple</v-icon>
 										Persons {{item.persons}}
-										<br />
-										<br />
-										<ul>
-											<li v-for="(item, index) in item.features" :key="index">{{item}}</li>
-										</ul>
 									</v-card-text>
+									<v-card-actions>
+										<Dialog :props="{title: data.name + ' Amenities', buttonText: 'View Amenities'}">
+											<ul>
+												<li v-for="(item, index) in item.features" :key="index">{{item}}</li>
+											</ul>
+										</Dialog>
+									</v-card-actions>
 								</v-card>
 							</v-flex>
 						</v-layout>
@@ -67,6 +68,7 @@
 <script>
 export default {
 	components: {
+		Dialog: () => import("@/components/Dialog"),
 		googleMapCoordinate: () => import("@/components/googleMapCoordinate"),
 		CallToAction: () => import("@/components/CallToAction")
 	},

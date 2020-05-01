@@ -40,12 +40,6 @@
 			<v-card-text>
 				<v-icon color=" lighten-2" large>mdi-shield-home</v-icon>Quarantine Friendly
 			</v-card-text>
-
-			<!-- <v-card-actions>
-			<v-btn color="secondary">-->
-			<!-- <nuxt-link :to="details.slug" class="accent--text">More</nuxt-link> -->
-			<!-- </v-btn>
-			</v-card-actions>-->
 		</v-card>
 	</div>
 </template>
