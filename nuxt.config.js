@@ -139,16 +139,17 @@ export default {
   /*
   ** Build configuration
   */
-  build: {
 
-    build: {
-      transpile: ['vuetify/lib'],
-      plugins: [new VuetifyLoaderPlugin()]
-    },
-    /*
-    ** You can extend webpack config here
-    */
-    extend(config, ctx) {
-    }
+
+  build: {
+    extractCSS: true,
+    // transpile: ['vuetify/lib'],
+    // plugins: [new VuetifyLoaderPlugin()]
+  },
+  /*
+  ** You can extend webpack config here
+  */
+  extend(config, ctx) {
   }
+
 }
