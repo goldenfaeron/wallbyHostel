@@ -36,12 +36,29 @@
 				</v-flex>
 			</v-layout>
 		</v-container>-->
+		<v-container grid-list-xs>
+			<v-layout row wrap>
+				<v-flex xs4>
+					<CardInstaGram></CardInstaGram>
+				</v-flex>
+			</v-layout>
+
+			<!-- insta -->
+		</v-container>
 		<CallToAction
 			:props="{
              booking: hotel.booking_link, 
              website: hotel.website_link,
              airbnb: hotel.airbnb_link }"
 		></CallToAction>
+		<v-container grid-list-lg>
+			<h2>{{hotel.name}} on Instagram</h2>
+			<v-layout row wrap mt-5>
+				<v-flex xs4 md2 v-for="(item, index) in hotel.linked_instagram" :key="index">
+					<CardInstagram :props="item"></CardInstagram>
+				</v-flex>
+			</v-layout>
+		</v-container>
 	</div>
 </template>
 
@@ -56,7 +73,7 @@ export default {
 				collection +
 				"?token=" +
 				store.state.collectionsToken,
-			{ filter: { slug: route.params.id } }
+			{ filter: { slug: route.params.id }, populate: 1 }
 		);
 
 		let request2 = await $axios.post(
@@ -73,6 +90,7 @@ export default {
 		};
 	},
 	components: {
+		CardInstagram: () => import("@/components/CardInstagram"),
 		CallToAction: () => import("@/components/CallToAction"),
 		CommentsParallax: () => import("@/components/CommentsParallax"),
 		JumbotronGradient: () => import("@/components/JumbotronGradient"),
