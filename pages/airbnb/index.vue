@@ -5,7 +5,7 @@
 		<!-- {{$store.state.borshHotels}} -->
 		<v-container grid-list-lg>
 			<v-layout row wrap>
-				<v-flex xs12 sm6 md6 lg4 v-for="(item, index) in $store.state.borshAirbnb[0].slice(0,24)" :key="index">
+				<v-flex xs12 sm6 md6 lg4 v-for="(item, index) in data" :key="index">
 					<v-card style="height: 100%;">
 						<v-card-title primary-title>
 							<v-layout align-content-space-between justify-space-between>
@@ -32,7 +32,7 @@
 						</div>
 						<v-card-actions>
 							<v-btn color="primary">
-								<nuxt-link :to="'/airbnb/'+index" class="accent--text">Read more</nuxt-link>
+								<nuxt-link :to="'/airbnb/'+item.slug" class="accent--text">Read more</nuxt-link>
 							</v-btn>
 							<v-btn color="success" :href="'https://airbnb.com/rooms/'+item.id">book on airbnb.com</v-btn>
 						</v-card-actions>
@@ -45,6 +45,21 @@
 
 <script>
 export default {
+	asyncData({ params, store, $axios, route }) {
+		let collection = "airbnb";
+		return $axios
+			.post(
+				store.state.webRoot +
+					"/api/collections/get/" +
+					collection +
+					"?token=" +
+					store.state.collectionsToken
+				// { fields: { slug: 1, } }
+			)
+			.then(res => {
+				return { data: res.data.entries };
+			});
+	},
 	methods: {
 		placeholder(index) {
 			return index % 2;

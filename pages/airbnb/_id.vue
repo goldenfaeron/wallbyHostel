@@ -150,9 +150,23 @@
 
 <script>
 export default {
+	asyncData({ params, store, $axios, route }) {
+		let collection = "airbnb";
+		return $axios
+			.post(
+				store.state.webRoot +
+					"/api/collections/get/" +
+					collection +
+					"?token=" +
+					store.state.collectionsToken,
+				{ filter: { slug: route.params.id } }
+			)
+			.then(res => {
+				return { data: res.data.entries[0] };
+			});
+	},
 	data() {
 		return {
-			data: this.$store.state.borshAirbnb[0][this.$route.params.id],
 			dialog: false
 		};
 	},
