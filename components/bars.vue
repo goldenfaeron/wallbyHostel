@@ -1,6 +1,6 @@
 		<template >
 	<section id="bars">
-		<v-container grid-list-lg>
+		<!-- <v-container grid-list-lg>
 			<h1>{{$store.state.city}} BARS</h1>
 			<v-responsive class="mx-auto mb-12" width="56">
 				<v-divider></v-divider>
@@ -17,8 +17,6 @@
 							:key="index"
 						>
 							<v-card height="100%" flat>
-								<!-- <v-img :src="$store.state.assetRoot + item.image.path" max-height="10cm"></v-img> -->
-
 								<v-card-title primary-title>
 									<v-layout align-content-space-between justify-space-between>
 										<v-flex>
@@ -39,12 +37,7 @@
 									Read {{item.reviewsCount}} reviews
 								</v-card-text>
 
-								<!-- v-if="!item.inCart" -->
-								<v-card-actions>
-									<!-- <v-btn color="secondary"> -->
-									<!-- <nuxt-link :to="'/booking/'+index" class="accent--text">Read more</nuxt-link> -->
-									<!-- </v-btn> -->
-								</v-card-actions>
+								<v-card-actions></v-card-actions>
 							</v-card>
 						</v-flex>
 					</v-layout>
@@ -54,7 +47,7 @@
 			<v-layout justify-center>
 				<v-btn color="primary" href="/bars">See More</v-btn>
 			</v-layout>
-		</v-container>
+		</v-container>-->
 	</section>
 </template>
 

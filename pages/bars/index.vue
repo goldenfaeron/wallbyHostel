@@ -7,7 +7,8 @@
 
 		<v-container grid-list-lg>
 			<v-layout row wrap>
-				<v-flex xs12 sm12 md6 lg3 v-for="(item, index) in $store.state.borshBars[0]" :key="index">
+				<!-- {{bars}} -->
+				<v-flex xs12 sm12 md6 lg3 v-for="(item, index) in bars" :key="index">
 					<CardBar :props="item" :index="index"></CardBar>
 				</v-flex>
 			</v-layout>
@@ -17,6 +18,15 @@
 
 <script>
 export default {
+	asyncData({ params, store, $axios, route }) {
+		return $axios
+			.get(
+				"https://api.apify.com/v2/datasets/yjCnu5NPvA4Ze4RUZ/items?format=json&clean=1"
+			)
+			.then(res => {
+				return { bars: res.data };
+			});
+	},
 	components: { CardBar: () => import("@/components/CardBar") },
 	methods: {
 		placeholder(index) {

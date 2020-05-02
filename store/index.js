@@ -15,7 +15,7 @@ export const state = () => ({
     //JSON
     borshHotels: [],
     amazonProducts: [],
-    borshBars: [],
+    // borshBars: [],
     borshInstagram: [],
     borshAirbnb: [],
     // borshYoutube: [],
@@ -47,9 +47,9 @@ export const mutations = {
     setBorshHotels(state, list) {
         state.borshHotels = list;
     },
-    setBorshBars(state, list) {
-        state.borshBars = list;
-    },
+    // setBorshBars(state, list) {
+    //     state.borshBars = list;
+    // },
     setBorshInstagram(state, list) {
         state.borshInstagram = list;
     },
@@ -71,13 +71,13 @@ export const actions = {
 
 
 
-    async FETCH_EXCHANGE_RATE({ commit, state }, payload) {
+    // async FETCH_EXCHANGE_RATE({ commit, state }, payload) {
 
-        const { data } = await axios.get("https://api.exchangeratesapi.io/latest?base=" + state.defaultCurrency + "&symbols=" + payload)
-        commit('setExchangeRate', Math.round(data.rates[payload] * 100) / 100)
-        commit('setCurrency', payload)
+    //     const { data } = await axios.get("https://api.exchangeratesapi.io/latest?base=" + state.defaultCurrency + "&symbols=" + payload)
+    //     commit('setExchangeRate', Math.round(data.rates[payload] * 100) / 100)
+    //     commit('setCurrency', payload)
 
-    },
+    // },
 
     //JSON
     async nuxtServerInit({ commit }) {
@@ -100,13 +100,13 @@ export const actions = {
         await commit('setBorshHotels', borshHotels);
 
         //google locations (bars)
-        let files3 = await require.context('~/assets/json/barsborsh', false, /\.json$/);
-        let borshbars = files3.keys().map(key => {
-            let res = files3(key);
-            res.slug = key.slice(2, -5);
-            return res;
-        });
-        await commit('setBorshBars', borshbars);
+        // let files3 = await require.context('~/assets/json/barsborsh', false, /\.json$/);
+        // let borshbars = files3.keys().map(key => {
+        //     let res = files3(key);
+        //     res.slug = key.slice(2, -5);
+        //     return res;
+        // });
+        // await commit('setBorshBars', borshbars);
 
         //instagram
         let files4 = await require.context('~/assets/json/instagram', false, /\.json$/);

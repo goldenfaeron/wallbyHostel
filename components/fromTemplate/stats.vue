@@ -32,8 +32,8 @@ export default {
 					"instagram"
 				],
 				[this.$store.state.borshHotels[0].length, "Hotels", "booking"],
-				[this.$store.state.borshAirbnb[0].length, "Airbnbs", "airbnb"],
-				[this.$store.state.borshBars[0].length, "Cafes and bars", "bars"],
+				["this.$store.state.borshAirbnb[0].length", "Airbnbs", "airbnb"],
+				["35", "Cafes and bars", "bars"],
 				["20", "Videos", "youtube"]
 			]
 		};
