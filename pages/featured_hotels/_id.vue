@@ -55,14 +55,14 @@ export default {
 		let collection = "hotels";
 
 		//Get collection
-		let request1 = await $axios.post(
-			store.state.webRoot +
-				"/api/collections/get/" +
-				collection +
-				"?token=" +
-				store.state.collectionsToken,
-			{ filter: { slug: route.params.id } }
-		);
+		// let request1 = await $axios.post(
+		// 	store.state.webRoot +
+		// 		"/api/collections/get/" +
+		// 		collection +
+		// 		"?token=" +
+		// 		store.state.collectionsToken,
+		// 	{ filter: { slug: route.params.id } }
+		// );
 
 		let request2 = await $axios.post(
 			store.state.webRoot +
@@ -73,7 +73,7 @@ export default {
 			{ limit: 5, sort: { _created: -1 } }
 		);
 		return {
-			hotel: request1.data.entries[0],
+			// hotel: request1.data.entries[0],
 			featuredHotels: request2.data.entries
 		};
 	},

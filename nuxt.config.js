@@ -2,7 +2,7 @@ import colors from 'vuetify/es5/util/colors'
 import axios from 'axios'
 
 
-import VuetifyLoaderPlugin from 'vuetify-loader/lib/plugin'
+
 
 export default {
   mode: 'universal',
@@ -55,8 +55,8 @@ export default {
   },
 
   server: {
-    port: 8000, // default: 3000
-    host: '0.0.0.0' // default: localhost
+    // port: 8000, // default: 3000
+    // host: '0.0.0.0' // default: localhost
   },
   /*
   ** vuetify module configuration
@@ -92,7 +92,7 @@ export default {
   // }));
 
   generate: {
-    routes() {
+    async routes() {
 
       let team = axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/team?token=641a6e0c88f94f7d2adadd184752e1",
         {
@@ -144,8 +144,8 @@ export default {
 
 
   server: {
-    port: 8000, // default: 3000     
-    host: '0.0.0.0', // default: localhost   
+    port: 8000,
+    host: '0.0.0.0',
   },
   /*
   ** Build configuration
@@ -160,12 +160,8 @@ export default {
         // terser-webpack-plugin
         // optimize-css-assets-webpack-plugin
       ],
-      splitChunks: {
-        chunks: 'all',
-        automaticNameDelimiter: '.',
-        name: undefined,
-        cacheGroups: {}
-      }
+
+
     },
 
     splitChunks: {
@@ -175,9 +171,9 @@ export default {
     },
 
     extractCSS: true,
-    // transpile: ['vuetify/lib'],
-    // plugins: [new VuetifyLoaderPlugin()]
-    extend(config, ctx) {//make inside build!!!!!!
+    transpile: ['vuetify/lib'],
+    // plugins: [new VuetifyLoaderPlugin()],
+    extend(config, ctx) {
     }
   },
   /*
