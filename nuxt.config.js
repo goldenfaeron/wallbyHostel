@@ -92,7 +92,7 @@ export default {
   // }));
 
   generate: {
-    async routes() {
+    routes() {
 
       let team = axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/team?token=641a6e0c88f94f7d2adadd184752e1",
         {
@@ -171,7 +171,7 @@ export default {
     },
 
     extractCSS: true,
-    transpile: ['vuetify/lib'],
+    // transpile: ['vuetify/lib'],
     // plugins: [new VuetifyLoaderPlugin()],
     extend(config, ctx) {
     }
