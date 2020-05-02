@@ -3,6 +3,7 @@
 		<v-carousel>
 			<v-carousel-item v-for="(item, index) in data.photos" :key="index" :src="item.large"></v-carousel-item>
 		</v-carousel>
+
 		<v-container grid-list-xs>
 			<span class="grey--text text--darken-3">
 				<v-layout row justify-space-between>

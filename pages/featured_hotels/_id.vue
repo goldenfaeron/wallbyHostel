@@ -5,7 +5,7 @@
 			<v-layout row wrap>
 				<v-flex xs12 md6>
 					<h1>{{hotel.name}}</h1>
-
+					<!-- {{hotel.linked_object}} -->
 					<p v-html="hotel.description"></p>
 					<v-divider></v-divider>
 				</v-flex>

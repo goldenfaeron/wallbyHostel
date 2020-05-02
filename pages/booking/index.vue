@@ -1,11 +1,11 @@
 <template>
 	<div>
 		<h1 class="primary--text main-title" style="text-align: center;">Hotels in {{$store.state.city}}</h1>
-		<p
+		<!-- <p
 			class="secondary--text"
 			style="text-align: center;"
-		>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla.</p>
-		<Mission></Mission>
+		>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla.</p>-->
+		<!-- <Mission></Mission> -->
 
 		<v-container grid-list-lg>
 			<!-- Featured -->
