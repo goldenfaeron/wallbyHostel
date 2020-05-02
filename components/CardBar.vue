@@ -1,7 +1,10 @@
 <template>
 	<v-hover>
 		<v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 2}`">
-			<nuxt-link style="text-decoration:none; color: primary;" :to="'/bars/'+index">
+			<nuxt-link
+				style="text-decoration:none; color: primary;"
+				:to="{path: '/bars/'+index, params: {content:props } }"
+			>
 				<v-btn absolute small dark fab top right color="primary ">{{props.totalScore}}</v-btn>
 				<v-img v-if="props.imageUrls" max-height="100" :src="props.imageUrls[0]"></v-img>
 

@@ -38,8 +38,7 @@ export default {
 						title: 1,
 						text_1: 1,
 						image_1: 1,
-						text_2: 1,
-						image_2: 1,
+
 						slug: 1
 					}
 				}

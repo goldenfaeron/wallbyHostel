@@ -1,7 +1,8 @@
 import colors from 'vuetify/es5/util/colors'
 import axios from 'axios'
 
-import VuetifyLoaderPlugin from 'vuetify-loader/lib/plugin'
+
+
 
 export default {
   mode: 'universal',
@@ -33,7 +34,8 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '~/plugins/jsonld'
+    '~/plugins/jsonld',
+
   ],
   /*
   ** Nuxt.js dev-modules
@@ -53,8 +55,8 @@ export default {
   },
 
   server: {
-    port: 8000, // default: 3000
-    host: '0.0.0.0' // default: localhost
+    // port: 8000, // default: 3000
+    // host: '0.0.0.0' // default: localhost
   },
   /*
   ** vuetify module configuration
@@ -78,7 +80,16 @@ export default {
     }
   },
 
+  // ------ REFACTOR AS ------
 
+  // axios.all([
+  //   axios.get('https://api.github.com/users/mapbox'),
+  //   axios.get('https://api.github.com/users/phantomjs')
+  // ])
+  // .then(axios.spread((user1, user2) => {
+  //   console.log('Date created: ', user1.data.created_at);
+  //   console.log('Date created: ', user2.data.created_at);
+  // }));
 
   generate: {
     routes() {
@@ -133,8 +144,8 @@ export default {
 
 
   server: {
-    port: 8000, // default: 3000     
-    host: '0.0.0.0', // default: localhost   
+    port: 8000,
+    host: '0.0.0.0',
   },
   /*
   ** Build configuration
@@ -149,12 +160,8 @@ export default {
         // terser-webpack-plugin
         // optimize-css-assets-webpack-plugin
       ],
-      splitChunks: {
-        chunks: 'all',
-        automaticNameDelimiter: '.',
-        name: undefined,
-        cacheGroups: {}
-      }
+
+
     },
 
     splitChunks: {
@@ -165,8 +172,8 @@ export default {
 
     extractCSS: true,
     // transpile: ['vuetify/lib'],
-    // plugins: [new VuetifyLoaderPlugin()]
-    extend(config, ctx) {//make inside build!!!!!!
+    // plugins: [new VuetifyLoaderPlugin()],
+    extend(config, ctx) {
     }
   },
   /*

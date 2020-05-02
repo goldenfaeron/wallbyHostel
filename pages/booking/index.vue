@@ -17,8 +17,9 @@
 
 			<!-- From Booking.com  -->
 			<v-layout row wrap>
-				<v-flex xs12 sm12 md6 lg3 v-for="(item, index) in $store.state.borshHotels[0]" :key="index">
-					<CardHotel :props="item" :index="index"></CardHotel>
+				<v-flex xs6 sm4 lg3 v-for="(item, index) in $store.state.borshHotels[0]" :key="index">
+					<CardHotel class="hidden-xs-only" :props="item" :index="index"></CardHotel>
+					<CardHotelMobile class="hidden-sm-and-up" :props="item" :index="index"></CardHotelMobile>
 				</v-flex>
 			</v-layout>
 		</v-container>
@@ -28,6 +29,7 @@
 <script>
 export default {
 	components: {
+		CardHotelMobile: () => import("@/components/CardHotelMobile"),
 		CardFeaturedHotel: () => import("@/components/CardFeaturedHotel"),
 		CardHotel: () => import("@/components/CardHotel"),
 		Assurance: () => import("@/components/Assurance"),

@@ -54,7 +54,6 @@ export default {
 	async asyncData({ $axios, route, store }) {
 		let collection = "hotels";
 
-		//Get collection
 		let request1 = await $axios.post(
 			store.state.webRoot +
 				"/api/collections/get/" +
@@ -73,8 +72,8 @@ export default {
 			{ limit: 5, sort: { _created: -1 } }
 		);
 		return {
-			hotel: request1.data.entries[0],
-			featuredHotels: request2.data.entries
+			// hotel: request1.data.entries[0],
+			hotel: request1.data.entries[0]
 		};
 	},
 	components: {

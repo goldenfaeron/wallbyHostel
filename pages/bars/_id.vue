@@ -6,18 +6,18 @@
 				<v-flex xs12 md6>
 					<v-layout column wrap>
 						<v-flex xs12>
-							<v-carousel height="600" v-if="data.imageUrls && data.imageUrls.length > 0">
-								<v-carousel-item :src="item" v-for="(item, index) in data.imageUrls" :key="index"></v-carousel-item>
+							<v-carousel height="600" v-if="bar.imageUrls && bar.imageUrls.length > 0">
+								<v-carousel-item :src="item" v-for="(item, index) in bar.imageUrls" :key="index"></v-carousel-item>
 							</v-carousel>
 							<v-img v-else height="600" src="/img/placeholder.svg"></v-img>
 						</v-flex>
 						<v-flex>
-							<h1>{{data.title}}</h1>
-							<h2>{{data.categoryName}}</h2>
-							<googleMap :props="data.address"></googleMap>
-							{{data.address}}
+							<h1>{{bar.title}}</h1>
+							<h2>{{bar.categoryName}}</h2>
+							<googleMap :props="bar.address"></googleMap>
+							{{bar.address}}
 							<v-list>
-								<v-list-item v-for="(item, i) in data.openingHours" :key="i" :to="item.to" router exact>
+								<v-list-item v-for="(item, i) in bar.openingHours" :key="i" :to="item.to" router exact>
 									<v-list-item-action>
 										<v-list-item-title>
 											<v-icon>mdi-calendar-clock</v-icon>
@@ -34,7 +34,6 @@
 					</v-layout>
 				</v-flex>
 
-				<!-- Reviews -->
 				<v-flex xs12 md6>
 					<v-layout>
 						<v-flex xs12>
@@ -62,17 +61,26 @@
 
 <script>
 export default {
+	asyncData({ params, store, $axios, route }) {
+		return $axios
+			.get(
+				"https://api.apify.com/v2/datasets/yjCnu5NPvA4Ze4RUZ/items?format=json&clean=1"
+			)
+			.then(res => {
+				return {
+					bar: res.data[route.params.id],
+					reviews: JSON.parse(JSON.stringify(res.data[route.params.id].reviews))
+				};
+			});
+	},
+
 	components: {
 		googleMap: () => import("@/components/googleMap")
 	},
 	data() {
 		return {
-			reviews: JSON.parse(
-				JSON.stringify(
-					this.$store.state.borshBars[0][this.$route.params.id].reviews
-				)
-			),
-			data: this.$store.state.borshBars[0][this.$route.params.id]
+			// reviews: JSON.parse(JSON.stringify(bar.reviews))
+			// bar: this.bars[this.$route.params.id]
 		};
 	},
 

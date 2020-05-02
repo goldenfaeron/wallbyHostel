@@ -5,7 +5,7 @@ export const state = () => ({
     city: "Borsh",
     country: "Albania",
     developer: { name: "Sam", location: "Borsh, Albania" },
-    weather: { "coord": { "lon": 20.95, "lat": 40.59 }, "weather": [{ "id": 500, "main": "Rain", "description": "light rain", "icon": "10n" }], "base": "stations", "main": { "temp": 284.2, "feels_like": 282.25, "temp_min": 284.2, "temp_max": 284.2, "pressure": 1014, "humidity": 57, "sea_level": 1014, "grnd_level": 911 }, "wind": { "speed": 0.6, "deg": 292 }, "rain": { "1h": 0.14 }, "clouds": { "all": 38 }, "dt": 1588014751, "sys": { "country": "AL", "sunrise": 1587958790, "sunset": 1588008449 }, "timezone": 7200, "id": 782756, "name": "Borsh", "cod": 200 },
+    // weather: { "coord": { "lon": 20.95, "lat": 40.59 }, "weather": [{ "id": 500, "main": "Rain", "description": "light rain", "icon": "10n" }], "base": "stations", "main": { "temp": 284.2, "feels_like": 282.25, "temp_min": 284.2, "temp_max": 284.2, "pressure": 1014, "humidity": 57, "sea_level": 1014, "grnd_level": 911 }, "wind": { "speed": 0.6, "deg": 292 }, "rain": { "1h": 0.14 }, "clouds": { "all": 38 }, "dt": 1588014751, "sys": { "country": "AL", "sunrise": 1587958790, "sunset": 1588008449 }, "timezone": 7200, "id": 782756, "name": "Borsh", "cod": 200 },
 
     //CURRENCIES  
     defaultCurrency: 'GBP',
@@ -15,10 +15,13 @@ export const state = () => ({
     //JSON
     borshHotels: [],
     amazonProducts: [],
-    borshBars: [],
+    // borshBars: [],
     borshInstagram: [],
-    borshAirbnb: [],
-    borshYoutube: [],
+
+    // borshYoutube: [],
+
+    //NAV
+
 
 
     //Cockpit
@@ -36,26 +39,24 @@ export const state = () => ({
 
 export const mutations = {
 
-    setCurrency: (state, payload) => (state.currency = payload),
-    setExchangeRate: (state, payload) => (state.exchangeRate = payload),
+    // setCurrency: (state, payload) => (state.currency = payload),
+    // setExchangeRate: (state, payload) => (state.exchangeRate = payload),
 
     //json
 
     setBorshHotels(state, list) {
         state.borshHotels = list;
     },
-    setBorshBars(state, list) {
-        state.borshBars = list;
-    },
+    // setBorshBars(state, list) {
+    //     state.borshBars = list;
+    // },
     setBorshInstagram(state, list) {
         state.borshInstagram = list;
     },
-    setBorshAirbnb(state, list) {
-        state.borshAirbnb = list;
-    },
-    setBorshYoutube(state, list) {
-        state.borshYoutube = list;
-    },
+
+    // setBorshYoutube(state, list) {
+    //     state.borshYoutube = list;
+    // },
 
 
 
@@ -68,13 +69,13 @@ export const actions = {
 
 
 
-    async FETCH_EXCHANGE_RATE({ commit, state }, payload) {
+    // async FETCH_EXCHANGE_RATE({ commit, state }, payload) {
 
-        const { data } = await axios.get("https://api.exchangeratesapi.io/latest?base=" + state.defaultCurrency + "&symbols=" + payload)
-        commit('setExchangeRate', Math.round(data.rates[payload] * 100) / 100)
-        commit('setCurrency', payload)
+    //     const { data } = await axios.get("https://api.exchangeratesapi.io/latest?base=" + state.defaultCurrency + "&symbols=" + payload)
+    //     commit('setExchangeRate', Math.round(data.rates[payload] * 100) / 100)
+    //     commit('setCurrency', payload)
 
-    },
+    // },
 
     //JSON
     async nuxtServerInit({ commit }) {
@@ -97,13 +98,13 @@ export const actions = {
         await commit('setBorshHotels', borshHotels);
 
         //google locations (bars)
-        let files3 = await require.context('~/assets/json/barsborsh', false, /\.json$/);
-        let borshbars = files3.keys().map(key => {
-            let res = files3(key);
-            res.slug = key.slice(2, -5);
-            return res;
-        });
-        await commit('setBorshBars', borshbars);
+        // let files3 = await require.context('~/assets/json/barsborsh', false, /\.json$/);
+        // let borshbars = files3.keys().map(key => {
+        //     let res = files3(key);
+        //     res.slug = key.slice(2, -5);
+        //     return res;
+        // });
+        // await commit('setBorshBars', borshbars);
 
         //instagram
         let files4 = await require.context('~/assets/json/instagram', false, /\.json$/);
@@ -115,28 +116,67 @@ export const actions = {
         await commit('setBorshInstagram', borshinstagram);
 
         //Airbnb
-        let files5 = await require.context('~/assets/json/airbnb', false, /\.json$/);
-        let borshAirbnb = files5.keys().map(key => {
-            let res = files5(key);
-            res.slug = key.slice(2, -5);
-            return res;
-        });
-        await commit('setBorshAirbnb', borshAirbnb);
 
         //Youtube
-        let files6 = await require.context('~/assets/json/youtube', false, /\.json$/);
-        let borshYoutube = files6.keys().map(key => {
-            let res = files6(key);
-            res.slug = key.slice(2, -5);
-            return res;
-        });
-        await commit('setBorshYoutube', borshYoutube);
+        //     let files6 = await require.context('~/assets/json/youtube', false, /\.json$/);
+        //     let borshYoutube = files6.keys().map(key => {
+        //         let res = files6(key);
+        //         res.slug = key.slice(2, -5);
+        //         return res;
+        //     });
+        //     await commit('setBorshYoutube', borshYoutube);
     },
 
 }
 
 export const getters = {
-    getExchangeRate: state => state.exchangeRate,
+    // getExchangeRate: state => state.exchangeRate,
+    getNavigation: state =>
+        [
+            {
+                icon: "mdi-home",
+                title: "Home",
+                to: "/"
+            },
+
+            {
+                icon: "mdi-key-variant",
+                title: state.city + " Hotels",
+                to: "/booking"
+            },
+            {
+                icon: "mdi-beer",
+                title: state.city + " Bars",
+                to: "/bars"
+            },
+            {
+                icon: "mdi-instagram",
+                title: state.city + " on Instagram",
+                to: "/instagram"
+            },
+
+            {
+                icon: "",
+                img: "/img/airbnbLogo.png",
+                title: state.city + " Airbnb",
+                to: "/airbnb"
+            },
+            {
+                icon: "mdi-youtube",
+                title: state.city + " on Youtube",
+                to: "/youtube"
+            },
+            {
+                icon: "mdi-biohazard",
+                title: "Covid-19 in " + state.city,
+                to: "/corona"
+            },
+            {
+                icon: "mdi-account-box",
+                title: state.name + " Team",
+                to: "/team/"
+            }
+        ],
 
 }
 
