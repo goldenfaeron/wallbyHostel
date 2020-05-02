@@ -141,29 +141,29 @@ export const getters = {
 
             {
                 icon: "mdi-key-variant",
-                title: state.city + " Hotels",
+                title: "Hotels",
                 to: "/booking"
             },
             {
                 icon: "mdi-beer",
-                title: state.city + " Bars",
+                title: "Bars",
                 to: "/bars"
             },
             {
                 icon: "mdi-instagram",
-                title: state.city + " on Instagram",
+                title: "Instagram",
                 to: "/instagram"
             },
 
             {
                 icon: "",
                 img: "/img/airbnbLogo.png",
-                title: state.city + " Airbnb",
+                title: "Airbnb",
                 to: "/airbnb"
             },
             {
                 icon: "mdi-youtube",
-                title: state.city + " on Youtube",
+                title: "Youtube",
                 to: "/youtube"
             },
             {
