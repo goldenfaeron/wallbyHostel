@@ -2,20 +2,14 @@
 	<section id="airbnb">
 		<v-container grid-list-lg>
 			<h1>{{$store.state.city}} AIRBNBS</h1>
+
 			<v-responsive class="mx-auto mb-12" width="56">
 				<v-divider></v-divider>
 			</v-responsive>
 			<v-layout row wrap mt-5>
 				<v-container grid-list-lg>
 					<v-layout row wrap>
-						<v-flex
-							xs12
-							sm12
-							md6
-							lg3
-							v-for="(item, index) in $store.state.borshAirbnb[0].slice(0,4) "
-							:key="index"
-						>
+						<v-flex xs12 sm12 md6 lg3 v-for="(item, index) in props " :key="index">
 							<v-card height="100%" flat>
 								<!-- <v-img :src="$store.state.assetRoot + item.image.path" max-height="10cm"></v-img> -->
 
@@ -68,3 +62,9 @@ p {
 	text-align: center;
 }
 </style>
+
+<script>
+export default {
+	props: ["props"]
+};
+</script>

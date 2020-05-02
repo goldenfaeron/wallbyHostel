@@ -32,7 +32,7 @@ export default {
 					"instagram"
 				],
 				[this.$store.state.borshHotels[0].length, "Hotels", "booking"],
-				["this.$store.state.borshAirbnb[0].length", "Airbnbs", "airbnb"],
+				["20", "Airbnbs", "airbnb"],
 				["35", "Cafes and bars", "bars"],
 				["20", "Videos", "youtube"]
 			]

@@ -12,7 +12,7 @@
 		<br />
 		<booking></booking>
 		<br />
-		<airbnb></airbnb>
+		<airbnb :props="airbnb"></airbnb>
 		<br />
 		<bars></bars>
 	</div>
@@ -41,6 +41,35 @@ export default {
 		instagram,
 		airbnb,
 		bars
+	},
+
+	async asyncData({ $axios, route, store }) {
+		let collection = "airbnb";
+
+		let request1 = await $axios.post(
+			store.state.webRoot +
+				"/api/collections/get/" +
+				collection +
+				"?token=" +
+				store.state.collectionsToken,
+			{
+				fields: { name: 1, photos: 1, roomType: 1, stars: 1, slug: 1 },
+				limit: 4
+			}
+		);
+
+		// let request2 = await $axios.post(
+		// 	store.state.webRoot +
+		// 		"/api/collections/get/" +
+		// 		collection +
+		// 		"?token=" +
+		// 		store.state.collectionsToken,
+		// 	{ limit: 5, sort: { _created: -1 } }
+		// );
+		return {
+			// hotel: request1.data.entries[0],
+			airbnb: request1.data.entries
+		};
 	}
 };
 </script>
