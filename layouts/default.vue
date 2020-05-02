@@ -1,10 +1,17 @@
 <template>
 	<v-app>
-		<v-navigation-drawer v-model="drawer" :mini-variant="miniVariant" :clipped="clipped" fixed app>
+		<v-navigation-drawer
+			color="accent lighten-4"
+			v-model="drawer"
+			:mini-variant="miniVariant"
+			:clipped="clipped"
+			fixed
+			app
+		>
 			<v-list>
 				<v-list-item v-for="(item, i) in nav" :key="i" :to="item.to" router exact>
 					<v-list-item-action>
-						<v-icon v-if="item.icon">{{ item.icon }}</v-icon>
+						<v-icon color="primary" v-if="item.icon">{{ item.icon }}</v-icon>
 						<v-img height="32" width="24" v-else :src="item.img"></v-img>
 					</v-list-item-action>
 					<v-list-item-content>
@@ -13,7 +20,7 @@
 				</v-list-item>
 			</v-list>
 		</v-navigation-drawer>
-		<v-app-bar :clipped-left="clipped" app fixed color="accent lighten-2 " type>
+		<v-app-bar :clipped-left="clipped" app fixed color="accent lighten-3 " type>
 			<v-app-bar-nav-icon @click.stop="drawer = !drawer" />
 
 			<v-toolbar-title style="cursor:pointer" @click="go('/')">
