@@ -37,9 +37,9 @@
 			</v-layout>
 		</v-container>
 
-		<CommentsParallax
+		<!-- <CommentsParallax
 			:props="{comment: hotel.comment, title: hotel.name, subtitle: hotel.location.address}"
-		></CommentsParallax>
+		></CommentsParallax>-->
 		<CallToAction
 			:props="{
              booking: hotel.booking_link, 
