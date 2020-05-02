@@ -1,57 +1,191 @@
 <template>
-	<div class="text-xs-center">
-		<v-img height="300" width="400" :src="require('@/static/img/putin.jpg')"></v-img>
-		<h1>Aktuelle projekte mit {{this.$route.query.s}}</h1>
+	<div>
+		<v-carousel>
+			<!-- <v-carousel-item v-for="(item, index) in data.photos[0]" :key="index">
+				<img :src="item.large" alt />
+			</v-carousel-item>-->
+		</v-carousel>
+		<v-container grid-list-xs>
+			<span class="grey--text text--darken-3">
+				<v-layout row justify-space-between>
+					<v-flex lg5>
+						<p class="display-1 bold font-weight-bold" color>{{data.name}}</p>
+						<p>{{data.address}}</p>
+						<b>photos</b>
+						{{data.photos[2].large}}
+						<v-img :src="data.photos[0].large"></v-img>
+						<!-- <img height="200" width="200" :src="data.photos[0].large" alt /> -->
+						<br />
+						<br />
+						{{data.photos}}
+						<br />
+						<v-layout row wrap>
+							<v-flex lg3>
+								<p>{{data.numberOfGuests}} guests</p>
+							</v-flex>
+							<v-flex lg3>
+								<p>{{data.bedroomLabel}}</p>
+							</v-flex>
+							<v-flex lg3>
+								<p>{{data.bedLabel}}</p>
+							</v-flex>
+							<v-flex lg3>
+								<p>{{data.bathroomLabel}}</p>
+							</v-flex>
+						</v-layout>
 
-		<v-dialog v-model="dialog" width="100%" height="810px">
-			<template v-slot:activator="{ on }">
-				<v-container grid-list-lg>
-					<v-layout row wrap justify-center=" " align-center>
-						<v-flex xs12>
-							<v-btn color="red lighten-2" dark v-on="on">Click Me</v-btn>
-						</v-flex>
-					</v-layout>
-				</v-container>
-			</template>
+						<v-layout justify-space-around>
+							<v-btn
+								v-if="this.imageHeight"
+								color="success"
+								@click="$vuetify.goTo('#descr')"
+							>Go to description</v-btn>
+						</v-layout>
+						<br />
+						<v-divider></v-divider>
+						<br />
+						<span v-for="(item, index) in data.highlights" :key="index">
+							<p>
+								<v-icon color="green">mdi-check</v-icon>
+								<span class="font-weight-medium">{{item.headline}}</span>
+								<v-spacer></v-spacer>
+								{{item.message}}
+							</p>
+						</span>
+						<br />
+						<v-divider></v-divider>
+						<br />
+						<p class="font-weight-medium">Amneties</p>
+						<v-layout row wrap>
+							<v-flex lg6 xs12 v-for="(item, index) in data.listingAmenities.slice(-6)" :key="index">
+								<p v-if="item.isPresent == true">
+									<v-icon color="green">mdi-check</v-icon>
+									{{item.name}}
+								</p>
+								<p v-else>
+									<v-icon color="red">mdi-close</v-icon>
+									{{item.name}}
+								</p>
+							</v-flex>
+							<v-dialog v-model="dialog" width="500" scrollable>
+								<template v-slot:activator="{ on }">
+									<v-layout justify-center>
+										<v-btn color="primary" dark v-on="on" text>View all amneties</v-btn>
+									</v-layout>
+								</template>
 
-			<v-card>
-				<v-card-title class="headline grey lighten-2" primary-title>
-					<v-icon>mdi-ghost</v-icon>
-					A creative work from
-					{{$store.state.developer.name}}
-				</v-card-title>
+								<v-card>
+									<v-card-title class="headline grey lighten-2" primary-title>
+										Amneties
+										<v-spacer></v-spacer>
+										<v-btn flat @click="dialog = false" icon>
+											<v-icon>mdi-close</v-icon>
+										</v-btn>
+									</v-card-title>
 
-				<v-card-text>
-					<br />Graphic Design
-					Development and design go hand in hand.
-					If you are the creative type then you will want your website, platform or project to unique and expressive. After all, it's your brainchild.
-					We teach you the latest design programs, technologies and practice for colorful minds to kick-start their own brands and designs.
-					You will be making fly designs in no time which can be transformed into websites, social media, business cards, posters and marketing videos and campaigns.
-				</v-card-text>
-				<iframe
-					width="100%"
-					height="400px"
-					src="https://miro.com/app/embed/o9J_kt8HHpE=/?&pres=1&animate=1"
-					frameborder="0"
-					scrolling="no"
-					allowfullscreen
-				></iframe>
-				<v-divider></v-divider>
+									<v-card-text>
+										<br />
+										<v-flex v-for="(item, index) in data.listingAmenities" :key="index">
+											<p v-if="item.isPresent == true">
+												<v-icon color="green">mdi-check</v-icon>
+												{{item.name}}
+											</p>
+											<p v-else>
+												<v-icon color="red">mdi-close</v-icon>
+												{{item.name}}
+											</p>
+										</v-flex>
+									</v-card-text>
 
-				<v-card-actions>
-					<v-spacer></v-spacer>
-					<v-btn color="primary" flat @click="dialog = false">
-						<v-icon>mdi-thumb-up</v-icon>Awesome
-					</v-btn>
-				</v-card-actions>
-			</v-card>
-		</v-dialog>
+									<v-divider></v-divider>
+								</v-card>
+							</v-dialog>
+						</v-layout>
+						<br />
+						<v-divider></v-divider>
+						<br />
+						<p class="font-weight-medium">Sleeping arrangements</p>
+
+						<ol>
+							<li v-for="(item, index) in data.hometourRooms" :key="index">
+								<p class="font-weight-medium">{{item.nameWithType}}</p>
+								<p id="sleep">{{item.highlightsHometour[0]}}</p>
+							</li>
+						</ol>
+						<br />
+						<v-divider></v-divider>
+						<br />
+						<p class="font-weight-medium">Reviews</p>
+						<v-layout row justify-space-between>
+							<v-flex
+								lg5
+								xs12
+								v-for="(item, index) in data.reviewDetailsInterface.reviewSummary"
+								:key="index"
+							>
+								<p>{{item.label}}</p>
+								<v-progress-linear :value="item.percentage*100"></v-progress-linear>
+							</v-flex>
+						</v-layout>
+						<br />
+						<v-layout row wrap>
+							<v-flex lg12 v-for="(item, index) in data.reviews.slice(0,3)" :key="index">
+								<br />
+								<v-divider></v-divider>
+								<br />
+								<p>
+									<v-avatar class="mr-2" size="32">
+										<v-img :src="item.author.pictureUrl"></v-img>
+									</v-avatar>
+									{{item.author.firstName}}
+								</p>
+								<p>{{item.comments}}</p>
+							</v-flex>
+						</v-layout>
+						<br />
+						<br />
+					</v-flex>
+
+					<v-flex lg5>
+						<p id="descr" class="display-1 bold font-weight-bold">Description</p>
+						<br />
+						<pre style="white-space: pre-wrap;">{{data.sectionedDescription.description}}</pre>
+					</v-flex>
+				</v-layout>
+			</span>
+		</v-container>
 	</div>
 </template>
 
 
 <script>
 export default {
+	asyncData({ params, store, $axios, route }) {
+		let collection = "airbnb";
+		return $axios
+			.post(
+				store.state.webRoot +
+					"/api/collections/get/" +
+					collection +
+					"?token=" +
+					store.state.collectionsToken
+				// { filter: { slug: route.params.id } }
+			)
+			.then(res => {
+				return { data: res.data.entries[1] };
+			});
+	},
+
+	computed: {
+		imageHeight() {
+			switch (this.$vuetify.breakpoint.name) {
+				case "xs":
+					return true;
+				case "sm":
+					return true;
+			}
+		}
+	},
 	data() {
 		return {
 			dialog: false,
@@ -59,6 +193,11 @@ export default {
 				"Felix und ich arbeiten jetzt zusammen an der ganzen App Design zusammenarbeiten. Felix mit seinem 'kreatives Talent und seine künstlerischen Fähigkeiten nutzen, um einige wirklich coole Seiten auf der Website zu erstellen, um meine Kunst und seine Kunst zu zeigen und auch um eine wirklich zu schaffen wirklich schön aussehende Website, die Charakter und Stil hat",
 			henk: ""
 		};
+	},
+	filters: {
+		truncate(string, value) {
+			return (string || "").substring(0, value);
+		}
 	}
 };
 </script>
