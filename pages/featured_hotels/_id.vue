@@ -35,11 +35,7 @@
 					<CertificateCService :props="hotel.name"></CertificateCService>
 				</v-flex>
 			</v-layout>
-		</v-container>
-
-		<!-- <CommentsParallax
-			:props="{comment: hotel.comment, title: hotel.name, subtitle: hotel.location.address}"
-		></CommentsParallax>-->
+		</v-container>-->
 		<CallToAction
 			:props="{
              booking: hotel.booking_link, 
