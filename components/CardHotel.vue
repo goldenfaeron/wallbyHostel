@@ -11,7 +11,13 @@
 					</div>
 				</v-card-title>
 
-				<v-img :src="props.image" height="200"></v-img>
+				<v-img height="200" :src="props.image">
+					<template v-slot:placeholder>
+						<v-layout fill-height align-center justify-center ma-0>
+							<v-progress-circular indeterminate color="primary"></v-progress-circular>
+						</v-layout>
+					</template>
+				</v-img>
 
 				<v-card-text>
 					<p>{{props.description.substr(0,120)}}...</p>
