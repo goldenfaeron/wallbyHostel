@@ -152,7 +152,7 @@ export const getters = {
             {
                 icon: "mdi-instagram",
                 title: "Instagram",
-                to: "/instagram"
+                to: "/instagram/posts"
             },
 
             {
@@ -165,6 +165,11 @@ export const getters = {
                 icon: "mdi-youtube",
                 title: "Youtube",
                 to: "/youtube"
+            },
+            {
+                icon: "mdi-map-legend",
+                title: "What to do",
+                to: "/activities"
             },
             {
                 icon: "mdi-biohazard",
