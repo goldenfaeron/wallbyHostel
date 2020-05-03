@@ -73,17 +73,17 @@ export default {
 				collection +
 				"?token=" +
 				store.state.collectionsToken,
-			{ filter: { slug: route.params.id }, populate: 1 }
+			{ filter: { slug: route.params.id } }
 		);
 
-		let request2 = await $axios.post(
-			store.state.webRoot +
-				"/api/collections/get/" +
-				collection +
-				"?token=" +
-				store.state.collectionsToken,
-			{ limit: 5, sort: { _created: -1 } }
-		);
+		// let request2 = await $axios.post(
+		// 	store.state.webRoot +
+		// 		"/api/collections/get/" +
+		// 		collection +
+		// 		"?token=" +
+		// 		store.state.collectionsToken,
+		// 	{ limit: 5, sort: { _created: -1 } }
+		// );
 		return {
 			// hotel: request1.data.entries[0],
 			hotel: request1.data.entries[0]
