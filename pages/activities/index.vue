@@ -13,25 +13,9 @@
 			</v-layout>
 		</v-container>
 		<v-container grid-list-lg>
-			<!-- p{{posts}} -->
 			<v-layout row wrap>
 				<v-flex xs12 sm4 md4 lg6 v-for="(thing, index) in things" :key="index">
-					<v-hover>
-						<v-card flat slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 2}`">
-							<nuxt-link style="text-decoration:none; color: primary;" :to="'/activities/'+thing.slug">
-								<v-card-title primary-title>{{thing.name}}</v-card-title>
-								<v-card-subtitle primary-title>{{thing.location_string}}</v-card-subtitle>
-								<v-img height="200" :src="thing.photo.images.large.url">
-									<template v-slot:placeholder>
-										<v-layout fill-height align-center justify-center ma-0>
-											<v-progress-circular indeterminate color="primary"></v-progress-circular>
-										</v-layout>
-									</template>
-								</v-img>
-								<v-card-text>{{thing.description.substr(0,200)}}...</v-card-text>
-							</nuxt-link>
-						</v-card>
-					</v-hover>
+					<CardThing :props="thing"></CardThing>
 				</v-flex>
 			</v-layout>
 		</v-container>
@@ -65,7 +49,10 @@ export default {
 		};
 	},
 
-	components: { CardInstagram: () => import("@/components/CardInstagram") }
+	components: {
+		CardThing: () => import("@/components/CardThing"),
+		CardInstagram: () => import("@/components/CardInstagram")
+	}
 };
 </script>
 <style>

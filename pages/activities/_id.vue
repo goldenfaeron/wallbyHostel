@@ -24,17 +24,7 @@
 				<v-container grid-list-lg fluid>
 					<v-layout row wrap fill>
 						<v-flex xs12 lg12 v-for="(review, index) in thing.reviews" :key="index">
-							<v-card>
-								<v-card-title primary-title>{{review.title}}</v-card-title>
-								<v-card-subtitle secondary-text>
-									<v-icon>mdi-account-circle</v-icon>
-									{{review.user.username}}
-								</v-card-subtitle>
-								<div class="text-xs-center">
-									<v-rating color="red" :value="review.rating" half-increments readonly></v-rating>
-								</div>
-								<v-card-text>{{review.text}}</v-card-text>
-							</v-card>
+							<CardReview :props="review"></CardReview>
 						</v-flex>
 					</v-layout>
 				</v-container>
@@ -98,6 +88,7 @@ export default {
 	},
 
 	components: {
+		CardReview: () => import("@/components/CardReview"),
 		CardInstagram: () => import("@/components/CardInstagram"),
 		googleMapCoordinate: () => import("@/components/googleMapCoordinate")
 	}
