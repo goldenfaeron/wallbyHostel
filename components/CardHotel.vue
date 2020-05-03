@@ -1,7 +1,7 @@
 <template>
 	<v-hover>
 		<v-card flat slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 2}`">
-			<nuxt-link style="text-decoration:none; color: primary;" :to="'/booking/'+index">
+			<nuxt-link style="text-decoration:none; color: primary;" :to="'/booking/'+props.slug">
 				<!-- <v-img :src="$store.state.assetRoot + props.image.path" max-height="10cm"></v-img> -->
 
 				<v-card-title primary-title>
