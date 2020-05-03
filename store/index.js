@@ -14,9 +14,9 @@ export const state = () => ({
 
     //JSON
     borshHotels: [],
-    amazonProducts: [],
-    // borshBars: [],
-    borshInstagram: [],
+
+
+
 
     // borshYoutube: [],
 
@@ -44,9 +44,9 @@ export const mutations = {
 
     //json
 
-    setBorshHotels(state, list) {
-        state.borshHotels = list;
-    },
+    // setBorshHotels(state, list) {
+    //     state.borshHotels = list;
+    // },
     // setBorshBars(state, list) {
     //     state.borshBars = list;
     // },
@@ -89,13 +89,13 @@ export const actions = {
         // await commit('setAmazonProducts', amazonProducts);
 
         // Booking.com
-        let files2 = await require.context('~/assets/json/bookingborsh', false, /\.json$/);
-        let borshHotels = files2.keys().map(key => {
-            let res = files2(key);
-            res.slug = key.slice(2, -5);
-            return res;
-        });
-        await commit('setBorshHotels', borshHotels);
+        // let files2 = await require.context('~/assets/json/bookingborsh', false, /\.json$/);
+        // let borshHotels = files2.keys().map(key => {
+        //     let res = files2(key);
+        //     res.slug = key.slice(2, -5);
+        //     return res;
+        // });
+        // await commit('setBorshHotels', borshHotels);
 
         //google locations (bars)
         // let files3 = await require.context('~/assets/json/barsborsh', false, /\.json$/);
