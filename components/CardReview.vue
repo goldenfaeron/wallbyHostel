@@ -1,0 +1,21 @@
+<template>
+	<div>
+		<v-card>
+			<v-card-title primary-title>{{props.title}}</v-card-title>
+			<v-card-subtitle secondary-text>
+				<v-icon>mdi-account-circle</v-icon>
+				{{props.user.username}}
+			</v-card-subtitle>
+			<div class="text-xs-center">
+				<v-rating color="red" :value="props.rating" half-increments readonly></v-rating>
+			</div>
+			<v-card-text>{{props.text}}</v-card-text>
+		</v-card>
+	</div>
+</template>
+
+<script>
+export default {
+	props: ["props"]
+};
+</script>
