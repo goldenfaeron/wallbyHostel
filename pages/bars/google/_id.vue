@@ -34,7 +34,7 @@
 					</v-layout>
 				</v-flex>
 
-				<v-flex xs12 md6>
+				<v-flex xs12 md6 v-if="sortReviews">
 					<v-layout>
 						<v-flex xs12>
 							<h2>Reviews</h2>
@@ -62,14 +62,20 @@
 <script>
 export default {
 	asyncData({ params, store, $axios, route }) {
+		let collection = "googleplaces_" + store.state.city.toLowerCase();
 		return $axios
-			.get(
-				"https://api.apify.com/v2/datasets/yjCnu5NPvA4Ze4RUZ/items?format=json&clean=1"
+			.post(
+				store.state.webRoot +
+					"/api/collections/get/" +
+					collection +
+					"?token=" +
+					store.state.collectionsToken,
+				{ filter: { slug: route.params.id } }
 			)
 			.then(res => {
 				return {
-					bar: res.data[route.params.id],
-					reviews: JSON.parse(JSON.stringify(res.data[route.params.id].reviews))
+					bar: res.data.entries[0],
+					reviews: JSON.parse(JSON.stringify(res.data.entries[0].reviews))
 				};
 			});
 	},
@@ -86,21 +92,23 @@ export default {
 
 	computed: {
 		sortReviews() {
-			let reviewsClone = this.reviews;
-			let arr = [];
+			if (this.reviews) {
+				let reviewsClone = this.reviews;
+				let arr = [];
 
-			//Check if has text and push to new array
-			reviewsClone.forEach(element => {
-				if (element.text) {
-					element.text = element.text.replace("(Translated by Google)", "");
-					arr.push(element);
+				//Check if has text and push to new array
+				reviewsClone.forEach(element => {
+					if (element.text) {
+						element.text = element.text.replace("(Translated by Google)", "");
+						arr.push(element);
+					}
+				});
+				//Sort arr
+				function sortByLength(array) {
+					return array.sort((x, y) => x.text.length - y.text.length);
 				}
-			});
-			//Sort arr
-			function sortByLength(array) {
-				return array.sort((x, y) => x.text.length - y.text.length);
+				return sortByLength(arr).reverse();
 			}
-			return sortByLength(arr).reverse();
 		}
 	}
 };

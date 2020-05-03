@@ -7,9 +7,15 @@
 
 		<v-container grid-list-lg>
 			<v-layout row wrap>
-				<!-- {{bars}} -->
-				<v-flex xs12 sm12 md6 lg3 v-for="(item, index) in bars" :key="index">
+				<v-flex xs12 sm12 md6 lg3 v-for="(item, index) in bars_google" :key="index">
 					<CardBar :props="item" :index="index"></CardBar>
+				</v-flex>
+			</v-layout>
+		</v-container>
+		<v-container grid-list-lg>
+			<v-layout row wrap>
+				<v-flex xs12 sm12 md6 lg3 v-for="(item, index) in bars_tripadvisor" :key="index">
+					<CardBarTripadvisor :props="item" :index="index"></CardBarTripadvisor>
 				</v-flex>
 			</v-layout>
 		</v-container>
@@ -18,16 +24,37 @@
 
 <script>
 export default {
-	asyncData({ params, store, $axios, route }) {
-		return $axios
-			.get(
-				"https://api.apify.com/v2/datasets/yjCnu5NPvA4Ze4RUZ/items?format=json&clean=1"
-			)
-			.then(res => {
-				return { bars: res.data };
-			});
+	async asyncData({ $axios, route, store }) {
+		let collection = "googleplaces_" + store.state.city.toLowerCase();
+		let collection2 =
+			"tripadvisor_restuarants_" + store.state.city.toLowerCase();
+
+		let request1 = await $axios.post(
+			store.state.webRoot +
+				"/api/collections/get/" +
+				collection +
+				"?token=" +
+				store.state.collectionsToken,
+			{ limit: 15 }
+		);
+
+		let request2 = await $axios.post(
+			store.state.webRoot +
+				"/api/collections/get/" +
+				collection2 +
+				"?token=" +
+				store.state.collectionsToken,
+			{ limit: 15 }
+		);
+		return {
+			bars_google: request1.data.entries,
+			bars_tripadvisor: request2.data.entries
+		};
 	},
-	components: { CardBar: () => import("@/components/CardBar") },
+	components: {
+		CardBar: () => import("@/components/CardBar"),
+		CardBarTripadvisor: () => import("@/components/CardBarTripadvisor")
+	},
 	methods: {
 		placeholder(index) {
 			return index % 2;
