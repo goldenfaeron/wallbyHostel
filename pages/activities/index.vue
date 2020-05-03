@@ -15,7 +15,7 @@
 		<v-container grid-list-lg>
 			<!-- p{{posts}} -->
 			<v-layout row wrap>
-				<v-flex xs6 sm4 md4 lg6 v-for="(thing, index) in things" :key="index">
+				<v-flex xs12 sm4 md4 lg6 v-for="(thing, index) in things" :key="index">
 					<v-hover>
 						<v-card flat slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 2}`">
 							<nuxt-link style="text-decoration:none; color: primary;" :to="'/activities/'+thing.slug">

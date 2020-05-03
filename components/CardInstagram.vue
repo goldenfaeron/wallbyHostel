@@ -77,7 +77,7 @@
 							target="#"
 							v-on="on"
 							:href="'https://www.instagram.com/'+props.ownerUsername"
-						>{{props.ownerUsername}}</a>
+						>{{props.ownerUsername.substr(0,18)}}</a>
 					</v-card-actions>
 				</template>
 				<span>View profile</span>

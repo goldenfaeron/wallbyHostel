@@ -23,7 +23,7 @@
 
 				<v-container grid-list-lg fluid>
 					<v-layout row wrap fill>
-						<v-flex xs6 lg12 v-for="(review, index) in thing.reviews" :key="index">
+						<v-flex xs12 lg12 v-for="(review, index) in thing.reviews" :key="index">
 							<v-card>
 								<v-card-title primary-title>{{review.title}}</v-card-title>
 								<v-card-subtitle secondary-text>
@@ -52,7 +52,7 @@
 				<br />
 			</h2>
 			<v-layout row wrap>
-				<v-flex xs4 v-for="(post, index) in thing.instagram" :key="index" v-if="index<6">
+				<v-flex xs6 md4 v-for="(post, index) in thing.instagram" :key="index" v-if="index<6">
 					<CardInstagram :props="post"></CardInstagram>
 				</v-flex>
 			</v-layout>
