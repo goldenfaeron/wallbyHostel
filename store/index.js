@@ -135,24 +135,34 @@ export const getters = {
         [
             {
                 icon: "mdi-home",
-                title: "Home",
+                title: "About " + state.city,
                 to: "/"
+            },
+            {
+                icon: "mdi-map-legend",
+                title: "What to do",
+                to: "/activities"
             },
 
             {
-                icon: "mdi-key-variant",
-                title: "Hotels",
+                icon: "mdi-home",
+                title: "Where to stay",
                 to: "/booking"
             },
             {
-                icon: "mdi-beer",
-                title: "Bars",
+                icon: "mdi-food",
+                title: "Where to eat / drink",
                 to: "/bars"
             },
             {
                 icon: "mdi-instagram",
-                title: "Instagram",
+                title: "What to see",
                 to: "/instagram/posts"
+            },
+            {
+                icon: "mdi-youtube",
+                title: "What to watch",
+                to: "/youtube"
             },
 
             {
@@ -161,16 +171,7 @@ export const getters = {
                 title: "Airbnb",
                 to: "/airbnb"
             },
-            {
-                icon: "mdi-youtube",
-                title: "Youtube",
-                to: "/youtube"
-            },
-            {
-                icon: "mdi-map-legend",
-                title: "What to do",
-                to: "/activities"
-            },
+
             {
                 icon: "mdi-biohazard",
                 title: "Covid-19 in " + state.city,
