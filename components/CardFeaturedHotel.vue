@@ -11,7 +11,7 @@
 				</v-btn>
 				<v-card-title primary-title>
 					{{props.name }}
-					<v-rating large color="primary lighten-1" :value="props.rating" half-increments readonly></v-rating>
+					<v-rating color="primary lighten-1" :value="props.rating" half-increments readonly></v-rating>
 				</v-card-title>
 
 				<v-img :src="$store.state.assetRoot + props.header_image.path" height="200">

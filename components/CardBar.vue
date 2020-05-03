@@ -6,7 +6,13 @@
 				:to="{path: '/bars/google/'+props.slug }"
 			>
 				<v-btn absolute small dark fab top right color="primary ">{{props.totalScore}}</v-btn>
-				<v-img v-if="props.imageUrls" max-height="100" :src="props.imageUrls[0]"></v-img>
+				<v-img v-if="props.imageUrls" max-height="100" :src="props.imageUrls[0]">
+					<template v-slot:placeholder>
+						<v-layout fill-height align-center justify-center ma-0>
+							<v-progress-circular indeterminate color="primary"></v-progress-circular>
+						</v-layout>
+					</template>
+				</v-img>
 
 				<v-sheet v-else height="100" color="primary lighten-2">
 					<v-layout column justify-center align-center>

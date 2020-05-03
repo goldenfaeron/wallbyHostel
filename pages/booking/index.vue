@@ -17,7 +17,7 @@
 
 			<!-- From Booking.com  -->
 			<v-layout row wrap>
-				<v-flex xs6 sm4 lg3 v-for="(item, index) in $store.state.borshHotels[0]" :key="index">
+				<v-flex xs6 sm4 lg3 v-for="(item, index) in booking" :key="index">
 					<CardHotel class="hidden-xs-only" :props="item" :index="index"></CardHotel>
 					<CardHotelMobile class="hidden-sm-and-up" :props="item" :index="index"></CardHotelMobile>
 				</v-flex>
@@ -36,19 +36,31 @@ export default {
 		Mission: () => import("@/components/Mission")
 	},
 
-	asyncData({ params, store, $axios, route }) {
+	async asyncData({ $axios, route, store }) {
 		let collection = "hotels";
-		return $axios
-			.post(
-				store.state.webRoot +
-					"/api/collections/get/" +
-					collection +
-					"?token=" +
-					store.state.collectionsToken
-			)
-			.then(res => {
-				return { featured: res.data.entries.reverse() };
-			});
+		let collection2 = "booking_" + store.state.city.toLowerCase();
+
+		let request1 = await $axios.post(
+			store.state.webRoot +
+				"/api/collections/get/" +
+				collection +
+				"?token=" +
+				store.state.collectionsToken,
+			{ limit: 15 }
+		);
+
+		let request2 = await $axios.post(
+			store.state.webRoot +
+				"/api/collections/get/" +
+				collection2 +
+				"?token=" +
+				store.state.collectionsToken
+			// { limit: 15 }
+		);
+		return {
+			featured: request1.data.entries,
+			booking: request2.data.entries.reverse()
+		};
 	}
 };
 </script>

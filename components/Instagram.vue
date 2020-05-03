@@ -1,24 +1,16 @@
 	<template>
 	<section id="instagram">
 		<div>
-			<h1>{{$store.state.city}} ON INSTAGRAM</h1>
+			<h1>Stunning Instagram photos of {{$store.state.city}}</h1>
 			<v-responsive class="mx-auto mb-12" width="56">
-				<v-divider></v-divider>
+				<v-icon x-large>mdi-instagram</v-icon>
 			</v-responsive>
 			<v-container grid-list-lg mt-5>
 				<v-layout row wrap>
 					<!-- <v-card> -->
 					<v-container grid-list-lg>
 						<v-layout row wrap>
-
-							<v-flex
-								xs12
-								sm12
-								md6
-								lg3
-								v-for="(item, index) in $store.state.borshInstagram[0].slice(0,4) "
-								:key="index"
-							>
+							<v-flex xs6 sm6 md4 lg3 v-for="(item, index) in props " :key="index">
 								<v-hover>
 									<v-card height="100%" slot-scope="{ hover }">
 										<v-img max-height="200" :src="item.imageUrl">
@@ -54,6 +46,10 @@
 	</section>
 </template>
 
+<script>
+export default {
+	props: ["props"]
+};
 </script>
 
 <style lang="css" scoped>

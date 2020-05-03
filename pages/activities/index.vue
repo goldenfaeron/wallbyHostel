@@ -52,6 +52,24 @@ export default {
 	components: {
 		CardThing: () => import("@/components/CardThing"),
 		CardInstagram: () => import("@/components/CardInstagram")
+	},
+
+	data() {
+		return {
+			title: "Activities in " + this.$store.state.city
+		};
+	},
+	head() {
+		return {
+			title: this.title,
+			meta: [
+				{
+					hid: this.preview,
+					name: this.title,
+					content: this.preview
+				}
+			]
+		};
 	}
 };
 </script>
