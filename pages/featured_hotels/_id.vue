@@ -36,15 +36,6 @@
 				</v-flex>
 			</v-layout>
 		</v-container>-->
-		<v-container grid-list-xs>
-			<v-layout row wrap>
-				<v-flex xs4>
-					<CardInstaGram></CardInstaGram>
-				</v-flex>
-			</v-layout>
-
-			<!-- insta -->
-		</v-container>
 		<CallToAction
 			:props="{
              booking: hotel.booking_link, 
@@ -73,7 +64,7 @@ export default {
 				collection +
 				"?token=" +
 				store.state.collectionsToken,
-			{ filter: { slug: route.params.id } }
+			{ filter: { slug: route.params.id }, populate: 1 }
 		);
 
 		// let request2 = await $axios.post(
