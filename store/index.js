@@ -26,6 +26,7 @@ export const state = () => ({
 
     //Cockpit
     collectionsToken: '641a6e0c88f94f7d2adadd184752e1',
+    collectionSchema: '31fdc0efbd3c289620e787921e3e8b',
     assetRoot: "https://cockpit.goborshi.hackmylanguage.com/storage/uploads",
     webRoot: "https://cockpit.goborshi.hackmylanguage.com",
     imageToken: '969461cb194b4b0cd0c695d09e9502',
