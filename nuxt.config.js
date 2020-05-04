@@ -92,7 +92,7 @@ export default {
   // }));
 
   generate: {
-    routes() {
+    async routes() {
 
       let team = axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/team?token=641a6e0c88f94f7d2adadd184752e1",
         {
@@ -147,7 +147,7 @@ export default {
 
           })
         });
-      let google_places = axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/google_places_borsh?token=641a6e0c88f94f7d2adadd184752e1",
+      let google_places = axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/googleplaces_borsh?token=641a6e0c88f94f7d2adadd184752e1",
         {
 
           fields: { slug: 1, _id: 0 }
@@ -155,7 +155,7 @@ export default {
         .then((res) => {
           return res.data.entries.map((entry) => {
             return {
-              route: '/bars/' + entry.slug
+              route: '/bars/google/' + entry.slug
             }
 
           })
@@ -173,10 +173,23 @@ export default {
 
           })
         });
+      let activities = axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/tripadvisor_thingstodo_borsh?token=641a6e0c88f94f7d2adadd184752e1",
+        {
+
+          fields: { slug: 1, _id: 0 }
+        })
+        .then((res) => {
+          return res.data.entries.map((entry) => {
+            return {
+              route: '/activities/' + entry.slug
+            }
+
+          })
+        });
 
 
-      return Promise.all([team, featured_hotels, corona, hotels, google_places, tripadvisor_restuarants_borsh]).then(values => {
-        return [...values[0], ...values[1], ...values[2], ...values[3], ...values[4], ...values[5]]
+      return Promise.all([team, featured_hotels, corona, hotels, google_places, tripadvisor_restuarants_borsh, activities]).then(values => {
+        return [...values[0], ...values[1], ...values[2], ...values[3], ...values[4], ...values[5], ...values[6]]
       })
     },
 
