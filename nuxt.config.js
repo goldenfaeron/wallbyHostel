@@ -107,7 +107,7 @@ export default {
 
           })
         });
-      let hfeatured_hotels = axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/hotels?token=641a6e0c88f94f7d2adadd184752e1",
+      let featured_hotels = axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/hotels?token=641a6e0c88f94f7d2adadd184752e1",
         {
 
           fields: { slug: 1, _id: 0 }
