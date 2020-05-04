@@ -107,7 +107,7 @@ export default {
 
           })
         });
-      let hotels = axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/hotels?token=641a6e0c88f94f7d2adadd184752e1",
+      let hfeatured_hotels = axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/hotels?token=641a6e0c88f94f7d2adadd184752e1",
         {
 
           fields: { slug: 1, _id: 0 }
@@ -134,9 +134,49 @@ export default {
           })
         });
 
+      let hotels = axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/booking_borsh?token=641a6e0c88f94f7d2adadd184752e1",
+        {
 
-      return Promise.all([team, hotels, corona]).then(values => {
-        return [...values[0], ...values[1], ...values[2]]
+          fields: { slug: 1, _id: 0 }
+        })
+        .then((res) => {
+          return res.data.entries.map((entry) => {
+            return {
+              route: '/booking/' + entry.slug
+            }
+
+          })
+        });
+      let google_places = axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/google_places_borsh?token=641a6e0c88f94f7d2adadd184752e1",
+        {
+
+          fields: { slug: 1, _id: 0 }
+        })
+        .then((res) => {
+          return res.data.entries.map((entry) => {
+            return {
+              route: '/bars/' + entry.slug
+            }
+
+          })
+        });
+      let tripadvisor_restuarants_borsh = axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/tripadvisor_restuarants_borsh?token=641a6e0c88f94f7d2adadd184752e1",
+        {
+
+          fields: { slug: 1, _id: 0 }
+        })
+        .then((res) => {
+          return res.data.entries.map((entry) => {
+            return {
+              route: '/bars/tripadvisor/' + entry.slug
+            }
+
+          })
+        });
+
+
+      return Promise.all([team, featured_hotels, corona, hotels, google_places, tripadvisor_restuarants_borsh]).then(values => {
+        return [...values[0], ...values[1], ...values[2], ...values[3], ...values[4], ...values[5]]
       })
     },
 
