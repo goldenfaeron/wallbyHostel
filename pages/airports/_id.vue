@@ -51,7 +51,7 @@
 						</v-flex>
 					</v-layout>
 				</v-flex>
-
+				<!-- comment -->
 				<v-flex xs12 md6 v-if="sortReviews">
 					<v-layout>
 						<v-flex xs12>
@@ -93,7 +93,6 @@ export default {
 			.then(res => {
 				return {
 					airport: res.data.entries[0],
-
 					reviews: JSON.parse(JSON.stringify(res.data.entries[0].reviews))
 				};
 			});
