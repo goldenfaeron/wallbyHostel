@@ -1,10 +1,7 @@
 <template>
 	<v-hover>
 		<v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 2}`">
-			<nuxt-link
-				style="text-decoration:none; color: primary;"
-				:to="{path: '/bars/google/'+props.slug }"
-			>
+			<nuxt-link style="text-decoration:none; color: primary;" :to="{path:link+props.slug }">
 				<v-btn absolute small dark fab top right color="primary ">{{props.totalScore}}</v-btn>
 				<v-img v-if="props.imageUrls" max-height="100" :src="props.imageUrls[0]">
 					<template v-slot:placeholder>
@@ -42,7 +39,7 @@
 
 <script>
 export default {
-	props: ["props", "name", "buttonText", "index"],
+	props: ["props", "link"],
 	components: {
 		Dialog: () => import("@/components/Dialog")
 	}

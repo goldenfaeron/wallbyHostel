@@ -3,6 +3,9 @@
 		<v-container grid-list-xs>
 			<v-layout column fill-height align-center justify-center>
 				<v-flex xs12>
+					<v-responsive class="mx-auto" width="56">
+						<v-icon x-large>mdi-map-legend</v-icon>
+					</v-responsive>
 					<h1
 						class="text-xs-center text-lg-center text-md-center text-sm-center"
 					>What to do in {{$store.state.city}}</h1>

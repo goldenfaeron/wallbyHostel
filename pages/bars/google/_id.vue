@@ -93,7 +93,7 @@ export default {
 			.then(res => {
 				return {
 					bar: res.data.entries[0],
-					count: res.data.entries.length,
+
 					reviews: JSON.parse(JSON.stringify(res.data.entries[0].reviews))
 				};
 			});

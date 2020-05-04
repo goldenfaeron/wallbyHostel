@@ -80,32 +80,7 @@ export const actions = {
 
     //JSON
     async nuxtServerInit({ commit }) {
-        //AirBNB
-        // let files = await require.context('~/assets/json/amazon', false, /\.json$/);
-        // let amazonProducts = files.keys().map(key => {
-        //     let res = files(key);
-        //     res.slug = key.slice(2, -5);
-        //     return res;
-        // });
-        // await commit('setAmazonProducts', amazonProducts);
 
-        // Booking.com
-        // let files2 = await require.context('~/assets/json/bookingborsh', false, /\.json$/);
-        // let borshHotels = files2.keys().map(key => {
-        //     let res = files2(key);
-        //     res.slug = key.slice(2, -5);
-        //     return res;
-        // });
-        // await commit('setBorshHotels', borshHotels);
-
-        //google locations (bars)
-        // let files3 = await require.context('~/assets/json/barsborsh', false, /\.json$/);
-        // let borshbars = files3.keys().map(key => {
-        //     let res = files3(key);
-        //     res.slug = key.slice(2, -5);
-        //     return res;
-        // });
-        // await commit('setBorshBars', borshbars);
 
         //instagram
         let files4 = await require.context('~/assets/json/instagram', false, /\.json$/);
@@ -116,16 +91,7 @@ export const actions = {
         });
         await commit('setBorshInstagram', borshinstagram);
 
-        //Airbnb
 
-        //Youtube
-        //     let files6 = await require.context('~/assets/json/youtube', false, /\.json$/);
-        //     let borshYoutube = files6.keys().map(key => {
-        //         let res = files6(key);
-        //         res.slug = key.slice(2, -5);
-        //         return res;
-        //     });
-        //     await commit('setBorshYoutube', borshYoutube);
     },
 
 }
@@ -154,6 +120,11 @@ export const getters = {
                 icon: "mdi-food",
                 title: "Where to eat / drink",
                 to: "/bars"
+            },
+            {
+                icon: "mdi-store",
+                title: "Where to shop",
+                to: "/shops"
             },
             {
                 icon: "mdi-instagram",

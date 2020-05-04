@@ -1,5 +1,8 @@
 <template>
 	<div>
+		<v-responsive class="mx-auto" width="56">
+			<v-icon x-large>mdi-youtube</v-icon>
+		</v-responsive>
 		<h1
 			class="primary--text main-title"
 			style="text-align: center;"
