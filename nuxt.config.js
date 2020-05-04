@@ -199,10 +199,23 @@ export default {
 
           })
         });
+      let airports = axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/googleplaces_airports_borsh?token=641a6e0c88f94f7d2adadd184752e1",
+        {
+
+          fields: { slug: 1, _id: 0 }
+        })
+        .then((res) => {
+          return res.data.entries.map((entry) => {
+            return {
+              route: '/airports/' + entry.slug
+            }
+
+          })
+        });
 
 
-      return Promise.all([team, featured_hotels, corona, hotels, google_places, tripadvisor_restuarants_borsh, activities, shops]).then(values => {
-        return [...values[0], ...values[1], ...values[2], ...values[3], ...values[4], ...values[5], ...values[6], ...values[7]]
+      return Promise.all([team, featured_hotels, corona, hotels, google_places, tripadvisor_restuarants_borsh, activities, shops, airports]).then(values => {
+        return [...values[0], ...values[1], ...values[2], ...values[3], ...values[4], ...values[5], ...values[6], ...values[7], ...values[8]]
       })
     },
 

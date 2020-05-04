@@ -143,6 +143,12 @@ export const getters = {
                 title: "Airbnb",
                 to: "/airbnb"
             },
+            {
+                icon: "mdi-airport",
+
+                title: "Airports near " + state.city,
+                to: "/airports"
+            },
 
             {
                 icon: "mdi-biohazard",
