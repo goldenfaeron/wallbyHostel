@@ -51,6 +51,19 @@ export default {
 			.then(res => {
 				return { content: res.data.entries[0] };
 			});
+	},
+
+	head() {
+		return {
+			title: this.content.title,
+			meta: [
+				{
+					hid: this.content.title,
+					name: this.content.title,
+					content: this.content.text_1
+				}
+			]
+		};
 	}
 };
 </script>

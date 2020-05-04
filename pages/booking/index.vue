@@ -61,6 +61,19 @@ export default {
 			featured: request1.data.entries,
 			booking: request2.data.entries.reverse()
 		};
+	},
+
+	head() {
+		return {
+			title: "Hotels in " + this.$store.state.city,
+			meta: [
+				{
+					hid: "Hotels in " + this.$store.state.city,
+					name: "Hotels in " + this.$store.state.city,
+					content: "Hotels in " + this.$store.state.city
+				}
+			]
+		};
 	}
 };
 </script>

@@ -94,6 +94,19 @@ export default {
 	},
 	data() {
 		return {};
+	},
+
+	head() {
+		return {
+			title: this.hotel.name,
+			meta: [
+				{
+					hid: "Hotel in " + this.$store.state.city,
+					name: this.hotel.name,
+					content: this.hotel.description.substr(0, 100)
+				}
+			]
+		};
 	}
 };
 </script>

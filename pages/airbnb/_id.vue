@@ -1,28 +1,28 @@
 <template>
 	<div>
 		<v-carousel>
-			<v-carousel-item v-for="(item, index) in data.photos" :key="index" :src="item.large"></v-carousel-item>
+			<v-carousel-item v-for="(item, index) in room.photos" :key="index" :src="item.large"></v-carousel-item>
 		</v-carousel>
 
 		<v-container grid-list-xs>
 			<span class="grey--text text--darken-3">
 				<v-layout row justify-space-between>
 					<v-flex lg5>
-						<p class="display-1 bold font-weight-bold" color>{{data.name}}</p>
-						<p>{{data.address}}</p>
+						<p class="display-1 bold font-weight-bold" color>{{room.name}}</p>
+						<p>{{room.address}}</p>
 						<br />
 						<v-layout row wrap>
 							<v-flex lg3>
-								<p>{{data.numberOfGuests}} guests</p>
+								<p>{{room.numberOfGuests}} guests</p>
 							</v-flex>
 							<v-flex lg3>
-								<p>{{data.bedroomLabel}}</p>
+								<p>{{room.bedroomLabel}}</p>
 							</v-flex>
 							<v-flex lg3>
-								<p>{{data.bedLabel}}</p>
+								<p>{{room.bedLabel}}</p>
 							</v-flex>
 							<v-flex lg3>
-								<p>{{data.bathroomLabel}}</p>
+								<p>{{room.bathroomLabel}}</p>
 							</v-flex>
 						</v-layout>
 
@@ -36,7 +36,7 @@
 						<br />
 						<v-divider></v-divider>
 						<br />
-						<span v-for="(item, index) in data.highlights" :key="index">
+						<span v-for="(item, index) in room.highlights" :key="index">
 							<p>
 								<v-icon color="green">mdi-check</v-icon>
 								<span class="font-weight-medium">{{item.headline}}</span>
@@ -49,7 +49,7 @@
 						<br />
 						<p class="font-weight-medium">Amneties</p>
 						<v-layout row wrap>
-							<v-flex lg6 xs12 v-for="(item, index) in data.listingAmenities.slice(-6)" :key="index">
+							<v-flex lg6 xs12 v-for="(item, index) in room.listingAmenities.slice(-6)" :key="index">
 								<p v-if="item.isPresent == true">
 									<v-icon color="green">mdi-check</v-icon>
 									{{item.name}}
@@ -77,7 +77,7 @@
 
 									<v-card-text>
 										<br />
-										<v-flex v-for="(item, index) in data.listingAmenities" :key="index">
+										<v-flex v-for="(item, index) in room.listingAmenities" :key="index">
 											<p v-if="item.isPresent == true">
 												<v-icon color="green">mdi-check</v-icon>
 												{{item.name}}
@@ -99,7 +99,7 @@
 						<p class="font-weight-medium">Sleeping arrangements</p>
 
 						<ol>
-							<li v-for="(item, index) in data.hometourRooms" :key="index">
+							<li v-for="(item, index) in room.hometourRooms" :key="index">
 								<p class="font-weight-medium">{{item.nameWithType}}</p>
 								<p id="sleep">{{item.highlightsHometour[0]}}</p>
 							</li>
@@ -112,7 +112,7 @@
 							<v-flex
 								lg5
 								xs12
-								v-for="(item, index) in data.reviewDetailsInterface.reviewSummary"
+								v-for="(item, index) in room.reviewDetailsInterface.reviewSummary"
 								:key="index"
 							>
 								<p>{{item.label}}</p>
@@ -121,7 +121,7 @@
 						</v-layout>
 						<br />
 						<v-layout row wrap>
-							<v-flex lg12 v-for="(item, index) in data.reviews.slice(0,3)" :key="index">
+							<v-flex lg12 v-for="(item, index) in room.reviews.slice(0,3)" :key="index">
 								<br />
 								<v-divider></v-divider>
 								<br />
@@ -141,7 +141,7 @@
 					<v-flex lg5>
 						<p id="descr" class="display-1 bold font-weight-bold">Description</p>
 						<br />
-						<pre style="white-space: pre-wrap;">{{data.sectionedDescription.description}}</pre>
+						<pre style="white-space: pre-wrap;">{{room.sectionedDescription.description}}</pre>
 					</v-flex>
 				</v-layout>
 			</span>
@@ -163,7 +163,7 @@ export default {
 				{ filter: { slug: route.params.id } }
 			)
 			.then(res => {
-				return { data: res.data.entries[0] };
+				return { room: res.data.entries[0] };
 			});
 	},
 	data() {
@@ -185,6 +185,19 @@ export default {
 					return true;
 			}
 		}
+	},
+
+	head() {
+		return {
+			title: this.room.name,
+			meta: [
+				{
+					hid: this.room.name,
+					name: this.room.name + "- AirBNB in " + this.$store.state.city,
+					content: this.room.name + "- AirBNB in " + this.$store.state.city
+				}
+			]
+		};
 	}
 };
 </script>

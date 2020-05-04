@@ -110,6 +110,19 @@ export default {
 				return sortByLength(arr).reverse();
 			}
 		}
+	},
+
+	head() {
+		return {
+			title: this.bar.title,
+			meta: [
+				{
+					hid: this.bar.categoryName + "in" + this.$store.state.city,
+					name: this.title,
+					content: this.bar.categoryName + "in" + this.$store.state.city
+				}
+			]
+		};
 	}
 };
 </script>

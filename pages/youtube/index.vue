@@ -83,12 +83,12 @@ export default {
 
 	head() {
 		return {
-			title: this.title,
+			title: this.$store.state.city + " on Youtube",
 			meta: [
 				{
-					hid: this.preview,
-					name: this.title,
-					content: this.preview
+					hid: this.$store.state.city + " on Youtube",
+					name: this.$store.state.city + " on Youtube",
+					content: this.$store.state.city + " on Youtube"
 				}
 			]
 		};

@@ -80,6 +80,19 @@ export default {
 			data1: request1.data.entries,
 			data2: request2.data.entries
 		};
+	},
+
+	head() {
+		return {
+			title: "News in " + this.$store.state.city,
+			meta: [
+				{
+					hid: "News in " + this.$store.state.city,
+					name: "News in " + this.$store.state.city,
+					content: "News in " + this.$store.state.city
+				}
+			]
+		};
 	}
 };
 </script>

@@ -49,8 +49,21 @@ export default {
 			posts: request1.data.entries
 		};
 	},
-	CardInstagram: () => import("@/components/CardInstagram"),
-	components: { CardInstagram: () => import("@/components/CardInstagram") }
+
+	components: { CardInstagram: () => import("@/components/CardInstagram") },
+
+	head() {
+		return {
+			title: "Instagram #" + this.$store.state.city,
+			meta: [
+				{
+					hid: "Instagram #" + this.$store.state.city,
+					name: "Instagram #" + this.$store.state.city,
+					content: "Instagram #" + this.$store.state.city
+				}
+			]
+		};
+	}
 };
 </script>
 <style>

@@ -91,6 +91,19 @@ export default {
 		CardReview: () => import("@/components/CardReview"),
 		CardInstagram: () => import("@/components/CardInstagram"),
 		googleMapCoordinate: () => import("@/components/googleMapCoordinate")
+	},
+
+	head() {
+		return {
+			title: this.thing.name,
+			meta: [
+				{
+					hid: this.thing.name,
+					name: this.thing.name,
+					content: this.thing.description
+				}
+			]
+		};
 	}
 };
 </script>

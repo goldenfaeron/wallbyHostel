@@ -46,6 +46,19 @@ export default {
 			.then(res => {
 				return { content: res.data.entries };
 			});
+	},
+
+	head() {
+		return {
+			title: "COVID-19 in " + this.$store.state.city,
+			meta: [
+				{
+					hid: "COVID-19 in " + this.$store.state.city,
+					name: "COVID-19 in " + this.$store.state.city,
+					content: "COVID-19 in " + this.$store.state.city
+				}
+			]
+		};
 	}
 };
 </script>

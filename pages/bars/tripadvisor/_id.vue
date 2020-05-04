@@ -132,6 +132,19 @@ export default {
 				return sortByLength(arr).reverse();
 			}
 		}
+	},
+
+	head() {
+		return {
+			title: this.bar.name,
+			meta: [
+				{
+					hid: this.bar.type + "in" + this.$store.state.city,
+					name: this.name,
+					content: this.bar.type + "in" + this.$store.state.city
+				}
+			]
+		};
 	}
 };
 </script>
