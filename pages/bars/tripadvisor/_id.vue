@@ -26,10 +26,10 @@
 									<br />
 									<span v-if="bar.phone">
 										<v-icon>mdi-phone</v-icon>
-										{{bar.phone}}
+										<a :href="'tel:'+ bar.phone">{{bar.phone}}</a>
 									</span>
 									<br />
-									<span>
+									<span v-if="bar.web_url">
 										<v-icon>mdi-sign-direction</v-icon>
 										<a target="_blank" :href="bar.web_url">View Tripadvisor Profile</a>
 									</span>
