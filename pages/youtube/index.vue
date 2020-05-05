@@ -10,46 +10,34 @@
 
 		<v-container grid-list-lg>
 			<v-layout row wrap>
-				<v-flex xs12 sm12 md6 lg3 v-for="(item, index) in featured" :key="index">
-					<v-card height="100%" flat>
-						<iframe
+				<v-flex xs12 sm12 md6 lg3 v-for="(item, index) in featured.slice(0,4)" :key="index">
+					<v-card flat @click.native="clickTest">
+						<v-img
+							:src="'https://i.ytimg.com/vi/'+item.url.slice(32,43)+'/maxresdefault.jpg'"
+							height="200px"
+						></v-img>
+						<!--<iframe
 							width="100%"
 							height="300"
 							:src="'https://www.youtube.com/embed/'+item.id"
 							frameborder="0"
 							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 							allowfullscreen
-						></iframe>
-						<v-card-title primary-title>
-							<v-layout align-content-space-between justify-space-between>
-								<v-flex>
-									<p
-										class="headline d-flex"
-										style="overflow-wrap: anywhere; word-wrap: break-word; word-break: normal; hyphens: auto;"
-									>{{item.title}}</p>
-								</v-flex>
-							</v-layout>
-						</v-card-title>
+						></iframe>-->
 
-						<v-card-text>
-							<!-- {{item.details}} -->
-							{{item.viewCount}}
-							<br />
-							{{item.likes}}
-							<br />
-							{{item.dislikes}}
-							<br />
-							{{item.channelName}}
-							<br />
-							{{item.numberOfSubscribers}}
-						</v-card-text>
+						<p
+							class="font-weight-bold"
+							style="height: 2.8rem; line-height: 1.4rem; overflow: hidden;"
+						>{{item.title}}</p>
+						{{item.channelName}}
+						<br />
+						{{item.viewCount}} Views
 						<!-- <div class="text-xs-center">
 							<v-rating color="red" :value="item.totalScore" half-increments readonly></v-rating>
 						</div>-->
 
-						<v-card-actions>
-							<v-btn color="red" :href="item.url">Watch on YouTube</v-btn>
-						</v-card-actions>
+						<!--<v-btn color="red" :href="item.url">Watch on YouTube</v-btn>-->
+						
 					</v-card>
 				</v-flex>
 			</v-layout>
@@ -72,7 +60,10 @@ export default {
 	methods: {
 		placeholder(index) {
 			return index % 2;
-		}
+		},
+		clickTest() {
+			alert("WORK!");
+		},
 	},
 	data() {
 		return {
@@ -107,3 +98,5 @@ export default {
 	}
 };
 </script>
+<style>
+</style>
