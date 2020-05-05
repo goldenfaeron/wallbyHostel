@@ -25,7 +25,7 @@
 <script>
 export default {
 	async asyncData({ $axios, route, store }) {
-		let collection = "googleplaces_shops_" + store.state.city.toLowerCase();
+		let collection = "googleplaces_shops_borsh";
 
 		let request1 = await $axios.post(
 			store.state.webRoot +

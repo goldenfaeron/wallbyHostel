@@ -80,7 +80,7 @@
 <script>
 export default {
 	asyncData({ params, store, $axios, route }) {
-		let collection = "googleplaces_shops_" + store.state.city.toLowerCase();
+		let collection = "googleplaces_shops_borsh";
 		return $axios
 			.post(
 				store.state.webRoot +

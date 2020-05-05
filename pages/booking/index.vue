@@ -47,7 +47,7 @@ export default {
 
 	async asyncData({ $axios, route, store }) {
 		let collection = "hotels";
-		let collection2 = "booking_" + store.state.city.toLowerCase();
+		let collection2 = "booking_borsh";
 
 		let request1 = await $axios.post(
 			store.state.webRoot +

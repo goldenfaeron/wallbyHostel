@@ -63,7 +63,7 @@
 <script>
 export default {
 	async asyncData({ $axios, route, store }) {
-		let collection = "tripadvisor_thingstodo_" + store.state.city.toLowerCase();
+		let collection = "tripadvisor_thingstodo_borsh";
 
 		let request1 = await $axios.post(
 			store.state.webRoot +
