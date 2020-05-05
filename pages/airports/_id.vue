@@ -135,9 +135,9 @@ export default {
 			title: this.airport.title,
 			meta: [
 				{
-					hid: this.airport.categoryName + "in" + this.$store.state.city,
-					name: this.title,
-					content: this.airport.categoryName + "in" + this.$store.state.city
+					hid: this.airport + " near " + this.$store.state.city,
+					name: this.airport.title,
+					content: this.airport + " near " + this.$store.state.city
 				}
 			]
 		};
