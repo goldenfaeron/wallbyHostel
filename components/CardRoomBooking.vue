@@ -11,7 +11,7 @@
 		<v-card-title primary-title>{{props.roomType}}</v-card-title>
 		<v-card-text>
 			<v-icon>mdi-bed-double</v-icon>
-			{{props.bedType.replace("Choose your bed (if available)", "")}}
+			{{props.bedType}}
 			<br />
 			<v-icon>mdi-account-multiple</v-icon>
 			Persons {{props.persons}}
