@@ -69,6 +69,18 @@ export default {
 		truncate(string, value) {
 			return (string || "").substring(0, value);
 		}
+	},
+	head() {
+		return {
+			title: "AirBnB in " + this.$store.state.city,
+			meta: [
+				{
+					hid: "AirBnB in " + this.$store.state.city,
+					name: "AirBnB in " + this.$store.state.city,
+					content: "AirBnB in " + this.$store.state.city
+				}
+			]
+		};
 	}
 };
 </script>

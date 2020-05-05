@@ -26,13 +26,9 @@ export default {
 	data() {
 		return {
 			stats: [
-				[
-					this.$store.state.borshInstagram[0].length,
-					"Instagram posts",
-					"instagram"
-				],
-				[this.$store.state.borshHotels[0].length, "Hotels", "booking"],
-				["this.$store.state.borshAirbnb[0].length", "Airbnbs", "airbnb"],
+				["64", "Instagram posts", "instagram"],
+				["45", "Hotels", "booking"],
+				["20", "Airbnbs", "airbnb"],
 				["35", "Cafes and bars", "bars"],
 				["20", "Videos", "youtube"]
 			]

@@ -7,18 +7,15 @@
 						<h1>{{content.title}}</h1>
 					</v-flex>
 					<v-flex xs12 id="image_1">
-						<v-img :src="$store.state.assetRoot + content.image_1.path"></v-img>
+						<v-img :src="content.image"></v-img>
 					</v-flex>
 					<v-flex xs12 id="text_1">
-						<div v-html="content.text_1"></div>
-					</v-flex>
-					<v-flex xs12 id="image_2">
-						<v-img :src="$store.state.assetRoot + content.image_2.path"></v-img>
+						<div v-html="content.text"></div>
 					</v-flex>
 
-					<v-flex xs12 id="text_2">
+					<!-- <v-flex xs12 id="text_2">
 						<div v-html="content.text_2"></div>
-					</v-flex>
+					</v-flex>-->
 				</v-layout>
 			</v-container>
 		</template>
@@ -28,7 +25,7 @@
 <script>
 export default {
 	asyncData({ params, store, $axios, route }) {
-		let collection = "corona";
+		let collection = "exital";
 		return $axios
 			.post(
 				store.state.webRoot +
@@ -36,17 +33,7 @@ export default {
 					collection +
 					"?token=" +
 					store.state.collectionsToken,
-				{ filter: { slug: route.params.id } },
-				{
-					fields: {
-						title: 1,
-						text_1: 1,
-						image_1: 1,
-						text_2: 1,
-						image_2: 1,
-						slug: 1
-					}
-				}
+				{ filter: { slug: route.params.id } }
 			)
 			.then(res => {
 				return { content: res.data.entries[0] };
@@ -60,7 +47,7 @@ export default {
 				{
 					hid: this.content.title,
 					name: this.content.title,
-					content: this.content.text_1
+					content: this.content.title
 				}
 			]
 		};

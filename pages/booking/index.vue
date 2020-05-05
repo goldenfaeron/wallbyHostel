@@ -1,13 +1,15 @@
 <template>
 	<div>
-		<h1 class="primary--text main-title" style="text-align: center;">Hotels in {{$store.state.city}}</h1>
-		<p
-			class="secondary--text"
+		<v-responsive class="mx-auto" width="56">
+			<v-icon x-large>mdi-home</v-icon>
+		</v-responsive>
+		<h1
+			class="primary--text main-title"
 			style="text-align: center;"
-		>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla.</p>
-		<Mission></Mission>
+		>The best hotels in {{$store.state.city}}</h1>
+		<h2 class="secondary--text" style="text-align: center;">{{featured.length}} Featured Hotels</h2>
 
-		<v-container grid-list-lg>
+		<v-container grid-list-lg class="my-5">
 			<!-- Featured -->
 			<v-layout row wrap>
 				<v-flex xs12 sm6 md4 v-for="(item, index) in featured" :key="index">
@@ -16,8 +18,15 @@
 			</v-layout>
 
 			<!-- From Booking.com  -->
-			<v-layout row wrap>
-				<v-flex xs6 sm4 lg3 v-for="(item, index) in $store.state.borshHotels[0]" :key="index">
+			<v-responsive class="mx-auto" width="56">
+				<v-icon large>mdi-search-web</v-icon>
+			</v-responsive>
+			<h2
+				class="secondary--text"
+				style="text-align: center;"
+			>{{booking.length}} results from Booking.com</h2>
+			<v-layout row wrap class="my-5">
+				<v-flex xs6 sm4 lg3 v-for="(item, index) in booking" :key="index">
 					<CardHotel class="hidden-xs-only" :props="item" :index="index"></CardHotel>
 					<CardHotelMobile class="hidden-sm-and-up" :props="item" :index="index"></CardHotelMobile>
 				</v-flex>
@@ -36,19 +45,44 @@ export default {
 		Mission: () => import("@/components/Mission")
 	},
 
-	asyncData({ params, store, $axios, route }) {
+	async asyncData({ $axios, route, store }) {
 		let collection = "hotels";
-		return $axios
-			.post(
-				store.state.webRoot +
-					"/api/collections/get/" +
-					collection +
-					"?token=" +
-					store.state.collectionsToken
-			)
-			.then(res => {
-				return { featured: res.data.entries.reverse() };
-			});
+		let collection2 = "booking_borsh";
+
+		let request1 = await $axios.post(
+			store.state.webRoot +
+				"/api/collections/get/" +
+				collection +
+				"?token=" +
+				store.state.collectionsToken,
+			{ limit: 15 }
+		);
+
+		let request2 = await $axios.post(
+			store.state.webRoot +
+				"/api/collections/get/" +
+				collection2 +
+				"?token=" +
+				store.state.collectionsToken
+			// { limit: 15 }
+		);
+		return {
+			featured: request1.data.entries,
+			booking: request2.data.entries.reverse()
+		};
+	},
+
+	head() {
+		return {
+			title: "Hotels in " + this.$store.state.city,
+			meta: [
+				{
+					hid: "Hotels in " + this.$store.state.city,
+					name: "Hotels in " + this.$store.state.city,
+					content: "Hotels in " + this.$store.state.city
+				}
+			]
+		};
 	}
 };
 </script>

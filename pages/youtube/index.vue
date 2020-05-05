@@ -1,5 +1,8 @@
 <template>
 	<div>
+		<v-responsive class="mx-auto" width="56">
+			<v-icon x-large>mdi-youtube</v-icon>
+		</v-responsive>
 		<h1
 			class="primary--text main-title"
 			style="text-align: center;"
@@ -83,12 +86,12 @@ export default {
 
 	head() {
 		return {
-			title: this.title,
+			title: this.$store.state.city + " on Youtube",
 			meta: [
 				{
-					hid: this.preview,
-					name: this.title,
-					content: this.preview
+					hid: this.$store.state.city + " on Youtube",
+					name: this.$store.state.city + " on Youtube",
+					content: this.$store.state.city + " on Youtube"
 				}
 			]
 		};

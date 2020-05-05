@@ -1,8 +1,8 @@
 <template>
 	<div>
-		<v-sheet color="primary lighten-2">
-			<v-container grid-list-xs>
-				<v-layout row wrap align-center=" ">
+		<v-sheet color="primary lighten-2" height="200">
+			<v-container grid-list-xs height="400px">
+				<v-layout row wrap align-center=" " class="mt-12">
 					<v-flex xs4 md4>
 						<h1 class="white--text">
 							Book Now

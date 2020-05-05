@@ -41,6 +41,19 @@ export default {
 
 	components: {
 		Welcome: () => import("@/components/Welcome")
+	},
+
+	head() {
+		return {
+			title: this.$store.state.name + " Developer Team",
+			meta: [
+				{
+					hid: this.$store.state.name + " Developer Team",
+					name: " Developer Team",
+					content: " Developer Team"
+				}
+			]
+		};
 	}
 };
 </script>

@@ -14,9 +14,12 @@ export const state = () => ({
 
     //JSON
     borshHotels: [],
-    amazonProducts: [],
-    // borshBars: [],
-    borshInstagram: [],
+
+    //Openweathermap
+    weatherToken: 'cdb5d1ad4220610c588be2ecfe1a4671',
+
+
+
 
     // borshYoutube: [],
 
@@ -26,6 +29,7 @@ export const state = () => ({
 
     //Cockpit
     collectionsToken: '641a6e0c88f94f7d2adadd184752e1',
+    collectionSchema: '31fdc0efbd3c289620e787921e3e8b',
     assetRoot: "https://cockpit.goborshi.hackmylanguage.com/storage/uploads",
     webRoot: "https://cockpit.goborshi.hackmylanguage.com",
     imageToken: '969461cb194b4b0cd0c695d09e9502',
@@ -44,9 +48,9 @@ export const mutations = {
 
     //json
 
-    setBorshHotels(state, list) {
-        state.borshHotels = list;
-    },
+    // setBorshHotels(state, list) {
+    //     state.borshHotels = list;
+    // },
     // setBorshBars(state, list) {
     //     state.borshBars = list;
     // },
@@ -79,32 +83,7 @@ export const actions = {
 
     //JSON
     async nuxtServerInit({ commit }) {
-        //AirBNB
-        // let files = await require.context('~/assets/json/amazon', false, /\.json$/);
-        // let amazonProducts = files.keys().map(key => {
-        //     let res = files(key);
-        //     res.slug = key.slice(2, -5);
-        //     return res;
-        // });
-        // await commit('setAmazonProducts', amazonProducts);
 
-        // Booking.com
-        let files2 = await require.context('~/assets/json/bookingborsh', false, /\.json$/);
-        let borshHotels = files2.keys().map(key => {
-            let res = files2(key);
-            res.slug = key.slice(2, -5);
-            return res;
-        });
-        await commit('setBorshHotels', borshHotels);
-
-        //google locations (bars)
-        // let files3 = await require.context('~/assets/json/barsborsh', false, /\.json$/);
-        // let borshbars = files3.keys().map(key => {
-        //     let res = files3(key);
-        //     res.slug = key.slice(2, -5);
-        //     return res;
-        // });
-        // await commit('setBorshBars', borshbars);
 
         //instagram
         let files4 = await require.context('~/assets/json/instagram', false, /\.json$/);
@@ -115,16 +94,7 @@ export const actions = {
         });
         await commit('setBorshInstagram', borshinstagram);
 
-        //Airbnb
 
-        //Youtube
-        //     let files6 = await require.context('~/assets/json/youtube', false, /\.json$/);
-        //     let borshYoutube = files6.keys().map(key => {
-        //         let res = files6(key);
-        //         res.slug = key.slice(2, -5);
-        //         return res;
-        //     });
-        //     await commit('setBorshYoutube', borshYoutube);
     },
 
 }
@@ -135,37 +105,60 @@ export const getters = {
         [
             {
                 icon: "mdi-home",
-                title: "Home",
+                title: "About " + state.city,
                 to: "/"
+            },
+            {
+                icon: "mdi-map-legend",
+                title: "What to do",
+                to: "/activities"
             },
 
             {
-                icon: "mdi-key-variant",
-                title: state.city + " Hotels",
+                icon: "mdi-home",
+                title: "Where to stay",
                 to: "/booking"
             },
             {
-                icon: "mdi-beer",
-                title: state.city + " Bars",
+                icon: "mdi-food",
+                title: "Where to eat / drink",
                 to: "/bars"
             },
             {
+                icon: "mdi-store",
+                title: "Where to shop",
+                to: "/shops"
+            },
+            {
                 icon: "mdi-instagram",
-                title: state.city + " on Instagram",
-                to: "/instagram"
+                title: "What to see",
+                to: "/instagram/posts"
+            },
+            {
+                icon: "mdi-youtube",
+                title: "What to watch",
+                to: "/youtube"
             },
 
             {
                 icon: "",
                 img: "/img/airbnbLogo.png",
-                title: state.city + " Airbnb",
+                title: "Airbnb",
                 to: "/airbnb"
             },
             {
-                icon: "mdi-youtube",
-                title: state.city + " on Youtube",
-                to: "/youtube"
+                icon: "mdi-airport",
+
+                title: "Airports near " + state.city,
+                to: "/airports"
             },
+            {
+                icon: "mdi-weather-cloudy",
+
+                title: "Weather in " + state.city,
+                to: "/weather"
+            },
+
             {
                 icon: "mdi-biohazard",
                 title: "Covid-19 in " + state.city,
@@ -175,7 +168,12 @@ export const getters = {
                 icon: "mdi-account-box",
                 title: state.name + " Team",
                 to: "/team/"
-            }
+            },
+            {
+                icon: "mdi-account-box",
+                title: state.name + " News",
+                to: "/news/"
+            },
         ],
 
 }

@@ -1,37 +1,45 @@
 <template>
-	<v-card>
-		<!-- <v-img :src="$store.state.assetRoot + props.image.path" max-height="10cm"></v-img> -->
-		<v-btn absolute dark fab top right color="primary">
-			<v-icon>mdi-star</v-icon>
-		</v-btn>
-		<v-card-title primary-title>
-			<v-layout align-content-space-between justify-space-between>
-				<v-flex>
-					<p class="headline d-flex">{{props.name }}</p>
-				</v-flex>
-			</v-layout>
-		</v-card-title>
+	<v-hover>
+		<v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 2}`">
+			<nuxt-link
+				style="text-decoration:none; font-color: primary;"
+				:to="'/featured_hotels/'+props.slug"
+			>
+				<!-- <v-img :src="$store.state.assetRoot + props.image.path" max-height="10cm"></v-img> -->
+				<v-btn absolute dark fab top right color="red">
+					<v-icon>mdi-medal</v-icon>
+				</v-btn>
+				<v-card-title primary-title>
+					{{props.name }}
+					<v-rating color="primary lighten-1" :value="props.rating" half-increments readonly></v-rating>
+				</v-card-title>
 
-		<v-img :src="$store.state.assetRoot + props.header_image.path" height="200"></v-img>
+				<v-img :src="$store.state.assetRoot + props.header_image.path" height="200">
+					<template v-slot:placeholder>
+						<v-layout fill-height align-center justify-center ma-0>
+							<v-progress-circular indeterminate color="primary"></v-progress-circular>
+						</v-layout>
+					</template>
+				</v-img>
 
-		<v-card-text v-html="props.preview_text.substr(0, 200)">
-			<br />
-			<ul>
-				<li v-for="(props, index) in props.features" :key="index">{{props}}hello</li>
-			</ul>
-		</v-card-text>
+				<v-card-text>
+					<span v-if="props.corona_safe">
+						<v-icon color="green lighten-2" green lighten-2>mdi-shield-check</v-icon>COVID-19 Safe
+						<br />
+					</span>
+					<span v-if="props.corona_quarantine_friendly">
+						<v-icon color="green lighten-2" green lighten-2>mdi-shield-home</v-icon>Quarantine Friendly
+						<br />
+					</span>
+					<span v-if="props.excellent_customer_service">
+						<v-icon color="green lighten-2" green lighten-2>mdi-shield-star</v-icon>Excellent Service
+					</span>
+				</v-card-text>
 
-		<div class="text-xs-center">
-			<v-rating color="primary lighten-1" :value="props.rating" half-increments readonly></v-rating>
-		</div>
-
-		<!-- v-if="!props.inCart" -->
-		<v-card-actions>
-			<v-btn color="success">
-				<nuxt-link :to="'/featured_hotels/'+props.slug">Read more</nuxt-link>
-			</v-btn>
-		</v-card-actions>
-	</v-card>
+				<!-- v-if="!props.inCart" -->
+			</nuxt-link>
+		</v-card>
+	</v-hover>
 </template>
 
 <script>

@@ -1,7 +1,7 @@
 <template>
 	<v-hover>
 		<v-card flat slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 2}`">
-			<nuxt-link style="text-decoration:none; color: primary;" :to="'/booking/'+index">
+			<nuxt-link style="text-decoration:none; color: primary;" :to="'/booking/'+props.slug">
 				<!-- <v-img :src="$store.state.assetRoot + props.image.path" max-height="10cm"></v-img> -->
 
 				<v-card-title primary-title>
@@ -11,7 +11,13 @@
 					</div>
 				</v-card-title>
 
-				<v-img :src="props.image" height="200"></v-img>
+				<v-img height="200" :src="props.image">
+					<template v-slot:placeholder>
+						<v-layout fill-height align-center justify-center ma-0>
+							<v-progress-circular indeterminate color="primary"></v-progress-circular>
+						</v-layout>
+					</template>
+				</v-img>
 
 				<v-card-text>
 					<p>{{props.description.substr(0,120)}}...</p>

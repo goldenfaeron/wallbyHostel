@@ -2,7 +2,7 @@
 	<v-card>
 		<v-container grid-list-sm fluid>
 			<v-layout row wrap>
-				<v-flex v-for="image in props" :key="image" xs4 d-flex>
+				<v-flex v-for="image in props" :key="image" xs6 md4 d-flex>
 					<v-card flat tile class="d-flex">
 						<v-img
 							:lazy-src="$store.state.webRoot+'/api/cockpit/image?token='+$store.state.imageToken+'&src='+image._id+'&w=200&h=200&o=true'"

@@ -29,6 +29,19 @@ export default {
 		CoreFooter: () => import("@/components/core/Footer"),
 		CoreToolbar: () => import("@/components/core/Toolbar"),
 		CoreView: () => import("@/components/core/View")
+	},
+
+	head() {
+		return {
+			title: this.featured.name,
+			meta: [
+				{
+					hid: this.$store.state.name + " Developer Team",
+					name: this.featured.name,
+					content: " Developer Team"
+				}
+			]
+		};
 	}
 };
 </script>
