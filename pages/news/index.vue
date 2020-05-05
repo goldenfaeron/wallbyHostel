@@ -8,7 +8,7 @@
 					<div v-html="item.description.substr(0,150)"></div>
 					<br />
 					<nuxt-link :to="'/news/'+ item.slug" append>
-						<v-btn color="primary ">Read more</v-btn>
+						<v-btn color="primary ">Read some more</v-btn>
 					</nuxt-link>
 				</v-flex>
 				<v-flex xs4 id="image_1">
