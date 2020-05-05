@@ -15,6 +15,9 @@ export const state = () => ({
     //JSON
     borshHotels: [],
 
+    //Openweathermap
+    weatherToken: 'cdb5d1ad4220610c588be2ecfe1a4671',
+
 
 
 
@@ -148,6 +151,12 @@ export const getters = {
 
                 title: "Airports near " + state.city,
                 to: "/airports"
+            },
+            {
+                icon: "mdi-weather-cloudy",
+
+                title: "Weather in " + state.city,
+                to: "/weather"
             },
 
             {
