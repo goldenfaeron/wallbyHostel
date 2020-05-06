@@ -81,9 +81,6 @@ export default {
 	},
 
 	methods: {
-		placeholder(index) {
-			return index % 2;
-		},
 		reloadPage() {
 			window.location.reload();
 		}
@@ -99,31 +96,6 @@ export default {
 			arrNumber: "0"
 		};
 	},
-
-	head() {
-		return {
-			title: this.$store.state.city + " on Youtube",
-			meta: [
-				{
-					hid: this.$store.state.city + " on Youtube",
-					name: this.$store.state.city + " on Youtube",
-					content: this.$store.state.city + " on Youtube"
-				}
-			]
-		};
-	},
-	jsonld() {
-		return {
-			"@context": "http://schema.org",
-			"@type": "WebPage",
-			name: this.title,
-			description: this.preview,
-			publisher: {
-				"@type": "ProfilePage",
-				name: this.$store.state.developer
-			}
-		};
-	}
 };
 </script>
 <style>
