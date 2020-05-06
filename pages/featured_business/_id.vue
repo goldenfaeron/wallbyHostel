@@ -27,6 +27,10 @@
 
 		<v-container grid-list-lg>
 			<h2>{{shop.name}} Offers</h2>
+			{{shop.telephone}}
+			<a
+				:href="'https://wa.me/'+shop.telephone"
+			>Message or call {{shop.owner}} on Whatsapp</a>
 			<v-layout row wrap mt-5>
 				<v-flex xs12 sm6 md4 v-for="(item, index) in shop.linked_shops" :key="index">
 					<CardBar :props="item"></CardBar>
