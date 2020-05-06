@@ -16,13 +16,6 @@
 				</v-flex>
 			</v-layout>
 		</v-container>
-		<v-container grid-list-lg class="mt-7">
-			<v-layout row wrap>
-				<v-flex xs12 sm12 md6 lg3 v-for="(item, index) in bars_tripadvisor" :key="index">
-					<CardBarTripadvisor :props="item" :link="'/bars/google/'" :index="index"></CardBarTripadvisor>
-				</v-flex>
-			</v-layout>
-		</v-container>
 	</div>
 </template>
 
@@ -30,7 +23,6 @@
 export default {
 	async asyncData({ $axios, route, store }) {
 		let collection = "googleplaces_borsh";
-		let collection2 = "tripadvisor_restuarants_borsh";
 
 		let request1 = await $axios.post(
 			store.state.webRoot +
@@ -41,22 +33,21 @@ export default {
 			{ limit: 15 }
 		);
 
-		let request2 = await $axios.post(
-			store.state.webRoot +
-				"/api/collections/get/" +
-				collection2 +
-				"?token=" +
-				store.state.collectionsToken,
-			{ limit: 15 }
-		);
+		// let request2 = await $axios.post(
+		// 	store.state.webRoot +
+		// 		"/api/collections/get/" +
+		// 		collection2 +
+		// 		"?token=" +
+		// 		store.state.collectionsToken,
+		// 	{ limit: 15 }
+		// );
 		return {
-			bars_google: request1.data.entries,
-			bars_tripadvisor: request2.data.entries
+			bars_google: request1.data.entries
+			// bars_tripadvisor: request2.data.entries
 		};
 	},
 	components: {
-		CardBar: () => import("@/components/CardBar"),
-		CardBarTripadvisor: () => import("@/components/CardBarTripadvisor")
+		CardBar: () => import("@/components/CardBar")
 	},
 	methods: {
 		placeholder(index) {
