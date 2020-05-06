@@ -71,7 +71,6 @@
 					allowfullscreen
 					height="100%"
 					id="player"
-				
 				></iframe>
 			</v-card>
 		</v-dialog>
@@ -116,7 +115,13 @@ export default {
 			x: 0,
 			y: 0
 		},
-		arrNumber: "0"
+		arrNumber: "0",
+	//	name: this.video.name,
+	//	description: this.video.details,
+	//	thumbnailUrl: 'https://i.ytimg.com/vi/'+this.video.id+'/maxresdefault.jpg',
+	//	uploadDate: this.video.date,
+	//	contentUrl: this.video.url
+
 	}),
 
 	mounted() {
@@ -130,6 +135,18 @@ export default {
 		reloadPage() {
 			window.location.reload();
 		}
+	},
+	jsonld() {
+		return {
+			"@context": "https://schema.org",
+			"@type": "VideoObject",
+			name: this.video.name,
+			description: this.video.details,
+			thumbnailUrl: 'https://i.ytimg.com/vi/'+this.video.id+'/maxresdefault.jpg',
+			uploadDate: this.video.date,
+			contentUrl: this.video.url,
+			embedUrl: this.video.url,
+		};
 	}
 };
 </script>
