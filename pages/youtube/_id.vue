@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<iframe
-			:src="'https://www.youtube.com/embed/'+video.id"
+			:src="'https://www.youtube.com/embed/'+video.id+'?autoplay=1'"
 			frameborder="0"
 			allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 			allowfullscreen
@@ -71,6 +71,7 @@
 					allowfullscreen
 					height="100%"
 					id="player"
+				
 				></iframe>
 			</v-card>
 		</v-dialog>
