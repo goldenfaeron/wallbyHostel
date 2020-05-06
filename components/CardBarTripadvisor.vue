@@ -15,7 +15,6 @@
 						</v-flex>
 					</v-layout>
 				</v-sheet>
-
 				<v-card-title primary-title>{{props.name}}</v-card-title>
 				<v-card-subtitle>{{props.type}}</v-card-subtitle>
 				<v-card-text>

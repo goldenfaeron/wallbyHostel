@@ -64,7 +64,7 @@ export default {
 				collection +
 				"?token=" +
 				store.state.collectionsToken,
-			{ filter: { slug: route.params.id }, populate: 1 }
+			{ filter: { slug: route.params.id } }
 		);
 
 		// let request2 = await $axios.post(
