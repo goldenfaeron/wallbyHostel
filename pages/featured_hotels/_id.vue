@@ -42,14 +42,14 @@
              website: hotel.website_link,
              airbnb: hotel.airbnb_link }"
 		></CallToAction>
-		<v-container grid-list-lg>
+		<!-- <v-container grid-list-lg>
 			<h2>{{hotel.name}} on Instagram</h2>
 			<v-layout row wrap mt-5>
 				<v-flex xs4 md2 v-for="(item, index) in hotel.linked_instagram" :key="index">
 					<CardInstagram :props="item"></CardInstagram>
 				</v-flex>
 			</v-layout>
-		</v-container>
+		</v-container>-->
 	</div>
 </template>
 
@@ -64,7 +64,7 @@ export default {
 				collection +
 				"?token=" +
 				store.state.collectionsToken,
-			{ filter: { slug: route.params.id }, populate: 1 }
+			{ filter: { slug: route.params.id } }
 		);
 
 		// let request2 = await $axios.post(
