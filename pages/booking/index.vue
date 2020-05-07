@@ -40,9 +40,9 @@ export default {
 	components: {
 		CardHotelMobile: () => import("@/components/CardHotelMobile"),
 		CardFeaturedHotel: () => import("@/components/CardFeaturedHotel"),
-		CardHotel: () => import("@/components/CardHotel"),
-		Assurance: () => import("@/components/Assurance"),
-		Mission: () => import("@/components/Mission")
+		CardHotel: () => import("@/components/CardHotel")
+		// Assurance: () => import("@/components/Assurance"),
+		// Mission: () => import("@/components/Mission")
 	},
 
 	async asyncData({ $axios, route, store }) {
