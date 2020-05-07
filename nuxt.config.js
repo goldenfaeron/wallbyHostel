@@ -236,34 +236,28 @@ export default {
   },
 
 
-  server: {
-    port: 8000,
-    host: '0.0.0.0',
-  },
-  /*
-  ** Build configuration
-  */
+
 
 
   build: {
 
-    optimization: {
-      minimize: true,
-      minimizer: [
-        // terser-webpack-plugin
-        // optimize-css-assets-webpack-plugin
-      ],
+    // optimization: {
+    //   minimize: true,
+    //   minimizer: [
+    //     // terser-webpack-plugin
+    //     // optimize-css-assets-webpack-plugin
+    //   ],
 
 
-    },
+    // },
 
-    splitChunks: {
-      layouts: false,
-      pages: true,
-      commons: true
-    },
+    // splitChunks: {
+    //   layouts: false,
+    //   pages: true,
+    //   commons: true
+    // },
 
-    extractCSS: true,
+    // extractCSS: true,
     // transpile: ['vuetify/lib'],
     // plugins: [new VuetifyLoaderPlugin()],
     extend(config, ctx) {
