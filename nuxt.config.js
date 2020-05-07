@@ -92,9 +92,9 @@ export default {
   // }));
 
   generate: {
-    async routes() {
+    routes() {
 
-      let team = await axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/team?token=641a6e0c88f94f7d2adadd184752e1",
+      let team = axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/team?token=641a6e0c88f94f7d2adadd184752e1",
         {
 
           fields: { slug: 1, _id: 0 }
@@ -107,7 +107,7 @@ export default {
 
           })
         });
-      let featured_hotels = await axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/hotels?token=641a6e0c88f94f7d2adadd184752e1",
+      let featured_hotels = axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/hotels?token=641a6e0c88f94f7d2adadd184752e1",
         {
 
           fields: { slug: 1, _id: 0 }
@@ -120,7 +120,7 @@ export default {
 
           })
         });
-      let corona = await axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/corona?token=641a6e0c88f94f7d2adadd184752e1",
+      let corona = axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/corona?token=641a6e0c88f94f7d2adadd184752e1",
         {
 
           fields: { slug: 1, _id: 0 }
@@ -134,7 +134,7 @@ export default {
           })
         });
 
-      let hotels = await axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/booking_borsh?token=641a6e0c88f94f7d2adadd184752e1",
+      let hotels = axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/booking_borsh?token=641a6e0c88f94f7d2adadd184752e1",
         {
 
           fields: { slug: 1, _id: 0 }
@@ -147,7 +147,7 @@ export default {
 
           })
         });
-      let google_places = await axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/googleplaces_borsh?token=641a6e0c88f94f7d2adadd184752e1",
+      let google_places = axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/googleplaces_borsh?token=641a6e0c88f94f7d2adadd184752e1",
         {
 
           fields: { slug: 1, _id: 0 }
@@ -160,7 +160,7 @@ export default {
 
           })
         });
-      let tripadvisor_restuarants_borsh = await axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/tripadvisor_restuarants_borsh?token=641a6e0c88f94f7d2adadd184752e1",
+      let tripadvisor_restuarants_borsh = axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/tripadvisor_restuarants_borsh?token=641a6e0c88f94f7d2adadd184752e1",
         {
 
           fields: { slug: 1, _id: 0 }
@@ -173,7 +173,7 @@ export default {
 
           })
         });
-      let activities = await axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/tripadvisor_thingstodo_borsh?token=641a6e0c88f94f7d2adadd184752e1",
+      let activities = axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/tripadvisor_thingstodo_borsh?token=641a6e0c88f94f7d2adadd184752e1",
         {
 
           fields: { slug: 1, _id: 0 }
@@ -186,7 +186,7 @@ export default {
 
           })
         });
-      let shops = await axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/googleplaces_shops_borsh?token=641a6e0c88f94f7d2adadd184752e1",
+      let shops = axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/googleplaces_shops_borsh?token=641a6e0c88f94f7d2adadd184752e1",
         {
 
           fields: { slug: 1, _id: 0 }
@@ -199,7 +199,7 @@ export default {
 
           })
         });
-      let airports = await axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/googleplaces_airports_borsh?token=641a6e0c88f94f7d2adadd184752e1",
+      let airports = axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/googleplaces_airports_borsh?token=641a6e0c88f94f7d2adadd184752e1",
         {
 
           fields: { slug: 1, _id: 0 }
@@ -213,7 +213,7 @@ export default {
           })
         });
 
-      let featured_business = await axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/shops_featured?token=641a6e0c88f94f7d2adadd184752e1",
+      let featured_business = axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/shops_featured?token=641a6e0c88f94f7d2adadd184752e1",
         {
 
           fields: { slug: 1, _id: 0 }
