@@ -10,7 +10,7 @@
 				<v-container grid-list-lg>
 					<v-layout row wrap>
 						<v-flex xs6 sm6 md4 lg3 v-for="(item, index) in props " :key="index">
-							<v-card height="100%" flat>
+							<v-card height="100%">
 								<!-- <v-img :src="$store.state.assetRoot + item.image.path" max-height="10cm"></v-img> -->
 
 								<v-card-title primary-title>
