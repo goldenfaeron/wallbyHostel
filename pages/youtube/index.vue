@@ -10,7 +10,7 @@
 
 		<v-container grid-list-lg>
 			<v-layout row wrap>
-				<v-flex xs12 sm12 md6 lg3 v-for="(item, index) in featured" :key="index">
+				<v-flex xs12 sm12 md6 lg3 v-for="(item, index) in videos" :key="index">
 			
 					<v-card flat @click.native="dialog = true; arrNumber = index">
 						<v-layout row wrap>
@@ -19,11 +19,10 @@
 							</v-flex>
 							<v-flex lg10>
 								<v-img :src="'https://i.ytimg.com/vi/'+item.id+'/maxresdefault.jpg'" height="200px"></v-img>
-
 								<p
 									class="font-weight-bold"
 									style="height: 2.8rem; line-height: 1.4rem; overflow: hidden;"
-								>{{item.title}}</p>
+								>{{item.name}}</p>
 								{{item.channelName}}
 								<br />
 								{{item.viewCount}} Views &#183; {{item.likes}} likes
@@ -52,11 +51,11 @@
 							<v-icon>mdi-close</v-icon>
 						</v-btn>
 					</div>
-					<v-btn color="red" :href="featured[this.arrNumber].url">Watch on YouTube</v-btn>
+					<v-btn color="red" :href="videos[this.arrNumber].url">Watch on YouTube</v-btn>
 				</v-layout>
 
 				<iframe
-					:src="'https://www.youtube.com/embed/'+featured[this.arrNumber].id"
+					:src="'https://www.youtube.com/embed/'+videos[this.arrNumber].id"
 					frameborder="0"
 					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 					allowfullscreen
@@ -70,14 +69,21 @@
 
 <script>
 export default {
-	asyncData({ params, store, $axios, route }) {
-		return $axios
-			.get(
-				"https://api.apify.com/v2/datasets/X7FaS3y0RYgf3sdaq/items?format=json&clean=1"
-			)
-			.then(res => {
-				return { featured: res.data };
-			});
+async asyncData({ $axios, route, store }) {
+		let collection = "youtube";
+
+
+		let request1 = await $axios.post(
+			store.state.webRoot +
+				"/api/collections/get/" +
+				collection +
+				"?token=" +
+				store.state.collectionsToken
+		);
+		return {
+			// hotel: request1.data.entries[0],
+			videos: request1.data.entries
+		};
 	},
 
 	methods: {

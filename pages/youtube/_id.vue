@@ -37,7 +37,7 @@
 								<p
 									class="font-weight-bold"
 									style="height: 2.8rem; line-height: 1.4rem; overflow: hidden;"
-								>{{item.title}}</p>
+								>{{item.name}}</p>
 								{{item.channelName}}
 								<br />
 								{{item.viewCount}} Views &#183; {{item.likes}} likes
