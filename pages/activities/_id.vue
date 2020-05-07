@@ -15,7 +15,7 @@
 					<p>{{thing.description}}</p>
 					<!-- Featured business -->
 					<h2>
-						What to do on {{thing.name}}
+						What to do in {{thing.name}}
 						<v-icon>mdi-account-star</v-icon>
 					</h2>
 
