@@ -3,7 +3,7 @@
 		<v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 2}`">
 			<nuxt-link
 				style="text-decoration:none; font-color: primary;"
-				:to="'/featured_hotel/'+props.slug"
+				:to="'/featured_hotels/'+props.slug"
 			>
 				<!-- <v-img :src="$store.state.assetRoot + props.image.path" max-height="10cm"></v-img> -->
 

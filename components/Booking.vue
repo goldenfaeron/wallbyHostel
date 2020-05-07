@@ -9,7 +9,7 @@
 				<v-container grid-list-lg>
 					<v-layout row wrap>
 						<v-flex xs6 sm6 md4 lg3 v-for="(item, index) in props " :key="index">
-							<CardFeaturedHotel :props="item"></CardFeaturedHotel>
+							<CardFeaturedHotel :props="item" link="/featured_hotel/"></CardFeaturedHotel>
 						</v-flex>
 					</v-layout>
 				</v-container>

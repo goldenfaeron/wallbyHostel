@@ -167,12 +167,12 @@ export const getters = {
             {
                 icon: "mdi-account-box",
                 title: state.name + " Team",
-                to: "/team/"
+                to: "/team"
             },
             {
                 icon: "mdi-account-box",
                 title: state.name + " News",
-                to: "/news/"
+                to: "/news"
             },
         ],
 
