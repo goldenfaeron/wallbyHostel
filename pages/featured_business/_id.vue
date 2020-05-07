@@ -25,15 +25,14 @@
 			</v-layout>
 		</v-container>
 
-		<v-container grid-list-lg>
+		<!-- Whatsapp message -->
+		<!-- <v-container grid-list-lg>
 			<h2>{{shop.name}} Offers</h2>
 			{{shop.telephone}}
 			<a
 				:href="'https://wa.me/'+shop.telephone+'?text='+encodeWhatsappMessage(shop.owner, 'Boating one hour', 'Sunday', '5 o clock')"
 			>Message or call {{shop.owner}} on Whatsapp</a>
-
-			<!-- <a :href="'https://wa.me/'+shop.telephone">Message or call {{shop.owner}} on Whatsapp</a> -->
-		</v-container>
+		</v-container>-->
 
 		<!-- Linked shops -->
 		<!-- <v-container grid-list-lg>
@@ -95,7 +94,7 @@ export default {
 				collection +
 				"?token=" +
 				store.state.collectionsToken,
-			{ filter: { slug: route.params.id }, populate: 1 }
+			{ filter: { slug: route.params.id } }
 		);
 
 		return {

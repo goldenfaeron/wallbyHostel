@@ -98,7 +98,7 @@ export default {
 				collection2 +
 				"?token=" +
 				store.state.collectionsToken,
-			{ limit: 5, sort: { _created: -1 }, populate: 1 }
+			{ limit: 5, sort: { _created: -1 } }
 		);
 		return {
 			thing: request1.data.entries[0],
