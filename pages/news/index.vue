@@ -16,7 +16,7 @@
 				</v-flex>
 			</v-layout>
 		</v-container>
-		<v-container grid-list-lg>
+		<!-- <v-container grid-list-lg>
 			<v-layout row wrap my-5 v-for="(item, index) in data2" :key="index">
 				<v-flex xs8 id="title">
 					<h1>{{item.title}}</h1>
@@ -31,7 +31,7 @@
 					<v-img :src="item.image"></v-img>
 				</v-flex>
 			</v-layout>
-		</v-container>
+		</v-container>-->
 	</div>
 </template>
 
@@ -53,32 +53,30 @@ export default {
 					title: 1,
 					description: 1,
 					image: 1,
-
 					slug: 1
 				}
 			}
 		);
 
-		let request2 = await $axios.post(
-			store.state.webRoot +
-				"/api/collections/get/" +
-				collection2 +
-				"?token=" +
-				store.state.collectionsToken,
+		// let request2 = await $axios.post(
+		// 	store.state.webRoot +
+		// 		"/api/collections/get/" +
+		// 		collection2 +
+		// 		"?token=" +
+		// 		store.state.collectionsToken,
 
-			{
-				fields: {
-					title: 1,
-					description: 1,
-					image: 1,
-
-					slug: 1
-				}
-			}
-		);
+		// 	{
+		// 		fields: {
+		// 			title: 1,
+		// 			description: 1,
+		// 			image: 1,
+		// 			slug: 1
+		// 		}
+		// 	}
+		// );
 		return {
-			data1: request1.data.entries,
-			data2: request2.data.entries
+			data1: request1.data.entries
+			// data2: request2.data.entries
 		};
 	},
 
