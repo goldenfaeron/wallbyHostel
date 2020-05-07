@@ -52,7 +52,7 @@
 			<v-btn
 				small
 				fab
-				flat
+				text
 				class="hidden-sm-and-up"
 				color="accent lighten-3"
 				@click.stop="rightDrawer = !rightDrawer"

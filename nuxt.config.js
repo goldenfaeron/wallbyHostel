@@ -228,7 +228,7 @@ export default {
       //   });
 
 
-      return Promise.all([team, featured_hotels, corona, hotels, google_places, tripadvisor_restuarants_borsh, activities, shops, airports, featured_business]).then(values => {
+      return Promise.all([team, featured_hotels, corona, hotels, google_places, tripadvisor_restuarants_borsh, activities, shops, airports]).then(values => {
         return [...values[0], ...values[1], ...values[2], ...values[3], ...values[4], ...values[5], ...values[6], ...values[7], ...values[8],]
       })
     },
