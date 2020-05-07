@@ -140,7 +140,7 @@ export default {
 			"@context": "https://schema.org",
 			"@type": "VideoObject",
 			name: this.video.name,
-			description: this.video.details,
+			// description: this.video.details,
 			thumbnailUrl:
 				"https://i.ytimg.com/vi/" + this.video.id + "/maxresdefault.jpg",
 			uploadDate: this.video.date,

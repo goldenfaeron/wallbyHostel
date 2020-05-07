@@ -213,23 +213,25 @@ export default {
           })
         });
 
-      let youtube = axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/youtube?token=641a6e0c88f94f7d2adadd184752e1",
-        {
+      // let youtube = axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/youtube?token=641a6e0c88f94f7d2adadd184752e1",
+      //   {
 
-          fields: { slug: 1, _id: 0 }
-        })
-        .then((res) => {
-          return res.data.entries.map((entry) => {
-            return {
-              route: '/youtube/' + entry.slug
-            }
+      //     fields: { slug: 1, _id: 0 }
+      //   })
+      //   .then((res) => {
+      //     return res.data.entries.map((entry) => {
+      //       return {
+      //         route: '/youtube/' + entry.slug
+      //       }
 
-          })
-        });
+      //     })
+      //   });
 
 
+
+      //...values[9]
       return Promise.all([team, featured_hotels, corona, hotels, google_places, tripadvisor_restuarants_borsh, activities, shops, airports, youtube]).then(values => {
-        return [...values[0], ...values[1], ...values[2], ...values[3], ...values[4], ...values[5], ...values[6], ...values[7], ...values[8], ...values[9]]
+        return [...values[0], ...values[1], ...values[2], ...values[3], ...values[4], ...values[5], ...values[6], ...values[7], ...values[8]]
       })
     },
 
