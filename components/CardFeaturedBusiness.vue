@@ -3,10 +3,12 @@
 		<v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 2}`">
 			<nuxt-link
 				style="text-decoration:none; font-color: primary;"
-				:to="'/featured_hotel/'+props.slug"
+				:to="'/featured_business/'+props.slug"
 			>
 				<!-- <v-img :src="$store.state.assetRoot + props.image.path" max-height="10cm"></v-img> -->
-
+				<v-btn absolute dark fab top right color="red">
+					<v-icon>mdi-medal</v-icon>
+				</v-btn>
 				<v-card-title primary-title>
 					{{props.name }}
 					<v-rating color="primary lighten-1" :value="props.rating" half-increments readonly></v-rating>
@@ -21,6 +23,14 @@
 				</v-img>
 
 				<v-card-text>
+					<span v-if="props.corona_safe">
+						<v-icon color="green lighten-2" green lighten-2>mdi-shield-check</v-icon>COVID-19 Safe
+						<br />
+					</span>
+					<span v-if="props.corona_quarantine_friendly">
+						<v-icon color="green lighten-2" green lighten-2>mdi-shield-home</v-icon>Quarantine Friendly
+						<br />
+					</span>
 					<span v-if="props.excellent_customer_service">
 						<v-icon color="green lighten-2" green lighten-2>mdi-shield-star</v-icon>Excellent Service
 					</span>

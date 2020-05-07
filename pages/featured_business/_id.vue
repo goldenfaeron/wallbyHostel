@@ -33,21 +33,29 @@
 			>Message or call {{shop.owner}} on Whatsapp</a>
 
 			<!-- <a :href="'https://wa.me/'+shop.telephone">Message or call {{shop.owner}} on Whatsapp</a> -->
+		</v-container>
+
+		<!-- Linked shops -->
+		<!-- <v-container grid-list-lg>
 			<v-layout row wrap mt-5>
 				<v-flex xs12 sm6 md4 v-for="(item, index) in shop.linked_shops" :key="index">
 					<CardBar :props="item"></CardBar>
 				</v-flex>
 			</v-layout>
-		</v-container>
-		<v-container grid-list-lg>
+		</v-container>-->
+
+		<!-- Linked other business -->
+		<!-- <v-container grid-list-lg>
 			<h2>{{shop.owner}}'sother businesses</h2>
 			<v-layout row wrap mt-5>
 				<v-flex xs12 sm6 md4 v-for="(item, index) in shop.linked_shops" :key="index">
 					<CardBar :props="item"></CardBar>
 				</v-flex>
 			</v-layout>
-		</v-container>
-		<v-container grid-list-lg>
+		</v-container>-->
+
+		<!-- Linked hotels -->
+		<!-- <v-container grid-list-lg>
 			<h2>{{shop.owner}}'s hotels</h2>
 			{{shop.owner}} has {{shop.linked_hotels.length}} hotel
 			<span v-if="shop.linked_hotels.length >1">s</span>
@@ -57,8 +65,10 @@
 					<CardHotel :props="item"></CardHotel>
 				</v-flex>
 			</v-layout>
-		</v-container>
-		<v-container grid-list-lg>
+		</v-container>-->
+
+		<!-- Linked featured hotels -->
+		<!-- <v-container grid-list-lg>
 			<h2>{{shop.name}}other hotels</h2>
 			{{shop.owner}} has {{shop.linked_featured_hotels.length}} featured hotel
 			<span
@@ -70,7 +80,7 @@
 					<CardFeaturedHotel :props="item"></CardFeaturedHotel>
 				</v-flex>
 			</v-layout>
-		</v-container>
+		</v-container>-->
 	</div>
 </template>
 

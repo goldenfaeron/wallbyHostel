@@ -23,7 +23,7 @@
 					<v-container grid-list-lg>
 						<v-layout row wrap>
 							<v-flex xs6 md4 v-for="(item, index) in business" :key="index">
-								<CardFeaturedHotel :props="item"></CardFeaturedHotel>
+								<CardFeaturedBusiness :props="item"></CardFeaturedBusiness>
 							</v-flex>
 						</v-layout>
 					</v-container>
@@ -48,6 +48,7 @@
 			</v-layout>
 		</v-container>
 
+		<!-- Instagram -->
 		<v-container grid-list-lg>
 			<h2>
 				{{thing.name}} on Instagram
@@ -108,7 +109,7 @@ export default {
 	components: {
 		CardReview: () => import("@/components/CardReview"),
 		CardInstagram: () => import("@/components/CardInstagram"),
-		CardFeaturedHotel: () => import("@/components/CardFeaturedHotel"),
+		CardFeaturedBusiness: () => import("@/components/CardFeaturedBusiness"),
 		googleMapCoordinate: () => import("@/components/googleMapCoordinate")
 	},
 
