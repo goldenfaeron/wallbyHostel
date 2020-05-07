@@ -88,7 +88,7 @@ export default {
 				collection +
 				"?token=" +
 				store.state.collectionsToken,
-			{ filter: { slug: route.params.id }, populate: 1 }
+			{ filter: { slug: route.params.id } }
 		);
 
 		let request2 = await $axios.post(
@@ -115,13 +115,12 @@ export default {
 			x: 0,
 			y: 0
 		},
-		arrNumber: "0",
-	//	name: this.video.name,
-	//	description: this.video.details,
-	//	thumbnailUrl: 'https://i.ytimg.com/vi/'+this.video.id+'/maxresdefault.jpg',
-	//	uploadDate: this.video.date,
-	//	contentUrl: this.video.url
-
+		arrNumber: "0"
+		//	name: this.video.name,
+		//	description: this.video.details,
+		//	thumbnailUrl: 'https://i.ytimg.com/vi/'+this.video.id+'/maxresdefault.jpg',
+		//	uploadDate: this.video.date,
+		//	contentUrl: this.video.url
 	}),
 
 	mounted() {
@@ -142,10 +141,11 @@ export default {
 			"@type": "VideoObject",
 			name: this.video.name,
 			description: this.video.details,
-			thumbnailUrl: 'https://i.ytimg.com/vi/'+this.video.id+'/maxresdefault.jpg',
+			thumbnailUrl:
+				"https://i.ytimg.com/vi/" + this.video.id + "/maxresdefault.jpg",
 			uploadDate: this.video.date,
 			contentUrl: this.video.url,
-			embedUrl: this.video.url,
+			embedUrl: this.video.url
 		};
 	}
 };

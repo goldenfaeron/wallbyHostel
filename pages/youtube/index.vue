@@ -11,7 +11,6 @@
 		<v-container grid-list-lg>
 			<v-layout row wrap>
 				<v-flex xs12 sm12 md6 lg3 v-for="(item, index) in featured" :key="index">
-			
 					<v-card flat @click.native="dialog = true; arrNumber = index">
 						<v-layout row wrap>
 							<v-flex lg2>
@@ -71,12 +70,17 @@
 <script>
 export default {
 	asyncData({ params, store, $axios, route }) {
+		let collection = "youtube";
 		return $axios
 			.get(
-				"https://api.apify.com/v2/datasets/X7FaS3y0RYgf3sdaq/items?format=json&clean=1"
+				store.state.webRoot +
+					"/api/collections/get/" +
+					collection +
+					"?token=" +
+					store.state.collectionsToken
 			)
 			.then(res => {
-				return { featured: res.data };
+				return { featured: res.data.entries };
 			});
 	},
 
