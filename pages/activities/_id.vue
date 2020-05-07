@@ -49,7 +49,7 @@
 		</v-container>
 
 		<!-- Instagram -->
-		<v-container grid-list-lg>
+		<!-- <v-container grid-list-lg>
 			<h2>
 				{{thing.name}} on Instagram
 				<v-icon>mdi-instagram</v-icon>
@@ -61,7 +61,7 @@
 					<CardInstagram :props="post"></CardInstagram>
 				</v-flex>
 			</v-layout>
-		</v-container>
+		</v-container>-->
 
 		<v-container>
 			<h2>
