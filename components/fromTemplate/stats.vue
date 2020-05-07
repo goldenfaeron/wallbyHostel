@@ -29,8 +29,8 @@ export default {
 				["64", "Instagram posts", "instagram"],
 				["45", "Hotels", "booking"],
 				["20", "Airbnbs", "airbnb"],
-				["35", "Cafes and bars", "bars"],
-				["20", "Videos", "youtube"]
+				["35", "Cafes and bars", "Bar"]
+				// ["20", "Videos", "youtube"]
 			]
 		};
 	}
