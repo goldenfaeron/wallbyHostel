@@ -29,8 +29,10 @@
 			<h2>{{shop.name}} Offers</h2>
 			{{shop.telephone}}
 			<a
-				:href="'https://wa.me/'+shop.telephone"
+				:href="'https://wa.me/'+shop.telephone+'?text='+encodeWhatsappMessage(shop.owner, 'Boating one hour', 'Sunday', '5 o clock')"
 			>Message or call {{shop.owner}} on Whatsapp</a>
+
+			<!-- <a :href="'https://wa.me/'+shop.telephone">Message or call {{shop.owner}} on Whatsapp</a> -->
 			<v-layout row wrap mt-5>
 				<v-flex xs12 sm6 md4 v-for="(item, index) in shop.linked_shops" :key="index">
 					<CardBar :props="item"></CardBar>
@@ -86,14 +88,6 @@ export default {
 			{ filter: { slug: route.params.id }, populate: 1 }
 		);
 
-		// let request2 = await $axios.post(
-		// 	store.state.webRoot +
-		// 		"/api/collections/get/" +
-		// 		collection +
-		// 		"?token=" +
-		// 		store.state.collectionsToken,
-		// 	{ limit: 5, sort: { _created: -1 } }
-		// );
 		return {
 			// shop: request1.data.entries[0],
 			shop: request1.data.entries[0]
@@ -113,6 +107,21 @@ export default {
 		CertificateCorona: () => import("@/components/CertificateCorona"),
 		CertificateCService: () => import("@/components/CertificateCService"),
 		CertificateQuarantine: () => import("@/components/CertificateQuarantine")
+	},
+
+	methods: {
+		encodeWhatsappMessage(name, offer, day, time) {
+			let msg =
+				"Hey " +
+				name +
+				", I would like to do the " +
+				offer +
+				" on " +
+				day +
+				" at " +
+				time;
+			return encodeURI(msg);
+		}
 	},
 	data() {
 		return {};
