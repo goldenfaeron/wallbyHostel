@@ -15,7 +15,7 @@
 		<v-container grid-list-lg class="mt-7">
 			<v-layout row wrap>
 				<v-flex xs12 sm12 md6 lg3 v-for="(item, index) in airports_google" :key="index">
-					<CardBar :props="item" :link="'/airports/'" :index="index"></CardBar>
+					<CardAirport :props="item"></CardAirport>
 				</v-flex>
 			</v-layout>
 		</v-container>
@@ -50,7 +50,7 @@ export default {
 		};
 	},
 	components: {
-		CardBar: () => import("@/components/CardBar")
+		CardAirport: () => import("@/components/CardAirport")
 	},
 	methods: {
 		placeholder(index) {
