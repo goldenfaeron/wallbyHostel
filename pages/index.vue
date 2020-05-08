@@ -66,8 +66,8 @@ export default {
 				"?token=" +
 				store.state.collectionsToken,
 			{
-				// fields: { name: 1, photos: 1, roomType: 1, stars: 1, slug: 1 },
-				limit: 8
+				fields: { imageUrl: 1, likesCount: 1, firstComment: 1, slug: 1 },
+				limit: 4
 			}
 		);
 		let request3 = await $axios.post(
@@ -77,7 +77,14 @@ export default {
 				"?token=" +
 				store.state.collectionsToken,
 			{
-				// fields: { name: 1, photos: 1, roomType: 1, stars: 1, slug: 1 },
+				fields: {
+					name: 1,
+					rating: 1,
+					header_image: 1,
+					excellent_customer_service: 1,
+					rating: 1,
+					slug: 1
+				},
 
 				limit: 4
 			}
@@ -90,7 +97,13 @@ export default {
 				store.state.collectionsToken,
 			{
 				filter: { imageUrls: true },
-				// fields: { name: 1, photos: 1, roomType: 1, stars: 1, slug: 1 },
+				fields: {
+					title: 1,
+					address: 1,
+					categoryName: 1,
+					reviewsCount: 1,
+					slug: 1
+				},
 				limit: 4
 			}
 		);
