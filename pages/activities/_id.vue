@@ -17,12 +17,11 @@
 					<h2>
 						What to do in {{thing.name}}
 						<v-icon>mdi-account-star</v-icon>
-					</h2>
-
+					</h2>{
 					<v-divider></v-divider>
 					<v-container grid-list-lg>
 						<v-layout row wrap>
-							<v-flex xs6 md4 v-for="(item, index) in business" :key="index">
+							<v-flex xs6 md4 v-for="(item, index) in thing.linked_business" :key="index">
 								<CardFeaturedBusiness :props="item"></CardFeaturedBusiness>
 							</v-flex>
 						</v-layout>
@@ -89,7 +88,7 @@ export default {
 				collection +
 				"?token=" +
 				store.state.collectionsToken,
-			{ filter: { slug: route.params.id } }
+			{ filter: { slug: route.params.id }, populate: 1 }
 		);
 
 		let request2 = await $axios.post(

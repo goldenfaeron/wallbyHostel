@@ -1,12 +1,13 @@
 <template>
 	<div>
-		<v-carousel>
-			<v-carousel-item v-for="(item, index) in room.photos" :key="index" :src="item.large"></v-carousel-item>
-		</v-carousel>
-
 		<v-container grid-list-xs>
 			<span class="grey--text text--darken-3">
 				<v-layout row justify-space-between>
+					<v-flex xs12>
+						<v-carousel>
+							<v-carousel-item v-for="(item, index) in room.photos" :key="index" :src="item.large"></v-carousel-item>
+						</v-carousel>
+					</v-flex>
 					<v-flex lg5>
 						<p class="display-1 bold font-weight-bold" color>{{room.name}}</p>
 						<p>{{room.address}}</p>
