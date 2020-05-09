@@ -13,7 +13,7 @@
 		<airbnb :props="airbnb"></airbnb>
 		<v-divider></v-divider>
 
-		<instagram :props="instagram"></instagram>
+		<!-- <instagram :props="instagram"></instagram> -->
 	</div>
 </template>
 
@@ -119,7 +119,7 @@ export default {
 		return {
 			// hotel: request1.data.entries[0],
 			airbnb: request1.data.entries,
-			instagram: request2.data.entries,
+			// instagram: request2.data.entries,
 			hotels: request3.data.entries,
 			bars: request4.data.entries
 		};
