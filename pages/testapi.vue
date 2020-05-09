@@ -3,7 +3,7 @@
 		<v-btn @click="getroutes()" color="success">get</v-btn>
 		<v-btn @click="getJSON()" color="success">get</v-btn>
 		{{arr}}
-		{{jsonArr}}
+		<!-- {{jsonArr}} -->
 	</div>
 </template>
 
@@ -16,11 +16,11 @@ export default {
 		};
 	},
 	methods: {
-		getJSON() {
-			this.$axios.get("@/assets/routes/all.json").then(res => {
-				this.jsonArr = res.data;
-			});
-		},
+		// getJSON() {
+		// 	this.$axios.get("@/assets/routes/all.json").then(res => {
+		// 		this.jsonArr = res.data;
+		// 	});
+		// },
 		getroutes() {
 			let routeList = [];
 

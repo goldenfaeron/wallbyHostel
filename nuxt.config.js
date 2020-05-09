@@ -1,6 +1,6 @@
 import colors from 'vuetify/es5/util/colors'
 import axios from 'axios'
-import routeList from '/Users/macpro128ssd/Documents/Projects/Nuxt/goborshi_backup/assets/routes/all.json'
+
 
 
 
