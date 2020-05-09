@@ -4,13 +4,16 @@
 		<about></about>
 		<stats></stats>
 		<bars :props="bars"></bars>
+		b{{bars}}
 		<v-divider></v-divider>
 
 		<booking :props="hotels"></booking>
+		{{hotels}}
 		<v-divider></v-divider>
 		<br />
 
-		<airbnb :props="airbnb"></airbnb>
+		<!-- <airbnb :props="airbnb"></airbnb>
+		{{airbnb}}-->
 		<v-divider></v-divider>
 
 		<!-- <instagram :props="instagram"></instagram> -->
@@ -48,28 +51,33 @@ export default {
 		let collection3 = "hotels";
 		let collection4 = "googleplaces_borsh";
 
-		let request1 = await $axios.post(
-			store.state.webRoot +
-				"/api/collections/get/" +
-				collection +
-				"?token=" +
-				store.state.collectionsToken,
-			{
-				fields: { name: 1, photos: 1, roomType: 1, stars: 1, slug: 1 },
-				limit: 4
-			}
-		);
-		let request2 = await $axios.post(
-			store.state.webRoot +
-				"/api/collections/get/" +
-				collection2 +
-				"?token=" +
-				store.state.collectionsToken,
-			{
-				fields: { imageUrl: 1, likesCount: 1, firstComment: 1, slug: 1 },
-				limit: 4
-			}
-		);
+		//aribnb
+		// let request1 = await $axios.post(
+		// 	store.state.webRoot +
+		// 		"/api/collections/get/" +
+		// 		collection +
+		// 		"?token=" +
+		// 		store.state.collectionsToken,
+		// 	{
+		// 		fields: { name: 1, photos: 1, roomType: 1, stars: 1, slug: 1 },
+		// 		limit: 4
+		// 	}
+		// );
+
+		//instagram
+		// let request2 = await $axios.post(
+		// 	store.state.webRoot +
+		// 		"/api/collections/get/" +
+		// 		collection2 +
+		// 		"?token=" +
+		// 		store.state.collectionsToken,
+		// 	{
+		// 		fields: { imageUrl: 1, likesCount: 1, firstComment: 1, slug: 1 },
+		// 		limit: 4
+		// 	}
+		// );
+
+		//hotels (featured)
 		let request3 = await $axios.post(
 			store.state.webRoot +
 				"/api/collections/get/" +
@@ -89,6 +97,8 @@ export default {
 				limit: 4
 			}
 		);
+
+		//googleplaces_borsh (bars)
 		let request4 = await $axios.post(
 			store.state.webRoot +
 				"/api/collections/get/" +
@@ -117,8 +127,7 @@ export default {
 		// 	{ limit: 5, sort: { _created: -1 } }
 		// );
 		return {
-			// hotel: request1.data.entries[0],
-			airbnb: request1.data.entries,
+			// airbnb: request1.data.entries,
 			// instagram: request2.data.entries,
 			hotels: request3.data.entries,
 			bars: request4.data.entries

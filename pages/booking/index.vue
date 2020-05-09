@@ -21,7 +21,7 @@
 			<v-responsive class="mx-auto" width="56">
 				<v-icon large>mdi-search-web</v-icon>
 			</v-responsive>
-			<h2
+			<!-- <h2
 				class="secondary--text"
 				style="text-align: center;"
 			>{{booking.length}} results from Booking.com</h2>
@@ -30,7 +30,7 @@
 					<CardHotel class="hidden-xs-only" :props="item" :index="index"></CardHotel>
 					<CardHotelMobile class="hidden-sm-and-up" :props="item" :index="index"></CardHotelMobile>
 				</v-flex>
-			</v-layout>
+			</v-layout>-->
 		</v-container>
 	</div>
 </template>
@@ -47,7 +47,7 @@ export default {
 
 	async asyncData({ $axios, route, store }) {
 		let collection = "hotels";
-		let collection2 = "booking_borsh";
+		// let collection2 = "booking_borsh";
 
 		let request1 = await $axios.post(
 			store.state.webRoot +
@@ -58,17 +58,17 @@ export default {
 			{ limit: 15 }
 		);
 
-		let request2 = await $axios.post(
-			store.state.webRoot +
-				"/api/collections/get/" +
-				collection2 +
-				"?token=" +
-				store.state.collectionsToken
-			// { limit: 15 }
-		);
+		// let request2 = await $axios.post(
+		// 	store.state.webRoot +
+		// 		"/api/collections/get/" +
+		// 		collection2 +
+		// 		"?token=" +
+		// 		store.state.collectionsToken
+		// 	// { limit: 15 }
+		// );
 		return {
-			featured: request1.data.entries,
-			booking: request2.data.entries.reverse()
+			featured: request1.data.entries
+			// booking: request2.data.entries.reverse()
 		};
 	},
 
