@@ -23,9 +23,9 @@
 
 <script>
 export default {
-	asyncData({ params, store, $axios, route }) {
+	async asyncData({ params, store, $axios, route }) {
 		let collection = "corona";
-		return $axios
+		return await $axios
 			.post(
 				store.state.webRoot +
 					"/api/collections/get/" +

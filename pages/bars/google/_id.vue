@@ -79,9 +79,9 @@
 
 <script>
 export default {
-	asyncData({ params, store, $axios, route }) {
+	async asyncData({ params, store, $axios, route }) {
 		let collection = "googleplaces_borsh";
-		return $axios
+		return await $axios
 			.post(
 				store.state.webRoot +
 					"/api/collections/get/" +

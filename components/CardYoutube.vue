@@ -11,7 +11,6 @@
 		<v-container grid-list-lg>
 			<v-layout row wrap>
 				<v-flex xs12 sm12 md6 lg3 v-for="(item, index) in featured" :key="index">
-			
 					<v-card flat @click.native="dialog = true; arrNumber = index">
 						<v-layout row wrap>
 							<v-flex lg2>
@@ -70,8 +69,8 @@
 
 <script>
 export default {
-	asyncData({ params, store, $axios, route }) {
-		return $axios
+	async asyncData({ params, store, $axios, route }) {
+		return await $axios
 			.get(
 				"https://api.apify.com/v2/datasets/X7FaS3y0RYgf3sdaq/items?format=json&clean=1"
 			)
@@ -95,7 +94,7 @@ export default {
 			dialog: false,
 			arrNumber: "0"
 		};
-	},
+	}
 };
 </script>
 <style>

@@ -92,9 +92,11 @@ export default {
   // }));
 
   generate: {
-    routes() {
+    async routes() {
 
-      let team = axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/team?token=641a6e0c88f94f7d2adadd184752e1",
+      //team, featured_hotels, corona,hotels, google_places, tripadvisor_restuarants_borsh, activities, shops, aiports, featured_business
+
+      let team = await axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/team?token=641a6e0c88f94f7d2adadd184752e1",
         {
 
           fields: { slug: 1, _id: 0 }
@@ -107,7 +109,7 @@ export default {
 
           })
         });
-      let featured_hotels = axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/hotels?token=641a6e0c88f94f7d2adadd184752e1",
+      let featured_hotels = await axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/hotels?token=641a6e0c88f94f7d2adadd184752e1",
         {
 
           fields: { slug: 1, _id: 0 }
@@ -120,7 +122,7 @@ export default {
 
           })
         });
-      let corona = axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/corona?token=641a6e0c88f94f7d2adadd184752e1",
+      let corona = await axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/corona?token=641a6e0c88f94f7d2adadd184752e1",
         {
 
           fields: { slug: 1, _id: 0 }
@@ -134,7 +136,7 @@ export default {
           })
         });
 
-      let hotels = axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/booking_borsh?token=641a6e0c88f94f7d2adadd184752e1",
+      let hotels = await axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/booking_borsh?token=641a6e0c88f94f7d2adadd184752e1",
         {
 
           fields: { slug: 1, _id: 0 }
@@ -147,7 +149,7 @@ export default {
 
           })
         });
-      let google_places = axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/googleplaces_borsh?token=641a6e0c88f94f7d2adadd184752e1",
+      let google_places = await axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/googleplaces_borsh?token=641a6e0c88f94f7d2adadd184752e1",
         {
 
           fields: { slug: 1, _id: 0 }
@@ -160,7 +162,7 @@ export default {
 
           })
         });
-      let tripadvisor_restuarants_borsh = axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/tripadvisor_restuarants_borsh?token=641a6e0c88f94f7d2adadd184752e1",
+      let tripadvisor_restuarants_borsh = await axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/tripadvisor_restuarants_borsh?token=641a6e0c88f94f7d2adadd184752e1",
         {
 
           fields: { slug: 1, _id: 0 }
@@ -173,7 +175,7 @@ export default {
 
           })
         });
-      let activities = axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/tripadvisor_thingstodo_borsh?token=641a6e0c88f94f7d2adadd184752e1",
+      let activities = await axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/tripadvisor_thingstodo_borsh?token=641a6e0c88f94f7d2adadd184752e1",
         {
 
           fields: { slug: 1, _id: 0 }
@@ -186,7 +188,7 @@ export default {
 
           })
         });
-      let shops = axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/googleplaces_shops_borsh?token=641a6e0c88f94f7d2adadd184752e1",
+      let shops = await axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/googleplaces_shops_borsh?token=641a6e0c88f94f7d2adadd184752e1",
         {
 
           fields: { slug: 1, _id: 0 }
@@ -199,21 +201,7 @@ export default {
 
           })
         });
-      let airports = axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/googleplaces_airports_borsh?token=641a6e0c88f94f7d2adadd184752e1",
-        {
-
-          fields: { slug: 1, _id: 0 }
-        })
-        .then((res) => {
-          return res.data.entries.map((entry) => {
-            return {
-              route: '/airports/' + entry.slug
-            }
-
-          })
-        });
-
-      // let featured_business = axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/shops_featured?token=641a6e0c88f94f7d2adadd184752e1",
+      // let airports = axios.get("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/googleplaces_airports_borsh?token=641a6e0c88f94f7d2adadd184752e1",
       //   {
 
       //     fields: { slug: 1, _id: 0 }
@@ -221,15 +209,34 @@ export default {
       //   .then((res) => {
       //     return res.data.entries.map((entry) => {
       //       return {
-      //         route: '/featured_business/' + entry.slug
+      //         route: '/airports/' + entry.slug
       //       }
 
       //     })
       //   });
 
+      let featured_business = await axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/shops_featured?token=641a6e0c88f94f7d2adadd184752e1",
+        {
 
-      return Promise.all([team, featured_hotels, corona, hotels, google_places, tripadvisor_restuarants_borsh, activities, shops, airports]).then(values => {
-        return [...values[0], ...values[1], ...values[2], ...values[3], ...values[4], ...values[5], ...values[6], ...values[7], ...values[8],]
+          fields: { slug: 1, _id: 0 }
+        })
+        .then((res) => {
+          return res.data.entries.map((entry) => {
+            return {
+              route: '/featured_business/' + entry.slug
+            }
+
+          })
+        });
+
+
+
+
+      //team, featured_hotels, corona,hotels, google_places, tripadvisor_restuarants_borsh, activities, shops, aiports, featured_business
+      // airports 9
+
+      return Promise.all([team, featured_hotels, corona, hotels, google_places, tripadvisor_restuarants_borsh, activities, shops, featured_business,]).then(values => {
+        return [...values[0], ...values[1], ...values[2], ...values[3], ...values[4], ...values[5], ...values[6], ...values[7], ...values[8], ...values[9]]
       })
     },
 

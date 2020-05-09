@@ -69,9 +69,9 @@
 
 <script>
 export default {
-	asyncData({ params, store, $axios, route }) {
+	async asyncData({ params, store, $axios, route }) {
 		let collection = "youtube";
-		return $axios
+		return await $axios
 			.get(
 				store.state.webRoot +
 					"/api/collections/get/" +
