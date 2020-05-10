@@ -6,37 +6,7 @@
 		<v-container grid-list-lg>
 			<v-layout row wrap>
 				<v-flex xs12 sm6 md6 lg4 v-for="(item, index) in data" :key="index">
-					<v-card style="height: 100%;">
-						<v-card-title primary-title>
-							<v-layout align-content-space-between justify-space-between>
-								<v-flex>
-									<p class="headline d-flex">{{item.name }}</p>
-								</v-flex>
-							</v-layout>
-						</v-card-title>
-						<v-img v-if="item.photos" max-height="200" :src="item.photos[0].large"></v-img>
-						<v-img v-else max-height="200" :src="'/img/placeholder'+placeholder(index)+'.svg'"></v-img>
-						<v-card-text>
-							<p
-								style="font-weight: bold;"
-								class="truncate-overflow"
-							>{{item.sectionedDescription.description}}</p>
-							<br />
-							Room Type: {{item.roomType}}
-							<br />
-							<v-icon>mdi-square-edit-outline</v-icon>
-							Read {{item.reviews.length}} reviews
-						</v-card-text>
-						<div class="text-xs-center">
-							<v-rating color="red" :value="item.stars" half-increments readonly></v-rating>
-						</div>
-						<v-card-actions>
-							<v-btn color="primary">
-								<nuxt-link :to="'/airbnb/'+item.slug" class="accent--text">Read more</nuxt-link>
-							</v-btn>
-							<v-btn color="success" :href="'https://airbnb.com/rooms/'+item.id">book on airbnb.com</v-btn>
-						</v-card-actions>
-					</v-card>
+					<CardAirbnb :props="item"></CardAirbnb>
 				</v-flex>
 			</v-layout>
 		</v-container>
@@ -45,6 +15,7 @@
 
 <script>
 export default {
+	components: { CardAirbnb: () => import("@/components/CardAirbnb") },
 	async asyncData({ params, store, $axios, route }) {
 		let collection = "airbnb";
 		return await $axios
