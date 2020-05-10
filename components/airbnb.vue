@@ -13,27 +13,24 @@
 							<v-card height="100%">
 								<!-- <v-img :src="$store.state.assetRoot + item.image.path" max-height="10cm"></v-img> -->
 
-								<v-card-title primary-title>
-									<v-layout justify-center>
-										<p
-											class="headline d-flex"
-											style="overflow-wrap: anywhere; word-wrap: break-word; word-break: normal; hyphens: auto;"
-										>{{item.name }}</p>
-									</v-layout>
-								</v-card-title>
-
+								
 								<v-img height="200" :src="item.photos[0].large">
 									<template v-slot:placeholder>
 										<v-layout fill-height align-center justify-center ma-0>
 											<v-progress-circular indeterminate color="primary"></v-progress-circular>
 										</v-layout>
 									</template>
+									<v-layout fill-height align-end justify-center ma-0>
+										<span class="d-flex" style="background-color:#383838; opacity:0.7; width:100%; word-break: normal;" >
+											<v-card-title class="white--text" style="word-break: normal;" color="white">{{item.name }}</v-card-title>
+										</span>
+									</v-layout>
 								</v-img>
 
 								<v-card-text>Room type: {{item.roomType}}</v-card-text>
 
 								<div class="text-xs-center">
-									<v-rating color="red" :value="item.stars" half-increments readonly></v-rating>
+									<v-rating color="red" :value="item.stars" class="hidden-xs-only" half-increments readonly></v-rating>
 								</div>
 
 								<!-- v-if="!item.inCart" -->

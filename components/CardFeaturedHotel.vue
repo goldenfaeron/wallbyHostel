@@ -26,7 +26,7 @@
 					</template>
 					<v-layout fill-height align-end justify-center ma-0>
 						<span class="d-flex" style="background-color:#383838; opacity:0.7; width:100%">
-							<v-card-title class="white--text" color="white">{{props.name }}</v-card-title>
+							<v-card-title style="word-break: normal;" class="white--text" color="white">{{props.name }}</v-card-title>
 						</span>
 					</v-layout>
 				</v-img>
