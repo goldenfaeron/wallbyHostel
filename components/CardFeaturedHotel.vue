@@ -9,7 +9,13 @@
 
 				<v-card-title primary-title>
 					{{props.name }}
-					<v-rating color="primary lighten-1" :value="props.rating" half-increments readonly></v-rating>
+					<v-rating
+						color="primary lighten-1"
+						class="hidden-xs-only"
+						:value="props.rating"
+						half-increments
+						readonly
+					></v-rating>
 				</v-card-title>
 
 				<v-img :src="$store.state.assetRoot + props.header_image.path" height="200">
@@ -21,16 +27,47 @@
 				</v-img>
 
 				<v-card-text>
-					<span v-if="props.excellent_customer_service">
-						<v-icon color="green lighten-2" green lighten-2>mdi-shield-star</v-icon>Excellent Service
-					</span>
+					<v-tooltip bottom>
+						<template v-slot:activator="{ on }">
+							<span v-if="props.excellent_customer_service" v-on="on">
+								<v-icon color="green lighten-2" green lighten-2>mdi-shield-star</v-icon>
+							</span>
+						</template>
+						<span>
+							<v-icon color="green lighten-2" green lighten-2>mdi-shield-star</v-icon>Excellent Service Award
+						</span>
+					</v-tooltip>
+					<v-tooltip bottom>
+						<template v-slot:activator="{ on }">
+							<span v-if="props.corona_safe" v-on="on">
+								<v-icon color="green lighten-2" green lighten-2>mdi-shield-check</v-icon>
+							</span>
+						</template>
+						<span>
+							<v-icon color="green lighten-2" large green lighten-2>mdi-shield-check</v-icon>COVID-19 Safety
+						</span>
+					</v-tooltip>
+					<v-tooltip bottom>
+						<template v-slot:activator="{ on }">
+							<span v-if="props.quarantine_friendly" v-on="on">
+								<v-icon color="green lighten-2" green lighten-2>mdi-shield-home</v-icon>
+							</span>
+						</template>
+						<span>
+							<v-icon color="green lighten-2" green lighten-2>mdi-shield-home</v-icon>Quarantine Friendly
+						</span>
+					</v-tooltip>
 				</v-card-text>
 
+				<!-- <v-flex xs12 sm6 md4 v-if="hotel.corona_excellent_customer_service">
+					<CertificateCService :props="hotel.name"></CertificateCService>
+				</v-flex>-->
 				<!-- v-if="!props.inCart" -->
 			</nuxt-link>
 		</v-card>
 	</v-hover>
 </template>
+
 
 <script>
 export default {

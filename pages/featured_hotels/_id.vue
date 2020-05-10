@@ -25,13 +25,13 @@
 			</v-layout>
 
 			<v-layout row wrap>
-				<v-flex xs12 sm6 md4>
+				<v-flex xs12 sm6 md4 v-if="hotel.corona_safe">
 					<CertificateCorona :props="hotel.name"></CertificateCorona>
 				</v-flex>
-				<v-flex xs12 sm6 md4>
+				<v-flex xs12 sm6 md4 v-if="hotel.corona_quarantine_friendly">
 					<CertificateQuarantine :props="hotel.name"></CertificateQuarantine>
 				</v-flex>
-				<v-flex xs12 sm6 md4>
+				<v-flex xs12 sm6 md4 v-if="hotel.excellent_customer_service">
 					<CertificateCService :props="hotel.name"></CertificateCService>
 				</v-flex>
 			</v-layout>

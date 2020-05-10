@@ -90,6 +90,8 @@ export default {
 					rating: 1,
 					header_image: 1,
 					excellent_customer_service: 1,
+					corona_safe: 1,
+					quarantine_friendly: 1,
 					rating: 1,
 					slug: 1
 				},
