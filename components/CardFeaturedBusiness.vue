@@ -5,10 +5,6 @@
 				style="text-decoration:none; font-color: primary;"
 				:to="'/featured_business/'+props.slug"
 			>
-				<!-- <v-img :src="$store.state.assetRoot + props.image.path" max-height="10cm"></v-img> -->
-				<v-btn absolute dark fab top right color="red">
-					<v-icon>mdi-medal</v-icon>
-				</v-btn>
 				<v-card-title primary-title>
 					{{props.name }}
 					<!-- <v-rating color="primary lighten-1" :value="props.rating" half-increments readonly></v-rating> -->
