@@ -24,7 +24,7 @@
 					</v-layout>
 				</v-sheet>
 
-				<v-card-title v-if="props.imageUrls">{{props.title}}</v-card-title>
+				<v-card-title v-if="props.imageUrls" style="word-break: normal;">{{props.title}}</v-card-title>
 				<v-card-text>
 					<p>
 						<v-icon small>mdi-account-star</v-icon>
