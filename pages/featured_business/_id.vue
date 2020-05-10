@@ -7,45 +7,70 @@
 					<h1>{{shop.name}}</h1>
 					<!-- {{shop.linked_object}} -->
 					<p v-html="shop.description"></p>
+					<br />
+
 					<v-divider></v-divider>
 				</v-flex>
 				<v-flex xs12 md6>
 					<ImageGallery :props="shop.gallery"></ImageGallery>
 				</v-flex>
 
-				<v-flex xs12 my-5>
-					<v-container grid-list-lg>
-						<v-layout row wrap>
-							<v-flex xs12 sm6 md4 v-for="(room, index) in shop.offers" :key="index">
-								<CardRoom :details="room.value" :show="false"></CardRoom>
-							</v-flex>
-						</v-layout>
-					</v-container>
-				</v-flex>
+				<v-flex xs12 my-5></v-flex>
 			</v-layout>
 		</v-container>
 
-		<!-- Whatsapp message -->
+		<!-- Pickers and Whatsapp message -->
+		<v-container>
+			<v-btn @click="book =!book" color="success">Book Now</v-btn>
+		</v-container>
+
+		<v-container grid-list-lg v-if="shop.telephone && book">
+			<v-layout row wrap>
+				<v-flex xs12 sm6 md4>
+					<h2>Chose a time</h2>
+					<v-time-picker v-model="time" type="month" width="300"></v-time-picker>
+					<v-icon color="primary">mdi-chevron-right</v-icon>
+				</v-flex>
+				<v-flex xs12 sm6 md4>
+					<h2>Chose a date</h2>
+					<v-date-picker v-model="picker" color="green lighten-1" width="300"></v-date-picker>
+					<v-icon color="primary">mdi-chevron-right</v-icon>
+				</v-flex>
+
+				<v-flex xs12 sm6 md4>
+					<h2 class="primary--text">Contact {{shop.name}}</h2>
+					{{shop.telephone}}
+					<br />
+					<br />
+					<i>"{{encodeWhatsappMessage(shop.owner, 'this', picker, time, false)}}"</i>
+					<br />
+					<v-btn
+						:href="'https://wa.me/'+shop.telephone+'?text='+encodeWhatsappMessage(shop.owner, 'Boating one hour', picker, time, true)"
+						color="primary"
+					>
+						Book on Whatsapp
+						<v-icon>mdi-whatsapp</v-icon>
+					</v-btn>
+				</v-flex>
+			</v-layout>
+		</v-container>
+		<!-- end wa -->
+
 		<v-container grid-list-lg>
-			<h2>{{shop.name}} Offers</h2>
-			{{shop.telephone}}
-			<a
-				:href="'https://wa.me/'+shop.telephone+'?text='+encodeWhatsappMessage(shop.owner, 'Boating one hour', 'Sunday', '5 o clock')"
-			>Message or call {{shop.owner}} on Whatsapp</a>
+			<v-layout row wrap>
+				<v-flex xs12 sm6 md4 v-for="(room, index) in shop.offers" :key="index">
+					<CardRoom :details="room.value" :show="false"></CardRoom>
+				</v-flex>
+			</v-layout>
 		</v-container>
 
 		<!-- Linked shops -->
-		<v-container grid-list-lg>
-			<v-layout row wrap mt-5>
-				<v-flex xs12 sm6 md4 v-for="(item, index) in shop.linked_shops" :key="index">
-					<CardBar :props="item"></CardBar>
-				</v-flex>
-			</v-layout>
-		</v-container>
-
-		<!-- Linked other business -->
-		<v-container grid-list-lg>
-			<h2>{{shop.owner}}'sother businesses</h2>
+		<v-container grid-list-lg v-if="shop.linked_shops">
+			<h2>{{shop.owner}}'s shops</h2>
+			{{shop.owner}} has {{shop.linked_shops.length}}
+			shop
+			<span v-if="shop.linked_shops.length >1">s</span>
+			in {{$store.state.city}}
 			<v-layout row wrap mt-5>
 				<v-flex xs12 sm6 md4 v-for="(item, index) in shop.linked_shops" :key="index">
 					<CardBar :props="item"></CardBar>
@@ -54,7 +79,7 @@
 		</v-container>
 
 		<!-- Linked hotels -->
-		<v-container grid-list-lg>
+		<v-container grid-list-lg v-if="shop.linked_hotels">
 			<h2>{{shop.owner}}'s hotels</h2>
 			{{shop.owner}} has {{shop.linked_hotels.length}} hotel
 			<span v-if="shop.linked_hotels.length >1">s</span>
@@ -65,9 +90,9 @@
 				</v-flex>
 			</v-layout>
 		</v-container>
-		{{shop}}
+
 		<!-- Linked featured hotels -->
-		<v-container grid-list-lg>
+		<v-container grid-list-lg v-if="shop.linked_featured_hotels">
 			<h2>{{shop.name}}other hotels</h2>
 			{{shop.owner}} has {{shop.linked_featured_hotels.length}} featured hotel
 			<span
@@ -85,6 +110,15 @@
 
 <script>
 export default {
+	data() {
+		return {
+			time: "",
+			picker: new Date().toISOString().substr(0, 10),
+			message: "",
+			book: false
+		};
+	},
+
 	async asyncData({ $axios, route, store }) {
 		let collection = "shops_featured";
 
@@ -118,7 +152,7 @@ export default {
 	},
 
 	methods: {
-		encodeWhatsappMessage(name, offer, day, time) {
+		encodeWhatsappMessage(name, offer, day, time, uri) {
 			let msg =
 				"Hey " +
 				name +
@@ -128,11 +162,10 @@ export default {
 				day +
 				" at " +
 				time;
-			return encodeURI(msg);
+			if (uri) {
+				return encodeURI(msg);
+			} else return msg;
 		}
-	},
-	data() {
-		return {};
 	},
 
 	head() {

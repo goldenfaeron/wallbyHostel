@@ -17,7 +17,7 @@
 					<h2>
 						What to do in {{thing.name}}
 						<v-icon>mdi-account-star</v-icon>
-					</h2>{
+					</h2>
 					<v-divider></v-divider>
 					<v-container grid-list-lg>
 						<v-layout row wrap>
