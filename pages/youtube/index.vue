@@ -10,30 +10,24 @@
 
 		<v-container grid-list-lg>
 			<v-layout row wrap>
-				<v-flex xs12 sm12 md6 lg3 v-for="(item, index) in featured" :key="index">
-					<v-card flat @click.native="dialog = true; arrNumber = index">
-						<v-layout row wrap>
-							<v-flex lg2>
-								<v-img src></v-img>
-							</v-flex>
-							<v-flex lg10>
+				<v-flex xs12 sm12 md6 lg3 v-for="(item, index) in videos" :key="index">
+					<v-hover>
+						<v-card
+							flat
+							@click.native="dialog = true; arrNumber = index"
+							slot-scope="{ hover }"
+							:class="`elevation-${hover ? 12 : 0}`"
+						>
+							<nuxt-link to style="text-decoration:none;">
 								<v-img :src="'https://i.ytimg.com/vi/'+item.id+'/maxresdefault.jpg'" height="200px"></v-img>
-
 								<p
 									class="font-weight-bold"
-									style="height: 2.8rem; line-height: 1.4rem; overflow: hidden;"
-								>{{item.title}}</p>
-								{{item.channelName}}
-								<br />
+									style="height: 2.8rem; line-height: 1.5rem; overflow: hidden;"
+								>{{item.name}}</p>
 								{{item.viewCount}} Views &#183; {{item.likes}} likes
-							</v-flex>
-						</v-layout>
-						<!-- <div class="text-xs-center">
-							<v-rating color="red" :value="item.totalScore" half-increments readonly></v-rating>
-						</div>-->
-
-						<!--<v-btn color="red" :href="item.url">Watch on YouTube</v-btn>-->
-					</v-card>
+							</nuxt-link>
+						</v-card>
+					</v-hover>
 				</v-flex>
 			</v-layout>
 		</v-container>
@@ -46,16 +40,24 @@
 		>
 			<v-card>
 				<v-layout justify-space-between>
-					<div @click="reloadPage()">
+					<div>
 						<v-btn icon @click="dialog=false;" color="red">
 							<v-icon>mdi-close</v-icon>
 						</v-btn>
 					</div>
-					<v-btn color="red" :href="featured[this.arrNumber].url">Watch on YouTube</v-btn>
+					<v-tooltip top>
+						<template v-slot:activator="{ on }">
+							<a target="_blank" :href="videos[arrNumber].url" v-on="on">
+								<v-img height="32" width="32" src="/img/link.svg" ></v-img>
+							</a>
+						</template>
+						<span>Watch on Youtube</span>
+					</v-tooltip>
 				</v-layout>
 
 				<iframe
-					:src="'https://www.youtube.com/embed/'+featured[this.arrNumber].id"
+				v-if="dialog"
+					:src="'https://www.youtube.com/embed/'+videos[this.arrNumber].id"
 					frameborder="0"
 					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 					allowfullscreen
@@ -69,19 +71,23 @@
 
 <script>
 export default {
-	async asyncData({ params, store, $axios, route }) {
+	async asyncData({ $axios, route, store }) {
 		let collection = "youtube";
-		return await $axios
-			.get(
-				store.state.webRoot +
-					"/api/collections/get/" +
-					collection +
-					"?token=" +
-					store.state.collectionsToken
-			)
-			.then(res => {
-				return { featured: res.data.entries };
-			});
+
+		let request1 = await $axios.post(
+			store.state.webRoot +
+				"/api/collections/get/" +
+				collection +
+				"?token=" +
+				store.state.collectionsToken,
+				{
+					limit: 8
+				}
+		);
+		return {
+			// hotel: request1.data.entries[0],
+			videos: request1.data.entries
+		};
 	},
 
 	methods: {
