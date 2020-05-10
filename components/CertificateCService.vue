@@ -1,32 +1,26 @@
 <template>
 	<div>
-		<v-container grid-list-xs>
-			<v-layout mx-5 column wrap justify-space-between align-content-space-between>
-				<v-flex xs1 my-1>
-					<v-card>
-						<v-card-title primary-title>
-							<v-icon color="green lighten-2" large green lighten-2>mdi-shield-star</v-icon>Excellent Customer Service
-						</v-card-title>
+		<v-card>
+			<v-card-title primary-title>
+				<v-icon color="green lighten-2" large green lighten-2>mdi-shield-star</v-icon>Excellent Customer Service
+			</v-card-title>
 
-						<v-card-text>
-							{{props}} has a reputation of outstanding customer service
-							<br />
-							<br />
-							<v-icon small>mdi-account-check</v-icon>Hand sanitizer Available
-							<br />
-							<v-icon small>mdi-account-check</v-icon>Gloves Available
-							<br />
-							<v-icon small>mdi-account-check</v-icon>Regular cleaning and disinfection
-						</v-card-text>
+			<v-card-text>
+				{{props}} has a reputation of outstanding customer service
+				<br />
+				<br />
+				<v-icon small>mdi-account-check</v-icon>Hand sanitizer Available
+				<br />
+				<v-icon small>mdi-account-check</v-icon>Gloves Available
+				<br />
+				<v-icon small>mdi-account-check</v-icon>Regular cleaning and disinfection
+			</v-card-text>
 
-						<!-- <img :src="require('@/assets/bupa/carequality.png')" alt /> -->
-						<v-card-actions>
-							<v-btn :to="buttonLink" color="primary">Read more</v-btn>
-						</v-card-actions>
-					</v-card>
-				</v-flex>
-			</v-layout>
-		</v-container>
+			<!-- <img :src="require('@/assets/bupa/carequality.png')" alt /> -->
+			<v-card-actions>
+				<v-btn :to="buttonLink" color="primary">Read more</v-btn>
+			</v-card-actions>
+		</v-card>
 	</div>
 </template>
 

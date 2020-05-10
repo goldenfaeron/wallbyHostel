@@ -13,29 +13,35 @@
 					<ImageGallery :props="hotel.gallery"></ImageGallery>
 				</v-flex>
 
-				<v-flex xs12 my-5>
-					<v-container grid-list-lg>
-						<v-layout row wrap>
-							<v-flex xs12 sm6 md4 v-for="(room, index) in hotel.rooms" :key="index">
-								<CardRoom :details="room.value" :show="false"></CardRoom>
-							</v-flex>
-						</v-layout>
-					</v-container>
-				</v-flex>
+				<!-- Rooms -->
+				<v-layout row wrap>
+					<v-flex xs12 my-5>
+						<v-container grid-list-lg>
+							<v-layout row wrap>
+								<v-flex xs12 sm6 md4 v-for="(room, index) in hotel.rooms" :key="index">
+									<CardRoom :details="room.value" :show="false"></CardRoom>
+								</v-flex>
+							</v-layout>
+						</v-container>
+					</v-flex>
+				</v-layout>
 			</v-layout>
 
-			<v-layout row wrap>
-				<v-flex xs12 sm6 md4 v-if="hotel.corona_safe">
-					<CertificateCorona :props="hotel.name"></CertificateCorona>
-				</v-flex>
-				<v-flex xs12 sm6 md4 v-if="hotel.corona_quarantine_friendly">
-					<CertificateQuarantine :props="hotel.name"></CertificateQuarantine>
-				</v-flex>
-				<v-flex xs12 sm6 md4 v-if="hotel.excellent_customer_service">
-					<CertificateCService :props="hotel.name"></CertificateCService>
-				</v-flex>
-			</v-layout>
-		</v-container>-->
+			<!-- Certificates -->
+			<v-container grid-list-lg>
+				<v-layout row wrap>
+					<v-flex xs12 sm6 md4 v-if="hotel.corona_safe">
+						<CertificateCorona :props="hotel.name"></CertificateCorona>
+					</v-flex>
+					<v-flex xs12 sm6 md4 v-if="hotel.corona_quarantine_friendly">
+						<CertificateQuarantine :props="hotel.name"></CertificateQuarantine>
+					</v-flex>
+					<v-flex xs12 sm6 md4 v-if="hotel.excellent_customer_service">
+						<CertificateCService :props="hotel.name"></CertificateCService>
+					</v-flex>
+				</v-layout>
+			</v-container>
+		</v-container>
 		<CallToAction
 			:props="{
              booking: hotel.booking_link, 

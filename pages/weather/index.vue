@@ -1,6 +1,276 @@
 <template>
 	<div>
-		<v-container grid-list-lg>
+		<v-carousel cycle hide-delimiters interval="10000" :height="this.windowSize.y-64">
+			<v-carousel-item>
+				<v-img :height="this.windowSize.y-64" src="/img/weatherBackground.jpg">
+					<div class="title" style="position: absolute; padding-left: 2%; padding-top: 1.5%;">
+						<p>
+							<span class="font-weight-bold">{{getDayString(weather.daily[0].dt)}}</span>
+							<br />
+							<span class="font-weight-regular">{{weather.timezone}}</span>
+						</p>
+						<p></p>
+					</div>
+					<v-row class="fill-height" align="center" justify="center">
+						<div class="display-4 font-weight-bold">
+							{{Math.round(weather.daily[0].temp.max)}}°
+							<span class="font-weight-thin">|</span>
+							<span class="font-weight-light">{{Math.round(weather.daily[0].temp.min)}}°</span>
+						</div>
+					</v-row>
+				</v-img>
+			</v-carousel-item>
+			<v-carousel-item>
+				<v-img :height="this.windowSize.y-64" src="/img/weatherBackground.jpg">
+					<div class="title" style="position: absolute; padding-left: 2%; padding-top: 1.5%;">
+						<p>
+							<span class="font-weight-bold">{{getDayString(weather.daily[0].dt)}}</span>
+							<br />
+							<span class="font-weight-regular">{{weather.timezone}}</span>
+						</p>
+						<p></p>
+					</div>
+					<v-row class="fill-height" align="center" justify="center">
+						<v-container grid-list-lg>
+							<v-layout row wrap>
+								<v-flex lg3 v-for="(item, index) in weather.hourly.slice(8,12)" :key="index">
+									<v-card color="transparent" flat>
+										<v-layout justify-center>
+											<v-card-title class="black--text display-1" align-center>{{getTimeString(item.dt)}}</v-card-title>
+										</v-layout>
+										<v-row align="center" justify="center">
+											<img
+												height="100px"
+												:src="'http://openweathermap.org/img/wn/'+item.weather[0].icon+'@2x.png'"
+											/>
+										</v-row>
+										<br />
+										<div align="center">
+											<p class="display-2 font-weight-bold">{{Math.round(item.temp)}}°</p>
+											<p class="display-1 font-weight-light">{{item.clouds}} % overcast</p>
+										</div>
+									</v-card>
+								</v-flex>
+							</v-layout>
+						</v-container>
+					</v-row>
+				</v-img>
+			</v-carousel-item>
+			<v-carousel-item>
+				<v-img :height="this.windowSize.y-64" src="/img/weatherBackground.jpg">
+					<div class="title" style="position: absolute; padding-left: 2%; padding-top: 1.5%;">
+						<p>
+							<span class="font-weight-bold">{{getDayString(weather.daily[0].dt)}}</span>
+							<br />
+							<span class="font-weight-regular">{{weather.timezone}}</span>
+						</p>
+						<p></p>
+					</div>
+					<v-row class="fill-height" align="center" justify="center">
+						<v-container grid-list-lg>
+							<v-layout row wrap>
+								<v-flex lg3 v-for="(item, index) in weather.hourly.slice(12,16)" :key="index">
+									<v-card color="transparent" flat>
+										<v-layout justify-center>
+											<v-card-title class="black--text display-1" align-center>{{getTimeString(item.dt)}}</v-card-title>
+										</v-layout>
+										<v-row align="center" justify="center">
+											<img
+												height="100px"
+												:src="'http://openweathermap.org/img/wn/'+item.weather[0].icon+'@2x.png'"
+											/>
+										</v-row>
+										<br />
+										<div align="center">
+											<p class="display-2 font-weight-bold">{{Math.round(item.temp)}}°</p>
+											<p class="display-1 font-weight-light">{{item.clouds}} % overcast</p>
+										</div>
+									</v-card>
+								</v-flex>
+							</v-layout>
+						</v-container>
+					</v-row>
+				</v-img>
+			</v-carousel-item>
+			<v-carousel-item>
+				<v-img :height="this.windowSize.y-64" src="/img/weatherBackground.jpg">
+					<div class="title" style="position: absolute; padding-left: 2%; padding-top: 1.5%;">
+						<p>
+							<span class="font-weight-bold">{{getDayString(weather.daily[0].dt)}}</span>
+							<br />
+							<span class="font-weight-regular">{{weather.timezone}}</span>
+						</p>
+						<p></p>
+					</div>
+					<v-row class="fill-height" align="center" justify="center">
+						<v-container grid-list-lg>
+							<v-layout row wrap>
+								<v-flex lg3 v-for="(item, index) in weather.hourly.slice(16,20)" :key="index">
+									<v-card color="transparent" flat>
+										<v-layout justify-center>
+											<v-card-title class="black--text display-1" align-center>{{getTimeString(item.dt)}}</v-card-title>
+										</v-layout>
+										<v-row align="center" justify="center">
+											<img
+												height="100px"
+												:src="'http://openweathermap.org/img/wn/'+item.weather[0].icon+'@2x.png'"
+											/>
+										</v-row>
+										<br />
+										<div align="center">
+											<p class="display-2 font-weight-bold">{{Math.round(item.temp)}}°</p>
+											<p class="display-1 font-weight-light">{{item.clouds}} % overcast</p>
+										</div>
+									</v-card>
+								</v-flex>
+							</v-layout>
+						</v-container>
+					</v-row>
+				</v-img>
+			</v-carousel-item>
+			<v-carousel-item>
+				<v-img :height="this.windowSize.y-64" src="/img/weatherBackground.jpg">
+					<div class="title" style="position: absolute; padding-left: 2%; padding-top: 1.5%;">
+						<p>
+							<span class="font-weight-bold">{{getDayString(weather.daily[0].dt)}}</span>
+							<br />
+							<span class="font-weight-regular">{{weather.timezone}}</span>
+						</p>
+						<p></p>
+					</div>
+					<v-row class="fill-height" align="center" justify="center">
+						<v-container grid-list-lg>
+							<v-layout row wrap>
+								<v-flex lg3 v-for="(item, index) in weather.hourly.slice(20,24)" :key="index">
+									<v-card color="transparent" flat>
+										<v-layout justify-center>
+											<v-card-title class="black--text display-1" align-center>{{getTimeString(item.dt)}}</v-card-title>
+										</v-layout>
+										<v-row align="center" justify="center">
+											<img
+												height="100px"
+												:src="'http://openweathermap.org/img/wn/'+item.weather[0].icon+'@2x.png'"
+											/>
+										</v-row>
+										<br />
+										<div align="center">
+											<p class="display-2 font-weight-bold">{{Math.round(item.temp)}}°</p>
+											<p class="display-1 font-weight-light">{{item.clouds}} % overcast</p>
+										</div>
+									</v-card>
+								</v-flex>
+							</v-layout>
+						</v-container>
+					</v-row>
+				</v-img>
+			</v-carousel-item>
+			<v-carousel-item>
+				<v-img :height="this.windowSize.y-64" src="/img/weatherBackground.jpg">
+					<div class="title" style="position: absolute; padding-left: 2%; padding-top: 1.5%;">
+						<p>
+							<span class="font-weight-bold">{{getDayString(weather.daily[0].dt)}}</span>
+							<br />
+							<span class="font-weight-regular">{{weather.timezone}}</span>
+						</p>
+						<p></p>
+					</div>
+					<v-row class="fill-height" align="center" justify="center">
+						<v-container grid-list-lg>
+							<v-layout row wrap>
+								<v-flex lg3 v-for="(item, index) in weather.hourly.slice(24,28)" :key="index">
+									<v-card color="transparent" flat>
+										<v-layout justify-center>
+											<v-card-title class="black--text display-1" align-center>{{getTimeString(item.dt)}}</v-card-title>
+										</v-layout>
+										<v-row align="center" justify="center">
+											<img
+												height="100px"
+												:src="'http://openweathermap.org/img/wn/'+item.weather[0].icon+'@2x.png'"
+											/>
+										</v-row>
+										<br />
+										<div align="center">
+											<p class="display-2 font-weight-bold">{{Math.round(item.temp)}}°</p>
+											<p class="display-1 font-weight-light">{{item.clouds}} % overcast</p>
+										</div>
+									</v-card>
+								</v-flex>
+							</v-layout>
+						</v-container>
+					</v-row>
+				</v-img>
+			</v-carousel-item>
+			<v-carousel-item>
+				<v-img :height="this.windowSize.y-64" src="/img/weatherBackground.jpg">
+					<div class="title" style="position: absolute; padding-left: 2%; padding-top: 1.5%;">
+						<p>
+							<span class="font-weight-bold">{{getDayString(weather.daily[0].dt)}}</span>
+							<br />
+							<span class="font-weight-regular">{{weather.timezone}}</span>
+						</p>
+						<p></p>
+					</div>
+					<v-row class="fill-height" align="center" justify="center">
+						<v-container grid-list-lg>
+							<v-layout row wrap>
+								<v-flex lg3 v-for="(item, index) in weather.hourly.slice(28,32)" :key="index">
+									<v-card color="transparent" flat>
+										<v-layout justify-center>
+											<v-card-title class="black--text display-1" align-center>{{getTimeString(item.dt)}}</v-card-title>
+										</v-layout>
+										<v-row align="center" justify="center">
+											<img
+												height="100px"
+												:src="'http://openweathermap.org/img/wn/'+item.weather[0].icon+'@2x.png'"
+											/>
+										</v-row>
+										<br />
+										<div align="center">
+											<p class="display-2 font-weight-bold">{{Math.round(item.temp)}}°</p>
+											<p class="display-1 font-weight-light">{{item.clouds}} % overcast</p>
+										</div>
+									</v-card>
+								</v-flex>
+							</v-layout>
+						</v-container>
+					</v-row>
+				</v-img>
+			</v-carousel-item>
+
+			<v-carousel-item>
+				<v-img :height="this.windowSize.y-64" src="/img/weatherBackground.jpg">
+					<div class="title" style="position: absolute; padding-left: 2%; padding-top: 1.5%;">
+						<p>
+							<span class="font-weight-bold">{{getDayString(weather.daily[0].dt)}}</span>
+							<br />
+							<span class="font-weight-regular">{{weather.timezone}}</span>
+						</p>
+						<p></p>
+					</div>
+					<v-row class="fill-height" align="center">
+						<v-container grid-list-lg>
+							<v-layout row justify-center>
+								<v-flex lg6>
+									<div class="display-4 font-weight-bold" align="end">
+										{{Math.round(weather.daily[0].temp.max)}}°
+										<span class="font-weight-thin">|</span>
+									</div>
+								</v-flex>
+								<v-flex lg6>
+									<div class="display-2 font-weight-light">
+										Feels like:
+										<span class="font-weight-medium">{{Math.round(weather.current.feels_like)}}°</span>
+										<br />Wind:
+										<span class="font-weight-medium">{{degToCompass(weather.current.wind_deg)}} {{Math.round(weather.current.wind_speed)}} km/h</span>
+									</div>
+								</v-flex>
+							</v-layout>
+						</v-container>
+					</v-row>
+				</v-img>
+			</v-carousel-item>
+		</v-carousel>
+	<!--	<v-container grid-list-lg>
 			<v-responsive class="mx-auto" width="56">
 				<v-icon x-large>mdi-weather-cloudy</v-icon>
 			</v-responsive>
@@ -59,12 +329,18 @@
 					</v-flex>
 				</v-layout>
 			</v-layout>
-		</v-container>
+		</v-container>-->
 	</div>
 </template>
 
 <script>
 export default {
+	data: () => ({
+		windowSize: {
+			x: 0,
+			y: 0
+		}
+	}),
 	components: {
 		CardHotelMobile: () => import("@/components/CardHotelMobile"),
 		CardFeaturedHotel: () => import("@/components/CardFeaturedHotel"),
@@ -87,6 +363,9 @@ export default {
 	},
 
 	methods: {
+		onResize() {
+			this.windowSize = { x: window.innerWidth, y: window.innerHeight };
+		},
 		getDayString(e) {
 			var timestamp = e;
 			var a = new Date(timestamp * 1000);
@@ -171,7 +450,9 @@ export default {
 			return degToCard();
 		}
 	},
-
+	mounted() {
+		this.onResize();
+	},
 	head() {
 		return {
 			title: "Hotels in " + this.$store.state.city,
