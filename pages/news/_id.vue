@@ -7,7 +7,7 @@
 						<h1>{{content.title}}</h1>
 					</v-flex>
 					<v-flex xs12 id="image_1">
-						<v-img :src="content.image"></v-img>
+						<v-img :height="[$vuetify.breakpoint.smAndUp ? '600px' : '200px']" :src="content.image"></v-img>
 					</v-flex>
 					<v-flex xs12 id="text_1">
 						<div v-html="content.text"></div>
