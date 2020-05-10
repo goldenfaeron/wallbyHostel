@@ -1,6 +1,5 @@
 <template>
 	<v-container>
-		<h1>{{this.$route.query.name}}</h1>
 		<v-layout>
 			<v-timeline>
 				<v-timeline-item v-for="(year, i) in years" :key="i" :color="year.color" small>

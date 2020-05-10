@@ -4,10 +4,14 @@
 			<v-layout row wrap>
 				<v-flex xs12>
 					<v-card>
-						<v-img height="300" src="img/sam.png"></v-img>
+						<v-img height="300" src="/img/sam.png"></v-img>
 						<v-card-title primary-title>Hey {{this.$route.query.name}}</v-card-title>
 						<v-card-text>
+							<b>Welcome to the {{$store.state.name}} web app</b>
+							<br />
 							This is a message from your friend {{$store.state.developer.name}} in {{$store.state.developer.location}}
+							<br />
+							<br />We list all businesses and places in Borsh and have created a special listing for your business
 							<br />
 							<br />We use Cockpit CMS to host our backend content until we are able to build an extensive user login to the frontend application.
 							<br />You can log in to the backend to edit your content and profile here.
@@ -23,12 +27,16 @@
 						<v-card-actions>
 							<v-btn :href="cpLink" exact target="_blank" color="primary lighten-2">Back End</v-btn>
 						</v-card-actions>
-						<v-card-title>View Your business on {{$store.state.name}}</v-card-title>
+						<v-card-title>
+							See your business live on
+							<br />
+							{{$store.state.name}}
+						</v-card-title>
 						<v-card-actions>
 							<v-btn
 								color="accent darken-2"
 								target="_blank"
-								:to="'featured_business/'+ this.$route.query.nuxtlink"
+								:to="'/featured_business/'+ this.$route.query.nuxtlink"
 							>Front End</v-btn>
 						</v-card-actions>
 					</v-card>
