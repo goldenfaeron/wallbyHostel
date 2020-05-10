@@ -3,7 +3,7 @@
 		<v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 2}`">
 			<nuxt-link style="text-decoration:none; color: primary;" :to="'/shops/'+props.slug">
 				<v-btn absolute small dark fab top right color="primary ">
-					<v-icon color="white">mdi-beer</v-icon>
+					<v-icon>{{icon(props.categoryName)}}</v-icon>
 				</v-btn>
 				<v-img v-if="props.imageUrls" max-height="100" :src="props.imageUrls[0]">
 					<template v-slot:placeholder>
@@ -44,6 +44,40 @@ export default {
 	props: ["props", "link"],
 	components: {
 		Dialog: () => import("@/components/Dialog")
+	},
+	methods: {
+		icon(c) {
+			switch (c) {
+				case "Bakery":
+					return "mdi-bread-slice";
+				case "Grocery store":
+					return "mdi-food-apple";
+				case "Supermarket":
+					return "mdi-cart-outline";
+				case "Convenience store":
+					return "mdi-cart-outline";
+				case "Store":
+					return "mdi-store";
+				case "Shopping mall":
+					return "mdi-shopping";
+				case "Seafood restaurant":
+					return "mdi-fish";
+				case "Traditional market":
+					return "mdi-storefront";
+				case "Mediterranean restaurant":
+					return "mdi-food-variant";
+				case "Veterinary pharmacy":
+					return "mdi-plus-thick";
+				case "Restaurant":
+					return "mdi-silverware-fork-knife";
+				case "Electronics store":
+					return "mdi-cellphone";
+				case "Tire shop":
+					return "mdi-car-side";
+				case "Clothing store":
+					return "mdi-tshirt-crew";
+			}
+		}
 	}
 };
 </script>
