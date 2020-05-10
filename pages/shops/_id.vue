@@ -5,15 +5,15 @@
 				<!-- Image + Information -->
 				<v-flex xs12 md6>
 					<v-layout column wrap>
+						<h1>{{bar.title}}</h1>
+						<h2>{{bar.categoryName}}</h2>
 						<v-flex xs12 v-if="bar.imageUrls">
-							<v-carousel height="600" v-if="bar.imageUrls && bar.imageUrls.length > 0">
+							<v-carousel height="400" v-if="bar.imageUrls && bar.imageUrls.length > 0">
 								<v-carousel-item :src="item" v-for="(item, index) in bar.imageUrls" :key="index"></v-carousel-item>
 							</v-carousel>
 							<v-img v-else height="600" src="/img/placeholder.svg"></v-img>
 						</v-flex>
 						<v-flex>
-							<h1>{{bar.title}}</h1>
-							<h2>{{bar.categoryName}}</h2>
 							<googleMap :props="bar.address"></googleMap>
 							<v-card>
 								<v-card-title primary-title>Contact</v-card-title>
@@ -57,17 +57,10 @@
 						<v-flex xs12>
 							<h2>Reviews</h2>
 							<div v-for="(item, index) in sortReviews" :key="index">
-								<h3>{{item.name}}</h3>
-								<br />
-								{{item.text}}
-								<br />
-								{{item.publishAt}}
-								<br />
-								<div class="text-xs-center">
-									<v-rating color="red" :value="item.stars" half-increments readonly></v-rating>
-									<br />
-									<br />
-								</div>
+								<CardReview
+									class="mt-3"
+									:props="{title:item.name, text:item.text, rating:item.stars, user :{username: 'User'}}"
+								></CardReview>
 							</div>
 						</v-flex>
 					</v-layout>
@@ -100,7 +93,8 @@ export default {
 	},
 
 	components: {
-		googleMap: () => import("@/components/googleMap")
+		googleMap: () => import("@/components/googleMap"),
+		CardReview: () => import("@/components/CardReview")
 	},
 	data() {
 		return {

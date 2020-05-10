@@ -30,7 +30,7 @@ export default {
 				collection +
 				"?token=" +
 				store.state.collectionsToken,
-			{ limit: 15 }
+			{ sort: { imageUrls: -1 } }
 		);
 
 		// let request2 = await $axios.post(

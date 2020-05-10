@@ -57,17 +57,10 @@
 						<v-flex xs12>
 							<h2>Reviews</h2>
 							<div v-for="(item, index) in sortReviews" :key="index">
-								<h3>{{item.name}}</h3>
-								<br />
-								{{item.text}}
-								<br />
-								{{item.publishAt}}
-								<br />
-								<div class="text-xs-center">
-									<v-rating color="red" :value="item.stars" half-increments readonly></v-rating>
-									<br />
-									<br />
-								</div>
+								<CardReview
+									class="mt-3"
+									:props="{title:item.name, text:item.text, rating:item.stars, user :{username: 'User'}}"
+								></CardReview>
 							</div>
 						</v-flex>
 					</v-layout>
@@ -100,7 +93,8 @@ export default {
 	},
 
 	components: {
-		googleMap: () => import("@/components/googleMap")
+		googleMap: () => import("@/components/googleMap"),
+		CardReview: () => import("@/components/CardReview")
 	},
 	data() {
 		return {

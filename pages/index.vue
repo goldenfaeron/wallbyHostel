@@ -16,7 +16,7 @@
 
 		<v-divider></v-divider>
 
-		<!-- <instagram :props="instagram"></instagram> -->
+		<instagram :props="instagram"></instagram>
 	</div>
 </template>
 
@@ -72,8 +72,7 @@ export default {
 				"?token=" +
 				store.state.collectionsToken,
 			{
-				fields: { imageUrl: 1, likesCount: 1, firstComment: 1, slug: 1 },
-				limit: 4
+				limit: 8
 			}
 		);
 
