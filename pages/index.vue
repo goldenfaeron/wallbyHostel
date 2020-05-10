@@ -3,6 +3,7 @@
 		<welcome></welcome>
 		<about></about>
 		<stats></stats>
+		<activities :props="activities"></activities>
 		<bars :props="bars"></bars>
 
 		<v-divider></v-divider>
@@ -31,6 +32,7 @@ import booking from "~/components/Booking.vue";
 import instagram from "~/components/Instagram.vue";
 import airbnb from "~/components/airbnb.vue";
 import bars from "~/components/bars.vue";
+import activities from "~/components/activities.vue";
 
 export default {
 	components: {
@@ -42,7 +44,8 @@ export default {
 		booking,
 		instagram,
 		airbnb,
-		bars
+		bars,
+		activities
 	},
 
 	async asyncData({ $axios, route, store }) {
@@ -50,6 +53,7 @@ export default {
 		let collection2 = "instagram";
 		let collection3 = "hotels";
 		let collection4 = "googleplaces_borsh";
+		let collection5 = "tripadvisor_thingstodo_borsh";
 
 		// aribnb
 		let request1 = await $axios.post(
@@ -107,16 +111,26 @@ export default {
 				"?token=" +
 				store.state.collectionsToken,
 			{
-				filter: { imageUrls: true },
+				sort: { imageUrls: -1 },
 				fields: {
 					title: 1,
 					address: 1,
 					categoryName: 1,
 					reviewsCount: 1,
+					imageUrls: 1,
 					slug: 1
 				},
 				limit: 4
 			}
+		);
+
+		let request5 = await $axios.post(
+			store.state.webRoot +
+				"/api/collections/get/" +
+				collection5 +
+				"?token=" +
+				store.state.collectionsToken,
+			{ limit: 4 }
 		);
 
 		// let request2 = await $axios.post(
@@ -131,7 +145,8 @@ export default {
 			airbnb: request1.data.entries,
 			instagram: request2.data.entries,
 			hotels: request3.data.entries,
-			bars: request4.data.entries
+			bars: request4.data.entries,
+			activities: request5.data.entries
 		};
 	}
 };
