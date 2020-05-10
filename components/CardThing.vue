@@ -18,7 +18,7 @@
 						</v-layout>
 					</template>
 				</v-img>
-				<v-card-text>{{props.description.substr(0,200)}}...</v-card-text>
+				<v-card-text class="hidden-sm-and-down">{{props.description.substr(0,200)}}...</v-card-text>
 			</nuxt-link>
 		</v-card>
 	</v-hover>
