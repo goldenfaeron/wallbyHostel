@@ -4,13 +4,21 @@
 			<v-layout column wrap>
 				<v-flex>
 					<h1 primary-title>{{thing.name}}</h1>
-					<v-img height="400" :src="thing.photo.images.large.url">
+					<v-img height="200" v-if="!thing.cp_photo" :src="thing.photo.images.large.url">
 						<template v-slot:placeholder>
 							<v-layout fill-height align-center justify-center ma-0>
 								<v-progress-circular indeterminate color="primary"></v-progress-circular>
 							</v-layout>
 						</template>
 					</v-img>
+					<v-img v-else height="200" :src="$store.state.assetRoot +thing.cp_photo.path">
+						<template v-slot:placeholder>
+							<v-layout fill-height align-center justify-center ma-0>
+								<v-progress-circular indeterminate color="primary"></v-progress-circular>
+							</v-layout>
+						</template>
+					</v-img>
+
 					<h2 primary-title>{{thing.location_string}}</h2>
 					<p>{{thing.description}}</p>
 					<!-- Featured business -->
