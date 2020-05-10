@@ -162,7 +162,7 @@ export default {
 				day +
 				" at " +
 				time;
-			if (uri) {
+			if (uri == true) {
 				return encodeURI(msg);
 			} else return msg;
 		}

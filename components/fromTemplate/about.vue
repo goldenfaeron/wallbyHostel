@@ -13,7 +13,7 @@
 				<v-divider class="mb-1"></v-divider>
 				<v-responsive class="mx-auto mb-8" width="56"></v-responsive>
 				<b>{{$store.state.name}} finds you everything you need for your stay in {{$store.state.city}}</b>
-				<v-icon x-large mb-3>mdi-chevron-down</v-icon>
+				<v-icon x-large>mdi-chevron-down</v-icon>
 			</v-responsive>
 		</v-container>
 	</section>
