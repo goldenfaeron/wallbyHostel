@@ -1,8 +1,7 @@
 <template>
 	<div>
 		<h1 class="primary--text main-title" style="text-align: center;">Vacation in Borsh</h1>
-		<!-- <h1>{{$store.state.borshHotels[0][0].order}}</h1> -->
-		<!-- {{$store.state.borshHotels}} -->
+
 		<v-container grid-list-lg>
 			<v-layout row wrap>
 				<v-flex xs12 sm6 md6 lg4 v-for="(item, index) in data" :key="index">

@@ -20,7 +20,12 @@
 					</v-layout>
 				</v-img>
 
-				<v-card-text>Room type: {{props.roomType}}</v-card-text>
+				<v-card-text>
+					{{props.roomType}}
+					<br />
+					<v-icon>mdi-star</v-icon>
+					{{props.stars}} Stars
+				</v-card-text>
 
 				<div class="text-xs-center">
 					<v-rating color="red" :value="props.stars" class="hidden-xs-only" half-increments readonly></v-rating>

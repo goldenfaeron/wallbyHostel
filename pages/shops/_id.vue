@@ -8,7 +8,10 @@
 						<h1>{{bar.title}}</h1>
 						<h2>{{bar.categoryName}}</h2>
 						<v-flex xs12 v-if="bar.imageUrls">
-							<v-carousel height="400" v-if="bar.imageUrls && bar.imageUrls.length > 0">
+							<v-carousel
+								:height="[$vuetify.breakpoint.smAndUp ? '600px' : '200px']"
+								v-if="bar.imageUrls && bar.imageUrls.length > 0"
+							>
 								<v-carousel-item :src="item" v-for="(item, index) in bar.imageUrls" :key="index"></v-carousel-item>
 							</v-carousel>
 							<v-img v-else height="600" src="/img/placeholder.svg"></v-img>

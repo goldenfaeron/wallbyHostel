@@ -4,7 +4,7 @@
 			<span class="grey--text text--darken-3">
 				<v-layout row justify-space-between>
 					<v-flex xs12>
-						<v-carousel>
+						<v-carousel :height="[$vuetify.breakpoint.smAndUp ? '600px' : '200px']" hide-delimiters>
 							<v-carousel-item v-for="(item, index) in room.photos" :key="index" :src="item.large"></v-carousel-item>
 						</v-carousel>
 					</v-flex>

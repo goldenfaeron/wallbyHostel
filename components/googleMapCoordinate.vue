@@ -2,7 +2,7 @@
 	<div>
 		<iframe
 			width="100%"
-			height="600"
+			:height="[$vuetify.breakpoint.smAndUp ? '600px' : '200px']"
 			:src="'https://maps.google.com/maps?q='+props.Lat+','+props.Lng+'&hl=es&z=16&amp;output=embed'"
 			frameborder="0"
 			scrolling="no"

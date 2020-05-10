@@ -6,7 +6,10 @@
 				<v-flex xs12 md6>
 					<v-layout column wrap>
 						<v-flex xs12 v-if="airport.imageUrls">
-							<v-carousel height="600" v-if="airport.imageUrls && airport.imageUrls.length > 0">
+							<v-carousel
+								:height="[$vuetify.breakpoint.smAndUp ? '600px' : '200px']"
+								v-if="airport.imageUrls && airport.imageUrls.length > 0"
+							>
 								<v-carousel-item :src="item" v-for="(item, index) in airport.imageUrls" :key="index"></v-carousel-item>
 							</v-carousel>
 							<v-img v-else height="600" src="/img/placeholder.svg"></v-img>

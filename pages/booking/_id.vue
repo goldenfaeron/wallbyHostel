@@ -1,8 +1,10 @@
 <template>
 	<div>
-		<v-parallax :src="hotel.image"></v-parallax>
 		<v-container grid-list-xs>
 			<v-layout row wrap>
+				<v-flex xs12>
+					<v-img :height="[$vuetify.breakpoint.smAndUp ? '600px' : '200px']" :src="hotel.image"></v-img>
+				</v-flex>
 				<v-flex xs12>
 					<h1>{{hotel.name}}</h1>
 					<h3>{{hotel.type}}</h3>
