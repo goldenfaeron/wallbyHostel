@@ -87,8 +87,9 @@
 			:props="{booking: hotel.url.replace('httpse', 'https'), website: 'hello', airbnb: 'hello'}"
 		></CallToAction>
 
-		<!-- More hotels -->
+		<!-- more -->
 		<v-container grid-list-lg>
+			<!-- Featured -->
 			<v-responsive class="mx-auto" width="56">
 				<v-icon large>mdi-trophy</v-icon>
 			</v-responsive>
@@ -98,16 +99,9 @@
 					<CardFeaturedHotel :props="item"></CardFeaturedHotel>
 				</v-flex>
 			</v-layout>
-			<v-responsive class="mx-auto" width="56">
-				<v-icon large>mdi-search-web</v-icon>
-			</v-responsive>
-			<h2 class="secondary--text" style="text-align: center;">More results from Booking.com</h2>
-			<v-layout row wrap class="my-5">
-				<v-flex xs6 sm4 lg3 v-for="(item, index) in shuffle(more)" :key="index" v-if="index<8">
-					<CardHotel class="hidden-xs-only" :props="item" :index="index"></CardHotel>
-					<CardHotelMobile class="hidden-sm-and-up" :props="item" :index="index"></CardHotelMobile>
-				</v-flex>
-			</v-layout>
+
+			<!-- Booking -->
+			<BookingList :props="more"></BookingList>
 		</v-container>
 	</div>
 </template>
@@ -171,7 +165,8 @@ export default {
 		CardRoomBooking: () => import("@/components/CardRoomBooking"),
 		Dialog: () => import("@/components/Dialog"),
 		googleMapCoordinate: () => import("@/components/googleMapCoordinate"),
-		CallToAction: () => import("@/components/CallToAction")
+		CallToAction: () => import("@/components/CallToAction"),
+		BookingList: () => import("@/components/views/BookingList")
 	},
 
 	data() {

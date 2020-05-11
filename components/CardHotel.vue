@@ -24,7 +24,7 @@
 
 				<v-card-text>
 					<div class="text-xs-center">
-						<v-rating color="red" :value="props.rating/2" half-increments readonly></v-rating>
+						<v-rating small color="primary lighten-2" :value="props.rating/2" half-increments readonly></v-rating>
 					</div>
 					<p>{{props.description.substr(0,120)}}...</p>
 				</v-card-text>
