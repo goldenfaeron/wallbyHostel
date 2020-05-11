@@ -55,8 +55,21 @@ export default {
 				"/api/collections/get/" +
 				collection +
 				"?token=" +
-				store.state.collectionsToken,
-			{ limit: 15 }
+				store.state.collectionsToken +
+				"&rspc=1",
+			{
+				fields: {
+					description: 0,
+					gallery: 0,
+					ammenities: 0,
+					rooms: 0,
+					linked_instagram: 0,
+					linked_object: 0,
+					comment: 0,
+					rooms_details: 0
+				},
+				limit: 6
+			}
 		);
 
 		let request2 = await $axios.post(
@@ -64,8 +77,9 @@ export default {
 				"/api/collections/get/" +
 				collection2 +
 				"?token=" +
-				store.state.collectionsToken
-			// { limit: 15 }
+				store.state.collectionsToken +
+				"&rspc=1",
+			{ fields: { features: 0, rooms: 0 } }
 		);
 		return {
 			featured: request1.data.entries,

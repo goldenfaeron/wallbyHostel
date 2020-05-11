@@ -32,6 +32,7 @@ export default {
 					collection +
 					"?token=" +
 					store.state.collectionsToken,
+				+"&rspc=1",
 
 				{
 					fields: {

@@ -48,7 +48,7 @@
 					<v-tooltip top>
 						<template v-slot:activator="{ on }">
 							<a target="_blank" :href="videos[arrNumber].url" v-on="on">
-								<v-img height="32" width="32" src="/img/link.svg" ></v-img>
+								<v-img height="32" width="32" src="/img/link.svg"></v-img>
 							</a>
 						</template>
 						<span>Watch on Youtube</span>
@@ -56,7 +56,7 @@
 				</v-layout>
 
 				<iframe
-				v-if="dialog"
+					v-if="dialog"
 					:src="'https://www.youtube.com/embed/'+videos[this.arrNumber].id"
 					frameborder="0"
 					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -79,10 +79,12 @@ export default {
 				"/api/collections/get/" +
 				collection +
 				"?token=" +
-				store.state.collectionsToken,
-				{
-					limit: 8
-				}
+				store.state.collectionsToken +
+				"&rspc=1",
+			{
+				fields: { details: 0 },
+				limit: 8
+			}
 		);
 		return {
 			// hotel: request1.data.entries[0],

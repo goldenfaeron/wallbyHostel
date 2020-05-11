@@ -23,8 +23,11 @@ export default {
 					"/api/collections/get/" +
 					collection +
 					"?token=" +
-					store.state.collectionsToken
-				// { fields: { slug: 1, } }
+					store.state.collectionsToken +
+					"&rspc=1",
+				{
+					fields: { name: 1, photos: 1, roomType: 1, stars: 1, slug: 1 }
+				}
 			)
 			.then(res => {
 				return { data: res.data.entries };

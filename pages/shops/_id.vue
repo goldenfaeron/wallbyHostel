@@ -83,7 +83,8 @@ export default {
 					"/api/collections/get/" +
 					collection +
 					"?token=" +
-					store.state.collectionsToken,
+					store.state.collectionsToken +
+					"&rspc=1",
 				{ filter: { slug: route.params.id } }
 			)
 			.then(res => {

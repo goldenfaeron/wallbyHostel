@@ -61,7 +61,8 @@ export default {
 				"/api/collections/get/" +
 				collection +
 				"?token=" +
-				store.state.collectionsToken,
+				store.state.collectionsToken +
+				"&rspc=1",
 			{
 				fields: { name: 1, photos: 1, roomType: 1, stars: 1, slug: 1 },
 				limit: 4
@@ -74,7 +75,8 @@ export default {
 				"/api/collections/get/" +
 				collection2 +
 				"?token=" +
-				store.state.collectionsToken,
+				store.state.collectionsToken +
+				"&rspc=1",
 			{
 				limit: 8
 			}
@@ -86,7 +88,8 @@ export default {
 				"/api/collections/get/" +
 				collection3 +
 				"?token=" +
-				store.state.collectionsToken,
+				store.state.collectionsToken +
+				"&rspc=1",
 			{
 				fields: {
 					name: 1,
@@ -109,7 +112,8 @@ export default {
 				"/api/collections/get/" +
 				collection4 +
 				"?token=" +
-				store.state.collectionsToken,
+				store.state.collectionsToken +
+				"&rspc=1",
 			{
 				sort: { imageUrls: -1 },
 				fields: {
@@ -129,18 +133,11 @@ export default {
 				"/api/collections/get/" +
 				collection5 +
 				"?token=" +
-				store.state.collectionsToken,
+				store.state.collectionsToken +
+				"&rspc=1",
 			{ limit: 4 }
 		);
 
-		// let request2 = await $axios.post(
-		// 	store.state.webRoot +
-		// 		"/api/collections/get/" +
-		// 		collection +
-		// 		"?token=" +
-		// 		store.state.collectionsToken,
-		// 	{ limit: 5, sort: { _created: -1 } }
-		// );
 		return {
 			airbnb: request1.data.entries,
 			instagram: request2.data.entries,
