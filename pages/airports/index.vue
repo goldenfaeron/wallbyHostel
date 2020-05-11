@@ -32,18 +32,11 @@ export default {
 				"/api/collections/get/" +
 				collection +
 				"?token=" +
-				store.state.collectionsToken,
-			{ limit: 15 }
+				store.state.collectionsToken +
+				"&rspc=1",
+			{ fields: { reviews: 0, popularTimesHistogram: 0 }, limit: 15 }
 		);
 
-		// let request2 = await $axios.post(
-		// 	store.state.webRoot +
-		// 		"/api/collections/get/" +
-		// 		collection2 +
-		// 		"?token=" +
-		// 		store.state.collectionsToken,
-		// 	{ limit: 15 }
-		// );
 		return {
 			airports_google: request1.data.entries
 			// airports_tripadvisor: request2.data.entries

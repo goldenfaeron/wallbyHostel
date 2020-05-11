@@ -35,8 +35,18 @@ export default {
 				"/api/collections/get/" +
 				collection +
 				"?token=" +
-				store.state.collectionsToken,
-			{ limit: 15 }
+				store.state.collectionsToken +
+				"&rspc=1",
+			{
+				fields: {
+					name: 1,
+					description: 1,
+					location_string: 1,
+					photo: 1,
+					slug: 1
+				},
+				limit: 15
+			}
 		);
 
 		// let request2 = await $axios.post(

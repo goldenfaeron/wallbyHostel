@@ -34,12 +34,12 @@
 				</span>
 				<br />
 			</v-card-text>
-			<v-card-text>
+			<!-- <v-card-text>
 				<v-icon color=" lighten-2" large>mdi-shield-check</v-icon>COVID-19 Safe
 			</v-card-text>
 			<v-card-text>
 				<v-icon color=" lighten-2" large>mdi-shield-home</v-icon>Quarantine Friendly
-			</v-card-text>
+			</v-card-text>-->
 		</v-card>
 	</div>
 </template>

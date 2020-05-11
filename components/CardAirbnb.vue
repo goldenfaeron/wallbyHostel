@@ -1,10 +1,10 @@
 <template>
 	<v-hover>
-		<v-card flat slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 2}`">
-			<nuxt-link style="text-decoration:none; color: primary;" :to="'/booking/'+props.slug">
+		<v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 2}`">
+			<nuxt-link style="text-decoration:none; color: primary;" :to="'/airbnb/'+props.slug">
 				<!-- <v-img :src="$store.state.assetRoot + props.image.path" max-height="10cm"></v-img> -->
 
-				<v-img height="200" :src="props.image">
+				<v-img height="200" :src="props.photos[0].large">
 					<template v-slot:placeholder>
 						<v-layout fill-height align-center justify-center ma-0>
 							<v-progress-circular indeterminate color="primary"></v-progress-circular>
@@ -21,11 +21,15 @@
 				</v-img>
 
 				<v-card-text>
+					{{props.roomType}}
+					<br />
 					<v-icon>mdi-star</v-icon>
-					Rated {{Math.round(props.rating/2)}} Stars
+					{{props.stars}} Stars
 				</v-card-text>
 
-				<!-- v-if="!props.inCart" -->
+				<div class="text-xs-center">
+					<v-rating color="red" :value="props.stars" class="hidden-xs-only" half-increments readonly></v-rating>
+				</div>
 			</nuxt-link>
 		</v-card>
 	</v-hover>
@@ -33,6 +37,9 @@
 
 <script>
 export default {
-	props: ["props", "index"]
+	props: ["props"]
 };
 </script>
+
+<style>
+</style>

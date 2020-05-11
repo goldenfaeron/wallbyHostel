@@ -18,29 +18,18 @@
 			</v-layout>
 
 			<!-- From Booking.com  -->
-			<v-responsive class="mx-auto" width="56">
-				<v-icon large>mdi-search-web</v-icon>
-			</v-responsive>
-			<h2
-				class="secondary--text"
-				style="text-align: center;"
-			>{{booking.length}} results from Booking.com</h2>
-			<v-layout row wrap class="my-5">
-				<v-flex xs6 sm4 lg3 v-for="(item, index) in booking" :key="index">
-					<CardHotel class="hidden-xs-only" :props="item" :index="index"></CardHotel>
-					<CardHotelMobile class="hidden-sm-and-up" :props="item" :index="index"></CardHotelMobile>
-				</v-flex>
-			</v-layout>
 		</v-container>
+		<BookingList :props="booking"></BookingList>
 	</div>
 </template>
 
 <script>
 export default {
 	components: {
-		CardHotelMobile: () => import("@/components/CardHotelMobile"),
-		CardFeaturedHotel: () => import("@/components/CardFeaturedHotel"),
-		CardHotel: () => import("@/components/CardHotel")
+		BookingList: () => import("@/components/views/BookingList"),
+
+		CardFeaturedHotel: () => import("@/components/CardFeaturedHotel")
+
 		// Assurance: () => import("@/components/Assurance"),
 		// Mission: () => import("@/components/Mission")
 	},
@@ -55,8 +44,21 @@ export default {
 				"/api/collections/get/" +
 				collection +
 				"?token=" +
-				store.state.collectionsToken,
-			{ limit: 15 }
+				store.state.collectionsToken +
+				"&rspc=1",
+			{
+				fields: {
+					description: 0,
+					gallery: 0,
+					ammenities: 0,
+					rooms: 0,
+					linked_instagram: 0,
+					linked_object: 0,
+					comment: 0,
+					rooms_details: 0
+				},
+				limit: 6
+			}
 		);
 
 		let request2 = await $axios.post(
@@ -64,8 +66,9 @@ export default {
 				"/api/collections/get/" +
 				collection2 +
 				"?token=" +
-				store.state.collectionsToken
-			// { limit: 15 }
+				store.state.collectionsToken +
+				"&rspc=1",
+			{ fields: { features: 0, rooms: 0 } }
 		);
 		return {
 			featured: request1.data.entries,

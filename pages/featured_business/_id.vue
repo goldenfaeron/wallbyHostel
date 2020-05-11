@@ -11,7 +11,7 @@
 
 					<v-divider></v-divider>
 				</v-flex>
-				<v-flex xs12 md6>
+				<v-flex xs12>
 					<ImageGallery :props="shop.gallery"></ImageGallery>
 				</v-flex>
 
@@ -127,7 +127,8 @@ export default {
 				"/api/collections/get/" +
 				collection +
 				"?token=" +
-				store.state.collectionsToken,
+				store.state.collectionsToken +
+				"&rspc=1",
 			{ filter: { slug: route.params.id }, populate: 1 }
 		);
 
@@ -162,7 +163,7 @@ export default {
 				day +
 				" at " +
 				time;
-			if (uri) {
+			if (uri == true) {
 				return encodeURI(msg);
 			} else return msg;
 		}

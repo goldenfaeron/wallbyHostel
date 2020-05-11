@@ -13,7 +13,7 @@ export const state = () => ({
     exchangeRate: '1',
 
     //JSON
-    borshHotels: [],
+    bookingCount: [],
 
     //Openweathermap
     weatherToken: 'cdb5d1ad4220610c588be2ecfe1a4671',
@@ -54,8 +54,8 @@ export const mutations = {
     // setBorshBars(state, list) {
     //     state.borshBars = list;
     // },
-    setBorshInstagram(state, list) {
-        state.borshInstagram = list;
+    setBookingCount(state, count) {
+        state.bookingCount = count;
     },
 
     // setBorshYoutube(state, list) {
@@ -82,17 +82,24 @@ export const actions = {
     // },
 
     //JSON
-    async nuxtServerInit({ commit }) {
+    async nuxtServerInit({ commit, state }) {
 
 
-        //instagram
-        let files4 = await require.context('~/assets/json/instagram', false, /\.json$/);
-        let borshinstagram = files4.keys().map(key => {
-            let res = files4(key);
-            res.slug = key.slice(2, -5);
-            return res;
-        });
-        await commit('setBorshInstagram', borshinstagram);
+
+        let collection = "booking_borsh";
+
+        let request = await axios.get(
+            state.webRoot +
+            "/api/collections/collection/" +
+            collection +
+            "?token=" +
+            state.collectionSchema
+        );
+
+
+
+
+        await commit('setBookingCount', request.data.itemsCount);
 
 
     },

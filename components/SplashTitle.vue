@@ -1,6 +1,9 @@
 <template>
 	<div>
-		<v-img :height="'600px'" :src="$store.state.assetRoot + props.header_image.path">
+		<v-img
+			:height="[$vuetify.breakpoint.smAndUp ? '600px' : '200px']"
+			:src="$store.state.assetRoot + props.header_image.path"
+		>
 			<v-theme-provider dark>
 				<v-container fill-height>
 					<v-row align="center" class="white--text mx-auto" justify="center">

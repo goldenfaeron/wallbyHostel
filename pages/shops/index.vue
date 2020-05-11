@@ -32,18 +32,11 @@ export default {
 				"/api/collections/get/" +
 				collection +
 				"?token=" +
-				store.state.collectionsToken,
-			{ sort: { imageUrls: -1 } }
+				store.state.collectionsToken +
+				"&rspc=1",
+			{ sort: { imageUrls: -1 }, fields: { reviews: 0 } }
 		);
 
-		// let request2 = await $axios.post(
-		// 	store.state.webRoot +
-		// 		"/api/collections/get/" +
-		// 		collection2 +
-		// 		"?token=" +
-		// 		store.state.collectionsToken,
-		// 	{ limit: 15 }
-		// );
 		return {
 			shops_google: request1.data.entries
 			// shops_tripadvisor: request2.data.entries

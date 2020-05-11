@@ -1,15 +1,12 @@
 <template>
 	<v-dialog v-model="dialog" width="400">
 		<template v-slot:activator="{ on }">
-			<v-container grid-list-lg>
-				<v-layout row wrap>
-					<v-flex xs12>
-						<br />
-
-						<v-btn color="primary" dark v-on="on">{{props.buttonText}}</v-btn>
-					</v-flex>
-				</v-layout>
-			</v-container>
+			<v-layout>
+				<v-btn color="primary lighten-3" text dark v-on="on">
+					<v-icon>mdi-format-list-bulleted</v-icon>
+					{{props.buttonText}}
+				</v-btn>
+			</v-layout>
 		</template>
 
 		<v-card>
