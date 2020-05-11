@@ -2,7 +2,6 @@
 	<div>
 		<v-container grid-list-lg>
 			<v-layout row wrap>
-				<!-- Image + Information -->
 				<v-flex xs12 md6>
 					<v-layout column wrap>
 						<h1>{{bar.title}}</h1>
