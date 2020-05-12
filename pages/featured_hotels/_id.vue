@@ -83,17 +83,20 @@
 
 					<!-- Certificates -->
 
-					<v-layout row wrap>
-						<v-flex xs12 v-if="hotel.corona_safe.length > 0">
+					<!-- <v-layout row wrap>
+						<v-flex xs12 v-if="hotel.corona_safe.length > 0 && hotel.corona_safe">
 							<CertificateCorona :props="hotel.name"></CertificateCorona>
 						</v-flex>
-						<v-flex xs12 v-if="hotel.corona_quarantine_friendly.length > 0">
+						<v-flex
+							xs12
+							v-if="hotel.corona_quarantine_friendly.length > 0 && hotel.corona_quarantine_friendly"
+						>
 							<CertificateQuarantine :props="hotel.name"></CertificateQuarantine>
 						</v-flex>
 						<v-flex xs12 v-if="hotel.excellent_customer_service">
 							<CertificateCService :props="hotel.name"></CertificateCService>
 						</v-flex>
-					</v-layout>
+					</v-layout>-->
 				</v-flex>
 
 				<v-flex xs12 md6>
