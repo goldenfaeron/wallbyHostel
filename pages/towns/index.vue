@@ -1,21 +1,15 @@
 <template>
 	<div>
 		<v-responsive class="mx-auto" width="56">
-			<v-icon x-large>mdi-airport</v-icon>
+			<v-icon x-large>mdi-city</v-icon>
 		</v-responsive>
-		<h1
-			class="primary--text main-title"
-			style="text-align: center;"
-		>Nearest Airports to {{$store.state.city}}</h1>
-		<h2
-			class="secondary--text"
-			style="text-align: center;"
-		>{{airports_google.length}} results from Google</h2>
 
+		<h1 class="primary--text main-title" style="text-align: center;">Neary towns {{$store.state.city}}</h1>
+		<h2 class="secondary--text" style="text-align: center;">{{town.length}} results from Google</h2>
 		<v-container grid-list-lg class="mt-7">
 			<v-layout row wrap>
-				<v-flex xs12 sm12 md6 lg3 v-for="(item, index) in airports_google" :key="index">
-					<CardAirport :props="item"></CardAirport>
+				<v-flex xs12 sm12 md6 lg3 v-for="(item, index) in town" :key="index">
+					<CardTown :props="item"></CardTown>
 				</v-flex>
 			</v-layout>
 		</v-container>
@@ -38,12 +32,13 @@ export default {
 		);
 
 		return {
-			airports_google: request1.data.entries
+			town: request1.data.entries
 			// airports_tripadvisor: request2.data.entries
 		};
 	},
 	components: {
-		CardAirport: () => import("@/components/CardAirport")
+		CardTown: () => import("@/components/CardTown")
+		// CardTown: () => import("@/components/CardTown")
 	},
 	methods: {
 		placeholder(index) {

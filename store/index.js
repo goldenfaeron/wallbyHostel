@@ -116,6 +116,11 @@ export const getters = {
                 to: "/"
             },
             {
+                icon: "mdi-city",
+                title: "Towns near " + state.city,
+                to: "/towns"
+            },
+            {
                 icon: "mdi-map-legend",
                 title: "What to do",
                 to: "/activities"
