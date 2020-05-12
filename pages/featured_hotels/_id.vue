@@ -57,8 +57,10 @@
 									<v-icon>mdi-food-croissant</v-icon>
 									Breakfast: {{hotel.breakfast}}
 									<br />
-									<v-icon>mdi-key-variant</v-icon>
-									Check in from: {{hotel.checkInFrom}} until {{hotel.checkInTo}}
+									<v-icon>mdi-key-variant</v-icon>Check in from:
+									<b>{{hotel.checkInFrom}}</b>
+									until
+									<b>{{hotel.checkInTo}}</b>
 									<br />
 									<v-icon>mdi-map-marker</v-icon>
 									Address: {{hotel.address}}
@@ -66,9 +68,10 @@
 									<br />
 									<v-icon>mdi-clipboard-list</v-icon>
 									<b>Conditions</b>
+
 									<ol v-if="hotel.conditions">
 										<!--  -->
-										<li v-for="(item, index) in hotel.conditions[0].value" :key="index">{{item}}</li>
+										<li v-for="(item, index) in hotel.conditions" :key="index">{{item.value.name}}</li>
 									</ol>
 									<br />
 									<v-divider></v-divider>
@@ -79,11 +82,12 @@
 					</v-layout>
 
 					<!-- Certificates -->
+
 					<v-layout row wrap>
-						<v-flex xs12 v-if="hotel.corona_safe">
+						<v-flex xs12 v-if="hotel.corona_safe.length > 0">
 							<CertificateCorona :props="hotel.name"></CertificateCorona>
 						</v-flex>
-						<v-flex xs12 v-if="hotel.corona_quarantine_friendly">
+						<v-flex xs12 v-if="hotel.corona_quarantine_friendly.length > 0">
 							<CertificateQuarantine :props="hotel.name"></CertificateQuarantine>
 						</v-flex>
 						<v-flex xs12 v-if="hotel.excellent_customer_service">

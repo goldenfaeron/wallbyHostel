@@ -17,27 +17,28 @@
 							<br />You can log in to the backend to edit your content and profile here.
 							Please remember this whole setup is still in development so some things on the front end and the back end may look ugly or unfinished
 						</v-card-text>
-						<v-card-title>Edit your business on Cockpit</v-card-title>
-						<v-card-text>
-							Username:
-							<b>{{this.$route.query.username}}</b>
-							<br />Password:
-							<b>{{this.$route.query.password}}</b>
-						</v-card-text>
-						<v-card-actions>
-							<v-btn :href="cpLink" exact target="_blank" color="primary lighten-2">Back End</v-btn>
-						</v-card-actions>
+						<span v-if="this.$route.query.cpLink">
+							<v-card-title>Edit your business on Cockpit</v-card-title>
+							<v-card-text>
+								Username:
+								<b>{{this.$route.query.username}}</b>
+								<br />Password:
+								<b>{{this.$route.query.password}}</b>
+							</v-card-text>
+							<v-card-actions>
+								<v-btn :href="cpLink" exact target="_blank" color="primary lighten-2">Back End</v-btn>
+							</v-card-actions>
+						</span>
 						<v-card-title>
 							See your business live on
-							<br />
 							{{$store.state.name}}
 						</v-card-title>
 						<v-card-actions>
 							<v-btn
 								color="accent darken-2"
 								target="_blank"
-								:to="'/featured_business/'+ this.$route.query.nuxtlink"
-							>Front End</v-btn>
+								:to="'/' + this.$route.query.nuxtlink"
+							>{{this.$route.query.name}}'s business</v-btn>
 						</v-card-actions>
 					</v-card>
 				</v-flex>
