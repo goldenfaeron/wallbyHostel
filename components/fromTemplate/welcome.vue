@@ -2,10 +2,7 @@
 <template>
 	<div id="hero">
 		<v-row>
-			<v-img
-				:min-height="'calc(100vh - ' + $vuetify.application.top + 'px)'"
-				:src="'/img/'+$store.state.city +'2.jpg'"
-			>
+			<v-img :height="this.windowSize.y-64" :src="'/img/'+$store.state.city +'2.jpg'">
 				<v-theme-provider dark>
 					<v-container fill-height>
 						<v-row align="center" class="white--text mx-auto" justify="center">
@@ -33,3 +30,21 @@
 		</v-row>
 	</div>
 </template>
+<script>
+export default {
+	data: () => ({
+		windowSize: {
+			x: 0,
+			y: 0
+		}
+	}),
+	methods: {
+		onResize() {
+			this.windowSize = { x: window.innerWidth, y: window.innerHeight };
+		}
+	},
+	mounted() {
+		this.onResize();
+	}
+};
+</script>
