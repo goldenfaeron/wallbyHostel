@@ -7,12 +7,12 @@
 				<ImageGallery :props="hotel.gallery"></ImageGallery>
 			</v-layout>
 		</v-container>
-		<!-- Title and deacription -->
+
+		<!-- New container -->
 		<v-container grid-list-lg>
 			<v-layout row wrap>
 				<v-flex xs12 md6>
-					<div class="display-1">
-						<v-icon x-large>mdi-home</v-icon>
+					<div class="display-2">
 						{{hotel.name}}
 						<v-container>
 							<v-layout row wrap>
@@ -23,7 +23,26 @@
 						</v-container>
 					</div>
 					<p v-html="hotel.description"></p>
+				</v-flex>
+				<v-flex xs12 md6>
+					<!-- Rooms -->
 
+					<h1 class="primary--text">Choice of {{hotel.rooms.length}} Room types</h1>
+
+					<v-layout row wrap>
+						<v-flex xs12 sm6 v-for="(room, index) in hotel.rooms" :key="index">
+							<v-icon x-large>mdi-bed</v-icon>
+							<CardRoom :details="room.value" :show="false"></CardRoom>
+						</v-flex>
+					</v-layout>
+				</v-flex>
+			</v-layout>
+		</v-container>
+
+		<!-- Title and deacription -->
+		<v-container grid-list-lg>
+			<v-layout row wrap>
+				<v-flex xs12 md6>
 					<!-- Ammenities -->
 					<p class="font-weight-medium">Ammenities</p>
 					<v-layout row wrap>
@@ -74,13 +93,6 @@
 				</v-flex>
 
 				<v-flex xs12 md6>
-					<!-- rooms -->
-					<v-layout row wrap>
-						<v-flex xs12 sm6 v-for="(room, index) in hotel.rooms" :key="index">
-							<CardRoom :details="room.value" :show="false"></CardRoom>
-						</v-flex>
-					</v-layout>
-
 					<v-container grid-list-lg>
 						<v-layout row wrap>
 							<v-flex xs12 mt-5>

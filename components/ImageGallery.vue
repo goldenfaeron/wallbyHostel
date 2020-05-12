@@ -1,6 +1,9 @@
 <template>
 	<v-container fluid>
 		<v-layout column wrap>
+			<v-flex align-self-end v-if="galleryMode">
+				<v-icon @click="closeGallery()">mdi-close-outline</v-icon>
+			</v-flex>
 			<v-img
 				:contain="displayImageContain"
 				:height="displayImageHeight"
@@ -80,6 +83,11 @@ export default {
 			}
 
 			return;
+		},
+
+		closeGallery() {
+			this.galleryMode = false;
+			this.displayImageContain = false;
 		}
 	},
 
