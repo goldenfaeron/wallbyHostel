@@ -23,7 +23,7 @@
 							{{town.title}} on Instagram
 						</div>
 						<v-layout row wrap align-center justify-center>
-							<v-flex xs2 v-for="(item, index) in town.instagram" :key="index">
+							<v-flex xs6 v-for="(item, index) in town.instagram" :key="index">
 								<CardInstagram :props="item"></CardInstagram>
 							</v-flex>
 						</v-layout>
