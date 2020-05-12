@@ -2,11 +2,6 @@
 	<v-hover>
 		<v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 2}`">
 			<nuxt-link style="text-decoration:none; color: primary;" :to="'/towns/'+props.slug">
-				<v-btn absolute small dark fab top right color="primary ">
-					<!--<v-icon v-if="props.categoryName == 'Restaurant'">mdi-silverware-fork-knife</v-icon>
-					<v-icon v-else color="white">mdi-beer</v-icon>-->
-					<v-icon>{{icon(props.categoryName)}}</v-icon>
-				</v-btn>
 				<v-img v-if="props.imageUrls" max-height="100" :src="props.imageUrls[0]">
 					<template v-slot:placeholder>
 						<v-layout fill-height align-center justify-center ma-0>
@@ -27,10 +22,9 @@
 				<v-card-title v-if="props.imageUrls" style="word-break: normal;">{{props.title}}</v-card-title>
 				<v-card-text>
 					<p>
-						<v-icon small>mdi-account-star</v-icon>
-						{{props.categoryName}} with
-						<span v-if="props.reviewsCount">{{props.reviewsCount}} Reviews</span>
-						<span v-else>No Reviews</span>
+						<v-icon small>mdi-image</v-icon>
+						<span v-if="props.imageUrls">View {{props.imageUrls.length}} images</span>
+						<span v-else>No images</span>
 					</p>
 					<!-- <v-icon small>mdi-map-marker</v-icon>
 

@@ -48,7 +48,7 @@ export default {
 	data() {
 		return {
 			type: "airports",
-			title: "airports in " + this.$store.state.city,
+			title: "Towns near " + this.$store.state.city,
 			preview:
 				"See all the best " + this.type + " in " + this.$store.state.city,
 			placeholder2: Math.floor(Math.random() * 2)

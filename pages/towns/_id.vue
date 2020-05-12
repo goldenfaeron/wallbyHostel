@@ -16,7 +16,7 @@
 				</v-flex>
 				<!-- {{town.instagram}} -->
 
-				<v-flex xs12>
+				<v-flex xs12 v-if="town.instagram">
 					<v-container grid-list-xs fluid>
 						<div class="display-1 text-center">
 							<v-icon x-large>mdi-instagram</v-icon>
