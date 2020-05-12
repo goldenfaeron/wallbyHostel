@@ -25,21 +25,15 @@
 					From
 					<b>{{details.price}}</b> Euro per night
 				</p>
-				<span v-show="!show">{{details.description | truncate(150)}}...</span>
+				<!-- <span v-show="!show">{{details.description | truncate(150)}}...</span>
 				<span v-show="show">{{details.description}}</span>
 				<span style="margin-left: 45%;">
 					<v-btn icon @click="show = !show">
 						<v-icon>{{ !show ? 'mdi-chevron-down' : 'mdi-chevron-up' }}</v-icon>
 					</v-btn>
 				</span>
-				<br />
+				<br />-->
 			</v-card-text>
-			<!-- <v-card-text>
-				<v-icon color=" lighten-2" large>mdi-shield-check</v-icon>COVID-19 Safe
-			</v-card-text>
-			<v-card-text>
-				<v-icon color=" lighten-2" large>mdi-shield-home</v-icon>Quarantine Friendly
-			</v-card-text>-->
 		</v-card>
 	</div>
 </template>

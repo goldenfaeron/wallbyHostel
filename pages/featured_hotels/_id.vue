@@ -1,61 +1,113 @@
 <template>
 	<div>
-		<SplashTitle :props="hotel"></SplashTitle>
-		<v-container grid-list-xs>
+		<!-- <SplashTitle :props="hotel"></SplashTitle> -->
+
+		<v-container fluid grid-list-xs>
+			<v-layout>
+				<ImageGallery :props="hotel.gallery"></ImageGallery>
+			</v-layout>
+		</v-container>
+		<!-- Title and deacription -->
+		<v-container grid-list-lg>
 			<v-layout row wrap>
 				<v-flex xs12 md6>
-					<h1>{{hotel.name}}</h1>
-					<!-- {{hotel.linked_object}} -->
-					<p v-html="hotel.description"></p>
-					<v-divider></v-divider>
-				</v-flex>
-				<v-flex xs12 md6>
-					<ImageGallery :props="hotel.gallery"></ImageGallery>
-				</v-flex>
-
-				<!-- Rooms -->
-				<v-layout row wrap>
-					<v-flex xs12 my-5>
-						<v-container grid-list-lg>
+					<div class="display-1">
+						<v-icon x-large>mdi-home</v-icon>
+						{{hotel.name}}
+						<v-container>
 							<v-layout row wrap>
-								<v-flex xs12 sm6 md4 v-for="(room, index) in hotel.rooms" :key="index">
-									<CardRoom :details="room.value" :show="false"></CardRoom>
+								<v-flex xs1 v-for="(item, index) in hotel.header_image.colors" :key="index">
+									<v-icon :color="item">mdi-star</v-icon>
 								</v-flex>
 							</v-layout>
 						</v-container>
-					</v-flex>
-				</v-layout>
+					</div>
+					<p v-html="hotel.description"></p>
+
+					<!-- Ammenities -->
+					<p class="font-weight-medium">Ammenities</p>
+					<v-layout row wrap>
+						<v-flex lg6 xs12 v-for="(item, index) in hotel.ammenities" :key="index">
+							<v-icon color="green">mdi-check</v-icon>
+							{{item}}
+						</v-flex>
+
+						<v-flex xs12>
+							<v-card flat>
+								<v-card-text>
+									<v-icon>mdi-food-croissant</v-icon>
+									Breakfast: {{hotel.breakfast}}
+									<br />
+									<v-icon>mdi-key-variant</v-icon>
+									Check in from: {{hotel.checkInFrom}} until {{hotel.checkInTo}}
+									<br />
+									<v-icon>mdi-map-marker</v-icon>
+									Address: {{hotel.address}}
+									<br />
+									<br />
+									<v-icon>mdi-clipboard-list</v-icon>
+									<b>Conditions</b>
+									<ol v-if="hotel.conditions">
+										<!--  -->
+										<li v-for="(item, index) in hotel.conditions[0].value" :key="index">{{item}}</li>
+									</ol>
+									<br />
+									<v-divider></v-divider>
+									<br />
+								</v-card-text>
+							</v-card>
+						</v-flex>
+					</v-layout>
+
+					<!-- Certificates -->
+					<v-layout row wrap>
+						<v-flex xs12 v-if="hotel.corona_safe">
+							<CertificateCorona :props="hotel.name"></CertificateCorona>
+						</v-flex>
+						<v-flex xs12 v-if="hotel.corona_quarantine_friendly">
+							<CertificateQuarantine :props="hotel.name"></CertificateQuarantine>
+						</v-flex>
+						<v-flex xs12 v-if="hotel.excellent_customer_service">
+							<CertificateCService :props="hotel.name"></CertificateCService>
+						</v-flex>
+					</v-layout>
+				</v-flex>
+
+				<v-flex xs12 md6>
+					<!-- rooms -->
+					<v-layout row wrap>
+						<v-flex xs12 sm6 v-for="(room, index) in hotel.rooms" :key="index">
+							<CardRoom :details="room.value" :show="false"></CardRoom>
+						</v-flex>
+					</v-layout>
+
+					<v-container grid-list-lg>
+						<v-layout row wrap>
+							<v-flex xs12 mt-5>
+								<div class="headline">
+									<v-icon large>mdi-map-marker-outline</v-icon>Location
+								</div>
+							</v-flex>
+							<v-flex xs12>
+								<googleMap props="borsh"></googleMap>
+							</v-flex>
+						</v-layout>
+					</v-container>
+
+					<!-- booking button -->
+					<v-layout column align-center>
+						<v-flex>
+							<v-btn :href="hotel.booking_link" target="_blank" color="primary" x-large>Book now</v-btn>
+							<p>Go to booking.com</p>
+						</v-flex>
+					</v-layout>
+
+					<!-- Google map and location -->
+				</v-flex>
 			</v-layout>
 
 			<!-- Certificates -->
-			<v-container grid-list-lg>
-				<v-layout row wrap>
-					<v-flex xs12 sm6 md4 v-if="hotel.corona_safe">
-						<CertificateCorona :props="hotel.name"></CertificateCorona>
-					</v-flex>
-					<v-flex xs12 sm6 md4 v-if="hotel.corona_quarantine_friendly">
-						<CertificateQuarantine :props="hotel.name"></CertificateQuarantine>
-					</v-flex>
-					<v-flex xs12 sm6 md4 v-if="hotel.excellent_customer_service">
-						<CertificateCService :props="hotel.name"></CertificateCService>
-					</v-flex>
-				</v-layout>
-			</v-container>
 		</v-container>
-		<CallToAction
-			:props="{
-             booking: hotel.booking_link, 
-             website: hotel.website_link,
-             airbnb: hotel.airbnb_link }"
-		></CallToAction>
-		<!-- <v-container grid-list-lg>
-			<h2>{{hotel.name}} on Instagram</h2>
-			<v-layout row wrap mt-5>
-				<v-flex xs4 md2 v-for="(item, index) in hotel.linked_instagram" :key="index">
-					<CardInstagram :props="item"></CardInstagram>
-				</v-flex>
-			</v-layout>
-		</v-container>-->
 	</div>
 </template>
 
@@ -88,6 +140,7 @@ export default {
 		};
 	},
 	components: {
+		googleMap: () => import("@/components/googleMap"),
 		CardInstagram: () => import("@/components/CardInstagram"),
 		CallToAction: () => import("@/components/CallToAction"),
 		CommentsParallax: () => import("@/components/CommentsParallax"),

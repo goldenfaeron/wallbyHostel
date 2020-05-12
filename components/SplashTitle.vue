@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<v-img
-			:height="[$vuetify.breakpoint.smAndUp ? '600px' : '200px']"
+			:height="[$vuetify.breakpoint.smAndUp ? '400px' : '200px']"
 			:src="$store.state.assetRoot + props.header_image.path"
 		>
 			<v-theme-provider dark>

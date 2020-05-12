@@ -11,7 +11,7 @@
 
 					<v-divider></v-divider>
 				</v-flex>
-				<v-flex xs12>
+				<v-flex xs12 md6>
 					<ImageGallery :props="shop.gallery"></ImageGallery>
 				</v-flex>
 

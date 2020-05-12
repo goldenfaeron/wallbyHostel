@@ -48,7 +48,7 @@
 						<br />
 						<v-divider></v-divider>
 						<br />
-						<p class="font-weight-medium">Amneties</p>
+						<p class="font-weight-medium">Ammenities</p>
 						<v-layout row wrap>
 							<v-flex lg6 xs12 v-for="(item, index) in room.listingAmenities.slice(-6)" :key="index">
 								<p v-if="item.isPresent == true">

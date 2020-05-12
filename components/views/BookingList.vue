@@ -30,7 +30,7 @@
 					<v-avatar size="40" color="primary">
 						<img :src="item.image" />
 					</v-avatar>
-					<nuxt-link :to="'/props/'+item.slug">
+					<nuxt-link :to="'/booking/'+item.slug">
 						<div class="heading" style="text-align: center">{{item.name}}</div>
 					</nuxt-link>
 					<v-rating x-small color="primary lighten-2" :value="item.rating/2" half-increments readonly></v-rating>
