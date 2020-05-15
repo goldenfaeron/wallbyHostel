@@ -146,14 +146,12 @@ export default {
 			bars: request4.data.entries,
 			activities: request5.data.entries
 		};
-	},
-
-	mounted() {
-		this.$nextTick(() => {
-			this.$nuxt.$loading.start();
-
-			setTimeout(() => this.$nuxt.$loading.finish(), 500);
-		});
 	}
+
+	// mounted() {
+	// 	// this.$nextTick(() => {
+	// 	this.$nuxt.$loading.start();
+	// 	// });
+	// },
 };
 </script>
