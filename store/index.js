@@ -33,6 +33,7 @@ export const state = () => ({
     assetRoot: "https://cockpit.goborshi.hackmylanguage.com/storage/uploads",
     webRoot: "https://cockpit.goborshi.hackmylanguage.com",
     imageToken: '969461cb194b4b0cd0c695d09e9502',
+    authToken: 'ac203b0773cc501428903c9de9ad09',
 
 
 
