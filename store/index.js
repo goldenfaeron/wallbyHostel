@@ -20,11 +20,8 @@ export const state = () => ({
 
 
 
-
-    // borshYoutube: [],
-
-    //NAV
-
+    //USER
+    user: { user: "", email: "", group: "", id: "", api_key: "", loggedIn: false },
 
 
     //Cockpit
@@ -58,6 +55,13 @@ export const mutations = {
     setBookingCount(state, count) {
         state.bookingCount = count;
     },
+
+    setLoginStatus(state, user) {
+        state.user.loggedIn = user.value
+        state.user.user = user.user
+        state.user.id = user.id
+
+    }
 
     // setBorshYoutube(state, list) {
     //     state.borshYoutube = list;
@@ -188,6 +192,10 @@ export const getters = {
                 to: "/news"
             },
         ],
+
+    getLoggedInStatus: state => state.user.loggedIn
+
+
 
 }
 

@@ -1,14 +1,13 @@
 <template >
 	<v-container
 		fluid
-		style="background-size: cover; background-image:url('https://en.instagram-brand.com/wp-content/uploads/2016/11/Glyph-Icon-hero.png')"
+		style="background-size: cover; background-image:url(require('@/assets/miro.png'))"
 	>
-		{{acc}}
 		<v-layout row justify-center class="mt-5">
 			<v-flex xs12 sm6 mt-5>
 				<v-card>
-					<InstagramToolbar></InstagramToolbar>
-					<InputLogin></InputLogin>
+					<InputLogin v-if="$store.state.user.loggedIn == false"></InputLogin>
+					<v-btn v-else color="warning" @click="logOut()">Log out</v-btn>
 				</v-card>
 				<!--  -->
 			</v-flex>
@@ -38,7 +37,6 @@ export default {
 	// },
 
 	components: {
-		InstagramToolbar: () => import("@/components/InstagramToolbar"),
 		InputLogin: () => import("@/components/InputLogin")
 	},
 	data() {
@@ -86,49 +84,13 @@ export default {
 				}
 			]
 		};
+	},
+
+	methods: {
+		logOut() {
+			this.$store.commit("setLoginStatus", { user: "", id: "", value: false });
+		}
 	}
 };
-
-// <v-card>
-// 				<v-toolbar color="teal" dark>
-// 					<v-toolbar-side-icon></v-toolbar-side-icon>
-
-// 					<v-toolbar-title>Topics</v-toolbar-title>
-
-// 					<v-spacer></v-spacer>
-
-// 					<v-btn icon>
-// 						<v-icon>more_vert</v-icon>
-// 					</v-btn>
-// 				</v-toolbar>
-
-// 				<v-list>
-// 					<v-list-group
-// 						v-for="item in items"
-// 						:key="item.title"
-// 						v-model="item.active"
-// 						:prepend-icon="item.action"
-// 						no-action
-// 					>
-// 						<template v-slot:activator>
-// 							<v-list-tile>
-// 								<v-list-tile-content>
-// 									<v-list-tile-title>{{ item.title }}</v-list-tile-title>
-// 								</v-list-tile-content>
-// 							</v-list-tile>
-// 						</template>
-
-// 						<v-list-tile v-for="subItem in item.items" :key="subItem.title" @click>
-// 							<v-list-tile-content>
-// 								<v-list-tile-title>{{ subItem.title }}</v-list-tile-title>
-// 							</v-list-tile-content>
-
-// 							<v-list-tile-action>
-// 								<v-icon>{{ subItem.action }}</v-icon>
-// 							</v-list-tile-action>
-// 						</v-list-tile>
-// 					</v-list-group>
-// 				</v-list>
-// 			</v-card>
 </script>
 
