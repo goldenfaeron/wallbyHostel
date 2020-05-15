@@ -128,6 +128,7 @@ export default {
 			}
 		);
 
+		//Activities
 		let request5 = await $axios.post(
 			store.state.webRoot +
 				"/api/collections/get/" +
@@ -145,6 +146,14 @@ export default {
 			bars: request4.data.entries,
 			activities: request5.data.entries
 		};
+	},
+
+	mounted() {
+		this.$nextTick(() => {
+			this.$nuxt.$loading.start();
+
+			setTimeout(() => this.$nuxt.$loading.finish(), 500);
+		});
 	}
 };
 </script>
