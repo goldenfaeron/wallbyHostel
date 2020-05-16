@@ -28,13 +28,8 @@ export default {
 	async asyncData({ $axios, route, store }) {
 		let collection = "instagram";
 
-		let request1 = await $axios.post(
-			store.state.webRoot +
-				"/api/collections/get/" +
-				collection +
-				"?token=" +
-				store.state.collectionsToken,
-			{ limit: 15 }
+		let request1 = await $axios.get(
+			"https://api.apify.com/v2/datasets/Ihrf9Y7dkGjwNwmi5/items?format=json&clean=1&limit=60"
 		);
 
 		// let request2 = await $axios.post(
@@ -46,7 +41,7 @@ export default {
 		// 	{ limit: 5, sort: { _created: -1 } }
 		// );
 		return {
-			posts: request1.data.entries
+			posts: request1.data
 		};
 	},
 

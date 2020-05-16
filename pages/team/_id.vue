@@ -2,8 +2,6 @@
 	<div>
 		<!--<core-toolbar />-->
 		<core-view :props="featured" />
-
-		<core-footer />
 	</div>
 </template>
 

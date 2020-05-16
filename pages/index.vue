@@ -70,16 +70,8 @@ export default {
 		);
 
 		// instagram
-		let request2 = await $axios.post(
-			store.state.webRoot +
-				"/api/collections/get/" +
-				collection2 +
-				"?token=" +
-				store.state.collectionsToken +
-				"&rspc=1",
-			{
-				limit: 8
-			}
+		let request2 = await $axios.get(
+			"https://api.apify.com/v2/datasets/Ihrf9Y7dkGjwNwmi5/items?format=json&clean=1&limit=24"
 		);
 
 		//hotels (featured)
@@ -141,7 +133,7 @@ export default {
 
 		return {
 			airbnb: request1.data.entries,
-			instagram: request2.data.entries,
+			instagram: request2.data,
 			hotels: request3.data.entries,
 			bars: request4.data.entries,
 			activities: request5.data.entries

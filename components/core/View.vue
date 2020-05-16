@@ -3,7 +3,7 @@
 		<!-- Welcome -->
 		<section id="welcome" class="hide-overflow">
 			<v-layout>
-				<v-flex hidden-sm-and-down md6>
+				<v-flex xs12 md6>
 					<v-img :src="$store.state.assetRoot + props.profile.path" height="100vh" />
 				</v-flex>
 
@@ -13,7 +13,7 @@
 					<v-layout align-center justify-center>
 						<v-flex xs10 md6>
 							<baseheading>{{props.name}}</baseheading>
-							<basetext>{{props.page_title}}</basetext>
+							<basetext v-html="props.page_title"></basetext>
 							<basebtn class="mt-4">{{props.page_button_0}}</basebtn>
 						</v-flex>
 					</v-layout>
@@ -31,7 +31,7 @@
 					<basebubble1 style="transform: rotate(180deg) translateX(25%)" />
 					<baseheading>{{props.page_projects_title}}</baseheading>
 
-					<basetext class="mb-5">{{props.page_projects_text}}</basetext>
+					<basetext class="mb-5" v-html="props.page_projects_text"></basetext>
 
 					<v-card color="secondary">
 						<v-container grid-list-md pa-2>
@@ -45,7 +45,7 @@
 						</v-container>
 					</v-card>
 				</v-flex>
-				<v-flex hidden-sm-and-down md6>
+				<v-flex xs12 md6>
 					<v-img :src="$store.state.assetRoot + props.page_projects_image.path" height="100%" />
 				</v-flex>
 			</v-layout>
@@ -55,16 +55,16 @@
 		<!-- Services  -->
 		<section id="services" class="hide-overflow">
 			<v-layout accent>
-				<v-flex hidden-sm-and-down md6>
+				<v-flex xs12 md6>
 					<v-img :src="$store.state.assetRoot + props.page_services_image.path" height="100%" />
 				</v-flex>
 				<v-flex xs12 md6 text-xs-center pa-5>
 					<v-layout align-center justify-center fill-height wrap>
 						<v-flex xs12>
 							<basebubble2 style="transform: translateX(55%)" />
-							<baseheading class="info--text">{{props.page_services_title}}</baseheading>
+							<baseheading class="info--text" v-html="props.page_services_title"></baseheading>
 
-							<basetext class="mb-5">{{props.page_services_text}}</basetext>
+							<basetext class="mb-5" v-html="props.page_services_text"></basetext>
 						</v-flex>
 						<v-flex v-for="(service, i) in props.page_services" :key="i" md6 text-xs-center mb-3>
 							<v-avatar class="elevation-6 mb-2" color="#69A1BB" size="64" tile>
@@ -73,7 +73,7 @@
 							<basetext>
 								{{service.value.name}}
 								<div class="mb-2">{{service.value.title}}</div>
-								<div>{{service.value.text}}</div>
+								<div v-html="service.value.text"></div>
 							</basetext>
 						</v-flex>
 					</v-layout>
@@ -91,9 +91,6 @@
 
 					<basetext class="mb-5">{{props.page_about_text}}</basetext>
 
-					<basesubheading class="info--text">Skills</basesubheading>
-					<basetext class="mb-5">{{props.page_about_text}}</basetext>
-
 					<v-alert outlined color="info">
 						<v-layout v-for="(skill, i) in props.page_skills" :key="i" style="color: #69A1BB;" wrap>
 							<v-flex xs6 text-uppercase>{{skill.value.skill}}</v-flex>
@@ -102,7 +99,7 @@
 						</v-layout>
 					</v-alert>
 				</v-flex>
-				<v-flex hidden-sm-and-down md6>
+				<v-flex xs12 md6>
 					<v-img :src="$store.state.assetRoot + props.page_about_image.path" height="100%" />
 				</v-flex>
 			</v-layout>
