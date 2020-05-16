@@ -1,19 +1,5 @@
 <template>
-	<div>
-		<!-- end wa -->
-		<!-- 
-		<v-container grid-list-lg>
-			<v-layout row wrap>
-				<v-flex xs12 sm6 md4 v-for="(room, index) in shop.offers" :key="index">
-					<CardRoom :details="room.value" :show="false"></CardRoom>
-				</v-flex>
-			</v-layout>
-		</v-container>-->
-
-		<!-- Linked shops -->
-		<!-- {{shop}} -->
-		<!-- {{$store.state.user.user}} -->
-		<!-- {{$store.state.user.id}} -->
+	<div v-if="$store.state.user.loggedIn==true">
 		<v-container>
 			<div class="display-2">Your businesses</div>
 			<v-layout row wrap mt-5>
@@ -26,40 +12,46 @@
 			</v-layout>
 		</v-container>
 
-		<!-- Linked hotels -->
-		<!-- <v-container grid-list-lg v-if="shop.linked_hotels">
-			<h2>{{shop.owner}}'s hotels</h2>
-			{{shop.owner}} has {{shop.linked_hotels.length}} hotel
-			<span v-if="shop.linked_hotels.length >1">s</span>
-			in {{$store.state.city}}
-			<v-layout row wrap mt-5>
-				<v-flex xs12 sm6 md4 v-for="(item, index) in shop.linked_hotels" :key="index">
-					<CardHotel :props="item"></CardHotel>
-				</v-flex>
-			</v-layout>
-		</v-container>-->
+		<v-container grid-list-xs>
+			<v-text-field name="name" v-model="input" label="label" id="id">Search</v-text-field>
+			<v-btn color="success" @click="scrape(input)">Scrape business</v-btn>
 
-		<!-- Linked featured hotels -->
-		<!-- <v-container grid-list-lg v-if="shop.linked_featured_hotels">
-			<h2>{{shop.name}}other hotels</h2>
-			{{shop.owner}} has {{shop.linked_featured_hotels.length}} featured hotel
-			<span
-				v-if="shop.linked_featured_hotels.length >1"
-			>s</span>
-			in {{$store.state.city}}
-			<v-layout row wrap mt-5>
-				<v-flex xs12 sm6 md4 v-for="(item, index) in shop.linked_featured_hotels" :key="index">
-					<CardFeaturedHotel :props="item"></CardFeaturedHotel>
+			<v-layout fill-height align-center justify-center ma-0 v-if="loading">
+				<v-progress-circular indeterminate color="primary"></v-progress-circular>
+			</v-layout>
+
+			<br />
+			<br />
+			<h2>Lastscrape (succeeded)</h2>
+			<v-layout row wrap>
+				<v-flex xs3 v-for="(item, index) in insta" :key="index">
+					<CardInstagram :props="item"></CardInstagram>
 				</v-flex>
 			</v-layout>
-		</v-container>-->
+
+			<h2>Last manual scrape attempt</h2>
+			<v-layout row wrap v-if="instanewnew.length>2">
+				<v-flex xs3 v-for="(item, index) in instanewnew" :key="index">
+					<CardInstagram :props="item"></CardInstagram>
+				</v-flex>
+			</v-layout>
+
+			<!-- {{insta}} -->
+		</v-container>
 	</div>
+	<div v-else>You must log in to view this page</div>
 </template>
 
 <script>
 export default {
 	data() {
-		return {};
+		return {
+			instagramScrape: "",
+			input: "",
+			loading: false,
+			instanewnew: ""
+			// instanew: ""
+		};
 	},
 
 	async asyncData({ $axios, route, store }) {
@@ -74,11 +66,49 @@ export default {
 			{ filter: { access: store.state.user.id } }
 		);
 
+		let request2 = await $axios.get(
+			"https://api.apify.com/v2/actor-tasks/BLYLNcjjiwQveJeJb/runs/last/dataset/items?token=QTP6bbGGyx42msYNpwEykZNkf&clean=1&limit=5&status=SUCCEEDED"
+		);
+
 		return {
-			shop: request1.data.entries
+			shop: request1.data.entries,
+			insta: request2.data
 		};
 	},
+
+	methods: {
+		async scrape(user) {
+			this.loading = true;
+			await this.$axios
+				.post(
+					"https://api.apify.com/v2/actor-tasks/BLYLNcjjiwQveJeJb/run-sync?token=QTP6bbGGyx42msYNpwEykZNkf&ui=1",
+					{
+						search: user,
+						searchType: "user",
+						searchLimit: 10,
+						resultsType: "posts",
+						resultsLimit: 5
+					}
+				)
+
+				.then(
+					await this.$axios
+						.get(
+							"https://api.apify.com/v2/actor-tasks/BLYLNcjjiwQveJeJb/runs/last/dataset/items?token=QTP6bbGGyx42msYNpwEykZNkf&clean=1&limit=5"
+						)
+						.then(res => {
+							setTimeout(() => {
+								this.instanewnew = res.data;
+								this.loading = false;
+								return;
+							}, 10000);
+						})
+				);
+		}
+	},
+
 	components: {
+		CardInstagram: () => import("@/components/CardInstagram"),
 		CallToAction: () => import("@/components/CallToAction"),
 		CommentsParallax: () => import("@/components/CommentsParallax"),
 		JumbotronGradient: () => import("@/components/JumbotronGradient"),
