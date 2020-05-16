@@ -48,7 +48,9 @@
 				class="ml-2 grey--text hidden-xs-only"
 			>Find what you need in {{$store.state.city}}, Albania</v-toolbar-title>
 			<v-spacer />
-			<v-btn v-if="$store.state.user.loggedIn == false" color="success" @click="go('/login')">login</v-btn>
+			<v-btn small v-if="$store.state.user.loggedIn == false" fab text @click="go('/login')">
+				<v-icon>mdi-account-circle</v-icon>
+			</v-btn>
 
 			<v-btn
 				v-if="$store.state.user.loggedIn"
