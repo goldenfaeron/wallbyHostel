@@ -1,23 +1,27 @@
 <template>
 	<div>
-		<template>
-			<v-container grid-list-lg>
-				<v-layout row wrap my-5 v-for="(item, index) in content" :key="index">
-					<v-flex xs8 id="title">
-						<h1>{{item.title}}</h1>
+		<v-container grid-list-lg>
+			<v-layout row wrap my-5>
+				<v-flex xs12 sm6 md4 v-for="(item, index) in content" :key="index">
+					<v-card>
+						<v-card-title primary-title>{{item.title}}</v-card-title>
+						<v-card-subtitle>News in {{$store.state.city}}</v-card-subtitle>
 
-						<div v-html="item.text_1.substr(0,150)"></div>
+						<v-img :src="$store.state.assetRoot + item.image_1.path" height="200"></v-img>
+
+						<v-card-text>
+							<p v-html="item.text_1.substr(0,150)"></p>
+						</v-card-text>
 						<br />
-						<nuxt-link :to="'corona/'+ item.slug">
-							<v-btn color="primary ">Read more</v-btn>
-						</nuxt-link>
-					</v-flex>
-					<v-flex xs4 id="image_1">
-						<v-img :src="$store.state.assetRoot + item.image_1.path"></v-img>
-					</v-flex>
-				</v-layout>
-			</v-container>
-		</template>
+						<v-card-actions>
+							<nuxt-link :to="'/corona/'+ item.slug" append>
+								<v-btn color="primary ">Read some more</v-btn>
+							</nuxt-link>
+						</v-card-actions>
+					</v-card>
+				</v-flex>
+			</v-layout>
+		</v-container>
 	</div>
 </template>
 
