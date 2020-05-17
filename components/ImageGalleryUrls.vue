@@ -22,7 +22,30 @@
 			<v-flex xs12>
 				<v-container grid-list-sm>
 					<v-layout row wrap :justify-center="galleryMode">
-						<v-flex v-for="(image, index) in props" :key="image" xs2 md1 @click="clickImg(image ,index)">
+						<v-flex
+							v-for="(image, index) in props"
+							:key="image"
+							xs2
+							md1
+							@click="clickImg(image ,index)"
+							v-if="limit12 && index < 11"
+						>
+							<v-img style="cursor:pointer" :src="image" class="grey lighten-2" :height="height">
+								<template v-slot:placeholder>
+									<v-layout fill-height align-center justify-center ma-0>
+										<v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
+									</v-layout>
+								</template>
+							</v-img>
+						</v-flex>
+						<v-flex
+							v-for="(image, index) in props"
+							:key="image"
+							xs2
+							md1
+							@click="clickImg(image ,index)"
+							v-if="!limit12"
+						>
 							<v-img style="cursor:pointer" :src="image" class="grey lighten-2" :height="height">
 								<template v-slot:placeholder>
 									<v-layout fill-height align-center justify-center ma-0>
@@ -45,7 +68,7 @@
 export default {
 	methods: {
 		clickImg(path, index) {
-			this.displayIndex = index;
+			(this.limit12 = false), (this.displayIndex = index);
 			this.galleryMode = true;
 			this.displayImage = path;
 			this.displayImageContain = true;
@@ -80,6 +103,7 @@ export default {
 
 	data() {
 		return {
+			limit12: true,
 			displayIndex: "",
 			galleryMode: false,
 			displayImageContain: false,

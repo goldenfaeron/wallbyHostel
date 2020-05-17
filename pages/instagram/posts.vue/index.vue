@@ -1,5 +1,6 @@
 <template>
 	<div>
+		<ImageGalleryUrls :props="imageUrls"></ImageGalleryUrls>
 		<v-container grid-list-xs>
 			<v-layout column fill-height align-center justify-center>
 				<v-flex xs12>
@@ -32,20 +33,26 @@ export default {
 			"https://api.apify.com/v2/datasets/Ihrf9Y7dkGjwNwmi5/items?format=json&clean=1&limit=60"
 		);
 
-		// let request2 = await $axios.post(
-		// 	store.state.webRoot +
-		// 		"/api/collections/get/" +
-		// 		collection +
-		// 		"?token=" +
-		// 		store.state.collectionsToken,
-		// 	{ limit: 5, sort: { _created: -1 } }
-		// );
 		return {
 			posts: request1.data
 		};
 	},
 
-	components: { CardInstagram: () => import("@/components/CardInstagram") },
+	computed: {
+		imageUrls() {
+			let arr = [];
+			this.posts.forEach(element => {
+				arr.push(element.imageUrl);
+			});
+
+			return arr;
+		}
+	},
+
+	components: {
+		CardInstagram: () => import("@/components/CardInstagram"),
+		ImageGalleryUrls: () => import("@/components/ImageGalleryUrls")
+	},
 
 	head() {
 		return {
