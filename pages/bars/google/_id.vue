@@ -3,6 +3,7 @@
 		<v-container grid-list-lg>
 			<h1>{{bar.title}}</h1>
 			<h2>{{bar.categoryName}}</h2>
+
 			<v-layout row wrap>
 				<!-- Image + Information -->
 				<v-flex xs12 md6>
@@ -54,12 +55,15 @@
 						</v-flex>
 					</v-layout>
 				</v-flex>
+				<!-- {{sortReviews}}
+				{{reviews}}-->
 
+				<div v-for="(item, index) in sortReviews" :key="index"></div>
 				<v-flex xs12 md6 v-if="sortReviews">
 					<v-layout>
 						<v-flex xs12>
 							<h2>Reviews</h2>
-							<div v-for="(item, index) in sortReviews" :key="index">
+							<div v-for="(item, i) in sortReviews" :key="i">
 								<CardReview
 									class="mt-3"
 									:props="{title:item.name, text:item.text, rating:item.stars, user :{username: 'User'}}"
@@ -74,6 +78,7 @@
 </template>
 
 <script>
+import { Mixin } from "~/mixins/sortReviews.js";
 export default {
 	async asyncData({ params, store, $axios, route }) {
 		let collection = "googleplaces_borsh";
@@ -106,28 +111,6 @@ export default {
 		};
 	},
 
-	computed: {
-		sortReviews() {
-			if (this.reviews) {
-				let reviewsClone = this.reviews;
-				let arr = [];
-
-				//Check if has text and push to new array
-				reviewsClone.forEach(element => {
-					if (element.text) {
-						element.text = element.text.replace("(Translated by Google)", "");
-						arr.push(element);
-					}
-				});
-				//Sort arr
-				function sortByLength(array) {
-					return array.sort((x, y) => x.text.length - y.text.length);
-				}
-				return sortByLength(arr).reverse();
-			}
-		}
-	},
-
 	head() {
 		return {
 			title: this.bar.title,
@@ -139,6 +122,7 @@ export default {
 				}
 			]
 		};
-	}
+	},
+	mixins: [Mixin]
 };
 </script>

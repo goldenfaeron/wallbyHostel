@@ -73,6 +73,7 @@
 </template>
 
 <script>
+import { Mixin } from "~/mixins/sortReviews.js";
 export default {
 	async asyncData({ params, store, $axios, route }) {
 		let collection = "googleplaces_shops_borsh";
@@ -106,28 +107,6 @@ export default {
 		};
 	},
 
-	computed: {
-		sortReviews() {
-			if (this.reviews) {
-				let reviewsClone = this.reviews;
-				let arr = [];
-
-				//Check if has text and push to new array
-				reviewsClone.forEach(element => {
-					if (element.text) {
-						element.text = element.text.replace("(Translated by Google)", "");
-						arr.push(element);
-					}
-				});
-				//Sort arr
-				function sortByLength(array) {
-					return array.sort((x, y) => x.text.length - y.text.length);
-				}
-				return sortByLength(arr).reverse();
-			}
-		}
-	},
-
 	head() {
 		return {
 			title: this.bar.title,
@@ -139,6 +118,8 @@ export default {
 				}
 			]
 		};
-	}
+	},
+
+	mixins: [Mixin]
 };
 </script>
