@@ -1,20 +1,13 @@
 <template>
-	<div>
-		<h1 class="primary--text main-title" style="text-align: center;">Vacation in Borsh</h1>
-
-		<v-container grid-list-lg>
-			<v-layout row wrap>
-				<v-flex xs12 sm6 md6 lg4 v-for="(item, index) in data" :key="index">
-					<CardAirbnb :props="item"></CardAirbnb>
-				</v-flex>
-			</v-layout>
-		</v-container>
-	</div>
+	<AirbnbList :props="data"></AirbnbList>
 </template>
 
 <script>
 export default {
-	components: { CardAirbnb: () => import("@/components/CardAirbnb") },
+	components: {
+		CardAirbnb: () => import("@/components/CardAirbnb"),
+		AirbnbList: () => import("@/components/views/AirbnbList")
+	},
 	async asyncData({ params, store, $axios, route }) {
 		let collection = "airbnb";
 		return await $axios

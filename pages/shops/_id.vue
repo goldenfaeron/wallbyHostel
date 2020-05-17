@@ -69,6 +69,7 @@
 				</v-flex>
 			</v-layout>
 		</v-container>
+		<ShopsList :props="bars"></ShopsList>
 	</div>
 </template>
 
@@ -77,28 +78,37 @@ import { Mixin } from "~/mixins/sortReviews.js";
 export default {
 	async asyncData({ params, store, $axios, route }) {
 		let collection = "googleplaces_shops_borsh";
-		return await $axios
-			.post(
-				store.state.webRoot +
-					"/api/collections/get/" +
-					collection +
-					"?token=" +
-					store.state.collectionsToken +
-					"&rspc=1",
-				{ filter: { slug: route.params.id } }
-			)
-			.then(res => {
-				return {
-					bar: res.data.entries[0],
+		let request1 = await $axios.post(
+			store.state.webRoot +
+				"/api/collections/get/" +
+				collection +
+				"?token=" +
+				store.state.collectionsToken +
+				"&rspc=1",
+			{ filter: { slug: route.params.id } }
+		);
+		let request2 = await $axios.post(
+			store.state.webRoot +
+				"/api/collections/get/" +
+				collection +
+				"?token=" +
+				store.state.collectionsToken +
+				"&rspc=1",
+			{ sort: { imageUrls: -1 }, fields: { reviews: 0 }, limit: 20 }
+		);
 
-					reviews: JSON.parse(JSON.stringify(res.data.entries[0].reviews))
-				};
-			});
+		return {
+			bar: request1.data.entries[0],
+			bars: request2.data.entries,
+
+			reviews: JSON.parse(JSON.stringify(request1.data.entries[0].reviews))
+		};
 	},
 
 	components: {
 		googleMap: () => import("@/components/googleMap"),
-		CardReview: () => import("@/components/CardReview")
+		CardReview: () => import("@/components/CardReview"),
+		ShopsList: () => import("@/components/views/ShopsList")
 	},
 	data() {
 		return {

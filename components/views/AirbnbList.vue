@@ -1,9 +1,9 @@
 <template>
 	<div>
-		<h1
-			class="primary--text main-title"
+		<div
+			class="display-1 primary--text main-title"
 			style="text-align: center;"
-		>More Airbnbs in {{$store.state.city}}</h1>
+		>Airbnbs in {{$store.state.city}}</div>
 
 		<v-container grid-list-lg>
 			<v-layout row wrap>

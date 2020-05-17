@@ -1,30 +1,29 @@
 <template>
-	<ShopsList :props="shops_google"></ShopsList>
+	<div>
+		<v-responsive class="mx-auto" width="56">
+			<v-icon x-large>mdi-store</v-icon>
+		</v-responsive>
+		<h1
+			class="primary--text main-title"
+			style="text-align: center;"
+		>The best shops in {{$store.state.city}}</h1>
+		<h2 class="secondary--text" style="text-align: center;">{{props.length}} results from Google</h2>
+
+		<v-container grid-list-lg class="mt-7">
+			<v-layout row wrap>
+				<v-flex xs6 sm4 v-for="(item, index) in props" :key="index">
+					<CardShop :props="item" :link="'/shops/'" :index="index"></CardShop>
+				</v-flex>
+			</v-layout>
+		</v-container>
+	</div>
 </template>
 
 <script>
 export default {
-	async asyncData({ $axios, route, store }) {
-		let collection = "googleplaces_shops_borsh";
-
-		let request1 = await $axios.post(
-			store.state.webRoot +
-				"/api/collections/get/" +
-				collection +
-				"?token=" +
-				store.state.collectionsToken +
-				"&rspc=1",
-			{ sort: { imageUrls: -1 }, fields: { reviews: 0 } }
-		);
-
-		return {
-			shops_google: request1.data.entries
-			// shops_tripadvisor: request2.data.entries
-		};
-	},
+	props: ["props"],
 	components: {
-		CardShop: () => import("@/components/CardShop"),
-		ShopsList: () => import("@/components/views/ShopsList")
+		CardShop: () => import("@/components/CardShop")
 	},
 	methods: {
 		placeholder(index) {
