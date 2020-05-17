@@ -1,5 +1,9 @@
 <template>
 	<div>
+		<v-img
+			:src="require('@/assets/fun.jpg')"
+			:height="[$vuetify.breakpoint.smAndUp ? '400px' : '200px']"
+		></v-img>
 		<v-container grid-list-xs>
 			<v-layout column fill-height align-center justify-center>
 				<v-flex xs12>

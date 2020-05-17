@@ -17,7 +17,7 @@
 		</v-container>
 		<v-container grid-list-lg>
 			<v-layout row wrap>
-				<v-flex xs12 md4 lg3 v-for="(thing, index) in props" :key="index">
+				<v-flex xs6 sm422 v-for="(thing, index) in props" :key="index">
 					<CardThing :props="thing"></CardThing>
 				</v-flex>
 			</v-layout>

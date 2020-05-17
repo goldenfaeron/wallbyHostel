@@ -1,5 +1,11 @@
 <template>
-	<AirbnbList :props="data"></AirbnbList>
+	<div>
+		<v-img
+			:src="require('@/assets/airbnb.jpg')"
+			:height="[$vuetify.breakpoint.smAndUp ? '400px' : '200px']"
+		></v-img>
+		<AirbnbList :props="data"></AirbnbList>
+	</div>
 </template>
 
 <script>

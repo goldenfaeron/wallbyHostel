@@ -1,5 +1,9 @@
 <template>
 	<div>
+		<v-img
+			:src="require('@/assets/hotel.jpg')"
+			:height="[$vuetify.breakpoint.smAndUp ? '400px' : '200px']"
+		></v-img>
 		<v-responsive class="mx-auto" width="56">
 			<v-icon x-large>mdi-home</v-icon>
 		</v-responsive>

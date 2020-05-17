@@ -1,5 +1,11 @@
 <template>
-	<ShopsList :props="shops_google"></ShopsList>
+	<div>
+		<v-img
+			:src="require('@/assets/shop.jpg')"
+			:height="[$vuetify.breakpoint.smAndUp ? '400px' : '200px']"
+		></v-img>
+		<ShopsList :props="shops_google"></ShopsList>
+	</div>
 </template>
 
 <script>
