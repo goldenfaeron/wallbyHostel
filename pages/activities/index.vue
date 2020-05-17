@@ -47,7 +47,8 @@ export default {
 					description: 1,
 					location_string: 1,
 					photo: 1,
-					slug: 1
+					slug: 1,
+					cp_photo: 1
 				},
 				limit: 15
 			}

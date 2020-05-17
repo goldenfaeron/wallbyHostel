@@ -6,7 +6,10 @@
 			<v-card-title primary-title>
 				<v-layout align-content-space-between justify-space-between>
 					<v-flex>
-						<p class="headline d-flex">{{details.name }}</p>
+						<p class="headline d-flex">
+							<v-icon class="mr-1">mdi-bed</v-icon>
+							{{details.name }}
+						</p>
 					</v-flex>
 				</v-layout>
 			</v-card-title>

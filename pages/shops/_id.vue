@@ -4,7 +4,13 @@
 			<v-layout row wrap>
 				<v-flex xs12 md6>
 					<v-layout column wrap>
-						<h1>{{bar.title}}</h1>
+						<h1>
+							{{bar.title}}
+							<v-btn v-if="bar.phone" text target="_blank" color="primary" x-large>
+								<v-icon>mdi-phone</v-icon>
+								{{bar.phone}}
+							</v-btn>
+						</h1>
 						<h2>{{bar.categoryName}}</h2>
 						<v-flex xs12 v-if="bar.imageUrls">
 							<v-carousel
@@ -54,8 +60,8 @@
 					</v-layout>
 				</v-flex>
 
-				<v-flex xs12 md6 v-if="sortReviews">
-					<v-layout>
+				<v-flex xs12 md6>
+					<v-layout v-if="sortReviews">
 						<v-flex xs12>
 							<h2>Reviews</h2>
 							<div v-for="(item, index) in sortReviews" :key="index">

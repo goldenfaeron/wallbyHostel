@@ -26,12 +26,17 @@
 				</v-flex>
 				<v-flex xs12 md6>
 					<!-- Rooms -->
+					<v-layout column align-center>
+						<v-flex>
+							<v-btn :href="hotel.booking_link" target="_blank" color="primary" x-large>Book now</v-btn>
+							<p>Go to booking.com</p>
+						</v-flex>
+					</v-layout>
 
-					<h1 class="primary--text">Choice of {{hotel.rooms.length}} Room types</h1>
+					<h1 class="primary--text text-center">Choice of {{hotel.rooms.length}} Room types</h1>
 
 					<v-layout row wrap>
 						<v-flex xs12 sm6 v-for="(room, index) in hotel.rooms" :key="index">
-							<v-icon x-large>mdi-bed</v-icon>
 							<CardRoom :details="room.value" :show="false"></CardRoom>
 						</v-flex>
 					</v-layout>
@@ -39,7 +44,7 @@
 			</v-layout>
 		</v-container>
 
-		<!-- Title and deacription -->
+		<!-- Amenities -->
 		<v-container grid-list-lg>
 			<v-layout row wrap>
 				<v-flex xs12 md6>
@@ -114,12 +119,6 @@
 					</v-container>
 
 					<!-- booking button -->
-					<v-layout column align-center>
-						<v-flex>
-							<v-btn :href="hotel.booking_link" target="_blank" color="primary" x-large>Book now</v-btn>
-							<p>Go to booking.com</p>
-						</v-flex>
-					</v-layout>
 
 					<!-- Google map and location -->
 				</v-flex>

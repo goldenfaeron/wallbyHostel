@@ -38,19 +38,19 @@ export default {
 		return {
 			title: "Activities in " + this.$store.state.city
 		};
-	},
-	head() {
-		return {
-			title: this.title,
-			meta: [
-				{
-					hid: this.preview,
-					name: this.title,
-					content: this.preview
-				}
-			]
-		};
 	}
+	// head() {
+	// 	return {
+	// 		title: this.title,
+	// 		meta: [
+	// 			{
+	// 				hid: this.preview,
+	// 				name: this.title,
+	// 				content: this.preview
+	// 			}
+	// 		]
+	// 	};
+	// }
 };
 </script>
 <style>
