@@ -3,7 +3,13 @@
 		<v-img
 			:src="require('@/assets/shop.jpg')"
 			:height="[$vuetify.breakpoint.smAndUp ? '400px' : '200px']"
-		></v-img>
+		>
+			<template v-slot:placeholder>
+				<v-layout fill-height align-center justify-center ma-0>
+					<v-progress-circular indeterminate color="primary"></v-progress-circular>
+				</v-layout>
+			</template>
+		</v-img>
 		<ShopsList :props="shops_google"></ShopsList>
 	</div>
 </template>
