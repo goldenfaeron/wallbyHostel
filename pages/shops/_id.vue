@@ -118,8 +118,6 @@ export default {
 				}
 			]
 		};
-	},
-
-	mixins: [Mixin]
+	}
 };
 </script>
