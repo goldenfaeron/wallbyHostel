@@ -1,6 +1,6 @@
 <template>
 	<section id="welcome" class="hide-overflow">
-		<v-layout mb-5>
+		<v-layout mb-5 row>
 			<v-flex xs12 md4>
 				<v-img :src="$store.state.assetRoot + props.profile.path" height="50vh" />
 			</v-flex>

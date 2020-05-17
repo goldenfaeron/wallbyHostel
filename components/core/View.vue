@@ -1,20 +1,20 @@
 <template>
 	<div>
 		<!-- Welcome -->
-		<section id="welcome" class="hide-overflow">
-			<v-layout>
+		<section id="welcome">
+			<v-layout row>
 				<v-flex xs12 md6>
-					<v-img :src="$store.state.assetRoot + props.profile.path" height="100vh" />
+					<v-img :src="$store.state.assetRoot + props.profile.path" height="100%" />
 				</v-flex>
 
 				<v-flex xs12 md6 align-content-space-between layout :pa-5="$vuetify.breakpoint.smAndDown" wrap>
 					<basebubble1 style="transform: rotate(180deg) translateY(25%)" />
 
 					<v-layout align-center justify-center>
-						<v-flex xs10 md6>
+						<v-flex xs12 md6>
 							<baseheading>{{props.name}}</baseheading>
 							<basetext v-html="props.page_title"></basetext>
-							<basebtn class="mt-4">{{props.page_button_0}}</basebtn>
+							<!-- <basebtn class="mt-4">{{props.page_button_0}}</basebtn> -->
 						</v-flex>
 					</v-layout>
 
@@ -46,7 +46,11 @@
 					</v-card>
 				</v-flex>
 				<v-flex xs12 md6>
-					<v-img :src="$store.state.assetRoot + props.page_projects_image.path" height="100%" />
+					<v-img
+						hidden-sm-and-down
+						:src="$store.state.assetRoot + props.page_projects_image.path"
+						height="100%"
+					/>
 				</v-flex>
 			</v-layout>
 		</section>
@@ -55,7 +59,7 @@
 		<!-- Services  -->
 		<section id="services" class="hide-overflow">
 			<v-layout accent>
-				<v-flex xs12 md6>
+				<v-flex xs12 md6 hidden-sm-and-down>
 					<v-img :src="$store.state.assetRoot + props.page_services_image.path" height="100%" />
 				</v-flex>
 				<v-flex xs12 md6 text-xs-center pa-5>
@@ -84,7 +88,7 @@
 
 		<!-- GetInTouch -->
 		<section id="about" class="hide-overflow">
-			<v-layout white>
+			<v-layout white row>
 				<v-flex xs12 md6 pa-5>
 					<basebubble1 style="transform: translate(5%, -5%)" />
 					<baseheading class="info--text">{{props.page_about_title}}</baseheading>
