@@ -1,10 +1,5 @@
 <template>
 	<div>
-		<div
-			class="display-1 primary--text main-title"
-			style="text-align: center;"
-		>Airbnbs in {{$store.state.city}}</div>
-
 		<v-container grid-list-lg>
 			<v-layout row wrap>
 				<v-flex xs12 sm6 md6 lg4 v-for="(item, index) in props" :key="index">

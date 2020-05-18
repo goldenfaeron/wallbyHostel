@@ -98,7 +98,7 @@
 			</v-responsive>
 			<h2 class="secondary--text" style="text-align: center;">Featured hotels in {{$store.state.city}}</h2>
 			<v-layout row wrap>
-				<v-flex xs12 sm6 md4 v-for="(item, index) in featured" :key="index">
+				<v-flex xs6 md4 v-for="(item, index) in featured" :key="index">
 					<CardFeaturedHotel :props="item"></CardFeaturedHotel>
 				</v-flex>
 			</v-layout>

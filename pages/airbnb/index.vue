@@ -10,13 +10,24 @@
 				</v-layout>
 			</template>
 		</v-img>
-		<AirbnbList :props="data"></AirbnbList>
+		<v-responsive class="mx-auto" width="56">
+			<v-icon x-large>mdi-home</v-icon>
+		</v-responsive>
+		<Title>
+			<h1 class="text-center primary--text">Airbnbs in {{$store.state.city}}</h1>
+			<h2
+				class="secondary--text"
+				style="text-align: center;"
+			>{{airbnbs.length}} Super Stays from Airbnb</h2>
+		</Title>
+		<AirbnbList :props="airbnbs"></AirbnbList>
 	</div>
 </template>
 
 <script>
 export default {
 	components: {
+		Title: () => import("@/components/transitions/Title"),
 		CardAirbnb: () => import("@/components/CardAirbnb"),
 		AirbnbList: () => import("@/components/views/AirbnbList")
 	},
@@ -35,7 +46,7 @@ export default {
 				}
 			)
 			.then(res => {
-				return { data: res.data.entries };
+				return { airbnbs: res.data.entries };
 			});
 	},
 	methods: {

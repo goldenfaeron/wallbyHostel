@@ -13,14 +13,16 @@
 		<v-responsive class="mx-auto" width="56">
 			<v-icon x-large>mdi-airport</v-icon>
 		</v-responsive>
-		<h1
-			class="primary--text main-title"
-			style="text-align: center;"
-		>Nearest Airports to {{$store.state.city}}</h1>
-		<h2
-			class="secondary--text"
-			style="text-align: center;"
-		>{{airports_google.length}} results from Google</h2>
+		<Title>
+			<h1
+				class="primary--text main-title"
+				style="text-align: center;"
+			>Nearest Airports to {{$store.state.city}}</h1>
+			<h2
+				class="secondary--text"
+				style="text-align: center;"
+			>{{airports_google.length}} results from Google</h2>
+		</Title>
 
 		<v-container grid-list-lg class="mt-7">
 			<v-layout row wrap>
@@ -53,7 +55,8 @@ export default {
 		};
 	},
 	components: {
-		CardAirport: () => import("@/components/CardAirport")
+		CardAirport: () => import("@/components/CardAirport"),
+		Title: () => import("@/components/transitions/Title")
 	},
 	methods: {
 		placeholder(index) {

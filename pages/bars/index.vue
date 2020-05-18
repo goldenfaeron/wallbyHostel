@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<v-img
-			:src="require('@/assets/bars.jpg')"
+			:src="require('@/assets/barman.jpg')"
 			:height="[$vuetify.breakpoint.smAndUp ? '400px' : '200px']"
 		>
 			<template v-slot:placeholder>
@@ -13,11 +13,16 @@
 		<v-responsive class="mx-auto" width="56">
 			<v-icon x-large>mdi-food</v-icon>
 		</v-responsive>
-		<h1
-			class="primary--text main-title"
-			style="text-align: center;"
-		>The best bars in {{$store.state.city}}</h1>
-		<h2 class="secondary--text" style="text-align: center;">{{bars_google.length}} results from Google</h2>
+		<Title>
+			<h1
+				class="primary--text main-title"
+				style="text-align: center;"
+			>The best bars in {{$store.state.city}}</h1>
+			<h2
+				class="secondary--text"
+				style="text-align: center;"
+			>{{bars_google.length}} results from Google</h2>
+		</Title>
 
 		<v-container grid-list-lg class="mt-7">
 			<v-layout row wrap>
@@ -62,7 +67,8 @@ export default {
 		};
 	},
 	components: {
-		CardBar: () => import("@/components/CardBar")
+		CardBar: () => import("@/components/CardBar"),
+		Title: () => import("@/components/transitions/Title")
 	},
 	methods: {
 		placeholder(index) {

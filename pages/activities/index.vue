@@ -10,18 +10,18 @@
 				</v-layout>
 			</template>
 		</v-img>
-		<v-container grid-list-xs>
+
+		<v-container>
 			<v-layout column fill-height align-center justify-center>
 				<v-flex xs12>
 					<v-responsive class="mx-auto" width="56">
 						<v-icon x-large>mdi-map-legend</v-icon>
 					</v-responsive>
-					<h1
-						class="text-xs-center text-lg-center text-md-center text-sm-center"
-					>What to do in {{$store.state.city}}</h1>
-				</v-flex>
-				<v-flex xs12>
-					<v-icon x-large>mdi-info</v-icon>
+
+					<Title>
+						<h1 class="text-center primary--text">What to do in {{$store.state.city}}</h1>
+						<h2 class="secondary--text" style="text-align: center;">{{things.length}} Top Activities</h2>
+					</Title>
 				</v-flex>
 			</v-layout>
 		</v-container>
@@ -74,6 +74,7 @@ export default {
 	},
 
 	components: {
+		Title: () => import("@/components/transitions/Title"),
 		CardThing: () => import("@/components/CardThing"),
 		CardInstagram: () => import("@/components/CardInstagram")
 	},

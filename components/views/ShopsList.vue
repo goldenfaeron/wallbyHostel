@@ -1,14 +1,5 @@
 <template>
 	<div>
-		<v-responsive class="mx-auto" width="56">
-			<v-icon x-large>mdi-store</v-icon>
-		</v-responsive>
-		<h1
-			class="primary--text main-title"
-			style="text-align: center;"
-		>The best shops in {{$store.state.city}}</h1>
-		<h2 class="secondary--text" style="text-align: center;">{{props.length}} results from Google</h2>
-
 		<v-container grid-list-lg class="mt-7">
 			<v-layout row wrap>
 				<v-flex xs6 sm4 v-for="(item, index) in props" :key="index">

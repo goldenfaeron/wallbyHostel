@@ -10,6 +10,20 @@
 				</v-layout>
 			</template>
 		</v-img>
+
+		<v-responsive class="mx-auto" width="56">
+			<v-icon x-large>mdi-store</v-icon>
+		</v-responsive>
+		<Title>
+			<h1
+				class="primary--text main-title"
+				style="text-align: center;"
+			>The best shops in {{$store.state.city}}</h1>
+			<h2
+				class="secondary--text"
+				style="text-align: center;"
+			>{{shops_google.length}} results from Google</h2>
+		</Title>
 		<ShopsList :props="shops_google"></ShopsList>
 	</div>
 </template>
@@ -36,7 +50,8 @@ export default {
 	},
 	components: {
 		CardShop: () => import("@/components/CardShop"),
-		ShopsList: () => import("@/components/views/ShopsList")
+		ShopsList: () => import("@/components/views/ShopsList"),
+		Title: () => import("@/components/transitions/Title")
 	},
 	methods: {
 		placeholder(index) {
