@@ -20,6 +20,7 @@
 				</v-list-item>
 			</v-list>
 		</v-navigation-drawer>
+
 		<v-app-bar :clipped-left="clipped" app fixed color="accent lighten-3 " type>
 			<!-- Mobile display left -->
 			<v-icon
@@ -67,15 +68,12 @@
 			>
 				<v-icon color="accent darken-2">mdi-menu</v-icon>
 			</v-btn>
-			<!-- Mobile display right -->
-
-			<!-- <v-btn icon @click.stop="rightDrawer = !rightDrawer">
-				<v-icon>mdi-account</v-icon>
-			</v-btn>-->
 		</v-app-bar>
+
 		<v-content>
 			<nuxt />
 		</v-content>
+
 		<v-navigation-drawer v-model="rightDrawer" :right="right" temporary fixed>
 			<v-list>
 				<v-list-item v-for="(item, i) in nav" :key="i" :to="item.to" router exact>
@@ -89,8 +87,9 @@
 				</v-list-item>
 			</v-list>
 		</v-navigation-drawer>
+		<BottomNav></BottomNav>
 		<Footer></Footer>
-		<GoBackButton></GoBackButton>
+		<!-- <GoBackButton></GoBackButton> -->
 	</v-app>
 </template>
 
@@ -99,9 +98,18 @@ export default {
 	computed: {
 		nav() {
 			return this.$store.getters.getNavigation;
+		},
+
+		navPos() {
+			return this.nav
+				.map(e => {
+					return e.to;
+				})
+				.indexOf(this.$route.path);
 		}
 	},
 	components: {
+		BottomNav: () => import("@/components/core/BottomNav"),
 		GoBackButton: () => import("@/components/core/GoBackButton"),
 		Footer: () => import("@/components/core/Footer"),
 		DrawerAnnouncement: () => import("@/components/DrawerAnnouncement")
@@ -109,8 +117,29 @@ export default {
 	methods: {
 		go(route) {
 			this.$router.push(route);
+		},
+
+		quickNav(direction) {
+			// console.log("clicked");
+			let length = this.nav.length - 1;
+			//reset position
+			if (direction == "right") {
+				if (this.navPos == length) {
+					return this.$router.push(this.nav[0].to);
+				} else {
+					return this.$router.push(this.nav[this.navPos + 1].to);
+				}
+			}
+			if (direction == "left") {
+				if (this.navPos == 0) {
+					return this.$router.push(this.nav[length].to);
+				} else {
+					return this.$router.push(this.nav[this.navPos - 1].to);
+				}
+			}
 		}
 	},
+
 	data() {
 		return {
 			clipped: false,
