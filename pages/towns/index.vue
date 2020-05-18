@@ -1,11 +1,20 @@
 <template>
 	<div>
+		<v-img
+			:src="require('@/assets/town.jpg')"
+			:height="[$vuetify.breakpoint.smAndUp ? '400px' : '200px']"
+		></v-img>
 		<v-responsive class="mx-auto" width="56">
 			<v-icon x-large>mdi-city</v-icon>
 		</v-responsive>
 
-		<h1 class="primary--text main-title" style="text-align: center;">Neary towns {{$store.state.city}}</h1>
-		<h2 class="secondary--text" style="text-align: center;">{{town.length}} results from Google</h2>
+		<Title>
+			<h1
+				class="primary--text main-title"
+				style="text-align: center;"
+			>Neary towns {{$store.state.city}}</h1>
+			<h2 class="secondary--text" style="text-align: center;">{{town.length}} results from Google</h2>
+		</Title>
 		<v-container grid-list-lg class="mt-7">
 			<v-layout row wrap>
 				<v-flex xs12 sm12 md6 lg3 v-for="(item, index) in town" :key="index">
@@ -37,7 +46,8 @@ export default {
 		};
 	},
 	components: {
-		CardTown: () => import("@/components/CardTown")
+		CardTown: () => import("@/components/CardTown"),
+		Title: () => import("@/components/transitions/Title")
 		// CardTown: () => import("@/components/CardTown")
 	},
 	methods: {

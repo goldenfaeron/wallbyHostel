@@ -1,17 +1,20 @@
 <template>
 	<div>
-		<v-container grid-list-xs>
-			<v-layout column fill-height align-center justify-center>
-				<v-flex xs12>
-					<v-icon x-large>mdi-instagram</v-icon>
-				</v-flex>
-				<v-flex xs12>
-					<h1
-						class="text-xs-center text-lg-center text-md-center text-sm-center"
-					>Latest Instagram posts in {{$store.state.city}}</h1>
-				</v-flex>
-			</v-layout>
-		</v-container>
+		<ImageGalleryUrls :props="imageUrls"></ImageGalleryUrls>
+		<Title>
+			<v-container grid-list-xs>
+				<v-layout column fill-height align-center justify-center>
+					<v-flex xs12>
+						<v-icon x-large>mdi-instagram</v-icon>
+					</v-flex>
+					<v-flex xs12>
+						<h1
+							class="text-xs-center text-lg-center text-md-center text-sm-center"
+						>Latest Instagram posts in {{$store.state.city}}</h1>
+					</v-flex>
+				</v-layout>
+			</v-container>
+		</Title>
 		<v-container grid-list-lg>
 			<!-- p{{posts}} -->
 			<v-layout row wrap>
@@ -28,29 +31,31 @@ export default {
 	async asyncData({ $axios, route, store }) {
 		let collection = "instagram";
 
-		let request1 = await $axios.post(
-			store.state.webRoot +
-				"/api/collections/get/" +
-				collection +
-				"?token=" +
-				store.state.collectionsToken,
-			{ limit: 15 }
+		let request1 = await $axios.get(
+			"https://api.apify.com/v2/datasets/Ihrf9Y7dkGjwNwmi5/items?format=json&clean=1&limit=60"
 		);
 
-		// let request2 = await $axios.post(
-		// 	store.state.webRoot +
-		// 		"/api/collections/get/" +
-		// 		collection +
-		// 		"?token=" +
-		// 		store.state.collectionsToken,
-		// 	{ limit: 5, sort: { _created: -1 } }
-		// );
 		return {
-			posts: request1.data.entries
+			posts: request1.data
 		};
 	},
 
-	components: { CardInstagram: () => import("@/components/CardInstagram") },
+	computed: {
+		imageUrls() {
+			let arr = [];
+			this.posts.forEach(element => {
+				arr.push(element.imageUrl);
+			});
+
+			return arr;
+		}
+	},
+
+	components: {
+		CardInstagram: () => import("@/components/CardInstagram"),
+		ImageGalleryUrls: () => import("@/components/ImageGalleryUrls"),
+		Title: () => import("@/components/transitions/Title")
+	},
 
 	head() {
 		return {

@@ -1,18 +1,30 @@
 <template>
 	<div>
+		<v-img
+			:src="require('@/assets/hotel.jpg')"
+			:height="[$vuetify.breakpoint.smAndUp ? '400px' : '200px']"
+		>
+			<template v-slot:placeholder>
+				<v-layout fill-height align-center justify-center ma-0>
+					<v-progress-circular indeterminate color="primary"></v-progress-circular>
+				</v-layout>
+			</template>
+		</v-img>
 		<v-responsive class="mx-auto" width="56">
 			<v-icon x-large>mdi-home</v-icon>
 		</v-responsive>
-		<h1
-			class="primary--text main-title"
-			style="text-align: center;"
-		>The best hotels in {{$store.state.city}}</h1>
-		<h2 class="secondary--text" style="text-align: center;">{{featured.length}} Featured Hotels</h2>
+		<Title>
+			<h1
+				class="primary--text main-title"
+				style="text-align: center;"
+			>The best hotels in {{$store.state.city}}</h1>
+			<h2 class="secondary--text" style="text-align: center;">{{featured.length}} Featured Hotels</h2>
+		</Title>
 
 		<v-container grid-list-lg class="my-5">
 			<!-- Featured -->
 			<v-layout row wrap>
-				<v-flex xs12 sm6 md4 v-for="(item, index) in featured" :key="index">
+				<v-flex xs6 md4 v-for="(item, index) in featured" :key="index">
 					<CardFeaturedHotel :props="item"></CardFeaturedHotel>
 				</v-flex>
 			</v-layout>
@@ -27,7 +39,7 @@
 export default {
 	components: {
 		BookingList: () => import("@/components/views/BookingList"),
-
+		Title: () => import("@/components/transitions/Title"),
 		CardFeaturedHotel: () => import("@/components/CardFeaturedHotel")
 
 		// Assurance: () => import("@/components/Assurance"),

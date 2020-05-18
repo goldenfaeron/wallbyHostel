@@ -1,20 +1,36 @@
 <template>
 	<div>
-		<h1 class="primary--text main-title" style="text-align: center;">Vacation in Borsh</h1>
-
-		<v-container grid-list-lg>
-			<v-layout row wrap>
-				<v-flex xs12 sm6 md6 lg4 v-for="(item, index) in data" :key="index">
-					<CardAirbnb :props="item"></CardAirbnb>
-				</v-flex>
-			</v-layout>
-		</v-container>
+		<v-img
+			:src="require('@/assets/airbnb.jpg')"
+			:height="[$vuetify.breakpoint.smAndUp ? '400px' : '200px']"
+		>
+			<template v-slot:placeholder>
+				<v-layout fill-height align-center justify-center ma-0>
+					<v-progress-circular indeterminate color="primary"></v-progress-circular>
+				</v-layout>
+			</template>
+		</v-img>
+		<v-responsive class="mx-auto" width="56">
+			<v-icon x-large>mdi-home</v-icon>
+		</v-responsive>
+		<Title>
+			<h1 class="text-center primary--text">Airbnbs in {{$store.state.city}}</h1>
+			<h2
+				class="secondary--text"
+				style="text-align: center;"
+			>{{airbnbs.length}} Super Stays from Airbnb</h2>
+		</Title>
+		<AirbnbList :props="airbnbs"></AirbnbList>
 	</div>
 </template>
 
 <script>
 export default {
-	components: { CardAirbnb: () => import("@/components/CardAirbnb") },
+	components: {
+		Title: () => import("@/components/transitions/Title"),
+		CardAirbnb: () => import("@/components/CardAirbnb"),
+		AirbnbList: () => import("@/components/views/AirbnbList")
+	},
 	async asyncData({ params, store, $axios, route }) {
 		let collection = "airbnb";
 		return await $axios
@@ -30,7 +46,7 @@ export default {
 				}
 			)
 			.then(res => {
-				return { data: res.data.entries };
+				return { airbnbs: res.data.entries };
 			});
 	},
 	methods: {

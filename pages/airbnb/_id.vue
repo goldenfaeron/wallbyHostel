@@ -147,25 +147,40 @@
 				</v-layout>
 			</span>
 		</v-container>
+		<AirbnbList :props="airbnbs"></AirbnbList>
 	</div>
 </template>
 
 <script>
 export default {
+	components: { AirbnbList: () => import("@/components/views/AirbnbList") },
+
 	async asyncData({ params, store, $axios, route }) {
 		let collection = "airbnb";
-		return await $axios
-			.post(
-				store.state.webRoot +
-					"/api/collections/get/" +
-					collection +
-					"?token=" +
-					store.state.collectionsToken,
-				{ filter: { slug: route.params.id } }
-			)
-			.then(res => {
-				return { room: res.data.entries[0] };
-			});
+		let request1 = await $axios.post(
+			store.state.webRoot +
+				"/api/collections/get/" +
+				collection +
+				"?token=" +
+				store.state.collectionsToken +
+				"&rspc=1",
+			{ filter: { slug: route.params.id } }
+		);
+
+		let request2 = await $axios.post(
+			store.state.webRoot +
+				"/api/collections/get/" +
+				collection +
+				"?token=" +
+				store.state.collectionsToken +
+				"&rspc=1",
+			{ limit: 20 }
+		);
+
+		return {
+			room: request1.data.entries[0],
+			airbnbs: request2.data.entries
+		};
 	},
 	data() {
 		return {

@@ -16,6 +16,12 @@
 				</v-flex>
 				<!-- Information card  -->
 				<v-flex xs12 md6 mt-2>
+					<v-layout column align-center>
+						<v-flex>
+							<v-btn :href="hotel.url" target="_blank" color="primary" x-large>Book now</v-btn>
+							<p>Go to booking.com</p>
+						</v-flex>
+					</v-layout>
 					<v-card>
 						<v-card-text>
 							<v-icon>mdi-food-croissant</v-icon>
@@ -83,9 +89,6 @@
 				</v-flex>
 			</v-layout>
 		</v-container>
-		<CallToAction
-			:props="{booking: hotel.url.replace('httpse', 'https'), website: 'hello', airbnb: 'hello'}"
-		></CallToAction>
 
 		<!-- more -->
 		<v-container grid-list-lg>
@@ -95,7 +98,7 @@
 			</v-responsive>
 			<h2 class="secondary--text" style="text-align: center;">Featured hotels in {{$store.state.city}}</h2>
 			<v-layout row wrap>
-				<v-flex xs12 sm6 md4 v-for="(item, index) in featured" :key="index">
+				<v-flex xs6 md4 v-for="(item, index) in featured" :key="index">
 					<CardFeaturedHotel :props="item"></CardFeaturedHotel>
 				</v-flex>
 			</v-layout>

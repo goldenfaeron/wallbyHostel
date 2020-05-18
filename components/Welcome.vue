@@ -1,7 +1,7 @@
 <template>
 	<section id="welcome" class="hide-overflow">
-		<v-layout mb-5>
-			<v-flex hidden-sm-and-down md4>
+		<v-layout mb-5 row>
+			<v-flex xs12 md4>
 				<v-img :src="$store.state.assetRoot + props.profile.path" height="50vh" />
 			</v-flex>
 
@@ -9,7 +9,7 @@
 				<v-layout align-center justify-center>
 					<v-flex xs11 md11>
 						<baseheading>{{props.name}}</baseheading>
-						<basetext>{{props.page_welcome_text}}</basetext>
+						<basetext v-html="props.page_welcome_text"></basetext>
 						<nuxt-link :to="''+props.slug" append>
 							<basebtn class="mt-4">{{props.page_button_0}}</basebtn>
 						</nuxt-link>

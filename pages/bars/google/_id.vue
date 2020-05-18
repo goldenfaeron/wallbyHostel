@@ -3,6 +3,7 @@
 		<v-container grid-list-lg>
 			<h1>{{bar.title}}</h1>
 			<h2>{{bar.categoryName}}</h2>
+
 			<v-layout row wrap>
 				<!-- Image + Information -->
 				<v-flex xs12 md6>
@@ -54,12 +55,15 @@
 						</v-flex>
 					</v-layout>
 				</v-flex>
+				<!-- {{sortReviews}}
+				{{reviews}}-->
 
+				<div v-for="(item, index) in sortReviews" :key="index"></div>
 				<v-flex xs12 md6 v-if="sortReviews">
 					<v-layout>
 						<v-flex xs12>
 							<h2>Reviews</h2>
-							<div v-for="(item, index) in sortReviews" :key="index">
+							<div v-for="(item, i) in sortReviews" :key="i">
 								<CardReview
 									class="mt-3"
 									:props="{title:item.name, text:item.text, rating:item.stars, user :{username: 'User'}}"
@@ -70,32 +74,56 @@
 				</v-flex>
 			</v-layout>
 		</v-container>
+		<BarsList :props="bars"></BarsList>
 	</div>
 </template>
 
 <script>
+import { Mixin } from "~/mixins/sortReviews.js";
 export default {
 	async asyncData({ params, store, $axios, route }) {
 		let collection = "googleplaces_borsh";
-		return await $axios
-			.post(
-				store.state.webRoot +
-					"/api/collections/get/" +
-					collection +
-					"?token=" +
-					store.state.collectionsToken,
-				{ filter: { slug: route.params.id } }
-			)
-			.then(res => {
-				return {
-					bar: res.data.entries[0],
+		let request1 = await $axios.post(
+			store.state.webRoot +
+				"/api/collections/get/" +
+				collection +
+				"?token=" +
+				store.state.collectionsToken +
+				"&rspc=1",
+			{ filter: { slug: route.params.id } }
+		);
 
-					reviews: JSON.parse(JSON.stringify(res.data.entries[0].reviews))
-				};
-			});
+		let request2 = await $axios.post(
+			store.state.webRoot +
+				"/api/collections/get/" +
+				collection +
+				"?token=" +
+				store.state.collectionsToken,
+			{
+				fields: {
+					imageUrls: 1,
+					title: 1,
+					totalScore: 1,
+					categoryName: 1,
+					url: 1,
+					slug: 1,
+					reviewsCount: 1,
+					location: 1
+				},
+				limit: 20,
+				sort: { imageUrls: -1 }
+			}
+		);
+
+		return {
+			bar: request1.data.entries[0],
+			bars: request2.data.entries,
+			reviews: JSON.parse(JSON.stringify(request1.data.entries[0].reviews))
+		};
 	},
 
 	components: {
+		BarsList: () => import("@/components/views/BarsList"),
 		googleMap: () => import("@/components/googleMap"),
 		CardReview: () => import("@/components/CardReview")
 	},
@@ -104,28 +132,6 @@ export default {
 			// reviews: JSON.parse(JSON.stringify(bar.reviews))
 			// bar: this.bars[this.$route.params.id]
 		};
-	},
-
-	computed: {
-		sortReviews() {
-			if (this.reviews) {
-				let reviewsClone = this.reviews;
-				let arr = [];
-
-				//Check if has text and push to new array
-				reviewsClone.forEach(element => {
-					if (element.text) {
-						element.text = element.text.replace("(Translated by Google)", "");
-						arr.push(element);
-					}
-				});
-				//Sort arr
-				function sortByLength(array) {
-					return array.sort((x, y) => x.text.length - y.text.length);
-				}
-				return sortByLength(arr).reverse();
-			}
-		}
 	},
 
 	head() {
@@ -139,6 +145,7 @@ export default {
 				}
 			]
 		};
-	}
+	},
+	mixins: [Mixin]
 };
 </script>

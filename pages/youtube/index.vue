@@ -3,10 +3,9 @@
 		<v-responsive class="mx-auto" width="56">
 			<v-icon x-large>mdi-youtube</v-icon>
 		</v-responsive>
-		<h1
-			class="primary--text main-title"
-			style="text-align: center;"
-		>{{$store.state.city}} on {{this.type}}</h1>
+		<Title>
+			<h1 class="primary--text main-title" style="text-align: center;">{{$store.state.city}}Tube</h1>
+		</Title>
 
 		<v-container grid-list-lg>
 			<v-layout row wrap>
@@ -90,6 +89,10 @@ export default {
 			// hotel: request1.data.entries[0],
 			videos: request1.data.entries
 		};
+	},
+
+	components: {
+		Title: () => import("@/components/transitions/Title")
 	},
 
 	methods: {

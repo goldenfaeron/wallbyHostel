@@ -4,20 +4,25 @@
 		<about></about>
 		<stats></stats>
 		<activities :props="activities"></activities>
+
+		<BtnCentered link="/activities"></BtnCentered>
+		<v-divider></v-divider>
 		<bars :props="bars"></bars>
 
 		<v-divider></v-divider>
 
 		<booking :props="hotels"></booking>
+		<BtnCentered link="/booking"></BtnCentered>
 
 		<v-divider></v-divider>
 		<br />
 
 		<airbnb :props="airbnb"></airbnb>
-
+		<BtnCentered link="/airbnb"></BtnCentered>
 		<v-divider></v-divider>
 
 		<instagram :props="instagram"></instagram>
+		<BtnCentered link="/instagram/posts"></BtnCentered>
 	</div>
 </template>
 
@@ -33,6 +38,7 @@ import instagram from "~/components/Instagram.vue";
 import airbnb from "~/components/airbnb.vue";
 import bars from "~/components/bars.vue";
 import activities from "~/components/activities.vue";
+import BtnCentered from "~/components/core/BtnCentered.vue";
 
 export default {
 	components: {
@@ -40,7 +46,7 @@ export default {
 		about,
 		features,
 		stats,
-
+		BtnCentered,
 		booking,
 		instagram,
 		airbnb,
@@ -70,16 +76,8 @@ export default {
 		);
 
 		// instagram
-		let request2 = await $axios.post(
-			store.state.webRoot +
-				"/api/collections/get/" +
-				collection2 +
-				"?token=" +
-				store.state.collectionsToken +
-				"&rspc=1",
-			{
-				limit: 8
-			}
+		let request2 = await $axios.get(
+			"https://api.apify.com/v2/datasets/Ihrf9Y7dkGjwNwmi5/items?format=json&clean=1&limit=24"
 		);
 
 		//hotels (featured)
@@ -141,7 +139,7 @@ export default {
 
 		return {
 			airbnb: request1.data.entries,
-			instagram: request2.data.entries,
+			instagram: request2.data,
 			hotels: request3.data.entries,
 			bars: request4.data.entries,
 			activities: request5.data.entries

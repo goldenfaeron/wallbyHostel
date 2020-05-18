@@ -1,24 +1,30 @@
 <template>
 	<div>
+		<v-img
+			:src="require('@/assets/shop.jpg')"
+			:height="[$vuetify.breakpoint.smAndUp ? '400px' : '200px']"
+		>
+			<template v-slot:placeholder>
+				<v-layout fill-height align-center justify-center ma-0>
+					<v-progress-circular indeterminate color="primary"></v-progress-circular>
+				</v-layout>
+			</template>
+		</v-img>
+
 		<v-responsive class="mx-auto" width="56">
 			<v-icon x-large>mdi-store</v-icon>
 		</v-responsive>
-		<h1
-			class="primary--text main-title"
-			style="text-align: center;"
-		>The best shops in {{$store.state.city}}</h1>
-		<h2
-			class="secondary--text"
-			style="text-align: center;"
-		>{{shops_google.length}} results from Google</h2>
-
-		<v-container grid-list-lg class="mt-7">
-			<v-layout row wrap>
-				<v-flex xs12 sm12 md6 lg3 v-for="(item, index) in shops_google" :key="index">
-					<CardShop :props="item" :link="'/shops/'" :index="index"></CardShop>
-				</v-flex>
-			</v-layout>
-		</v-container>
+		<Title>
+			<h1
+				class="primary--text main-title"
+				style="text-align: center;"
+			>The best shops in {{$store.state.city}}</h1>
+			<h2
+				class="secondary--text"
+				style="text-align: center;"
+			>{{shops_google.length}} results from Google</h2>
+		</Title>
+		<ShopsList :props="shops_google"></ShopsList>
 	</div>
 </template>
 
@@ -43,7 +49,9 @@ export default {
 		};
 	},
 	components: {
-		CardShop: () => import("@/components/CardShop")
+		CardShop: () => import("@/components/CardShop"),
+		ShopsList: () => import("@/components/views/ShopsList"),
+		Title: () => import("@/components/transitions/Title")
 	},
 	methods: {
 		placeholder(index) {

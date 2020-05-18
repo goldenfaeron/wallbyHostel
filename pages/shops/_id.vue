@@ -4,7 +4,13 @@
 			<v-layout row wrap>
 				<v-flex xs12 md6>
 					<v-layout column wrap>
-						<h1>{{bar.title}}</h1>
+						<h1>
+							{{bar.title}}
+							<v-btn v-if="bar.phone" text target="_blank" color="primary" x-large>
+								<v-icon>mdi-phone</v-icon>
+								{{bar.phone}}
+							</v-btn>
+						</h1>
 						<h2>{{bar.categoryName}}</h2>
 						<v-flex xs12 v-if="bar.imageUrls">
 							<v-carousel
@@ -54,8 +60,8 @@
 					</v-layout>
 				</v-flex>
 
-				<v-flex xs12 md6 v-if="sortReviews">
-					<v-layout>
+				<v-flex xs12 md6>
+					<v-layout v-if="sortReviews">
 						<v-flex xs12>
 							<h2>Reviews</h2>
 							<div v-for="(item, index) in sortReviews" :key="index">
@@ -69,63 +75,52 @@
 				</v-flex>
 			</v-layout>
 		</v-container>
+		<ShopsList :props="bars"></ShopsList>
 	</div>
 </template>
 
 <script>
+import { Mixin } from "~/mixins/sortReviews.js";
 export default {
 	async asyncData({ params, store, $axios, route }) {
 		let collection = "googleplaces_shops_borsh";
-		return await $axios
-			.post(
-				store.state.webRoot +
-					"/api/collections/get/" +
-					collection +
-					"?token=" +
-					store.state.collectionsToken +
-					"&rspc=1",
-				{ filter: { slug: route.params.id } }
-			)
-			.then(res => {
-				return {
-					bar: res.data.entries[0],
+		let request1 = await $axios.post(
+			store.state.webRoot +
+				"/api/collections/get/" +
+				collection +
+				"?token=" +
+				store.state.collectionsToken +
+				"&rspc=1",
+			{ filter: { slug: route.params.id } }
+		);
+		let request2 = await $axios.post(
+			store.state.webRoot +
+				"/api/collections/get/" +
+				collection +
+				"?token=" +
+				store.state.collectionsToken +
+				"&rspc=1",
+			{ sort: { imageUrls: -1 }, fields: { reviews: 0 }, limit: 20 }
+		);
 
-					reviews: JSON.parse(JSON.stringify(res.data.entries[0].reviews))
-				};
-			});
+		return {
+			bar: request1.data.entries[0],
+			bars: request2.data.entries,
+
+			reviews: JSON.parse(JSON.stringify(request1.data.entries[0].reviews))
+		};
 	},
 
 	components: {
 		googleMap: () => import("@/components/googleMap"),
-		CardReview: () => import("@/components/CardReview")
+		CardReview: () => import("@/components/CardReview"),
+		ShopsList: () => import("@/components/views/ShopsList")
 	},
 	data() {
 		return {
 			// reviews: JSON.parse(JSON.stringify(bar.reviews))
 			// bar: this.bars[this.$route.params.id]
 		};
-	},
-
-	computed: {
-		sortReviews() {
-			if (this.reviews) {
-				let reviewsClone = this.reviews;
-				let arr = [];
-
-				//Check if has text and push to new array
-				reviewsClone.forEach(element => {
-					if (element.text) {
-						element.text = element.text.replace("(Translated by Google)", "");
-						arr.push(element);
-					}
-				});
-				//Sort arr
-				function sortByLength(array) {
-					return array.sort((x, y) => x.text.length - y.text.length);
-				}
-				return sortByLength(arr).reverse();
-			}
-		}
 	},
 
 	head() {
@@ -139,6 +134,7 @@ export default {
 				}
 			]
 		};
-	}
+	},
+	mixins: [Mixin]
 };
 </script>
