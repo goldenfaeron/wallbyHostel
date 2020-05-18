@@ -4,20 +4,25 @@
 		<about></about>
 		<stats></stats>
 		<activities :props="activities"></activities>
+
+		<BtnCentered link="/activities"></BtnCentered>
+		<v-divider></v-divider>
 		<bars :props="bars"></bars>
 
 		<v-divider></v-divider>
 
 		<booking :props="hotels"></booking>
+		<BtnCentered link="/booking"></BtnCentered>
 
 		<v-divider></v-divider>
 		<br />
 
 		<airbnb :props="airbnb"></airbnb>
-
+		<BtnCentered link="/airbnb"></BtnCentered>
 		<v-divider></v-divider>
 
 		<instagram :props="instagram"></instagram>
+		<BtnCentered link="/instagram/posts"></BtnCentered>
 	</div>
 </template>
 
@@ -33,6 +38,7 @@ import instagram from "~/components/Instagram.vue";
 import airbnb from "~/components/airbnb.vue";
 import bars from "~/components/bars.vue";
 import activities from "~/components/activities.vue";
+import BtnCentered from "~/components/core/BtnCentered.vue";
 
 export default {
 	components: {
@@ -40,7 +46,7 @@ export default {
 		about,
 		features,
 		stats,
-
+		BtnCentered,
 		booking,
 		instagram,
 		airbnb,
