@@ -1,6 +1,7 @@
 <template>
 	<div>
-		<ImageGalleryUrls :props="imageUrls"></ImageGalleryUrls>
+		<!-- <ImageGalleryUrls :props="imageUrls"></ImageGalleryUrls> -->
+		<GalleryInstagram :props="posts"></GalleryInstagram>
 		<Title>
 			<v-container grid-list-xs>
 				<v-layout column fill-height align-center justify-center>
@@ -52,6 +53,7 @@ export default {
 	},
 
 	components: {
+		GalleryInstagram: () => import("@/components/gallery/GalleryInstagram"),
 		CardInstagram: () => import("@/components/CardInstagram"),
 		ImageGalleryUrls: () => import("@/components/ImageGalleryUrls"),
 		Title: () => import("@/components/transitions/Title")

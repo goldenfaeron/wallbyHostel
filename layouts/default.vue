@@ -1,5 +1,5 @@
 <template>
-	<v-app>
+	<v-app v-show="show">
 		<v-navigation-drawer
 			color="accent lighten-4"
 			v-model="drawer"
@@ -70,7 +70,7 @@
 			</v-btn>
 		</v-app-bar>
 
-		<v-content v-show="show">
+		<v-content>
 			<nuxt />
 		</v-content>
 
