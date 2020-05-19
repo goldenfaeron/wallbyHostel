@@ -1,9 +1,8 @@
 <template>
 	<div>
 		<v-container grid-list-lg>
-			<v-layout column wrap>
+			<v-layout column>
 				<v-flex>
-					<h1 primary-title>{{thing.name}}</h1>
 					<v-img height="200" v-if="!thing.cp_photo" :src="thing.photo.images.large.url">
 						<template v-slot:placeholder>
 							<v-layout fill-height align-center justify-center ma-0>
@@ -18,29 +17,42 @@
 							</v-layout>
 						</template>
 					</v-img>
-
-					<h2 primary-title>{{thing.location_string}}</h2>
-					<p>{{thing.description}}</p>
-					<!-- Featured business -->
-					<h2>
-						What to do in {{thing.name}}
-						<v-icon>mdi-account-star</v-icon>
-					</h2>
-					<v-divider></v-divider>
-					<v-container grid-list-lg>
-						<v-layout row wrap>
-							<v-flex xs12 md4 v-for="(item, index) in thing.linked_business" :key="index">
-								<CardFeaturedBusiness :props="item"></CardFeaturedBusiness>
-							</v-flex>
-						</v-layout>
-					</v-container>
-
-					<h2>
-						Reviews of {{thing.name}} from Tripadvisor
-						<v-icon>mdi-account-star</v-icon>
-						<v-divider></v-divider>
-					</h2>
+					<Title>
+						<div class="display-1 primary--text text-center">{{thing.name}}</div>
+						<h2 class="secondary--title text-center">{{thing.location_string}}</h2>
+						<p class="text-center">{{thing.description}}</p>
+						<!-- Featured business -->
+					</Title>
 				</v-flex>
+
+				<v-divider></v-divider>
+				<v-layout column align-center>
+					<v-flex xs12>
+						<h2 class="success--text lighten-1">
+							Check out
+							<!-- <v-icon>mdi-account-star</v-icon> -->
+						</h2>
+					</v-flex>
+					<v-flex xs12>
+						<v-container grid-list-lg>
+							<v-layout row wrap align-center justify-center>
+								<v-flex xs6 sm4 v-for="(item, index) in thing.linked_business" :key="index">
+									<CardFeaturedBusiness :props="item"></CardFeaturedBusiness>
+								</v-flex>
+							</v-layout>
+						</v-container>
+					</v-flex>
+				</v-layout>
+
+				<v-divider></v-divider>
+				<v-layout align-center v-if="thing.reviews">
+					<v-flex xs12>
+						<h2 class="warning--text lighten-1 text-center">
+							{{thing.name}}{{thing.reviews.length}} reviews
+							<!-- <v-icon>mdi-account-star</v-icon> -->
+						</h2>
+					</v-flex>
+				</v-layout>
 
 				<v-container grid-list-lg fluid>
 					<v-layout row wrap fill>
@@ -114,6 +126,7 @@ export default {
 	},
 
 	components: {
+		Title: () => import("@/components/transitions/Title"),
 		CardReview: () => import("@/components/CardReview"),
 		CardInstagram: () => import("@/components/CardInstagram"),
 		CardFeaturedBusiness: () => import("@/components/CardFeaturedBusiness"),

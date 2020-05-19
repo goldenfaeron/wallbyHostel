@@ -5,15 +5,17 @@
 				<v-flex xs12>
 					<v-img :height="[$vuetify.breakpoint.smAndUp ? '400px' : '200px']" :src="hotel.image"></v-img>
 				</v-flex>
-				<v-flex xs12 md6>
-					<div class="display-1">
-						<v-icon x-large>mdi-home</v-icon>
-						{{hotel.name}}
-					</div>
-					<br />
-					<div class>{{hotel.description}}</div>
-					<br />
-				</v-flex>
+				<Title>
+					<v-flex xs12 md6>
+						<div class="display-1">
+							<v-icon x-large>mdi-home</v-icon>
+							{{hotel.name}}
+						</div>
+						<br />
+						<div class>{{hotel.description}}</div>
+						<br />
+					</v-flex>
+				</Title>
 				<!-- Information card  -->
 				<v-flex xs12 md6 mt-2>
 					<v-layout column align-center>
@@ -162,13 +164,13 @@ export default {
 		};
 	},
 	components: {
+		Title: () => import("@/components/transitions/Title"),
 		CardFeaturedHotel: () => import("@/components/CardFeaturedHotel"),
 		CardHotelMobile: () => import("@/components/CardHotelMobile"),
 		CardHotel: () => import("@/components/CardHotel"),
 		CardRoomBooking: () => import("@/components/CardRoomBooking"),
 		Dialog: () => import("@/components/Dialog"),
 		googleMapCoordinate: () => import("@/components/googleMapCoordinate"),
-		CallToAction: () => import("@/components/CallToAction"),
 		BookingList: () => import("@/components/views/BookingList")
 	},
 

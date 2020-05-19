@@ -4,14 +4,16 @@
 			<v-layout row wrap>
 				<v-flex xs12 md6>
 					<v-layout column wrap>
-						<h1>
-							{{bar.title}}
-							<v-btn v-if="bar.phone" text target="_blank" color="primary" x-large>
-								<v-icon>mdi-phone</v-icon>
-								{{bar.phone}}
-							</v-btn>
-						</h1>
-						<h2>{{bar.categoryName}}</h2>
+						<Title>
+							<h1>
+								{{bar.title}}
+								<v-btn v-if="bar.phone" text target="_blank" color="primary" x-large>
+									<v-icon>mdi-phone</v-icon>
+									{{bar.phone}}
+								</v-btn>
+							</h1>
+							<h2>{{bar.categoryName}}</h2>
+						</Title>
 						<v-flex xs12 v-if="bar.imageUrls">
 							<v-carousel
 								:height="[$vuetify.breakpoint.smAndUp ? '600px' : '200px']"
@@ -112,6 +114,7 @@ export default {
 	},
 
 	components: {
+		Title: () => import("@/components/transitions/Title"),
 		googleMap: () => import("@/components/googleMap"),
 		CardReview: () => import("@/components/CardReview"),
 		ShopsList: () => import("@/components/views/ShopsList")

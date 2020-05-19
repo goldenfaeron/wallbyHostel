@@ -1,36 +1,89 @@
 <template>
 	<v-container fluid>
+		<!-- {{props}} -->
+
 		<v-layout column wrap>
-			<v-flex align-self-end v-if="galleryMode">
-				<v-icon @click="closeGallery()">mdi-close-outline</v-icon>
-			</v-flex>
-			<v-img :contain="displayImageContain" :height="displayImageHeight" :src="displayImage"></v-img>
+			<v-img :contain="displayImageContain" :height="displayImageHeight" :src="displayImage.imageUrl">
+				<v-container grid-list-lg>
+					<v-layout column align-content-start>
+						<!-- <v-flex align-self-end>
+							<v-btn color="primary lighten-3" fab>
+								<v-icon>mdi-text</v-icon>
+							</v-btn>
+						</v-flex>-->
+						<v-flex align-self-end v-if="galleryMode">
+							<v-btn color="red lighten-2" fab small>
+								<v-icon color="secondary " @click="closeGallery()">mdi-close-outline</v-icon>
+							</v-btn>
+						</v-flex>
+					</v-layout>
+				</v-container>
+			</v-img>
+
+			<!-- {{displayImage}} -->
 			<v-responsive>
 				<div class="title centered text-center">{{props.length}} Images</div>
 			</v-responsive>
 
 			<v-layout v-if="galleryMode" row justify-center>
-				<v-btn class="mx-1 my-1" small color="primary lighten" fab @click="shiftImage('left')">
+				<v-btn class="mx-1 my-1" color="primary lighten" @click="shiftImage('left')">
 					<v-icon>mdi-chevron-left</v-icon>
 				</v-btn>
+				<v-btn class="mx-1 my-1" color="primary lighten-2" fab small @click="showInfo = !showInfo">
+					<v-icon>mdi-information</v-icon>
+				</v-btn>
 
-				<v-btn class="mx-1 my-1" small color="primary lighten" fab @click="shiftImage('right')">
+				<v-btn class="mx-1 my-1" color="primary lighten" @click="shiftImage('right')">
 					<v-icon>mdi-chevron-right</v-icon>
 				</v-btn>
 			</v-layout>
+
+			<v-card v-if="showInfo">
+				<v-card-text>
+					<span v-if="displayImage.alt">
+						<v-icon>mdi-text</v-icon>
+						{{displayImage.alt}}
+						<br />
+					</span>
+					<span v-if="displayImage.locationName">
+						<v-icon>mdi-map-marker</v-icon>
+						{{displayImage.locationName}}
+						<br />
+					</span>
+					<span v-if="displayImage.firstComment">
+						<v-icon>mdi-comment</v-icon>
+						{{displayImage.firstComment}}
+						<br />
+					</span>
+					<span v-if="displayImage.likesCount">
+						<v-icon>mdi-heart</v-icon>
+						{{displayImage.likesCount}} likes
+						<br />
+					</span>
+					<span v-if="displayImage.ownerUsername">
+						<v-icon>mdi-account-outline</v-icon>
+						{{displayImage.ownerUsername}}
+						<br />
+					</span>
+					<span v-if="displayImage.ownerUsername">
+						<v-icon>mdi-instagram</v-icon>
+						<a :href="displayImage.url" target="_blank">View on Instagram</a>
+					</span>
+				</v-card-text>
+			</v-card>
 
 			<v-flex xs12>
 				<v-container grid-list-sm>
 					<v-layout row wrap :justify-center="galleryMode">
 						<v-flex
-							v-for="(image, index) in props.imageUrls"
+							v-for="(image, index) in props"
 							:key="image"
 							xs2
 							md1
 							@click="clickImg(image ,index)"
 							v-if="limit12 && index < 11"
 						>
-							<v-img style="cursor:pointer" :src="image" class="grey lighten-2" :height="height">
+							<v-img style="cursor:pointer" :src="image.imageUrl" class="grey lighten-2" :height="height">
 								<template v-slot:placeholder>
 									<v-layout fill-height align-center justify-center ma-0>
 										<v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
@@ -46,7 +99,7 @@
 							@click="clickImg(image ,index)"
 							v-if="!limit12"
 						>
-							<v-img style="cursor:pointer" :src="image" class="grey lighten-2" :height="height">
+							<v-img style="cursor:pointer" :src="image.imageUrl" class="grey lighten-2" :height="height">
 								<template v-slot:placeholder>
 									<v-layout fill-height align-center justify-center ma-0>
 										<v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
@@ -98,11 +151,14 @@ export default {
 		closeGallery() {
 			this.galleryMode = false;
 			this.displayImageContain = false;
+			this.limit12 = true;
+			this.showInfo = false;
 		}
 	},
 
 	data() {
 		return {
+			showInfo: false,
 			limit12: true,
 			displayIndex: "",
 			galleryMode: false,

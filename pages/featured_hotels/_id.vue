@@ -11,19 +11,21 @@
 		<!-- New container -->
 		<v-container grid-list-lg>
 			<v-layout row wrap>
-				<v-flex xs12 md6>
-					<div class="display-2">
-						{{hotel.name}}
-						<v-container>
-							<v-layout row wrap>
-								<v-flex xs1 v-for="(item, index) in hotel.header_image.colors" :key="index">
-									<v-icon :color="item">mdi-star</v-icon>
-								</v-flex>
-							</v-layout>
-						</v-container>
-					</div>
-					<p v-html="hotel.description"></p>
-				</v-flex>
+				<Title>
+					<v-flex xs12 md6>
+						<div class="display-2">
+							{{hotel.name}}
+							<v-container>
+								<v-layout row wrap>
+									<v-flex xs1 v-for="(item, index) in hotel.header_image.colors" :key="index">
+										<v-icon :color="item">mdi-star</v-icon>
+									</v-flex>
+								</v-layout>
+							</v-container>
+						</div>
+						<p v-html="hotel.description"></p>
+					</v-flex>
+				</Title>
 				<v-flex xs12 md6>
 					<!-- Rooms -->
 					<v-layout column align-center>
@@ -158,9 +160,10 @@ export default {
 		};
 	},
 	components: {
+		Title: () => import("@/components/transitions/Title"),
 		googleMap: () => import("@/components/googleMap"),
 		CardInstagram: () => import("@/components/CardInstagram"),
-		CallToAction: () => import("@/components/CallToAction"),
+
 		CommentsParallax: () => import("@/components/CommentsParallax"),
 		JumbotronGradient: () => import("@/components/JumbotronGradient"),
 		ImageGallery: () => import("@/components/ImageGallery"),

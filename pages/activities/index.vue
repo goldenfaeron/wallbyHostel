@@ -19,7 +19,7 @@
 					</v-responsive>
 
 					<Title>
-						<h1 class="text-center primary--text">What to do in {{$store.state.city}}</h1>
+						<div class="text-center primary--text display-2">What to do in {{$store.state.city}}</div>
 						<h2 class="secondary--text" style="text-align: center;">{{things.length}} Top Activities</h2>
 					</Title>
 				</v-flex>

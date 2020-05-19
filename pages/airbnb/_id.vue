@@ -9,9 +9,11 @@
 						</v-carousel>
 					</v-flex>
 					<v-flex lg5>
-						<p class="display-1 bold font-weight-bold" color>{{room.name}}</p>
-						<p>{{room.address}}</p>
-						<br />
+						<Title>
+							<p class="display-1 bold font-weight-bold" color>{{room.name}}</p>
+							<p>{{room.address}}</p>
+							<br />
+						</Title>
 						<v-layout row wrap>
 							<v-flex lg3>
 								<p>{{room.numberOfGuests}} guests</p>
@@ -153,7 +155,10 @@
 
 <script>
 export default {
-	components: { AirbnbList: () => import("@/components/views/AirbnbList") },
+	components: {
+		AirbnbList: () => import("@/components/views/AirbnbList"),
+		Title: () => import("@/components/transitions/Title")
+	},
 
 	async asyncData({ params, store, $axios, route }) {
 		let collection = "airbnb";
