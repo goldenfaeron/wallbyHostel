@@ -22,6 +22,10 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+
+  env: {
+    collectionToken: "641a6e0c88f94f7d2adadd184752e1"
+  },
   /*
   ** Customize the progress-bar color
   */

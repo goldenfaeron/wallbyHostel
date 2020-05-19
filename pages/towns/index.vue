@@ -35,7 +35,7 @@ export default {
 				"/api/collections/get/" +
 				collection +
 				"?token=" +
-				store.state.collectionsToken +
+				process.env.collectionToken +
 				"&rspc=1",
 			{ fields: { reviews: 0, popularTimesHistogram: 0 }, limit: 15 }
 		);

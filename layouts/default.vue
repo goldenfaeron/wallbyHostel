@@ -70,7 +70,7 @@
 			</v-btn>
 		</v-app-bar>
 
-		<v-content>
+		<v-content v-show="show">
 			<nuxt />
 		</v-content>
 
@@ -95,6 +95,28 @@
 
 <script>
 export default {
+	components: {
+		BottomNav: () => import("@/components/core/BottomNav"),
+		GoBackButton: () => import("@/components/core/GoBackButton"),
+		Footer: () => import("@/components/core/Footer"),
+		DrawerAnnouncement: () => import("@/components/DrawerAnnouncement")
+	},
+
+	data() {
+		return {
+			show: false,
+			clipped: false,
+			drawer: false,
+			fixed: false,
+			items: this.$store.state.nav_items,
+			miniVariant: false,
+			right: true,
+			rightDrawer: false,
+			title: "go" + this.$store.state.city + "i",
+			developer: this.$store.state.developer
+		};
+	},
+
 	computed: {
 		nav() {
 			return this.$store.getters.getNavigation;
@@ -108,12 +130,7 @@ export default {
 				.indexOf(this.$route.path);
 		}
 	},
-	components: {
-		BottomNav: () => import("@/components/core/BottomNav"),
-		GoBackButton: () => import("@/components/core/GoBackButton"),
-		Footer: () => import("@/components/core/Footer"),
-		DrawerAnnouncement: () => import("@/components/DrawerAnnouncement")
-	},
+
 	methods: {
 		go(route) {
 			this.$router.push(route);
@@ -140,18 +157,8 @@ export default {
 		}
 	},
 
-	data() {
-		return {
-			clipped: false,
-			drawer: false,
-			fixed: false,
-			items: this.$store.state.nav_items,
-			miniVariant: false,
-			right: true,
-			rightDrawer: false,
-			title: "go" + this.$store.state.city + "i",
-			developer: this.$store.state.developer
-		};
+	mounted() {
+		this.show = true;
 	}
 };
 </script>
