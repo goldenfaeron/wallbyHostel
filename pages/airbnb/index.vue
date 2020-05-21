@@ -74,10 +74,10 @@ export default {
 	},
 	head() {
 		return {
-			title: "AirBnB in " + this.$store.state.city,
+			title: this.$t("airbnbs_in") + this.$store.state.city,
 			meta: [
 				{
-					hid: "AirBnB in " + this.$store.state.city,
+					hid: this.$t("airbnbs_in") + this.$store.state.city,
 					name: "AirBnB in " + this.$store.state.city,
 					content: "AirBnB in " + this.$store.state.city
 				}

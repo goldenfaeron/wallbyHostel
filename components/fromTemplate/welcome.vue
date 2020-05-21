@@ -8,16 +8,14 @@
 						<v-row align="center" class="white--text mx-auto" justify="center">
 							<v-col class="white--text text-center" cols="12" tag="h1">
 								<span
-									class="font-weight-light"
-									:class="[$vuetify.breakpoint.smAndDown ? 'display-1' : 'display-2']"
-								>WELCOME TO</span>
+									:class="[$vuetify.breakpoint.smAndDown ? 'display-2' : 'display-3']  + ' font-weight-black text-uppercase'"
+								>{{$t('welcome')}}</span>
 
 								<br />
 
-								<span
-									:class="[$vuetify.breakpoint.smAndDown ? 'display-3': 'display-4']"
-									class="font-weight-black"
-								>BORSH</span>
+								<div
+									:class="[$vuetify.breakpoint.smAndDown ? 'display-3': 'display-4'] + ' font-weight-black text-uppercase'"
+								>{{$store.state.city}}</div>
 							</v-col>
 
 							<v-btn class="align-self-end" fab outlined @click="$vuetify.goTo('#about')">

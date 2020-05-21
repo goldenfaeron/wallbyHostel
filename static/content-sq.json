@@ -1,7 +1,15 @@
 {
+    "toolbar": "Gjeni atë që ju nevojitet ",
     "title": "Pershendetje, si je ti?",
-    "slogan": "Gjeni atë që ju nevojitet në ",
+    "welcome": "Mirësevini në ",
+    "subtitle": "Gjithçka që ju nevojitet në ",
+    "subtext": " është thjesht një nga linjat bregdetare më të qeta në Rivierën Jugore. Një parajsë perfekte për të kaluar ditët e verës në mënyrën e duhur.",
+    "subaction": " ju gjen gjithçka që ju nevojitet për qëndrimin tuaj në  ",
     "country": "Shqipëri",
     "airbnbs_in": "AirBnB në ",
-    "airbnb_super_stays": "Qëndrime super me Airbnb"
+    "airbnb_super_stays": "Qëndrime super me Airbnb",
+    "activities_title": "Farë të bësh në",
+    "activities_subtitle": "  Rekomandime Lokale ",
+    "towns_title": " Fshatrat afër ",
+    "towns_subtitle": " rezultatet nga Google "
 }

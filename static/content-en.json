@@ -1,7 +1,16 @@
 {
+    "toolbar": "Find what you need in ",
     "title": "Hi how are you",
-    "airbnbs_in": "Airbnbs in",
+    "welcome": "Welcome to ",
+    "subtitle": "Everything you need in ",
+    "subtext": " Beach is quite simply one of the most tranquil coastlines on the Southern Riviera. A picture-perfect paradise to spend your summer days the right way. ",
+    "subaction": "finds you everything you need for your stay in  ",
+    "airbnbs_in": "Airbnbs in ",
     "slogan": "Find what you need in ",
     "country": "Albania",
-    "airbnb_super_stays": "Super stays from Airbnb"
+    "airbnb_super_stays": "Super stays from Airbnb",
+    "activities_title": " What to do in ",
+    "activities_subtitle": " Local Recommendations ",
+    "towns_title": " Nearby towns to visit ",
+    "towns_subtitle": " results from Google "
 }

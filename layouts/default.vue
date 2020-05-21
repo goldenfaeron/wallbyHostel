@@ -48,7 +48,7 @@
 
 				<v-toolbar-title
 					class="ml-2 grey--text hidden-xs-only"
-				>{{$t('slogan')}} {{$store.state.city}}, {{$t('country')}}</v-toolbar-title>
+				>{{$t('toolbar')}} {{$store.state.city}}, {{$t('country')}}</v-toolbar-title>
 				<v-spacer />
 				<v-btn small v-if="$store.state.user.loggedIn == false" fab text @click="go('/login')">
 					<v-icon>mdi-account-circle</v-icon>
