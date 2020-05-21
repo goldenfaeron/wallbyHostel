@@ -18,6 +18,11 @@ export const state = () => ({
     //Openweathermap
     weatherToken: 'cdb5d1ad4220610c588be2ecfe1a4671',
 
+    //i18n
+
+    locale: "en",
+    locales: ["en", "sq"],
+
 
 
     //USER
@@ -44,14 +49,12 @@ export const mutations = {
     // setCurrency: (state, payload) => (state.currency = payload),
     // setExchangeRate: (state, payload) => (state.exchangeRate = payload),
 
-    //json
+    setLanguage(state, locale) {
+        if (state.locales.indexOf(locale) !== -1) {
+            state.locale = locale;
+        }
+    },
 
-    // setBorshHotels(state, list) {
-    //     state.borshHotels = list;
-    // },
-    // setBorshBars(state, list) {
-    //     state.borshBars = list;
-    // },
     setBookingCount(state, count) {
         state.bookingCount = count;
     },
@@ -62,14 +65,6 @@ export const mutations = {
         state.user.id = user.id
 
     }
-
-    // setBorshYoutube(state, list) {
-    //     state.borshYoutube = list;
-    // },
-
-
-
-
 
 
 }

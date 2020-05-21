@@ -48,11 +48,13 @@
 
 				<v-toolbar-title
 					class="ml-2 grey--text hidden-xs-only"
-				>Find what you need in {{$store.state.city}}, Albania</v-toolbar-title>
+				>{{$t('slogan')}} {{$store.state.city}}, {{$t('country')}}</v-toolbar-title>
 				<v-spacer />
 				<v-btn small v-if="$store.state.user.loggedIn == false" fab text @click="go('/login')">
 					<v-icon>mdi-account-circle</v-icon>
 				</v-btn>
+				<v-btn @click="changeLanguage('en')" fab text color="success">EN</v-btn>
+				<v-btn @click="changeLanguage('sq')" fab text color="success">SQ</v-btn>
 
 				<v-btn
 					v-if="$store.state.user.loggedIn"
@@ -163,6 +165,12 @@ export default {
 					return this.$router.push(this.nav[this.navPos - 1].to);
 				}
 			}
+		},
+
+		changeLanguage(lang) {
+			// Change the i18n context variable's locale
+			// This makes it so the correct locale file is used
+			this.$i18n.locale = lang;
 		}
 	},
 

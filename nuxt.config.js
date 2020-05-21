@@ -34,6 +34,8 @@ export default {
 
   loading: '~/components/loading/Loading.vue',
 
+
+
   /*
   ** Global CSS
   */
@@ -43,6 +45,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    "~/plugins/i18n.js",
     '~/plugins/jsonld',
 
   ],

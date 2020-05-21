@@ -14,12 +14,13 @@
 			<v-icon x-large>mdi-home</v-icon>
 		</v-responsive>
 		<Title>
-			<h1 class="text-center primary--text">Airbnbs in {{$store.state.city}}</h1>
+			<h1 class="text-center primary--text">{{airbnbs_in}} {{$store.state.city}}</h1>
 			<h2
 				class="secondary--text"
 				style="text-align: center;"
-			>{{airbnbs.length}} Super Stays from Airbnb</h2>
+			>{{airbnbs.length}} {{$t("airbnb_super_stays")}}</h2>
 		</Title>
+
 		<AirbnbList :props="airbnbs"></AirbnbList>
 	</div>
 </template>
@@ -57,6 +58,18 @@ export default {
 	filters: {
 		truncate(string, value) {
 			return (string || "").substring(0, value);
+		}
+	},
+
+	computed: {
+		title() {
+			return this.$t("title");
+		},
+		airbnb_super_stays() {
+			return this.$t("airbnb_super_stays");
+		},
+		airbnbs_in() {
+			return this.$t("airbnbs_in");
 		}
 	},
 	head() {
