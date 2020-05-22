@@ -36,7 +36,7 @@
 					<v-flex xs12>
 						<v-container grid-list-lg>
 							<v-layout row wrap align-center justify-center>
-								<v-flex xs6 sm4 v-for="(item, index) in thing.linked_business" :key="index">
+								<v-flex xs6 md4 v-for="(item, index) in thing.linked_business" :key="index">
 									<CardFeaturedBusiness :props="item"></CardFeaturedBusiness>
 								</v-flex>
 							</v-layout>
@@ -48,7 +48,7 @@
 				<v-layout align-center v-if="thing.reviews">
 					<v-flex xs12>
 						<h2 class="warning--text lighten-1 text-center">
-							{{thing.name}}{{thing.reviews.length}} reviews
+							{{thing.reviews.length}} reviews
 							<!-- <v-icon>mdi-account-star</v-icon> -->
 						</h2>
 					</v-flex>

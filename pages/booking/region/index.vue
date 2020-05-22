@@ -3,19 +3,27 @@
 		<v-responsive class="mx-auto" width="56">
 			<v-icon x-large>mdi-home</v-icon>
 		</v-responsive>
+
 		<Title>
 			<h1
 				class="primary--text main-title"
 				style="text-align: center;"
 			>The best hotels in {{$store.state.country}}</h1>
 		</Title>
-
-		<BookingList :props="booking" route="region/"></BookingList>
+		<BookingList :props="booking" :paginate="schema" route="region/" collection="booking_region"></BookingList>
 	</div>
 </template>
 
 <script>
 export default {
+	data() {
+		return {
+			skip: 20
+		};
+	},
+	methods: {
+		paginate() {}
+	},
 	components: {
 		BookingList: () => import("@/components/views/BookingList"),
 		Title: () => import("@/components/transitions/Title"),
@@ -28,6 +36,7 @@ export default {
 	async asyncData({ $axios, route, store }) {
 		let collection = "hotels";
 		let collection2 = "booking_region";
+
 		// let collection2 = "booking_borsh";
 
 		let request2 = await $axios.post(
@@ -37,9 +46,17 @@ export default {
 				"?token=" +
 				store.state.collectionsToken +
 				"&rspc=1",
-			{ fields: { features: 0, rooms: 0 } }
+			{ fields: { features: 0, rooms: 0 }, limit: 20 }
+		);
+		let request3 = await $axios.get(
+			store.state.webRoot +
+				"/api/collections/collection/" +
+				collection2 +
+				"?token=" +
+				store.state.collectionSchema
 		);
 		return {
+			schema: request3.data.itemsCount,
 			booking: request2.data.entries.reverse()
 		};
 	},

@@ -94,19 +94,8 @@
 
 		<!-- more -->
 		<v-container grid-list-lg>
-			<!-- Featured -->
-			<v-responsive class="mx-auto" width="56">
-				<v-icon large>mdi-trophy</v-icon>
-			</v-responsive>
-			<h2 class="secondary--text" style="text-align: center;">Featured hotels in {{$store.state.city}}</h2>
-			<v-layout row wrap>
-				<v-flex xs6 md4 v-for="(item, index) in featured" :key="index">
-					<CardFeaturedHotel :props="item"></CardFeaturedHotel>
-				</v-flex>
-			</v-layout>
-
 			<!-- Booking -->
-			<BookingList :props="more" route="region/"></BookingList>
+			<BookingList :props="more" route="region/" :paginate="schema" collection="booking_region"></BookingList>
 		</v-container>
 	</div>
 </template>
@@ -157,10 +146,20 @@ export default {
 				limit: 8
 			}
 		);
+
+		//schema
+		let request4 = await $axios.get(
+			store.state.webRoot +
+				"/api/collections/collection/" +
+				collection +
+				"?token=" +
+				store.state.collectionSchema
+		);
 		return {
 			hotel: request1.data.entries[0],
 			more: request2.data.entries,
-			featured: request3.data.entries
+			featured: request3.data.entries,
+			schema: request4.data.itemsCount
 		};
 	},
 	components: {
