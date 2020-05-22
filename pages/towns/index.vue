@@ -10,10 +10,10 @@
 
 		<Title>
 			<h1 class="primary--text main-title" style="text-align: center;">
-				{{$t('towns_title')}}
+				{{$t('towns.title')}}
 				{{$store.state.city}}
 			</h1>
-			<h2 class="secondary--text" style="text-align: center;">{{town.length}} {{$t('towns_subtitle')}}</h2>
+			<h2 class="secondary--text" style="text-align: center;">{{town.length}} {{$t('towns.subtitle')}}</h2>
 		</Title>
 		<v-container grid-list-lg class="mt-7">
 			<v-layout row wrap>
@@ -57,8 +57,6 @@ export default {
 	},
 	data() {
 		return {
-			type: "airports",
-			title: "Towns near " + this.$store.state.city,
 			preview:
 				"See all the best " + this.type + " in " + this.$store.state.city,
 			placeholder2: Math.floor(Math.random() * 2)
@@ -67,7 +65,7 @@ export default {
 
 	head() {
 		return {
-			title: this.title,
+			title: this.$t("towns.title") + this.$store.state.city,
 			meta: [
 				{
 					hid: this.preview,

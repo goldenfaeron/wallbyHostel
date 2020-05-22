@@ -20,13 +20,13 @@
 
 					<Title>
 						<div class="text-center primary--text display-2">
-							{{$t('activities_title')}}
+							{{$t('activities.title')}}
 							{{$store.state.city}}
 						</div>
 						<h2
 							class="secondary--text"
 							style="text-align: center;"
-						>{{things.length}} {{$t('activities_subtitle')}}</h2>
+						>{{things.length}} {{$t('activities.subtitle')}}</h2>
 					</Title>
 				</v-flex>
 			</v-layout>

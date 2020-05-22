@@ -1,16 +1,49 @@
 {
     "toolbar": "Find what you need in ",
+    "nav": {
+        "about": "About ",
+        "activities": "Activities in ",
+        "towns": "Towns near ",
+        "booking": "Where to stay",
+        "drink": "Where to eat/drink",
+        "shops": "Where to shop",
+        "instagram": "People in ",
+        "youtube": "Youtube Videos",
+        "airbnbs": "AirBnbs in ",
+        "airports": "Airports near ",
+        "weather": "Weather in ",
+        "corona": "Covid-19 in ",
+        "team": "Team",
+        "news": "News"
+    },
     "title": "Hi how are you",
     "welcome": "Welcome to ",
     "subtitle": "Everything you need in ",
     "subtext": " Beach is quite simply one of the most tranquil coastlines on the Southern Riviera. A picture-perfect paradise to spend your summer days the right way. ",
     "subaction": "finds you everything you need for your stay in  ",
-    "airbnbs_in": "Airbnbs in ",
     "slogan": "Find what you need in ",
     "country": "Albania",
-    "airbnb_super_stays": "Super stays from Airbnb",
-    "activities_title": " What to do in ",
-    "activities_subtitle": " Local Recommendations ",
-    "towns_title": " Nearby towns to visit ",
-    "towns_subtitle": " results from Google "
+    "airbnbs": {
+        "title": "Airbnbs in ",
+        "subtitle": "Super stays from Airbnb"
+    },
+    "activities": {
+        "title": " What to do in ",
+        "subtitle": " Local Recommendations "
+    },
+    "towns": {
+        "title": " Nearby towns to visit ",
+        "subtitle": " results from Google ",
+        "id_title": "Town near ",
+        "id_instagram": " on Instagram"
+    },
+    "instagram": {
+        "title": "Latest Instagram posts in "
+    },
+    "checkout": "check out",
+    "reviews": " reviews ",
+    "location": "location",
+    "view": "view",
+    "images": "images",
+    "no": "no"
 }

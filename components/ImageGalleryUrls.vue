@@ -6,7 +6,7 @@
 			</v-flex>
 			<v-img :contain="displayImageContain" :height="displayImageHeight" :src="displayImage"></v-img>
 			<v-responsive>
-				<div class="title centered text-center">{{props.length}} Images</div>
+				<div class="title centered text-center text-capitalize">{{props.length}} {{$t('images')}}</div>
 			</v-responsive>
 
 			<v-layout v-if="galleryMode" row justify-center>

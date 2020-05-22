@@ -1,7 +1,10 @@
 <template>
 	<div>
 		<div class="display-2 text-center">{{town.title}}</div>
-		<div class="heading text-center">Town near {{$store.state.city}}</div>
+		<div class="heading text-center">
+			{{$t('towns.id_title')}}
+			{{$store.state.city}}
+		</div>
 
 		<ImageGalleryUrls :props="town.imageUrls"></ImageGalleryUrls>
 
@@ -20,7 +23,7 @@
 					<v-container grid-list-xs fluid>
 						<div class="display-1 text-center">
 							<v-icon x-large>mdi-instagram</v-icon>
-							{{town.title}} on Instagram
+							{{town.title}} {{$t('towns.id_instagram')}}
 						</div>
 						<v-layout row wrap align-center justify-center>
 							<v-flex xs6 v-for="(item, index) in town.instagram" :key="index">
@@ -33,7 +36,7 @@
 				<v-flex xs12 md6 v-if="sortReviews">
 					<v-layout>
 						<v-flex xs12>
-							<h2>Reviews</h2>
+							<h2 class="text-capitalize">{{$t('reviews')}}</h2>
 							<div v-for="(item, index) in sortReviews" :key="index">
 								<h3>{{item.name}}</h3>
 								<br />

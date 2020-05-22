@@ -1,4 +1,5 @@
 import axios from "axios"
+
 export const state = () => ({
 
     name: "goBorshi",
@@ -108,7 +109,7 @@ export const actions = {
 
 export const getters = {
     // getExchangeRate: state => state.exchangeRate,
-    getNavigation: state =>
+    getNavigation: (state, ) =>
         [
             {
                 icon: "mdi-home",

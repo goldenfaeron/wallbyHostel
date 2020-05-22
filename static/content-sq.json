@@ -1,15 +1,48 @@
 {
     "toolbar": "Gjeni atë që ju nevojitet ",
+    "nav": {
+        "about": "Rreth ",
+        "activities": "Aktivitetet në ",
+        "towns": "Qytetet afër ",
+        "booking": "Ku të qëndrosh",
+        "drink": "Ku të ha / pi",
+        "shops": "Ku për të blerë ",
+        "instagram": "Njerëzit në ",
+        "airbnbs": "AirBnB në ",
+        "youtube": "Youtube Videos",
+        "airports": "Aeroportet afër ",
+        "weather": "Moti në ",
+        "corona": "Covid-19 në ",
+        "team": " Ekipi ",
+        "news": " Lajme "
+    },
     "title": "Pershendetje, si je ti?",
     "welcome": "Mirësevini në ",
     "subtitle": "Gjithçka që ju nevojitet në ",
     "subtext": " është thjesht një nga linjat bregdetare më të qeta në Rivierën Jugore. Një parajsë perfekte për të kaluar ditët e verës në mënyrën e duhur.",
     "subaction": " ju gjen gjithçka që ju nevojitet për qëndrimin tuaj në  ",
     "country": "Shqipëri",
-    "airbnbs_in": "AirBnB në ",
-    "airbnb_super_stays": "Qëndrime super me Airbnb",
-    "activities_title": "Farë të bësh në",
-    "activities_subtitle": "  Rekomandime Lokale ",
-    "towns_title": " Fshatrat afër ",
-    "towns_subtitle": " rezultatet nga Google "
+    "airbnbs": {
+        "title": "AirBnB në ",
+        "subtitle": "Qëndrime super me Airbnb"
+    },
+    "activities": {
+        "title": "Farë të bësh në",
+        "subtitle": " Rekomandime Lokale "
+    },
+    "towns": {
+        "title": " Fshatrat afër ",
+        "subtitle": " rezultatet nga Google ",
+        "id_title": "Fshat afër ",
+        "id_instagram": "ne Instagram"
+    },
+    "instagram": {
+        "title": "Postimet e fundit në Instagram në "
+    },
+    "checkout": " shikoni ",
+    "reviews": " reviews ",
+    "location": "vend",
+    "view": "shiko",
+    "images": "fotot",
+    "no": "ska"
 }

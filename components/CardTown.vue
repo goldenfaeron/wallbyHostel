@@ -1,5 +1,5 @@
 <template>
-	<v-hover>
+	<v-hover class="text-capitalize">
 		<v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 2}`">
 			<nuxt-link style="text-decoration:none; color: primary;" :to="'/towns/'+props.slug">
 				<v-img v-if="props.imageUrls" max-height="100" :src="props.imageUrls[0]">
@@ -23,8 +23,14 @@
 				<v-card-text>
 					<p>
 						<v-icon small>mdi-image</v-icon>
-						<span v-if="props.imageUrls">View {{props.imageUrls.length}} images</span>
-						<span v-else>No images</span>
+						<span v-if="props.imageUrls">
+							{{$t('view')}}
+							{{props.imageUrls.length}} {{$t('images')}}
+						</span>
+						<span v-else>
+							{{$t('no')}}
+							{{$t('images')}}
+						</span>
 					</p>
 					<!-- <v-icon small>mdi-map-marker</v-icon>
 

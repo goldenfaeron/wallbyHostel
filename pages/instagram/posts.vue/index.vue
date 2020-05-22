@@ -9,9 +9,10 @@
 						<v-icon x-large>mdi-instagram</v-icon>
 					</v-flex>
 					<v-flex xs12>
-						<h1
-							class="text-xs-center text-lg-center text-md-center text-sm-center"
-						>Latest Instagram posts in {{$store.state.city}}</h1>
+						<h1 class="text-xs-center text-lg-center text-md-center text-sm-center">
+							{{$t('instagram.title')}}
+							{{$store.state.city}}
+						</h1>
 					</v-flex>
 				</v-layout>
 			</v-container>
