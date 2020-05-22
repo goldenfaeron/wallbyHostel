@@ -18,7 +18,7 @@
 		<!-- Full view -->
 		<v-layout row wrap class="my-5" v-if="listFull">
 			<v-flex xs6 sm4 lg3 v-for="(item, index) in props" :key="index">
-				<CardHotel class="hidden-xs-only" :props="item" :index="index"></CardHotel>
+				<CardHotel class="hidden-xs-only" :props="item" :index="index" :route="route"></CardHotel>
 				<CardHotelMobile class="hidden-sm-and-up" :props="item" :index="index"></CardHotelMobile>
 			</v-flex>
 		</v-layout>
@@ -30,7 +30,7 @@
 					<v-avatar size="40" color="primary">
 						<img :src="item.image" />
 					</v-avatar>
-					<nuxt-link :to="'/booking/'+item.slug">
+					<nuxt-link :to="'/booking/'+route+item.slug">
 						<div class="heading" style="text-align: center">{{item.name}}</div>
 					</nuxt-link>
 					<v-rating x-small color="primary lighten-2" :value="item.rating/2" half-increments readonly></v-rating>
@@ -42,7 +42,7 @@
 
 <script>
 export default {
-	props: ["props"],
+	props: ["props", "route"],
 	data() {
 		return {
 			listFull: true

@@ -1,7 +1,7 @@
 <template>
 	<v-hover>
 		<v-card flat slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 2}`">
-			<nuxt-link style="text-decoration:none; color: primary;" :to="'/booking/'+routed+props.slug">
+			<nuxt-link style="text-decoration:none; color: primary;" :to="'/booking/region/'+props.slug">
 				<!-- <v-img :src="$store.state.assetRoot + props.image.path" max-height="10cm"></v-img> -->
 
 				<v-card-title primary-title></v-card-title>
@@ -37,14 +37,6 @@
 
 <script>
 export default {
-	props: ["props", "index", "route"],
-
-	computed: {
-		routed() {
-			if (this.route) {
-				return this.route;
-			} else return "";
-		}
-	}
+	props: ["props", "index"]
 };
 </script>

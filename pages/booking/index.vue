@@ -32,6 +32,32 @@
 			<!-- From Booking.com  -->
 		</v-container>
 		<BookingList :props="booking"></BookingList>
+
+		<v-container grid-list-lg>
+			<v-layout column>
+				<v-card>
+					<v-flex xs12>
+						<v-layout row>
+							<v-flex xs8 sm10>
+								<v-card-title primary-title>See Airbnbs for entire region</v-card-title>
+								<v-card-text>Want to visit Borsh and stay in a different area? No worries, we've got you covered with an extensive list of top hotels</v-card-text>
+								<v-btn class="mt-2" color="primary" to="/booking/region">See more hotels</v-btn>
+							</v-flex>
+							<v-flex xs4 sm2>
+								<v-img width="100" :src="require('@/assets/albania.svg')" alt />
+							</v-flex>
+						</v-layout>
+					</v-flex>
+					<v-flex xs12>
+						<v-layout row wrap>
+							<v-flex xs6 sm4 md3 v-for="(item, index) in regional" :key="index">
+								<CardHotelRegion :props="item"></CardHotelRegion>
+							</v-flex>
+						</v-layout>
+					</v-flex>
+				</v-card>
+			</v-layout>
+		</v-container>
 	</div>
 </template>
 
@@ -40,7 +66,8 @@ export default {
 	components: {
 		BookingList: () => import("@/components/views/BookingList"),
 		Title: () => import("@/components/transitions/Title"),
-		CardFeaturedHotel: () => import("@/components/CardFeaturedHotel")
+		CardFeaturedHotel: () => import("@/components/CardFeaturedHotel"),
+		CardHotelRegion: () => import("@/components/cards/CardHotelRegion")
 
 		// Assurance: () => import("@/components/Assurance"),
 		// Mission: () => import("@/components/Mission")
@@ -49,6 +76,7 @@ export default {
 	async asyncData({ $axios, route, store }) {
 		let collection = "hotels";
 		let collection2 = "booking_borsh";
+		let collection3 = "booking_region";
 		// let collection2 = "booking_borsh";
 
 		let request1 = await $axios.post(
@@ -82,9 +110,23 @@ export default {
 				"&rspc=1",
 			{ fields: { features: 0, rooms: 0 } }
 		);
+
+		let request3 = await $axios.post(
+			store.state.webRoot +
+				"/api/collections/get/" +
+				collection3 +
+				"?token=" +
+				store.state.collectionsToken +
+				"&rspc=1",
+			{
+				fields: { features: 0, rooms: 0 },
+				limit: 4
+			}
+		);
 		return {
 			featured: request1.data.entries,
-			booking: request2.data.entries.reverse()
+			booking: request2.data.entries.reverse(),
+			regional: request3.data.entries
 		};
 	},
 
