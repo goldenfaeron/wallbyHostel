@@ -64,6 +64,7 @@ export default {
 
   axios: {
     // proxyHeaders: false
+    // baseURL: https
   },
 
   // server: {

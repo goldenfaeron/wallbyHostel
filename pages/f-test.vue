@@ -32,7 +32,10 @@ export default {
 	methods: {
 		async icanhazip() {
 			try {
-				const res = await this.$axios.$get("/.netlify/functions/cockpit");
+				const res = await this.$axios({
+					url: "/.netlify/functions/cockpit",
+					basURL: "https://goborshi.netlify.com"
+				});
 				this.response = res;
 				this.error = null;
 			} catch (e) {
