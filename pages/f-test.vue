@@ -1,7 +1,7 @@
 
 <template>
 	<div>
-		{{msg}}
+		{{town}}
 		<h2>5. icanhazip.com</h2>
 		<p>
 			<em>API call done by lambda function</em>
@@ -19,6 +19,16 @@
 </template>
 <script>
 export default {
+	async asyncData({ params, store, route, $axios }) {
+		let collection = "exital";
+		await $axios.$post("/.netlify/functions/cockpit", "exital").then(res => {
+			console.log("done");
+
+			return { town: res.data };
+		});
+		// this.response = res;
+		// this.error = null;
+	},
 	data() {
 		return {
 			form: {},
@@ -26,6 +36,7 @@ export default {
 			error: null,
 			ip: null,
 			msg: ""
+			// town: ""
 		};
 	},
 
