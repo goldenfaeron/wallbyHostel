@@ -11,21 +11,20 @@
 		<!-- New container -->
 		<v-container grid-list-lg>
 			<v-layout row wrap>
-				<Title>
-					<v-flex xs12 md6>
-						<div class="display-2">
-							{{hotel.name}}
-							<v-container>
-								<v-layout row wrap>
-									<v-flex xs1 v-for="(item, index) in hotel.header_image.colors" :key="index">
-										<v-icon :color="item">mdi-star</v-icon>
-									</v-flex>
-								</v-layout>
-							</v-container>
-						</div>
-						<p v-html="hotel.description"></p>
-					</v-flex>
-				</Title>
+				<v-flex xs12 md5>
+					<div class="display-2">
+						{{hotel.name}}
+						<v-container>
+							<v-layout row wrap>
+								<v-flex xs1 v-for="(item, index) in hotel.header_image.colors" :key="index">
+									<v-icon :color="item">mdi-star</v-icon>
+								</v-flex>
+							</v-layout>
+						</v-container>
+					</div>
+					<p v-html="hotel.description"></p>
+				</v-flex>
+
 				<v-flex xs12 md6>
 					<!-- Rooms -->
 					<v-layout column align-center>
@@ -53,13 +52,13 @@
 					<!-- Ammenities -->
 					<p class="font-weight-medium">Ammenities</p>
 					<v-layout row wrap>
-						<v-flex lg6 xs12 v-for="(item, index) in hotel.ammenities" :key="index">
+						<v-flex x v-for="(item, index) in hotel.ammenities" :key="index">
 							<v-icon color="green">mdi-check</v-icon>
 							{{item}}
 						</v-flex>
 
-						<v-flex xs12>
-							<v-card flat>
+						<v-flex xs12 md6>
+							<v-card>
 								<v-card-text>
 									<v-icon>mdi-food-croissant</v-icon>
 									Breakfast: {{hotel.breakfast}}
