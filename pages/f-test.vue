@@ -34,7 +34,7 @@ export default {
 			try {
 				const res = await this.$axios({
 					url: "/.netlify/functions/cockpit",
-					basURL: "https://goborshi.netlify.com"
+					baseURL: "https://goborshi.netlify.app"
 				});
 				this.response = res;
 				this.error = null;
