@@ -7,7 +7,7 @@
 			<em>API call done by lambda function</em>
 		</p>
 		<p>Your IP: {{ ip }}</p>
-		<v-btn type="primary" @click="icanhazip()">🤖 Haz AWS IP please</v-btn>
+		<v-btn type="primary" @click="icanhazip('tripadvisor_thingstodo_borsh')">🤖 Haz AWS IP please</v-btn>
 
 		<p>Response: {{ response }}</p>
 		<p v-if="error" style="color: red;">
@@ -30,13 +30,13 @@ export default {
 	},
 
 	methods: {
-		async icanhazip() {
+		async icanhazip(val) {
 			try {
-				const res = await this.$axios({
-					url: "/.netlify/functions/cockpit",
-					// baseURL: "http://localhost:8888"
-					method: "post"
-				});
+				const res = await this.$axios.$post(
+					"/.netlify/functions/cockpit",
+
+					val
+				);
 				this.response = res;
 				this.error = null;
 			} catch (e) {
