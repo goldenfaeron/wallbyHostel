@@ -34,7 +34,8 @@ export default {
 			try {
 				const res = await this.$axios({
 					url: "/.netlify/functions/cockpit",
-					baseURL: "https://goborshi.netlify.app"
+					// baseURL: "http://localhost:8888"
+					method: "post"
 				});
 				this.response = res;
 				this.error = null;

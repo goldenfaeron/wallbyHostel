@@ -64,7 +64,7 @@ export default {
 
   axios: {
     // proxyHeaders: false
-    // baseURL: https
+    baseURL: 'http://localhost:8888'
   },
 
   // server: {
