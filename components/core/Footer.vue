@@ -25,12 +25,10 @@
 </template>
 
 <script>
+import { Mixin } from "~/mixins/navigation.js";
+
 export default {
-	computed: {
-		nav() {
-			return this.$store.getters.getNavigation;
-		}
-	},
+	mixins: [Mixin],
 
 	components: {
 		SocialMedia: () => import("@/components/SocialMedia")
