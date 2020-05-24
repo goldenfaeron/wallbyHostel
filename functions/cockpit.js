@@ -12,7 +12,7 @@ exports.handler = async (event, context) => {
     let skip = event.queryStringParameters.skip;
     let limit = event.queryStringParameters.limit;
 
-    const res = await fetch(API_ENDPOINT + name + '?token=' + API_KEY + "&rspc=1", {
+    const res = await fetch(API_ENDPOINT + name + '?token=' + "641a6e0c88f94f7d2adadd184752e1&rspc=1", {
         headers: {
             'content-type': 'application/json',
         },
