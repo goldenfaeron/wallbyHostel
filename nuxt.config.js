@@ -65,7 +65,7 @@ export default {
 
   axios: {
     // proxyHeaders: false
-    baseURL: 'http://localhost:8888'
+    baseURL: 'https://goborshi.netlify.app'
   },
 
   // server: {
