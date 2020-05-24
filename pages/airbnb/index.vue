@@ -18,38 +18,68 @@
 			<h2
 				class="secondary--text"
 				style="text-align: center;"
-			>{{airbnbs.length}} {{$t("airbnbs.subtitle")}}</h2>
+			>{{response.length}} {{$t("airbnbs.subtitle")}}</h2>
 		</Title>
 
-		<AirbnbList :props="airbnbs"></AirbnbList>
+		<AirbnbList :props="response"></AirbnbList>
 	</div>
 </template>
 
 <script>
 export default {
+	data() {
+		return {
+			response: ""
+		};
+	},
+	async mounted() {
+		let collection = "airbnb";
+		let fields = { name: 1, photos: 1, roomType: 1, stars: 1, slug: 1 };
+		let skip = 0;
+		let limit = 0;
+
+		try {
+			const res = await this.$axios.$post(
+				"/.netlify/functions/cockpit?name=" +
+					collection +
+					"&skip=" +
+					skip +
+					"&limit=" +
+					limit +
+					"",
+				fields
+			);
+
+			this.response = res.entries;
+			this.error = null;
+		} catch (e) {
+			this.error = e.response;
+			this.response = "—";
+		}
+	},
 	components: {
 		Title: () => import("@/components/transitions/Title"),
 		CardAirbnb: () => import("@/components/CardAirbnb"),
 		AirbnbList: () => import("@/components/views/AirbnbList")
 	},
-	async asyncData({ params, store, $axios, route }) {
-		let collection = "airbnb";
-		return await $axios
-			.post(
-				store.state.webRoot +
-					"/api/collections/get/" +
-					collection +
-					"?token=" +
-					store.state.collectionsToken +
-					"&rspc=1",
-				{
-					fields: { name: 1, photos: 1, roomType: 1, stars: 1, slug: 1 }
-				}
-			)
-			.then(res => {
-				return { airbnbs: res.data.entries };
-			});
-	},
+	// async asyncData({ params, store, $axios, route }) {
+	// 	let collection = "airbnb";
+	// 	return await $axios
+	// 		.post(
+	// 			store.state.webRoot +
+	// 				"/api/collections/get/" +
+	// 				collection +
+	// 				"?token=" +
+	// 				store.state.collectionsToken +
+	// 				"&rspc=1",
+	// 			{
+	// 				fields: { name: 1, photos: 1, roomType: 1, stars: 1, slug: 1 }
+	// 			}
+	// 		)
+	// 		.then(res => {
+	// 			return { airbnbs: res.data.entries };
+	// 		});
+	// },
 	methods: {
 		placeholder(index) {
 			return index % 2;
