@@ -1,34 +1,42 @@
 
 <template>
 	<div>
-		{{town}}
-		<h2>5. icanhazip.com</h2>
-		<p>
-			<em>API call done by lambda function</em>
-		</p>
-		<p>Your IP: {{ ip }}</p>
-		<v-btn type="primary" @click="icanhazip('tripadvisor_thingstodo_borsh')">🤖 Haz AWS IP please</v-btn>
-
 		<p>Response: {{ response }}</p>
-		<p v-if="error" style="color: red;">
-			<strong>Error {{ error.status }}</strong>
-			<br />
-			{{ error.data }}
-		</p>
+		{{entries}}
 	</div>
 </template>
 <script>
 export default {
-	async asyncData({ params, store, route, $axios }) {
-		let collection = "exital";
-		await $axios.$post("/.netlify/functions/cockpit", "exital").then(res => {
-			console.log("done");
+	//load data
+	async mounted() {
+		let collection = "airbnb";
+		let fields = { slug: 1, name: 1, _id: 0 };
+		let skip = 4;
+		let limit = 1;
 
-			return { town: res.data };
-		});
-		// this.response = res;
-		// this.error = null;
+		try {
+			console.log("request made");
+
+			const res = await this.$axios.$post(
+				"/.netlify/functions/cockpit?name=" +
+					collection +
+					"&skip=" +
+					skip +
+					"&limit=" +
+					limit +
+					"",
+
+				fields
+			);
+
+			this.response = res;
+			this.error = null;
+		} catch (e) {
+			this.error = e.response;
+			this.response = "—";
+		}
 	},
+
 	data() {
 		return {
 			form: {},
@@ -40,13 +48,42 @@ export default {
 		};
 	},
 
-	methods: {
-		async icanhazip(val) {
-			try {
-				const res = await this.$axios.$post(
-					"/.netlify/functions/cockpit",
+	computed: {
+		filterCollection() {
+			let collection = "airbnb";
+			let fields = { slug: 1, name: 1 };
+			let skip = 1;
 
-					val
+			return { c: collection, f: fields, s: skip };
+		}
+	},
+
+	methods: {
+		async icanhazip(vals) {
+			let f = this.filterCollection;
+			try {
+				console.log("request made");
+
+				const res = await this.$axios.$post(
+					"/.netlify/functions/cockpit?name=" + f.c + "&skip=" + f.s + "",
+
+					vals
+				);
+				this.response = res;
+				this.error = null;
+			} catch (e) {
+				this.error = e.response;
+				this.response = "—";
+			}
+		},
+		async hello(vals) {
+			try {
+				console.log("request made");
+
+				const res = await this.$axios.$get(
+					"/.netlify/functions/hello-world/hello-world?name=boobs",
+
+					vals
 				);
 				this.response = res;
 				this.error = null;

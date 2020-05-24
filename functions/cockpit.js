@@ -30,3 +30,6 @@ exports.handler = async (event, context) => {
     return res
 }
 
+
+
+// const API_ENDPOINT = 'https://cockpit.goborshi.hackmylanguage.com/api/collections/get/airbnb?token=641a6e0c88f94f7d2adadd184752e'
