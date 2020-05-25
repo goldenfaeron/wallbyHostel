@@ -1,0 +1,49 @@
+{
+	"activities": {
+		"subtitle": " Lokale Empfehlungen",
+		"title": " Was tun in"
+	},
+	"airbnbs": {
+		"subtitle": "Super bleibt von Airbnb",
+		"title": "Airbnbs in"
+	},
+	"checkout": "Auschecken",
+	"country": "Albanien",
+	"images": "Bilder",
+	"instagram": {
+		"title": "Neueste Instagram-Beiträge in"
+	},
+	"location": "Ort",
+	"nav": {
+		"about": "Über",
+		"activities": "Aktivitäten in",
+		"airbnbs": "Airbnbs in",
+		"airports": "Flughäfen in der Nähe",
+		"booking": "Wo übernachten",
+		"corona": "Covid-19 in",
+		"drink": "Wo man isst / trinkt",
+		"instagram": "Leute in",
+		"news": "Nachrichten",
+		"shops": "Wo einkaufen",
+		"team": "Mannschaft",
+		"towns": "Städte in der Nähe",
+		"weather": "Wetter in",
+		"youtube": "Youtube Videos"
+	},
+	"no": "Nein",
+	"reviews": " Bewertungen",
+	"slogan": "Finden Sie, was Sie brauchen",
+	"subaction": "findet für Sie alles, was Sie für Ihren Aufenthalt brauchen",
+	"subtext": " Der Strand ist ganz einfach eine der ruhigsten Küsten an der südlichen Riviera. Ein perfektes Paradies, um Ihre Sommertage richtig zu verbringen.",
+	"subtitle": "Alles was Sie brauchen",
+	"title": "Hi, wie geht es dir",
+	"toolbar": "Finden Sie, was Sie brauchen",
+	"towns": {
+		"id_instagram": " auf Instagram",
+		"id_title": "Stadt in der Nähe",
+		"subtitle": " Ergebnisse von Google",
+		"title": " Nahe gelegene Städte zu besuchen"
+	},
+	"view": "Aussicht",
+	"welcome": "Willkommen zu"
+}
