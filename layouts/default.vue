@@ -55,6 +55,7 @@
 				</v-btn>
 				<v-btn @click="changeLanguage('en')" fab text color="success">EN</v-btn>
 				<v-btn @click="changeLanguage('sq')" fab text color="success">SQ</v-btn>
+				<v-btn @click="changeLanguage('de')" fab text color="success">DE</v-btn>
 
 				<v-btn
 					v-if="$store.state.user.loggedIn"
