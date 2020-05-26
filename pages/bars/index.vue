@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<v-img
-			:src="require('@/assets/barman.jpg')"
+			:src="require('@/assets/food/the-munchies.png')"
 			:height="[$vuetify.breakpoint.smAndUp ? '400px' : '200px']"
 		>
 			<template v-slot:placeholder>

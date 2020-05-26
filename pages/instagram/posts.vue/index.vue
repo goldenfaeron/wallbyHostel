@@ -17,6 +17,8 @@
 				</v-layout>
 			</v-container>
 		</Title>
+
+		<CardPerson :props="response"></CardPerson>
 		<v-container grid-list-lg>
 			<!-- p{{posts}} -->
 			<v-layout row wrap>
@@ -30,6 +32,11 @@
 
 <script>
 export default {
+	data() {
+		return {
+			response: ""
+		};
+	},
 	async asyncData({ $axios, route, store }) {
 		let collection = "instagram";
 
@@ -40,6 +47,32 @@ export default {
 		return {
 			posts: request1.data
 		};
+	},
+
+	async mounted() {
+		let collection = "featured_person";
+		let fields = {};
+		let skip = 0;
+		let limit = 0;
+
+		try {
+			const res = await this.$axios.$post(
+				"/.netlify/functions/cockpit?name=" +
+					collection +
+					"&skip=" +
+					skip +
+					"&limit=" +
+					limit +
+					"",
+				fields
+			);
+
+			this.response = res.entries;
+			this.error = null;
+		} catch (e) {
+			this.error = e.response;
+			this.response = "—";
+		}
 	},
 
 	computed: {
@@ -54,6 +87,7 @@ export default {
 	},
 
 	components: {
+		CardPerson: () => import("@/components/cards/CardPerson"),
 		GalleryInstagram: () => import("@/components/gallery/GalleryInstagram"),
 		CardInstagram: () => import("@/components/CardInstagram"),
 		ImageGalleryUrls: () => import("@/components/ImageGalleryUrls"),

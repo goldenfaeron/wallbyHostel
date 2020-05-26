@@ -2,7 +2,7 @@
 	<v-hover>
 		<v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 2}`">
 			<nuxt-link style="text-decoration:none; color: primary;" :to="'/shops/'+props.slug">
-				<v-btn absolute small dark fab top right color="primary ">
+				<v-btn absolute small dark fab top right color="success">
 					<v-icon>{{icon(props.categoryName)}}</v-icon>
 				</v-btn>
 				<v-img v-if="props.imageUrls" max-height="100" :src="props.imageUrls[0]">
@@ -13,14 +13,22 @@
 					</template>
 				</v-img>
 
-				<v-sheet v-else height="100" color="primary lighten-2">
+				<v-img v-else max-height="100" :src="require('@/assets/miroodles/miroodles-blue.png')">
+					<template v-slot:placeholder>
+						<v-layout fill-height align-center justify-center ma-0>
+							<v-progress-circular indeterminate color="primary"></v-progress-circular>
+						</v-layout>
+					</template>
+					<v-card-title class="success--text" style="word-break: normal;">{{props.title}}</v-card-title>
+				</v-img>
+				<!-- <v-sheet v-else height="100" color="primary lighten-2">
 					<v-layout row fill-height align-center justify-start>
 						<v-flex>
 							<v-card-title class="primary--text">{{props.title}}</v-card-title>
 							<v-card-subtitle class="hidden-xs-only">{{props.categoryName}}</v-card-subtitle>
 						</v-flex>
 					</v-layout>
-				</v-sheet>
+				</v-sheet>-->
 
 				<v-card-title v-if="props.imageUrls">{{props.title}}</v-card-title>
 				<v-card-text>
@@ -44,6 +52,13 @@ export default {
 	props: ["props", "link"],
 	components: {
 		Dialog: () => import("@/components/Dialog")
+	},
+
+	computed: {
+		randomNumber() {
+			let limit = 9;
+			return Math.floor(Math.random() * Math.floor(limit));
+		}
 	},
 	methods: {
 		icon(c) {
