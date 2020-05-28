@@ -60,16 +60,18 @@ export default {
   */
   modules: [
     '@nuxtjs/axios',
+
   ],
 
   axios: {
     // proxyHeaders: false
+    baseURL: 'https://goborshi.netlify.app'
   },
 
-  server: {
-    port: 8000, // default: 3000
-    host: '0.0.0.0' // default: localhost
-  },
+  // server: {
+  //   port: 8000, // default: 3000
+  //   host: '0.0.0.0' // default: localhost
+  // },
   /*
   ** vuetify module configuration
   ** https://github.com/nuxt-community/vuetify-module
