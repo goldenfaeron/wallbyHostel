@@ -65,7 +65,7 @@ export default {
 	},
 	components: {
 		Title: () => import("@/components/transitions/Title"),
-		CardAirbnb: () => import("@/components/CardAirbnb"),
+		CardAirbnb: () => import("@/components/cards/CardAirbnb"),
 		AirbnbList: () => import("@/components/views/AirbnbList"),
 		CardPerson: () => import("@/components/cards/CardPerson")
 	},

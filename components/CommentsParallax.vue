@@ -58,7 +58,7 @@
 
 <script>
 export default {
-	components: { googleMap: () => import("@/components/googleMap") },
+	components: { googleMap: () => import("@/components/maps/googleMap") },
 	props: ["props"]
 };
 </script>

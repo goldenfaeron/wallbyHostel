@@ -115,8 +115,8 @@ export default {
 
 	components: {
 		Title: () => import("@/components/transitions/Title"),
-		googleMap: () => import("@/components/googleMap"),
-		CardReview: () => import("@/components/CardReview"),
+		googleMap: () => import("@/components/maps/googleMap"),
+		CardReview: () => import("@/components/cards/CardReview"),
 		ShopsList: () => import("@/components/views/ShopsList")
 	},
 	data() {

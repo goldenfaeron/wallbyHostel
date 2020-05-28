@@ -33,7 +33,7 @@ p {
 
 <script>
 export default {
-	components: { CardAirbnb: () => import("@/components/CardAirbnb") },
+	components: { CardAirbnb: () => import("@/components/cards/CardAirbnb") },
 	props: ["props"]
 };
 </script>

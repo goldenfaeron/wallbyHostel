@@ -80,9 +80,9 @@ export default {
 	},
 
 	components: {
-		ImageGalleryUrls: () => import("@/components/ImageGalleryUrls"),
-		CardInstagram: () => import("@/components/CardInstagram"),
-		googleMapCoordinate: () => import("@/components/googleMapCoordinate")
+		ImageGalleryUrls: () => import("@/components/gallery/ImageGalleryUrls"),
+		CardInstagram: () => import("@/components/cards/CardInstagram"),
+		googleMapCoordinate: () => import("@/components/maps/googleMapCoordinate")
 	},
 	data() {
 		return {

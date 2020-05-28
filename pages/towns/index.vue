@@ -46,9 +46,9 @@ export default {
 		};
 	},
 	components: {
-		CardTown: () => import("@/components/CardTown"),
+		CardTown: () => import("@/components/cards/CardTown"),
 		Title: () => import("@/components/transitions/Title")
-		// CardTown: () => import("@/components/CardTown")
+		// CardTown: () => import("@/components/cards/CardTown")
 	},
 	methods: {
 		placeholder(index) {

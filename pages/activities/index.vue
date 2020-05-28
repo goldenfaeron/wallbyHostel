@@ -81,8 +81,8 @@ export default {
 
 	components: {
 		Title: () => import("@/components/transitions/Title"),
-		CardThing: () => import("@/components/CardThing"),
-		CardInstagram: () => import("@/components/CardInstagram")
+		CardThing: () => import("@/components/cards/CardThing"),
+		CardInstagram: () => import("@/components/cards/CardInstagram")
 	},
 
 	data() {

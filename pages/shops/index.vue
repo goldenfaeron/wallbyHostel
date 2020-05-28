@@ -49,7 +49,7 @@ export default {
 		};
 	},
 	components: {
-		CardShop: () => import("@/components/CardShop"),
+		CardShop: () => import("@/components/cards/CardShop"),
 		ShopsList: () => import("@/components/views/ShopsList"),
 		Title: () => import("@/components/transitions/Title")
 	},

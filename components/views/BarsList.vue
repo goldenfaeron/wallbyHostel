@@ -23,7 +23,7 @@
 export default {
 	props: ["props"],
 	components: {
-		CardBar: () => import("@/components/CardBar")
+		CardBar: () => import("@/components/cards/CardBar")
 	},
 	methods: {
 		placeholder(index) {

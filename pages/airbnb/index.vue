@@ -59,7 +59,7 @@ export default {
 	},
 	components: {
 		Title: () => import("@/components/transitions/Title"),
-		CardAirbnb: () => import("@/components/CardAirbnb"),
+		CardAirbnb: () => import("@/components/cards/CardAirbnb"),
 		AirbnbList: () => import("@/components/views/AirbnbList")
 	},
 	// async asyncData({ params, store, $axios, route }) {

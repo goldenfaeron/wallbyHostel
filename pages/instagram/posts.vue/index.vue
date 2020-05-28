@@ -89,8 +89,8 @@ export default {
 	components: {
 		CardPerson: () => import("@/components/cards/CardPerson"),
 		GalleryInstagram: () => import("@/components/gallery/GalleryInstagram"),
-		CardInstagram: () => import("@/components/CardInstagram"),
-		ImageGalleryUrls: () => import("@/components/ImageGalleryUrls"),
+		CardInstagram: () => import("@/components/cards/CardInstagram"),
+		ImageGalleryUrls: () => import("@/components/gallery/ImageGalleryUrls"),
 		Title: () => import("@/components/transitions/Title")
 	},
 

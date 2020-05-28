@@ -164,12 +164,12 @@ export default {
 	},
 	components: {
 		Title: () => import("@/components/transitions/Title"),
-		CardFeaturedHotel: () => import("@/components/CardFeaturedHotel"),
-		CardHotelMobile: () => import("@/components/CardHotelMobile"),
-		CardHotel: () => import("@/components/CardHotel"),
-		CardRoomBooking: () => import("@/components/CardRoomBooking"),
+		CardFeaturedHotel: () => import("@/components/cards/CardFeaturedHotel"),
+		CardHotelMobile: () => import("@/components/cards/CardHotelMobile"),
+		CardHotel: () => import("@/components/cards/CardHotel"),
+		CardRoomBooking: () => import("@/components/cards/CardRoomBooking"),
 		Dialog: () => import("@/components/Dialog"),
-		googleMapCoordinate: () => import("@/components/googleMapCoordinate"),
+		googleMapCoordinate: () => import("@/components/maps/googleMapCoordinate"),
 		BookingList: () => import("@/components/views/BookingList")
 	},
 

@@ -160,17 +160,20 @@ export default {
 	},
 	components: {
 		Title: () => import("@/components/transitions/Title"),
-		googleMap: () => import("@/components/googleMap"),
-		CardInstagram: () => import("@/components/CardInstagram"),
+		googleMap: () => import("@/components/maps/googleMap"),
+		CardInstagram: () => import("@/components/cards/CardInstagram"),
 
 		CommentsParallax: () => import("@/components/CommentsParallax"),
-		JumbotronGradient: () => import("@/components/JumbotronGradient"),
-		ImageGallery: () => import("@/components/ImageGallery"),
+
+		ImageGallery: () => import("@/components/gallery/ImageGallery"),
 		SplashTitle: () => import("@/components/SplashTitle"),
-		CardRoom: () => import("@/components/CardRoom"),
-		CertificateCorona: () => import("@/components/CertificateCorona"),
-		CertificateCService: () => import("@/components/CertificateCService"),
-		CertificateQuarantine: () => import("@/components/CertificateQuarantine")
+		CardRoom: () => import("@/components/cards/CardRoom"),
+		CertificateCorona: () =>
+			import("@/components/certificates/CertificateCorona"),
+		CertificateCService: () =>
+			import("@/components/certificates/CertificateCService"),
+		CertificateQuarantine: () =>
+			import("@/components/certificates/CertificateQuarantine")
 	},
 	data() {
 		return {};

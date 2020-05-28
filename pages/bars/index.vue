@@ -67,7 +67,7 @@ export default {
 		};
 	},
 	components: {
-		CardBar: () => import("@/components/CardBar"),
+		CardBar: () => import("@/components/cards/CardBar"),
 		Title: () => import("@/components/transitions/Title")
 	},
 	methods: {
