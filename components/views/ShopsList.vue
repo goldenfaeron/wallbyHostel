@@ -14,7 +14,7 @@
 export default {
 	props: ["props"],
 	components: {
-		CardShop: () => import("@/components/CardShop")
+		CardShop: () => import("@/components/cards/CardShop")
 	},
 	methods: {
 		placeholder(index) {

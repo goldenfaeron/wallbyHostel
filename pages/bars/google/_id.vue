@@ -124,8 +124,8 @@ export default {
 
 	components: {
 		BarsList: () => import("@/components/views/BarsList"),
-		googleMap: () => import("@/components/googleMap"),
-		CardReview: () => import("@/components/CardReview")
+		googleMap: () => import("@/components/maps/googleMap"),
+		CardReview: () => import("@/components/cards/CardReview")
 	},
 	data() {
 		return {

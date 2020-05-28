@@ -127,10 +127,11 @@ export default {
 
 	components: {
 		Title: () => import("@/components/transitions/Title"),
-		CardReview: () => import("@/components/CardReview"),
-		CardInstagram: () => import("@/components/CardInstagram"),
-		CardFeaturedBusiness: () => import("@/components/CardFeaturedBusiness"),
-		googleMapCoordinate: () => import("@/components/googleMapCoordinate")
+		CardReview: () => import("@/components/cards/CardReview"),
+		CardInstagram: () => import("@/components/cards/CardInstagram"),
+		CardFeaturedBusiness: () =>
+			import("@/components/cards/CardFeaturedBusiness"),
+		googleMapCoordinate: () => import("@/components/maps/googleMapCoordinate")
 	},
 
 	head() {

@@ -261,7 +261,9 @@
 										Feels like:
 										<span class="font-weight-medium">{{Math.round(weather.current.feels_like)}}°</span>
 										<br />Wind:
-										<span class="font-weight-medium">{{degToCompass(weather.current.wind_deg)}} {{Math.round(weather.current.wind_speed)}} km/h</span>
+										<span
+											class="font-weight-medium"
+										>{{degToCompass(weather.current.wind_deg)}} {{Math.round(weather.current.wind_speed)}} km/h</span>
 									</div>
 								</v-flex>
 							</v-layout>
@@ -270,7 +272,7 @@
 				</v-img>
 			</v-carousel-item>
 		</v-carousel>
-	<!--	<v-container grid-list-lg>
+		<!--	<v-container grid-list-lg>
 			<v-responsive class="mx-auto" width="56">
 				<v-icon x-large>mdi-weather-cloudy</v-icon>
 			</v-responsive>
@@ -342,11 +344,9 @@ export default {
 		}
 	}),
 	components: {
-		CardHotelMobile: () => import("@/components/CardHotelMobile"),
-		CardFeaturedHotel: () => import("@/components/CardFeaturedHotel"),
-		CardHotel: () => import("@/components/CardHotel"),
-		Assurance: () => import("@/components/Assurance"),
-		Mission: () => import("@/components/Mission")
+		CardHotelMobile: () => import("@/components/cards/CardHotelMobile"),
+		CardFeaturedHotel: () => import("@/components/cards/CardFeaturedHotel"),
+		CardHotel: () => import("@/components/cards/CardHotel")
 	},
 
 	//Make location dynamic

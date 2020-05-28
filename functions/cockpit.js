@@ -11,6 +11,7 @@ exports.handler = async (event, context) => {
     let name = event.queryStringParameters.name;
     let skip = event.queryStringParameters.skip;
     let limit = event.queryStringParameters.limit;
+    let filter = event.queryStringParameters.filter;
 
     const res = await fetch(API_ENDPOINT + name + '?token=' + "641a6e0c88f94f7d2adadd184752e1&rspc=1", {
         headers: {
@@ -18,7 +19,7 @@ exports.handler = async (event, context) => {
         },
         method: 'POST',
         body: JSON.stringify({
-            limit: limit, skip: skip, fields: fields
+            limit: limit, skip: skip, fields: fields, filter: { slug: filter, }
         })
     })
         .then((response) => response.text())

@@ -55,7 +55,7 @@ export default {
 		};
 	},
 	components: {
-		CardAirport: () => import("@/components/CardAirport"),
+		CardAirport: () => import("@/components/cards/CardAirport"),
 		Title: () => import("@/components/transitions/Title")
 	},
 	methods: {

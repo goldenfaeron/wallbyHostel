@@ -21,7 +21,7 @@
 
 <script>
 export default {
-	components: { CardBar: () => import("@/components/CardBar") },
+	components: { CardBar: () => import("@/components/cards/CardBar") },
 	props: ["props"],
 	methods: {
 		placeholder(index) {

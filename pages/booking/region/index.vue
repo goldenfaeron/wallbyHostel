@@ -27,7 +27,7 @@ export default {
 	components: {
 		BookingList: () => import("@/components/views/BookingList"),
 		Title: () => import("@/components/transitions/Title"),
-		CardFeaturedHotel: () => import("@/components/CardFeaturedHotel")
+		CardFeaturedHotel: () => import("@/components/cards/CardFeaturedHotel")
 
 		// Assurance: () => import("@/components/Assurance"),
 		// Mission: () => import("@/components/Mission")

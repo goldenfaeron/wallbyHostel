@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<v-img
-			:src="require('@/assets/hotel.jpg')"
+			:src="require('@/assets/cityscapes.png')"
 			:height="[$vuetify.breakpoint.smAndUp ? '400px' : '200px']"
 		>
 			<template v-slot:placeholder>
@@ -66,7 +66,7 @@ export default {
 	components: {
 		BookingList: () => import("@/components/views/BookingList"),
 		Title: () => import("@/components/transitions/Title"),
-		CardFeaturedHotel: () => import("@/components/CardFeaturedHotel"),
+		CardFeaturedHotel: () => import("@/components/cards/CardFeaturedHotel"),
 		CardHotelRegion: () => import("@/components/cards/CardHotelRegion")
 
 		// Assurance: () => import("@/components/Assurance"),

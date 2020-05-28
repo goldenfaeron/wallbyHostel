@@ -29,7 +29,9 @@
 <script>
 export default {
 	props: ["props"],
-	components: { CardInstagram: () => import("@/components/CardInstagram") }
+	components: {
+		CardInstagram: () => import("@/components/cards/CardInstagram")
+	}
 };
 </script>
 

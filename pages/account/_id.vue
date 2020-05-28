@@ -108,20 +108,18 @@ export default {
 	},
 
 	components: {
-		CardInstagram: () => import("@/components/CardInstagram"),
-		CallToAction: () => import("@/components/CallToAction"),
+		CardInstagram: () => import("@/components/cards/CardInstagram"),
+
 		CommentsParallax: () => import("@/components/CommentsParallax"),
-		JumbotronGradient: () => import("@/components/JumbotronGradient"),
-		ImageGallery: () => import("@/components/ImageGallery"),
+
+		ImageGallery: () => import("@/components/gallery/ImageGallery"),
 		SplashTitle: () => import("@/components/SplashTitle"),
-		CardRoom: () => import("@/components/CardRoom"),
-		CardBar: () => import("@/components/CardBar"),
-		CardHotel: () => import("@/components/CardHotel"),
-		CardFeaturedHotel: () => import("@/components/CardFeaturedHotel"),
-		CardFeaturedBusiness: () => import("@/components/CardFeaturedBusiness"),
-		CertificateCorona: () => import("@/components/CertificateCorona"),
-		CertificateCService: () => import("@/components/CertificateCService"),
-		CertificateQuarantine: () => import("@/components/CertificateQuarantine")
+		CardRoom: () => import("@/components/cards/CardRoom"),
+		CardBar: () => import("@/components/cards/CardBar"),
+		CardHotel: () => import("@/components/cards/CardHotel"),
+		CardFeaturedHotel: () => import("@/components/cards/CardFeaturedHotel"),
+		CardFeaturedBusiness: () =>
+			import("@/components/cards/CardFeaturedBusiness")
 	},
 
 	head() {

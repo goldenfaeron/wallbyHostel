@@ -23,6 +23,10 @@ export default {
     ]
   },
 
+  rules: {
+    'nuxt/no-console': 'off'
+  },
+
   env: {
     collectionToken: "641a6e0c88f94f7d2adadd184752e1"
   },
@@ -67,7 +71,8 @@ export default {
 
   axios: {
     // proxyHeaders: false
-    baseURL: 'https://goborshi.netlify.app'
+    // baseURL: 'https://goborshi.netlify.app'
+    baseURL: 'http://localhost:8888'
   },
 
   // server: {

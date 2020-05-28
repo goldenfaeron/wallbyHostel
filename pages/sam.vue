@@ -22,7 +22,7 @@ export default {
 		};
 	},
 	components: {
-		googleMap: () => import("@/components/googleMap"),
+		googleMap: () => import("@/components/maps/googleMap"),
 		myWork,
 		splash,
 		aboutMe,

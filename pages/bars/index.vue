@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<v-img
-			:src="require('@/assets/barman.jpg')"
+			:src="require('@/assets/food/the-munchies.png')"
 			:height="[$vuetify.breakpoint.smAndUp ? '400px' : '200px']"
 		>
 			<template v-slot:placeholder>
@@ -67,7 +67,7 @@ export default {
 		};
 	},
 	components: {
-		CardBar: () => import("@/components/CardBar"),
+		CardBar: () => import("@/components/cards/CardBar"),
 		Title: () => import("@/components/transitions/Title")
 	},
 	methods: {

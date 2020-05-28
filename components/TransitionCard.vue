@@ -1,7 +1,7 @@
 <template>
 	<v-hover>
 		<v-card slot-scope="{ hover }" class="mx-auto" color="grey lighten-4">
-			<v-img :aspect-ratio="16/9" src="https://cdn.vuetifyjs.com/images/cards/kitchen.png">
+			<v-img :aspect-ratio="16/9" src="https://cdn.vuetifyjs.com/images/cards/Cards/kitchen.png">
 				<v-expand-transition>
 					<div
 						v-if="hover"
