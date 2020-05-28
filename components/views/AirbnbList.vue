@@ -13,7 +13,7 @@
 <script>
 export default {
 	props: ["props"],
-	components: { CardAirbnb: () => import("@/components/CardAirbnb") },
+	components: { CardAirbnb: () => import("@/components/cards/CardAirbnb") },
 
 	methods: {
 		placeholder(index) {
