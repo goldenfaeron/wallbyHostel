@@ -26,6 +26,8 @@ export default {
   env: {
     collectionToken: "641a6e0c88f94f7d2adadd184752e1"
   },
+
+
   /*
   ** Customize the progress-bar color
   */
