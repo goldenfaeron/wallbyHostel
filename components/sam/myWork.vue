@@ -51,7 +51,7 @@
 											data-v-8f31a7c4
 											tabindex="0"
 											class="white--text overflow-hidden v-card v-card--hover v-card--link v-sheet theme--dark"
-											style="height: 300px; background: url(https://hackmylanguage.com/assets/images/4/SamAlicantePortrait-98a7d8e4.jpg) center center / cover no-repeat;"
+											style="height: 300px; background: url(https://hackmylanguage.com/assets/gallery/Images/4/SamAlicantePortrait-98a7d8e4.jpg) center center / cover no-repeat;"
 										>
 											<!---->
 											<!---->

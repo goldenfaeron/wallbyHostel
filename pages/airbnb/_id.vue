@@ -155,41 +155,18 @@
 
 <script>
 export default {
+	//Server function to Get data before rendering page
+	middleware: "airbnb",
 	components: {
 		AirbnbList: () => import("@/components/views/AirbnbList"),
 		Title: () => import("@/components/transitions/Title")
 	},
 
-	async asyncData({ params, store, $axios, route }) {
-		let collection = "airbnb";
-		let request1 = await $axios.post(
-			store.state.webRoot +
-				"/api/collections/get/" +
-				collection +
-				"?token=" +
-				store.state.collectionsToken +
-				"&rspc=1",
-			{ filter: { slug: route.params.id } }
-		);
-
-		let request2 = await $axios.post(
-			store.state.webRoot +
-				"/api/collections/get/" +
-				collection +
-				"?token=" +
-				store.state.collectionsToken +
-				"&rspc=1",
-			{ limit: 20 }
-		);
-
-		return {
-			room: request1.data.entries[0],
-			airbnbs: request2.data.entries
-		};
-	},
 	data() {
 		return {
-			dialog: false
+			dialog: false,
+			room: this.$store.state.pageData[0],
+			airbnbs: this.$store.state.pageData[1]
 		};
 	},
 	filters: {

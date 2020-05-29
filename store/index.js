@@ -38,7 +38,8 @@ export const state = () => ({
     imageToken: '969461cb194b4b0cd0c695d09e9502',
     authToken: 'ac203b0773cc501428903c9de9ad09',
 
-
+    //Page content preload / req = request
+    pageData: []
 
 
 
@@ -54,6 +55,12 @@ export const mutations = {
         if (state.locales.indexOf(locale) !== -1) {
             state.locale = locale;
         }
+    },
+    setPageData(state, data) {
+
+        state.pageData = data;
+
+
     },
 
     setBookingCount(state, count) {

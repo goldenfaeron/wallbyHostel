@@ -98,39 +98,47 @@
 
 <script>
 export default {
-	async asyncData({ $axios, route, store }) {
-		let collection = "tripadvisor_thingstodo_borsh";
-		let collection2 = "shops_featured";
+	middleware: "activities",
+	// async asyncData({ $axios, route, store }) {
+	// 	let collection = "tripadvisor_thingstodo_borsh";
+	// 	let collection2 = "shops_featured";
 
-		let request1 = await $axios.post(
-			store.state.webRoot +
-				"/api/collections/get/" +
-				collection +
-				"?token=" +
-				store.state.collectionsToken,
-			{ filter: { slug: route.params.id }, populate: 1 }
-		);
+	// 	let request1 = await $axios.post(
+	// 		store.state.webRoot +
+	// 			"/api/collections/get/" +
+	// 			collection +
+	// 			"?token=" +
+	// 			store.state.collectionsToken,
+	// 		{ filter: { slug: route.params.id }, populate: 1 }
+	// 	);
 
-		let request2 = await $axios.post(
-			store.state.webRoot +
-				"/api/collections/get/" +
-				collection2 +
-				"?token=" +
-				store.state.collectionsToken,
-			{ limit: 5, sort: { _created: -1 } }
-		);
+	// 	let request2 = await $axios.post(
+	// 		store.state.webRoot +
+	// 			"/api/collections/get/" +
+	// 			collection2 +
+	// 			"?token=" +
+	// 			store.state.collectionsToken,
+	// 		{ limit: 5, sort: { _created: -1 } }
+	// 	);
+	// 	return {
+	// 		thing: request1.data.entries[0],
+	// 		business: request2.data.entries
+	// 	};
+	// },
+
+	data() {
 		return {
-			thing: request1.data.entries[0],
-			business: request2.data.entries
+			thing: this.$store.state.pageData[0],
+			business: this.$store.state.pageData[1]
 		};
 	},
-
 	components: {
 		Title: () => import("@/components/transitions/Title"),
-		CardReview: () => import("@/components/CardReview"),
-		CardInstagram: () => import("@/components/CardInstagram"),
-		CardFeaturedBusiness: () => import("@/components/CardFeaturedBusiness"),
-		googleMapCoordinate: () => import("@/components/googleMapCoordinate")
+		CardReview: () => import("@/components/cards/CardReview"),
+		CardInstagram: () => import("@/components/cards/CardInstagram"),
+		CardFeaturedBusiness: () =>
+			import("@/components/cards/CardFeaturedBusiness"),
+		googleMapCoordinate: () => import("@/components/maps/googleMapCoordinate")
 	},
 
 	head() {

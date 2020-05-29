@@ -99,8 +99,8 @@ export default {
 	},
 
 	components: {
-		CardHotelMobile: () => import("@/components/CardHotelMobile"),
-		CardHotel: () => import("@/components/CardHotel")
+		CardHotelMobile: () => import("@/components/cards/CardHotelMobile"),
+		CardHotel: () => import("@/components/cards/CardHotel")
 	}
 };
 </script>

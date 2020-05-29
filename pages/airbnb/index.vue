@@ -18,10 +18,10 @@
 			<h2
 				class="secondary--text"
 				style="text-align: center;"
-			>{{response.length}} {{$t("airbnbs.subtitle")}}</h2>
+			>{{airbnbs.length}} {{$t("airbnbs.subtitle")}}</h2>
 		</Title>
 
-		<AirbnbList :props="response"></AirbnbList>
+		<AirbnbList :props="airbnbs"></AirbnbList>
 	</div>
 </template>
 
@@ -29,57 +29,16 @@
 export default {
 	data() {
 		return {
-			response: ""
+			airbnbs: this.$store.state.pageData
 		};
 	},
-	async mounted() {
-		let collection = "airbnb";
-		let fields = { name: 1, photos: 1, roomType: 1, stars: 1, slug: 1 };
-		let skip = 0;
-		let limit = 0;
-
-		try {
-			const res = await this.$axios.$post(
-				"/.netlify/functions/cockpit?name=" +
-					collection +
-					"&skip=" +
-					skip +
-					"&limit=" +
-					limit +
-					"",
-				fields
-			);
-
-			this.response = res.entries;
-			this.error = null;
-		} catch (e) {
-			this.error = e.response;
-			this.response = "—";
-		}
-	},
+	middleware: "airbnb",
 	components: {
 		Title: () => import("@/components/transitions/Title"),
-		CardAirbnb: () => import("@/components/CardAirbnb"),
+		CardAirbnb: () => import("@/components/cards/CardAirbnb"),
 		AirbnbList: () => import("@/components/views/AirbnbList")
 	},
-	// async asyncData({ params, store, $axios, route }) {
-	// 	let collection = "airbnb";
-	// 	return await $axios
-	// 		.post(
-	// 			store.state.webRoot +
-	// 				"/api/collections/get/" +
-	// 				collection +
-	// 				"?token=" +
-	// 				store.state.collectionsToken +
-	// 				"&rspc=1",
-	// 			{
-	// 				fields: { name: 1, photos: 1, roomType: 1, stars: 1, slug: 1 }
-	// 			}
-	// 		)
-	// 		.then(res => {
-	// 			return { airbnbs: res.data.entries };
-	// 		});
-	// },
+
 	methods: {
 		placeholder(index) {
 			return index % 2;

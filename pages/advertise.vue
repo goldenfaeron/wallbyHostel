@@ -32,7 +32,7 @@
 <script>
 export default {
 	components: {
-		UserRegistrations: () => import("@/components/UserRegistrations")
+		// UserRegistrations: () => import("@/components/UserRegistrations")
 	},
 	data: () => ({
 		items: [

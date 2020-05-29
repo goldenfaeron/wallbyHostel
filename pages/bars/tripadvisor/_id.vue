@@ -102,7 +102,7 @@ export default {
 	},
 
 	components: {
-		googleMapCoordinate: () => import("@/components/googleMapCoordinate")
+		googleMapCoordinate: () => import("@/components/maps/googleMapCoordinate")
 	},
 	data() {
 		return {

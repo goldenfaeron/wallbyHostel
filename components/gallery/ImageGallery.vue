@@ -8,6 +8,7 @@
 				:contain="displayImageContain"
 				:height="displayImageHeight"
 				:src="$store.state.webRoot + displayImage"
+				v-if="displayImage"
 			></v-img>
 
 			<v-layout v-if="galleryMode" row justify-center>
@@ -31,6 +32,7 @@
 							@click="clickImg(image.path ,index)"
 						>
 							<v-img
+								v-if="image"
 								style="cursor:pointer"
 								:lazy-src="$store.state.webRoot+'/api/cockpit/image?token='+$store.state.imageToken+'&src='+image._id+'&w=100&h=50&o=true'"
 								:src="$store.state.webRoot + image.path"

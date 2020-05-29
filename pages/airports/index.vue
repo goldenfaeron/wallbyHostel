@@ -36,41 +36,26 @@
 
 <script>
 export default {
-	async asyncData({ $axios, route, store }) {
-		let collection = "googleplaces_airports_borsh";
-
-		let request1 = await $axios.post(
-			store.state.webRoot +
-				"/api/collections/get/" +
-				collection +
-				"?token=" +
-				store.state.collectionsToken +
-				"&rspc=1",
-			{ fields: { reviews: 0, popularTimesHistogram: 0 }, limit: 15 }
-		);
-
-		return {
-			airports_google: request1.data.entries
-			// airports_tripadvisor: request2.data.entries
-		};
-	},
-	components: {
-		CardAirport: () => import("@/components/CardAirport"),
-		Title: () => import("@/components/transitions/Title")
-	},
-	methods: {
-		placeholder(index) {
-			return index % 2;
-		}
-	},
+	middleware: "airports",
 	data() {
 		return {
+			airports_google: this.$store.state.pageData,
 			type: "airports",
 			title: "airports in " + this.$store.state.city,
 			preview:
 				"See all the best " + this.type + " in " + this.$store.state.city,
 			placeholder2: Math.floor(Math.random() * 2)
 		};
+	},
+
+	components: {
+		CardAirport: () => import("@/components/cards/CardAirport"),
+		Title: () => import("@/components/transitions/Title")
+	},
+	methods: {
+		placeholder(index) {
+			return index % 2;
+		}
 	},
 
 	head() {

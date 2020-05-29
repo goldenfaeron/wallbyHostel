@@ -137,19 +137,21 @@ export default {
 		};
 	},
 	components: {
-		CallToAction: () => import("@/components/CallToAction"),
 		CommentsParallax: () => import("@/components/CommentsParallax"),
-		JumbotronGradient: () => import("@/components/JumbotronGradient"),
-		ImageGallery: () => import("@/components/ImageGallery"),
-		SplashTitle: () => import("@/components/SplashTitle"),
-		CardRoom: () => import("@/components/CardRoom"),
-		CardBar: () => import("@/components/CardBar"),
-		CardHotel: () => import("@/components/CardHotel"),
-		CardFeaturedHotel: () => import("@/components/CardFeaturedHotel"),
 
-		CertificateCorona: () => import("@/components/CertificateCorona"),
-		CertificateCService: () => import("@/components/CertificateCService"),
-		CertificateQuarantine: () => import("@/components/CertificateQuarantine")
+		ImageGallery: () => import("@/components/gallery/ImageGallery"),
+		SplashTitle: () => import("@/components/SplashTitle"),
+		CardRoom: () => import("@/components/cards/CardRoom"),
+		CardBar: () => import("@/components/cards/CardBar"),
+		CardHotel: () => import("@/components/cards/CardHotel"),
+		CardFeaturedHotel: () => import("@/components/cards/CardFeaturedHotel"),
+
+		CertificateCorona: () =>
+			import("@/components/certificates/CertificateCorona"),
+		CertificateCService: () =>
+			import("@/components/certificates/CertificateCService"),
+		CertificateQuarantine: () =>
+			import("@/components/certificates/CertificateQuarantine")
 	},
 
 	methods: {

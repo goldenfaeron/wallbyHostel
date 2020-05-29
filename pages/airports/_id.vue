@@ -83,30 +83,32 @@
 <script>
 import { Mixin } from "~/mixins/sortReviews.js";
 export default {
-	async asyncData({ params, store, $axios, route }) {
-		let collection = "googleplaces_airports_borsh";
-		return await $axios
-			.post(
-				store.state.webRoot +
-					"/api/collections/get/" +
-					collection +
-					"?token=" +
-					store.state.collectionsToken,
-				{ filter: { slug: route.params.id } }
-			)
-			.then(res => {
-				return {
-					airport: res.data.entries[0],
-					reviews: JSON.parse(JSON.stringify(res.data.entries[0].reviews))
-				};
-			});
-	},
+	middleware: "airports",
+	// async asyncData({ params, store, $axios, route }) {
+	// 	let collection = "googleplaces_airports_borsh";
+	// 	return await $axios
+	// 		.post(
+	// 			store.state.webRoot +
+	// 				"/api/collections/get/" +
+	// 				collection +
+	// 				"?token=" +
+	// 				store.state.collectionsToken,
+	// 			{ filter: { slug: route.params.id } }
+	// 		)
+	// 		.then(res => {
+	// 			return {
+	// 				reviews: JSON.parse(JSON.stringify(res.data.entries[0].reviews))
+	// 			};
+	// 		});
+	// },
 
 	components: {
-		googleMap: () => import("@/components/googleMap")
+		googleMap: () => import("@/components/maps/googleMap")
 	},
 	data() {
 		return {
+			airport: this.$store.state.pageData[0],
+			reviews: this.$store.state.pageData[1]
 			// reviews: JSON.parse(JSON.stringify(airport.reviews))
 			// airport: this.airports[this.$route.params.id]
 		};

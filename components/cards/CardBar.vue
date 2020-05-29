@@ -14,15 +14,23 @@
 						</v-layout>
 					</template>
 				</v-img>
+				<v-img v-else max-height="100" :src="require('@/assets/food/food'+randomNumber+'.png')">
+					<template v-slot:placeholder>
+						<v-layout fill-height align-center justify-center ma-0>
+							<v-progress-circular indeterminate color="primary"></v-progress-circular>
+						</v-layout>
+					</template>
+					<v-card-title class="success--text" style="word-break: normal;">{{props.title}}</v-card-title>
+				</v-img>
 
-				<v-sheet v-else height="100" color="primary lighten-2">
+				<!-- <v-sheet v-else height="100" color="primary lighten-2">
 					<v-layout row fill-height align-center justify-start>
 						<v-flex>
 							<v-card-title class="primary--text" style="word-break: normal;">{{props.title}}</v-card-title>
 							<v-card-subtitle class="hidden-xs-only">{{props.categoryName}}</v-card-subtitle>
 						</v-flex>
 					</v-layout>
-				</v-sheet>
+				</v-sheet>-->
 
 				<v-card-title v-if="props.imageUrls" style="word-break: normal;">{{props.title}}</v-card-title>
 				<v-card-text>
@@ -47,27 +55,34 @@ export default {
 	components: {
 		Dialog: () => import("@/components/Dialog")
 	},
+
+	computed: {
+		randomNumber() {
+			let limit = 7;
+			return Math.floor(Math.random() * Math.floor(limit));
+		}
+	},
 	methods: {
 		icon(c) {
 			switch (c) {
 				case "Restaurant":
-					return 'mdi-silverware-fork-knife';
+					return "mdi-silverware-fork-knife";
 				case "Mediterranean restaurant":
-					return 'mdi-food-variant';
+					return "mdi-food-variant";
 				case "Ethnic restaurant":
-					return 'mdi-globe-model';
+					return "mdi-globe-model";
 				case "Bar":
-					return 'mdi-bottle-soda-outline';
+					return "mdi-bottle-soda-outline";
 				case "Pub":
-					return 'mdi-glass-mug-variant';
+					return "mdi-glass-mug-variant";
 				case "Seafood restaurant":
-					return 'mdi-fish';
+					return "mdi-fish";
 				case "Cocktail bar":
-					return 'mdi-glass-cocktail';
+					return "mdi-glass-cocktail";
 				case "Cafe":
-					return 'mdi-coffee';
+					return "mdi-coffee";
 				case "":
-					return 'mdi-beer';
+					return "mdi-beer";
 			}
 		}
 	}

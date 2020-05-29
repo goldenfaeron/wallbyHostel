@@ -112,8 +112,7 @@ export default {
 	components: {
 		BottomNav: () => import("@/components/core/BottomNav"),
 		GoBackButton: () => import("@/components/core/GoBackButton"),
-		Footer: () => import("@/components/core/Footer"),
-		DrawerAnnouncement: () => import("@/components/DrawerAnnouncement")
+		Footer: () => import("@/components/core/Footer")
 	},
 
 	data() {

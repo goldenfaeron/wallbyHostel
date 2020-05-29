@@ -23,7 +23,7 @@
 export default {
 	props: ["props"],
 	components: {
-		CardFeaturedHotel: () => import("@/components/CardFeaturedHotel")
+		CardFeaturedHotel: () => import("@/components/cards/CardFeaturedHotel")
 	}
 };
 </script>
