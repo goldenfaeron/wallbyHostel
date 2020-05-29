@@ -113,6 +113,7 @@
 
 <script>
 export default {
+	middleware: "booking",
 	async asyncData({ $axios, route, store }) {
 		let collection = "booking_borsh";
 		let collection2 = "hotels";

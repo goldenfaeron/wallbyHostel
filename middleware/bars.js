@@ -1,15 +1,16 @@
 export default async function ({ store, $axios, route }) {
-    let collection = "airbnb";
+    let collection = "googleplaces_borsh";
     if (route.params.id) {
 
         try {
+
 
             let request1 = await $axios.post(
                 store.state.webRoot +
                 "/api/collections/get/" +
                 collection +
                 "?token=" +
-                process.env.collectionToken +
+                store.state.collectionsToken +
                 "&rspc=1",
                 { filter: { slug: route.params.id } }
             );
@@ -19,12 +20,24 @@ export default async function ({ store, $axios, route }) {
                 "/api/collections/get/" +
                 collection +
                 "?token=" +
-                process.env.collectionToken +
-                "&rspc=1",
-                { limit: 20 }
+                store.state.collectionsToken,
+                {
+                    fields: {
+                        imageUrls: 1,
+                        title: 1,
+                        totalScore: 1,
+                        categoryName: 1,
+                        url: 1,
+                        slug: 1,
+                        reviewsCount: 1,
+                        location: 1
+                    },
+                    limit: 20,
+                    sort: { imageUrls: -1 }
+                }
             );
 
-            return store.commit("setPageData", [request1.data.entries[0], request2.data.entries])
+            return store.commit("setPageData", [request1.data.entries[0], request2.data.entries, JSON.parse(JSON.stringify(request1.data.entries[0].reviews))])
         }
 
 
@@ -43,10 +56,20 @@ export default async function ({ store, $axios, route }) {
                     "/api/collections/get/" +
                     collection +
                     "?token=" +
-                    process.env.collectionToken +
+                    store.state.collectionsToken +
                     "&rspc=1",
                     {
-                        fields: { name: 1, photos: 1, roomType: 1, stars: 1, slug: 1 }
+                        fields: {
+                            imageUrls: 1,
+                            title: 1,
+                            totalScore: 1,
+                            categoryName: 1,
+                            url: 1,
+                            slug: 1,
+                            reviewsCount: 1,
+                            location: 1
+                        },
+                        sort: { imageUrls: -1 }
                     }
                 )
                 .then(res => {

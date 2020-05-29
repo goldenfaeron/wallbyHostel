@@ -81,47 +81,7 @@
 <script>
 import { Mixin } from "~/mixins/sortReviews.js";
 export default {
-	async asyncData({ params, store, $axios, route }) {
-		let collection = "googleplaces_borsh";
-		let request1 = await $axios.post(
-			store.state.webRoot +
-				"/api/collections/get/" +
-				collection +
-				"?token=" +
-				store.state.collectionsToken +
-				"&rspc=1",
-			{ filter: { slug: route.params.id } }
-		);
-
-		let request2 = await $axios.post(
-			store.state.webRoot +
-				"/api/collections/get/" +
-				collection +
-				"?token=" +
-				store.state.collectionsToken,
-			{
-				fields: {
-					imageUrls: 1,
-					title: 1,
-					totalScore: 1,
-					categoryName: 1,
-					url: 1,
-					slug: 1,
-					reviewsCount: 1,
-					location: 1
-				},
-				limit: 20,
-				sort: { imageUrls: -1 }
-			}
-		);
-
-		return {
-			bar: request1.data.entries[0],
-			bars: request2.data.entries,
-			reviews: JSON.parse(JSON.stringify(request1.data.entries[0].reviews))
-		};
-	},
-
+	middleware: "bars",
 	components: {
 		BarsList: () => import("@/components/views/BarsList"),
 		googleMap: () => import("@/components/maps/googleMap"),
@@ -129,14 +89,15 @@ export default {
 	},
 	data() {
 		return {
-			// reviews: JSON.parse(JSON.stringify(bar.reviews))
-			// bar: this.bars[this.$route.params.id]
+			bar: this.$store.state.pageData[0],
+			bars: this.$store.state.pageData[1],
+			reviews: this.$store.state.pageData[2]
 		};
 	},
 
 	head() {
 		return {
-			title: this.bar.title,
+			// title: this.bar.title,
 			meta: [
 				{
 					hid: this.bar.categoryName + "in" + this.$store.state.city,
