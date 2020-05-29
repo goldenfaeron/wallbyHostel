@@ -38,8 +38,8 @@ export const state = () => ({
     imageToken: '969461cb194b4b0cd0c695d09e9502',
     authToken: 'ac203b0773cc501428903c9de9ad09',
 
-    //TEST PRELOADING store
-    pageData: "",
+    //Page content preload / req = request
+    pageData: []
 
 
 

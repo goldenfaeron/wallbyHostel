@@ -1,7 +1,7 @@
 <template>
 	<div>
 		hello
-		<!-- {{$store.state.pageData}} -->
+		{{$store.state.pageData}}
 		<div class="test">{{$store.state.pageData.name}}</div>
 	</div>
 </template>

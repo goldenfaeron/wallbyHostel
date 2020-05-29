@@ -14,30 +14,32 @@
 
 <script>
 export default {
-	async asyncData({ params, store, $axios, route }) {
+	async asyncData({ context, params, store, $axios, route }) {
 		let collection = "team";
-		return await $axios
-			.post(
-				store.state.webRoot +
-					"/api/collections/get/" +
-					collection +
-					"?token=" +
-					store.state.collectionsToken,
-				+"&rspc=1",
-				{
-					fields: {
-						name: 1,
-						profile: 1,
-						page_welcome_title: 1,
-						page_welcome_text: 1,
-						page_button_0: 1,
-						slug: 1
+		if (process.server) {
+			return await $axios
+				.post(
+					store.state.webRoot +
+						"/api/collections/get/" +
+						collection +
+						"?token=" +
+						store.state.collectionsToken,
+					+"&rspc=1",
+					{
+						fields: {
+							name: 1,
+							profile: 1,
+							page_welcome_title: 1,
+							page_welcome_text: 1,
+							page_button_0: 1,
+							slug: 1
+						}
 					}
-				}
-			)
-			.then(res => {
-				return { members: res.data.entries };
-			});
+				)
+				.then(res => {
+					return { members: res.data.entries };
+				});
+		}
 	},
 
 	components: {
