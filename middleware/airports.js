@@ -1,30 +1,23 @@
 export default async function ({ store, $axios, route }) {
-    let collection = "airbnb";
+    let collection = "googleplaces_airports_borsh";
     if (route.params.id) {
 
         try {
 
-            let request1 = await $axios.post(
-                store.state.webRoot +
-                "/api/collections/get/" +
-                collection +
-                "?token=" +
-                process.env.collectionToken +
-                "&rspc=1",
-                { filter: { slug: route.params.id } }
-            );
+            return await $axios
+                .$post(
+                    store.state.webRoot +
+                    "/api/collections/get/" +
+                    collection +
+                    "?token=" +
+                    store.state.collectionsToken,
+                    { filter: { slug: route.params.id } }
+                )
+                .then(res => {
+                    return store.commit("setPageData", [res.entries[0], JSON.parse(JSON.stringify(res.entries[0].reviews))])
+                });
 
-            let request2 = await $axios.post(
-                store.state.webRoot +
-                "/api/collections/get/" +
-                collection +
-                "?token=" +
-                process.env.collectionToken +
-                "&rspc=1",
-                { limit: 20 }
-            );
 
-            return store.commit("setPageData", [request1.data.entries[0], request2.data.entries])
         }
 
 
@@ -43,11 +36,9 @@ export default async function ({ store, $axios, route }) {
                     "/api/collections/get/" +
                     collection +
                     "?token=" +
-                    process.env.collectionToken +
+                    store.state.collectionsToken +
                     "&rspc=1",
-                    {
-                        fields: { name: 1, photos: 1, roomType: 1, stars: 1, slug: 1 }
-                    }
+                    { fields: { reviews: 0, popularTimesHistogram: 0 }, limit: 15 }
                 )
                 .then(res => {
                     return store.commit("setPageData", res.entries)
