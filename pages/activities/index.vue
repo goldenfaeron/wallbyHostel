@@ -43,41 +43,43 @@
 
 <script>
 export default {
-	async asyncData({ $axios, route, store }) {
-		let collection = "tripadvisor_thingstodo_borsh";
+	// async asyncData({ $axios, route, store }) {
+	// 	let collection = "tripadvisor_thingstodo_borsh";
 
-		let request1 = await $axios.post(
-			store.state.webRoot +
-				"/api/collections/get/" +
-				collection +
-				"?token=" +
-				store.state.collectionsToken +
-				"&rspc=1",
-			{
-				fields: {
-					name: 1,
-					description: 1,
-					location_string: 1,
-					photo: 1,
-					slug: 1,
-					cp_photo: 1
-				},
-				limit: 15
-			}
-		);
+	// 	let request1 = await $axios.post(
+	// 		store.state.webRoot +
+	// 			"/api/collections/get/" +
+	// 			collection +
+	// 			"?token=" +
+	// 			store.state.collectionsToken +
+	// 			"&rspc=1",
+	// 		{
+	// 			fields: {
+	// 				name: 1,
+	// 				description: 1,
+	// 				location_string: 1,
+	// 				photo: 1,
+	// 				slug: 1,
+	// 				cp_photo: 1
+	// 			},
+	// 			limit: 15
+	// 		}
+	// 	);
 
-		// let request2 = await $axios.post(
-		// 	store.state.webRoot +
-		// 		"/api/collections/get/" +
-		// 		collection +
-		// 		"?token=" +
-		// 		store.state.collectionsToken,
-		// 	{ limit: 5, sort: { _created: -1 } }
-		// );
-		return {
-			things: request1.data.entries
-		};
-	},
+	// 	// let request2 = await $axios.post(
+	// 	// 	store.state.webRoot +
+	// 	// 		"/api/collections/get/" +
+	// 	// 		collection +
+	// 	// 		"?token=" +
+	// 	// 		store.state.collectionsToken,
+	// 	// 	{ limit: 5, sort: { _created: -1 } }
+	// 	// );
+	// 	return {
+	// 		things: request1.data.entries
+	// 	};
+	// },
+
+	middleware: "activities",
 
 	components: {
 		Title: () => import("@/components/transitions/Title"),
@@ -87,7 +89,8 @@ export default {
 
 	data() {
 		return {
-			title: "Activities in " + this.$store.state.city
+			title: "Activities in " + this.$store.state.city,
+			things: this.$store.state.pageData
 		};
 	},
 	head() {

@@ -59,7 +59,7 @@ export const mutations = {
     setPageData(state, data) {
 
         state.pageData = data;
-        console.log("hello")
+
 
     },
 
