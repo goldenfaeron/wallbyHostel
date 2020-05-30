@@ -1,6 +1,6 @@
 <template>
 	<v-hover>
-		<v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 2}`">
+		<v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 2}`" height="100%">
 			<nuxt-link style="text-decoration:none; color: primary;" :to="'/bars/google/'+props.slug">
 				<v-btn absolute small dark fab top right color="primary ">
 					<!--<v-icon v-if="props.categoryName == 'Restaurant'">mdi-silverware-fork-knife</v-icon>
@@ -20,7 +20,7 @@
 							<v-progress-circular indeterminate color="primary"></v-progress-circular>
 						</v-layout>
 					</template>
-					<v-card-title class="success--text" style="word-break: normal;">{{props.title}}</v-card-title>
+					
 				</v-img>
 
 				<!-- <v-sheet v-else height="100" color="primary lighten-2">
@@ -32,7 +32,7 @@
 					</v-layout>
 				</v-sheet>-->
 
-				<v-card-title v-if="props.imageUrls" style="word-break: normal;">{{props.title}}</v-card-title>
+				<v-card-title style="word-break: normal;">{{props.title}}</v-card-title>
 				<v-card-text>
 					<p>
 						<v-icon small>mdi-account-star</v-icon>
