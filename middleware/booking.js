@@ -6,13 +6,14 @@ export default async function ({ store, $axios, route }) {
 
         try {
 
+
+
             let request1 = await $axios.post(
                 store.state.webRoot +
                 "/api/collections/get/" +
-                collection +
+                collection2 +
                 "?token=" +
-                process.env.collectionToken +
-                "&rspc=1",
+                store.state.collectionsToken,
                 { filter: { slug: route.params.id } }
             );
 
@@ -21,12 +22,33 @@ export default async function ({ store, $axios, route }) {
                 "/api/collections/get/" +
                 collection +
                 "?token=" +
-                process.env.collectionToken +
+                store.state.collectionsToken,
                 "&rspc=1",
-                { limit: 20 }
+                { fields: { features: 0, rooms: 0 }, limit: 8 }
             );
 
-            return store.commit("setPageData", [request1.data.entries[0], request2.data.entries])
+            let request3 = await $axios.post(
+                store.state.webRoot +
+                "/api/collections/get/" +
+                collection +
+                "?token=" +
+                store.state.collectionsToken +
+                "&rspc=1",
+                {
+                    fields: {
+                        description: 0,
+                        gallery: 0,
+                        ammenities: 0,
+                        rooms: 0,
+                        linked_instagram: 0,
+                        linked_object: 0,
+                        comment: 0,
+                        rooms_details: 0
+                    },
+                    limit: 8
+                })
+
+            return store.commit("setPageData", [request1.data.entries[0], request2.data.entries, request3.data.entries])
         }
 
 
