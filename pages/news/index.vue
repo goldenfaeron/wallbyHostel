@@ -3,22 +3,27 @@
 		<v-container grid-list-lg>
 			<v-layout row wrap my-5>
 				<v-flex xs12 sm6 md4 v-for="(item, index) in data1" :key="index">
-					<v-card>
-						<v-card-title primary-title>{{item.title}}</v-card-title>
-						<v-card-subtitle>News in {{$store.state.city}}</v-card-subtitle>
+					<v-hover>
+						<v-card v-card height="100%" slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 2}`">
+							<nuxt-link style="text-decoration:none;" class="" :to="'/corona/'+item.slug">
+							<v-card-title style="line-height: 20px; height: 20px; word-break:normal;" primary-title>{{item.title}}</v-card-title>
+							<br>
+							<v-card-subtitle>News in {{$store.state.city}}</v-card-subtitle>
 
-						<v-img :src="item.image" height="200"></v-img>
+							<v-img :src="item.image" height="200"></v-img>
 
-						<v-card-text>
-							<div v-html="item.description.substr(0,150)"></div>
-						</v-card-text>
-						<br />
+							<v-card-text>
+								<div v-html="item.description.substr(0,150)"></div>
+							</v-card-text>
+							<!--
 						<v-card-actions>
 							<nuxt-link :to="'/news/'+ item.slug" append>
 								<v-btn color="primary ">Read some more</v-btn>
 							</nuxt-link>
-						</v-card-actions>
-					</v-card>
+							</v-card-actions>-->
+							</nuxt-link>
+						</v-card>
+					</v-hover>
 				</v-flex>
 			</v-layout>
 		</v-container>

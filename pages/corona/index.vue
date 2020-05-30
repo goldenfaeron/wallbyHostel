@@ -3,7 +3,10 @@
 		<v-container grid-list-lg>
 			<v-layout row wrap my-5>
 				<v-flex xs12 sm6 md4 v-for="(item, index) in content" :key="index">
-					<v-card>
+					<v-hover>
+					<v-card height="100%" slot-scope="{ hover }"
+							:class="`elevation-${hover ? 12 : 2}`">
+						<nuxt-link style="text-decoration:none;" class="" :to="'/corona/'+item.slug">
 						<v-card-title primary-title>{{item.title}}</v-card-title>
 						<v-card-subtitle>News in {{$store.state.city}}</v-card-subtitle>
 
@@ -12,13 +15,15 @@
 						<v-card-text>
 							<p v-html="item.text_1.substr(0,150)"></p>
 						</v-card-text>
-						<br />
-						<v-card-actions>
+					
+						<!--<v-card-actions>
 							<nuxt-link :to="'/corona/'+ item.slug" append>
 								<v-btn color="primary ">Read some more</v-btn>
 							</nuxt-link>
-						</v-card-actions>
+						</v-card-actions>-->
+						</nuxt-link>
 					</v-card>
+					</v-hover>
 				</v-flex>
 			</v-layout>
 		</v-container>

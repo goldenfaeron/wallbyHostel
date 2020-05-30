@@ -1,6 +1,6 @@
 <template>
 	<v-hover>
-		<v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 2}`">
+		<v-card height="100%" slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 2}`">
 			<nuxt-link style="text-decoration:none; color: primary;" :to="'/airbnb/'+props.slug">
 				<!-- <v-img :src="$store.state.assetRoot + props.image.path" max-height="10cm"></v-img> -->
 

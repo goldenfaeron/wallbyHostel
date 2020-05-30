@@ -8,7 +8,7 @@
 			<v-layout row wrap mt-5>
 				<v-container grid-list-lg>
 					<v-layout row wrap>
-						<v-flex xs6 sm6 md4 lg3 v-for="(item, index) in props" :key="index">
+						<v-flex xs12 sm6 md4 lg3 v-for="(item, index) in props" :key="index">
 							<CardBar :props="item"></CardBar>
 						</v-flex>
 					</v-layout>

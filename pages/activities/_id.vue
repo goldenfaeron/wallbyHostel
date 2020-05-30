@@ -36,7 +36,7 @@
 					<v-flex xs12>
 						<v-container grid-list-lg>
 							<v-layout row wrap align-center justify-center>
-								<v-flex xs6 md4 v-for="(item, index) in thing.linked_business" :key="index">
+								<v-flex xs12 md4 v-for="(item, index) in thing.linked_business" :key="index">
 									<CardFeaturedBusiness :props="item"></CardFeaturedBusiness>
 								</v-flex>
 							</v-layout>

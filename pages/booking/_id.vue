@@ -63,7 +63,7 @@
 						<v-icon large>mdi-door</v-icon>Rooms
 					</div>
 				</v-flex>
-				<v-flex xs6 sm6 md3 v-for="(item, index) in hotel.rooms" :key="index">
+				<v-flex xs12 sm6 md3 v-for="(item, index) in hotel.rooms" :key="index">
 					<CardRoomBooking :props="item" :name="hotel.name + ' Amenities'" buttonText="View Amenities"></CardRoomBooking>
 				</v-flex>
 			</v-layout>
