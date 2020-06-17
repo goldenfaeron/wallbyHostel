@@ -2,8 +2,10 @@
 	<div>
 		<v-layout row wrap>
 			<v-flex lg6>
-				<div class="logo"></div>
-
+				<v-img
+					src="https://www.kexhostel.is/media/svg-icon/kex-big.svg"
+					style="  display: block;  margin: auto; width: 50%; margin-top:100px;margin-bottom:100px;"
+				></v-img>
 				<div class="welcome box vcenter eq matched pinged loaded">
 					<v-img
 						height="550px"
@@ -11,27 +13,36 @@
 					></v-img>
 				</div>
 			</v-flex>
-
-			<v-flex lg6></v-flex>
+			<v-flex lg6>
+				<div style="background-color:white;" class="black--text">
+					<v-container grid-list-lg>
+						<v-layout row wrap justify-center mt-5 pt-5 mx-5 px-5>
+							<p style="text-align:center" class="display-3 font-weight-bold">
+								Book your stay
+								<br />with us now!
+							</p>
+							<br />
+							<v-flex lg6>
+								<div align="center">
+									<v-btn outlined color="black" width="100%">
+										Arrival date
+									</v-btn>
+								</div>
+							</v-flex>
+							<v-flex lg6>
+								<div align="center">
+									<v-btn width="100%">hallo2</v-btn>
+								</div>
+							</v-flex>
+							<v-flex lg12>
+								<div align="center">
+									<v-btn width="100%">hallo3</v-btn>
+								</div>
+							</v-flex>
+						</v-layout>
+					</v-container>
+				</div>
+			</v-flex>
 		</v-layout>
 	</div>
 </template>
-
-<style >
-.logo {
-	background-color: #6db3f2;
-	display: block;
-	margin: auto;
-	background: url(https://www.kexhostel.is/media/svg-icon/kex-big.svg) no-repeat
-		center;
-	height: 50%;
-	width: 50%;
-}
-</style>
-<script>
-export default {
-	theme: {
-		dark: true
-	}
-};
-</script>
