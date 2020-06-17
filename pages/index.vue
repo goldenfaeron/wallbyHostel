@@ -1,155 +1,28 @@
 <template>
 	<div>
-		<welcome></welcome>
-		<about></about>
-		<stats></stats>
-		<activities :props="activities"></activities>
+		<v-layout row wrap>
+			<v-flex lg6>
+				<div class="logo">
 
-		<BtnCentered link="/activities"></BtnCentered>
-		<v-divider></v-divider>
-		<bars :props="bars"></bars>
+				</div>
 
-		<v-divider></v-divider>
+				<div class="welcome box vcenter eq matched pinged loaded">
+					<v-img
+						height="550px"
+						src="https://www.kexhostel.is/media/box-covers/halfcol-wide/3yiffh3h.jpg"
+					></v-img>
+				</div>
+			</v-flex>
 
-		<booking :props="hotels"></booking>
-		<BtnCentered link="/booking"></BtnCentered>
-
-		<v-divider></v-divider>
-		<br />
-
-		<airbnb :props="airbnb"></airbnb>
-		<BtnCentered link="/airbnb"></BtnCentered>
-		<v-divider></v-divider>
-
-		<instagram :props="instagram"></instagram>
-		<BtnCentered link="/instagram/posts"></BtnCentered>
+			<v-flex lg6></v-flex>
+		</v-layout>
 	</div>
 </template>
 
-
-<script>
-import welcome from "~/components/fromTemplate/welcome.vue";
-import about from "~/components/fromTemplate/about.vue";
-import features from "~/components/fromTemplate/features.vue";
-import stats from "~/components/fromTemplate/stats.vue";
-
-import booking from "~/components/Booking.vue";
-import instagram from "~/components/Instagram.vue";
-import airbnb from "~/components/airbnb.vue";
-import bars from "~/components/bars.vue";
-import activities from "~/components/activities.vue";
-import BtnCentered from "~/components/core/BtnCentered.vue";
-
-export default {
-	components: {
-		welcome,
-		about,
-		features,
-		stats,
-		BtnCentered,
-		booking,
-		instagram,
-		airbnb,
-		bars,
-		activities
-	},
-
-	async asyncData({ $axios, route, store }) {
-		let collection = "airbnb";
-		let collection2 = "instagram";
-		let collection3 = "hotels";
-		let collection4 = "googleplaces_borsh";
-		let collection5 = "tripadvisor_thingstodo_borsh";
-
-		// aribnb
-		let request1 = await $axios.post(
-			store.state.webRoot +
-				"/api/collections/get/" +
-				collection +
-				"?token=" +
-				store.state.collectionsToken +
-				"&rspc=1",
-			{
-				fields: { name: 1, photos: 1, roomType: 1, stars: 1, slug: 1 },
-				limit: 4
-			}
-		);
-
-		// instagram
-		let request2 = await $axios.get(
-			"https://api.apify.com/v2/datasets/Ihrf9Y7dkGjwNwmi5/items?format=json&clean=1&limit=24"
-		);
-
-		//hotels (featured)
-		let request3 = await $axios.post(
-			store.state.webRoot +
-				"/api/collections/get/" +
-				collection3 +
-				"?token=" +
-				store.state.collectionsToken +
-				"&rspc=1",
-			{
-				fields: {
-					name: 1,
-					rating: 1,
-					header_image: 1,
-					excellent_customer_service: 1,
-					corona_safe: 1,
-					quarantine_friendly: 1,
-					rating: 1,
-					slug: 1
-				},
-
-				limit: 4
-			}
-		);
-
-		//googleplaces_borsh (bars)
-		let request4 = await $axios.post(
-			store.state.webRoot +
-				"/api/collections/get/" +
-				collection4 +
-				"?token=" +
-				store.state.collectionsToken +
-				"&rspc=1",
-			{
-				sort: { imageUrls: -1 },
-				fields: {
-					title: 1,
-					address: 1,
-					categoryName: 1,
-					reviewsCount: 1,
-					imageUrls: 1,
-					slug: 1
-				},
-				limit: 4
-			}
-		);
-
-		//Activities
-		let request5 = await $axios.post(
-			store.state.webRoot +
-				"/api/collections/get/" +
-				collection5 +
-				"?token=" +
-				store.state.collectionsToken +
-				"&rspc=1",
-			{ limit: 4 }
-		);
-
-		return {
-			airbnb: request1.data.entries,
-			instagram: request2.data,
-			hotels: request3.data.entries,
-			bars: request4.data.entries,
-			activities: request5.data.entries
-		};
-	}
-
-	// mounted() {
-	// 	// this.$nextTick(() => {
-	// 	this.$nuxt.$loading.start();
-	// 	// });
-	// },
-};
-</script>
+<style lang="css">
+.logo {
+	background: url(https://www.kexhostel.is/media/svg-icon/kex-big.svg) no-repeat center center;
+	height: 200px;
+	width: 200px;
+}
+</style>
