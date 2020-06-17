@@ -8,7 +8,7 @@
 				></v-img>
 				<div class="welcome box vcenter eq matched pinged loaded">
 					<v-img
-						height="550px"
+						height="100%"
 						src="https://www.kexhostel.is/media/box-covers/halfcol-wide/3yiffh3h.jpg"
 					></v-img>
 				</div>
@@ -44,13 +44,23 @@
 						</v-layout>
 					</v-container>
 				</div>
+			
+					<v-img  src="https://www.kexhostel.is/media/box-covers/hq-halfcol-wide/xtv3nwv8.jpg">
 
-				<v-img src="https://www.kexhostel.is/media/box-covers/hq-halfcol-wide/xtv3nwv8.jpg">
-					<a href="/rooms-and-rates" class="item" style="min-height: 385.037px;">
-						<div class="text">
-							<v-img width="25%" src="https://www.kexhostel.is/media/svg-icon/roomsrates.svg"></v-img>
-						</div>
-					</a>
+							<v-container fill-height>
+								<v-row align="center" class="white--text mx-auto" justify="center">
+									<v-col class="white--text text-center" cols="12" tag="h1">
+										<div class="text">
+											<v-img style="margin: auto;" width="40%" src="https://www.kexhostel.is/media/svg-icon/roomsrates.svg"></v-img>
+										</div>
+									</v-col>
+								</v-row>
+							</v-container>
+					
+					</v-img>
+			
+				<v-img >
+					<a href="/rooms-and-rates" class="item" style="min-height: 385.037px;"></a>
 				</v-img>
 			</v-flex>
 		</v-layout>
