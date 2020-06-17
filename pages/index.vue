@@ -16,32 +16,42 @@
 			<v-flex lg6>
 				<div style="background-color:white;" class="black--text">
 					<v-container grid-list-lg>
-						<v-layout row wrap justify-center mt-5 pt-5 mx-5 px-5>
-							<p style="text-align:center" class="display-3 font-weight-bold">
+						<v-layout row wrap justify-center my-5 py-5 mx-5 px-5>
+							<p style="text-align:center; line-height: 100px" class="display-3 font-weight-bold">
 								Book your stay
 								<br />with us now!
 							</p>
+
 							<br />
 							<v-flex lg6>
 								<div align="center">
-									<v-btn outlined color="black" width="100%">
-										Arrival date
-									</v-btn>
+									<v-btn outlined color="black" width="100%">Arrival date</v-btn>
 								</div>
 							</v-flex>
 							<v-flex lg6>
 								<div align="center">
-									<v-btn width="100%">hallo2</v-btn>
+									<v-btn outlined color="black" width="100%">hallo2</v-btn>
 								</div>
 							</v-flex>
+							<v-flex lg12></v-flex>
 							<v-flex lg12>
 								<div align="center">
-									<v-btn width="100%">hallo3</v-btn>
+									<v-btn color="#dfd269" width="100%">
+										<span class="black--text font-weight-bold">Book</span>
+									</v-btn>
 								</div>
 							</v-flex>
 						</v-layout>
 					</v-container>
 				</div>
+
+				<v-img src="https://www.kexhostel.is/media/box-covers/hq-halfcol-wide/xtv3nwv8.jpg">
+					<a href="/rooms-and-rates" class="item" style="min-height: 385.037px;">
+						<div class="text">
+							<v-img width="25%" src="https://www.kexhostel.is/media/svg-icon/roomsrates.svg"></v-img>
+						</div>
+					</a>
+				</v-img>
 			</v-flex>
 		</v-layout>
 	</div>
