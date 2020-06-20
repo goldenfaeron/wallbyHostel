@@ -1,7 +1,3 @@
-# goborshi
-
-> Everything you need to enjoy your stay in the most beautiful village in Albania
-
 ## Build Setup
 
 ```bash
