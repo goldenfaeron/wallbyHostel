@@ -59,7 +59,7 @@ a {
 	text-decoration: none;
 }
 a.ex1 {
-	color: black;
+	color: black ;
 }
 a.ex1:hover,
 a.ex1:active {

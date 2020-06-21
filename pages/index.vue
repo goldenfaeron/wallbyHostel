@@ -270,7 +270,7 @@
 								</v-container>
 							</v-img>
 							<div style="background-color: #b7b181;">
-								<v-img :height="(this.windowSize.y-64)*1/6">
+								<v-img :height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*1/6 : (this.windowSize.y-64)/4]">
 									<v-container fill-height>
 										<v-row align="center" class="white--text mx-auto" justify="center">
 											<v-col class="white--text text-center" cols="12" tag="h1">
