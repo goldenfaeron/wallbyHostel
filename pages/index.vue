@@ -5,7 +5,7 @@
 				<v-flex lg6>
 					<div style="background-color:black;" class="black--text">
 						<v-img
-							:height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)/6 : (this.windowSize.y-64)/4]"
+							:height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)/6 : (this.windowSize.y)/4]"
 						>
 							<v-container fill-height>
 								<v-row align="center" class="white--text mx-auto" justify="center">
@@ -19,14 +19,24 @@
 						</v-img>
 					</div>
 					<v-img
-						:height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*5/6 : (this.windowSize.y-64)*.75]"
-						src="https://www.kexhostel.is/media/box-covers/halfcol-wide/3yiffh3h.jpg"
-					></v-img>
+						:height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*5/6 : (this.windowSize.y)*.75]"
+						src="/img/bar.jpg"
+					>
+						<v-container fill-height>
+							<v-row align="center" class="white--text mx-auto" justify="center">
+								<v-col class="white--text text-center" cols="12" tag="h1">
+									<div class="text">
+										<p :class="[$vuetify.breakpoint.smAndDown ? 'display-2 text-uppercase' : 'display-4 text-uppercase']  + ' font-weight-black yellow--text text--accent-1'">welcome to our social hostel in downtown reykjavík</p>
+									</div>
+								</v-col>
+							</v-row>
+						</v-container>
+					</v-img>
 				</v-flex>
 				<v-flex lg6>
 					<div style="background-color:white;" class="black--text">
 						<v-img
-							:height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*2/3 : (this.windowSize.y-64)/2]"
+							:height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*2/3 : (this.windowSize.y)/2]"
 						>
 							<v-container grid-list-lg>
 								<v-layout row wrap justify-center my-5 py-5 mx-5 px-5>
@@ -65,7 +75,7 @@
 					</div>
 
 					<v-img
-						:height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*1/3 : (this.windowSize.y-64)/2]"
+						:height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*1/3 : (this.windowSize.y)/2]"
 						src="https://www.kexhostel.is/media/box-covers/hq-halfcol-wide/xtv3nwv8.jpg"
 					>
 						<v-container fill-height>
@@ -92,7 +102,7 @@
 		<v-container fluid fill-height class="ma-0 pa-0">
 			<v-layout row wrap fill-height>
 				<v-img
-					:height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*2/3 : (this.windowSize.y-64)]"
+					:height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*2/3 : (this.windowSize.y)]"
 					src="https://www.kexhostel.is/media/box-covers/fullcol-wide/v4r8yedc.jpg"
 				>
 					<v-container fill-height>
@@ -115,19 +125,27 @@
 			<v-layout row wrap>
 				<v-flex lg6>
 					<div style="background-color: #a6bc71;">
-						<v-img :height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*3/4 : (this.windowSize.y-64)]">
+						<v-img
+							:height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*3/4 : (this.windowSize.y)]"
+						>
 							<v-container fill-height>
 								<v-row align="center" class="white--text mx-auto" justify="center">
 									<v-col class="white--text text-center" cols="12" tag="h1">
 										<div class="text">
-											<p :class="[$vuetify.breakpoint.smAndDown ? 'display-1' : 'display-3']  + ' font-weight-bold black--text'" :style="[$vuetify.breakpoint.smAndDown ? 'line-height: 40px;' : 'line-height: 80px;']  +'text-align:center;' ">
+											<p
+												:class="[$vuetify.breakpoint.smAndDown ? 'display-1' : 'display-3']  + ' font-weight-bold black--text'"
+												:style="[$vuetify.breakpoint.smAndDown ? 'line-height: 40px;' : 'line-height: 80px;']  +'text-align:center;' "
+											>
 												Kex is the
 												Icelandic word for
 												“biscuit” and a
 												social hostel in
 												Reykjavík.
 											</p>
-											<img :width="[$vuetify.breakpoint.smAndDown ? '70%' : '20%']" src="https://www.kexhostel.is/media/svg-icon/about.svg" />
+											<img
+												:width="[$vuetify.breakpoint.smAndDown ? '70%' : '20%']"
+												src="https://www.kexhostel.is/media/svg-icon/about.svg"
+											/>
 										</div>
 									</v-col>
 								</v-row>
@@ -137,7 +155,7 @@
 				</v-flex>
 				<v-flex lg6>
 					<v-img
-						:height="(this.windowSize.y-64)*(2/3)"
+						:height="(this.windowSize.y)*(2/3)"
 						src="https://www.kexhostel.is/media/box-covers/halfcol-wide/yyqhr3cv.jpg"
 					>
 						<v-container fill-height>
@@ -154,12 +172,15 @@
 							</v-row>
 						</v-container>
 					</v-img>
-					<v-img :height="(this.windowSize.y-64)/3">
+					<v-img :height="(this.windowSize.y)/3">
 						<v-container fill-height>
 							<v-row align="center" class="white--text mx-auto" justify="center">
 								<v-col class="white--text text-center" cols="12" tag="h1">
 									<div class="text">
-										<p :class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']" :style="[$vuetify.breakpoint.smAndDown ? 'line-height: 40px;' : 'line-height: 80px;']">
+										<p
+											:class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']"
+											:style="[$vuetify.breakpoint.smAndDown ? 'line-height: 40px;' : 'line-height: 80px;']"
+										>
 											A gentleman is a man who can
 											<br />play the accordion but doesn’t.
 										</p>
@@ -174,7 +195,7 @@
 		<v-container fluid fill-height class="ma-0 pa-0">
 			<v-layout row wrap fill-height>
 				<v-img
-					:height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*4/5 : (this.windowSize.y-64)]"
+					:height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*4/5 : (this.windowSize.y)]"
 					src="https://www.kexhostel.is/media/box-covers/fullcol-wide/469jem6i.jpg"
 				>
 					<v-container fill-height>
@@ -201,7 +222,7 @@
 			<v-layout row wrap>
 				<v-flex lg6>
 					<v-img
-						:height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*1/3 : (this.windowSize.y-64)/2]"
+						:height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*1/3 : (this.windowSize.y)/2]"
 						src="https://www.kexhostel.is/media/box-covers/halfcol-wide/k8jby7gq.jpg"
 					>
 						<v-container fill-height>
@@ -218,8 +239,8 @@
 							</v-row>
 						</v-container>
 					</v-img>
-					<div style="background-color: #e2d26b;"  class="hidden-sm-and-down">
-						<v-img :height="(this.windowSize.y-64)/2">
+					<div style="background-color: #e2d26b;" class="hidden-sm-and-down">
+						<v-img :height="(this.windowSize.y)/2">
 							<v-container fill-height>
 								<v-row align="center" class="white--text mx-auto" justify="center">
 									<v-col class="white--text text-center" cols="12" tag="h1">
@@ -239,13 +260,19 @@
 					<v-layout row wrap>
 						<v-flex lg6>
 							<div style="background-color: #ffffff;">
-								<v-img :height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)/4 : (this.windowSize.y-64)/2]">
+								<v-img
+									:height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)/4 : (this.windowSize.y)/2]"
+								>
 									<v-container fill-height>
 										<v-row align="center" class="white--text mx-auto" justify="center">
 											<v-col class="white--text text-center" cols="12" tag="h1">
 												<div class="text">
-													<p :class="[$vuetify.breakpoint.smAndDown ? 'display-1 black--text' : 'display-2 black--text']" :style="[$vuetify.breakpoint.smAndDown ? '' : 'line-height: 80px;']">
-														We're on <br> Facebook
+													<p
+														:class="[$vuetify.breakpoint.smAndDown ? 'display-1 black--text' : 'display-2 black--text']"
+														:style="[$vuetify.breakpoint.smAndDown ? '' : 'line-height: 80px;']"
+													>
+														We're on
+														<br />Facebook
 													</p>
 												</div>
 											</v-col>
@@ -255,12 +282,15 @@
 							</div>
 						</v-flex>
 						<v-flex lg6>
-							<v-img :height="(this.windowSize.y-64)/4">
+							<v-img :height="(this.windowSize.y)/4">
 								<v-container fill-height>
 									<v-row align="center" class="white--text mx-auto" justify="center">
 										<v-col class="white--text text-center" cols="12" tag="h1">
 											<div class="text">
-												<p :class="[$vuetify.breakpoint.smAndDown ? 'display-1' : 'display-2']" :style="[$vuetify.breakpoint.smAndDown ? '' : 'line-height: 80px;']">
+												<p
+													:class="[$vuetify.breakpoint.smAndDown ? 'display-1' : 'display-2']"
+													:style="[$vuetify.breakpoint.smAndDown ? '' : 'line-height: 80px;']"
+												>
 													And also on
 													<br />Twitter
 												</p>
@@ -270,12 +300,17 @@
 								</v-container>
 							</v-img>
 							<div style="background-color: #b7b181;">
-								<v-img :height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*1/6 : (this.windowSize.y-64)/4]">
+								<v-img
+									:height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*1/6 : (this.windowSize.y)/4]"
+								>
 									<v-container fill-height>
 										<v-row align="center" class="white--text mx-auto" justify="center">
 											<v-col class="white--text text-center" cols="12" tag="h1">
 												<div class="text">
-													<p :class="[$vuetify.breakpoint.smAndDown ? 'display-1' : 'display-2']" :style="[$vuetify.breakpoint.smAndDown ? '' : 'line-height: 80px;']">Instagram too!</p>
+													<p
+														:class="[$vuetify.breakpoint.smAndDown ? 'display-1' : 'display-2']"
+														:style="[$vuetify.breakpoint.smAndDown ? '' : 'line-height: 80px;']"
+													>Instagram too!</p>
 												</div>
 											</v-col>
 										</v-row>
@@ -285,7 +320,7 @@
 						</v-flex>
 					</v-layout>
 					<v-img
-						:height="(this.windowSize.y-64)/2"
+						:height="(this.windowSize.y)/2"
 						src="https://www.kexhostel.is/media/box-covers/halfcol-wide/t232qqcq.jpg"
 					>
 						<v-container fill-height>
@@ -302,8 +337,8 @@
 							</v-row>
 						</v-container>
 					</v-img>
-					<div style="background-color: #e2d26b;"  class="hidden-sm-and-up">
-						<v-img :height="(this.windowSize.y-64)/4">
+					<div style="background-color: #e2d26b;" class="hidden-sm-and-up">
+						<v-img :height="(this.windowSize.y)/4">
 							<v-container fill-height>
 								<v-row align="center" class="white--text mx-auto" justify="center">
 									<v-col class="white--text text-center" cols="12" tag="h1">
@@ -323,7 +358,7 @@
 		</v-container>
 		<v-container fluid fill-height class="ma-0 pa-0">
 			<v-img
-				:height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*3/5 : (this.windowSize.y-64)]"
+				:height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*3/5 : (this.windowSize.y)]"
 				src="https://www.kexhostel.is/media/box-covers/fullcol-wide/ic9769w3.jpg"
 			>
 				<v-container fill-height>
@@ -346,11 +381,11 @@
 			</v-img>
 		</v-container>
 		<v-container fluid fill-height class="ma-0 pa-0">
-			<v-img :height="(this.windowSize.y-64)*2/3">
+			<v-img :height="(this.windowSize.y)*2/3">
 				<div style="width: 100%">
 					<iframe
 						width="100%"
-						:height="(this.windowSize.y-64)*2/3"
+						:height="(this.windowSize.y)*2/3"
 						src="https://maps.google.com/maps?hl=en&amp;coord=39.877471,20.007149&amp;q=wallaby%20hostel%20albania&amp;ie=UTF8&amp;t=&amp;z=19&amp;iwloc=B&amp;output=embed"
 						frameborder="0"
 						scrolling="no"
