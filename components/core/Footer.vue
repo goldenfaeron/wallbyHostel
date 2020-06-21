@@ -3,18 +3,18 @@
 		<v-layout row wrap>
 			<v-flex lg6>
 				<div style="background-color: #000000;">
-					<v-img :height="(this.windowSize.y-64)*2/3">
+					<v-img :height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*2/3*2/5 : (this.windowSize.y-64)*2/3]">
 						<v-container fill-height>
 							<v-row align="center" class="white--text mx-auto" justify="center">
 								<v-col class="white--text text-center" cols="12" tag="h1">
 									<div class="text">
-										<p class="display-1">
+										<p :class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']">
 											Kex Hostel — Skúlagata 28
 										</p>
-										<p class="display-1">
+										<p :class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']">
 											101 Reykjavík Iceland
 										</p>
-										<p class="display-1">
+										<p :class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']">
 											+354 561 6060
 										</p>
 							
@@ -27,18 +27,18 @@
 			</v-flex>
 			<v-flex lg6>
 				<div style="background-color: #b7b181;">
-					<v-img :height="(this.windowSize.y-64)*2/3">
+					<v-img :height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*2/3*2/5 : (this.windowSize.y-64)*2/3]">
 						<v-container fill-height>
 							<v-row align="center" class="white--text mx-auto" justify="center">
 								<v-col class="white--text text-center" cols="12" tag="h1">
 									<div class="text">
-										<p class="display-1 ">
+										<p :class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']">
 											<a class="ex1">Contact Us</a>
 										</p>
-										<p class="display-1 " >
+										<p :class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']">
 											<a class="ex1">Terms & Conditions</a>
 										</p>
-										<p class="display-1 " >
+										<p :class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']">
 											<a class="ex1">Info@kexhostel.is</a>
 										</p>
 									</div>

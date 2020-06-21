@@ -1,7 +1,7 @@
 <template>
 	<v-app>
 		<span v-show="show">
-			<v-navigation-drawer
+		<!--	<v-navigation-drawer
 				color="accent lighten-4"
 				v-model="drawer"
 				:mini-variant="miniVariant"
@@ -22,9 +22,9 @@
 				</v-list>
 			</v-navigation-drawer>
 
-			<v-app-bar :clipped-left="clipped" app fixed color="accent lighten-3 " type>
+			<v-app-bar :clipped-left="clipped" app fixed color="accent lighten-3 " type>-->
 				<!-- Mobile display left -->
-				<v-icon
+			<!--	<v-icon
 					color="accent"
 					class="hidden-sm-and-up"
 					@click.stop="drawer = !drawer"
@@ -72,7 +72,7 @@
 				>
 					<v-icon color="accent darken-2">mdi-menu</v-icon>
 				</v-btn>
-			</v-app-bar>
+			</v-app-bar>-->
 
 			<v-content>
 				<nuxt />

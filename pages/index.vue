@@ -3,24 +3,31 @@
 		<v-container fluid class="ma-0 pa-0">
 			<v-layout row wrap fill-height>
 				<v-flex lg6>
-					<v-img :height="(this.windowSize.y-64)/4">
-						<br />
-						<div style="text-align:center;">
-							<img src="https://www.kexhostel.is/media/svg-icon/kex-big.svg" width="50%" />
-						</div>
-					</v-img>
-					<v-img :height="(this.windowSize.y-64)*0.75">
-						<div class="welcome box vcenter eq matched pinged loaded">
-							<v-img
-								height="100%"
-								src="https://www.kexhostel.is/media/box-covers/halfcol-wide/3yiffh3h.jpg"
-							></v-img>
-						</div>
-					</v-img>
+					<div style="background-color:black;" class="black--text">
+						<v-img
+							:height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)/6 : (this.windowSize.y-64)/4]"
+						>
+							<v-container fill-height>
+								<v-row align="center" class="white--text mx-auto" justify="center">
+									<v-col class="white--text text-center" cols="12" tag="h1">
+										<div class="text">
+											<img src="https://www.kexhostel.is/media/svg-icon/kex-big.svg" width="50%" />
+										</div>
+									</v-col>
+								</v-row>
+							</v-container>
+						</v-img>
+					</div>
+					<v-img
+						:height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*5/6 : (this.windowSize.y-64)*.75]"
+						src="https://www.kexhostel.is/media/box-covers/halfcol-wide/3yiffh3h.jpg"
+					></v-img>
 				</v-flex>
 				<v-flex lg6>
-					<v-img :height="(this.windowSize.y-64)/2">
-						<div style="background-color:white;" class="black--text">
+					<div style="background-color:white;" class="black--text">
+						<v-img
+							:height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*2/3 : (this.windowSize.y-64)/2]"
+						>
 							<v-container grid-list-lg>
 								<v-layout row wrap justify-center my-5 py-5 mx-5 px-5>
 									<v-flex xs12>
@@ -54,11 +61,11 @@
 									</v-flex>
 								</v-layout>
 							</v-container>
-						</div>
-					</v-img>
+						</v-img>
+					</div>
 
 					<v-img
-						:height="(this.windowSize.y-64)/2"
+						:height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*1/3 : (this.windowSize.y-64)/2]"
 						src="https://www.kexhostel.is/media/box-covers/hq-halfcol-wide/xtv3nwv8.jpg"
 					>
 						<v-container fill-height>
@@ -85,7 +92,7 @@
 		<v-container fluid fill-height class="ma-0 pa-0">
 			<v-layout row wrap fill-height>
 				<v-img
-					:height="this.windowSize.y-64"
+					:height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*2/3 : (this.windowSize.y-64)]"
 					src="https://www.kexhostel.is/media/box-covers/fullcol-wide/v4r8yedc.jpg"
 				>
 					<v-container fill-height>
@@ -94,7 +101,7 @@
 								<div class="text">
 									<v-img
 										style="margin: auto;"
-										width="30%"
+										:width="[$vuetify.breakpoint.smAndDown ? '70%' : '30%']"
 										src="https://www.kexhostel.is/media/svg-icon/saemundur.svg"
 									></v-img>
 								</div>
@@ -108,19 +115,19 @@
 			<v-layout row wrap>
 				<v-flex lg6>
 					<div style="background-color: #a6bc71;">
-						<v-img :height="(this.windowSize.y-64)">
+						<v-img :height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*3/4 : (this.windowSize.y-64)]">
 							<v-container fill-height>
 								<v-row align="center" class="white--text mx-auto" justify="center">
 									<v-col class="white--text text-center" cols="12" tag="h1">
 										<div class="text">
-											<p class="display-3 font-weight-bold black--text" style="line-height: 80px">
+											<p :class="[$vuetify.breakpoint.smAndDown ? 'display-1' : 'display-3']  + ' font-weight-bold black--text'" :style="[$vuetify.breakpoint.smAndDown ? 'line-height: 40px;' : 'line-height: 80px;']  +'text-align:center;' ">
 												Kex is the
-												<br />Icelandic word for
-												<br />“biscuit” and a
-												<br />social hostel in
-												<br />Reykjavík.
+												Icelandic word for
+												“biscuit” and a
+												social hostel in
+												Reykjavík.
 											</p>
-											<img width="20%" src="https://www.kexhostel.is/media/svg-icon/about.svg" />
+											<img :width="[$vuetify.breakpoint.smAndDown ? '70%' : '20%']" src="https://www.kexhostel.is/media/svg-icon/about.svg" />
 										</div>
 									</v-col>
 								</v-row>
@@ -139,7 +146,7 @@
 									<div class="text">
 										<v-img
 											style="margin: auto;"
-											width="30%"
+											:width="[$vuetify.breakpoint.smAndDown ? '70%' : '30%']"
 											src="https://www.kexhostel.is/media/svg-icon/gymtonic.svg"
 										></v-img>
 									</div>
@@ -152,7 +159,7 @@
 							<v-row align="center" class="white--text mx-auto" justify="center">
 								<v-col class="white--text text-center" cols="12" tag="h1">
 									<div class="text">
-										<p class="display-2" style="line-height: 80px">
+										<p :class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']" :style="[$vuetify.breakpoint.smAndDown ? 'line-height: 40px;' : 'line-height: 80px;']">
 											A gentleman is a man who can
 											<br />play the accordion but doesn’t.
 										</p>
@@ -167,7 +174,7 @@
 		<v-container fluid fill-height class="ma-0 pa-0">
 			<v-layout row wrap fill-height>
 				<v-img
-					:height="this.windowSize.y-64"
+					:height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*4/5 : (this.windowSize.y-64)]"
 					src="https://www.kexhostel.is/media/box-covers/fullcol-wide/469jem6i.jpg"
 				>
 					<v-container fill-height>
@@ -176,10 +183,10 @@
 								<div class="text">
 									<v-img
 										style="margin: auto;"
-										width="30%"
+										:width="[$vuetify.breakpoint.smAndDown ? '70%' : '30%']"
 										src="https://www.kexhostel.is/media/svg-icon/kexland-logo-both.svg"
 									></v-img>
-									<p class="display-2">
+									<p :class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']">
 										KEXLAND is our free spirited
 										<br />event and adventure organizer.
 									</p>
@@ -194,7 +201,7 @@
 			<v-layout row wrap>
 				<v-flex lg6>
 					<v-img
-						:height="(this.windowSize.y-64)/2"
+						:height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*1/3 : (this.windowSize.y-64)/2]"
 						src="https://www.kexhostel.is/media/box-covers/halfcol-wide/k8jby7gq.jpg"
 					>
 						<v-container fill-height>
@@ -211,7 +218,7 @@
 							</v-row>
 						</v-container>
 					</v-img>
-					<div style="background-color: #e2d26b;">
+					<div style="background-color: #e2d26b;"  class="hidden-sm-and-down">
 						<v-img :height="(this.windowSize.y-64)/2">
 							<v-container fill-height>
 								<v-row align="center" class="white--text mx-auto" justify="center">
@@ -232,14 +239,13 @@
 					<v-layout row wrap>
 						<v-flex lg6>
 							<div style="background-color: #ffffff;">
-								<v-img :height="(this.windowSize.y-64)/2">
+								<v-img :height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)/4 : (this.windowSize.y-64)/2]">
 									<v-container fill-height>
 										<v-row align="center" class="white--text mx-auto" justify="center">
 											<v-col class="white--text text-center" cols="12" tag="h1">
 												<div class="text">
-													<p class="display-2 black--text" style="line-height: 80px">
-														We're on
-														<br />Facebook
+													<p :class="[$vuetify.breakpoint.smAndDown ? 'display-1 black--text' : 'display-2 black--text']" :style="[$vuetify.breakpoint.smAndDown ? '' : 'line-height: 80px;']">
+														We're on <br> Facebook
 													</p>
 												</div>
 											</v-col>
@@ -254,7 +260,7 @@
 									<v-row align="center" class="white--text mx-auto" justify="center">
 										<v-col class="white--text text-center" cols="12" tag="h1">
 											<div class="text">
-												<p class="display-2" style="line-height: 80px">
+												<p :class="[$vuetify.breakpoint.smAndDown ? 'display-1' : 'display-2']" :style="[$vuetify.breakpoint.smAndDown ? '' : 'line-height: 80px;']">
 													And also on
 													<br />Twitter
 												</p>
@@ -264,12 +270,12 @@
 								</v-container>
 							</v-img>
 							<div style="background-color: #b7b181;">
-								<v-img :height="(this.windowSize.y-64)/4">
+								<v-img :height="(this.windowSize.y-64)*1/6">
 									<v-container fill-height>
 										<v-row align="center" class="white--text mx-auto" justify="center">
 											<v-col class="white--text text-center" cols="12" tag="h1">
 												<div class="text">
-													<p class="display-2" style="line-height: 80px">Instagram too!</p>
+													<p :class="[$vuetify.breakpoint.smAndDown ? 'display-1' : 'display-2']" :style="[$vuetify.breakpoint.smAndDown ? '' : 'line-height: 80px;']">Instagram too!</p>
 												</div>
 											</v-col>
 										</v-row>
@@ -288,7 +294,7 @@
 									<div class="text">
 										<v-img
 											style="margin: auto;"
-											width="30%"
+											:width="[$vuetify.breakpoint.smAndDown ? '60%' : '30%']"
 											src="https://www.kexhostel.is/media/svg-icon/baxtur.svg"
 										></v-img>
 									</div>
@@ -296,12 +302,28 @@
 							</v-row>
 						</v-container>
 					</v-img>
+					<div style="background-color: #e2d26b;"  class="hidden-sm-and-up">
+						<v-img :height="(this.windowSize.y-64)/4">
+							<v-container fill-height>
+								<v-row align="center" class="white--text mx-auto" justify="center">
+									<v-col class="white--text text-center" cols="12" tag="h1">
+										<div class="text">
+											<p class="headline font-weight-bold black--text">
+												Follow the river and you will
+												<br />find the sea.
+											</p>
+										</div>
+									</v-col>
+								</v-row>
+							</v-container>
+						</v-img>
+					</div>
 				</v-flex>
 			</v-layout>
 		</v-container>
 		<v-container fluid fill-height class="ma-0 pa-0">
 			<v-img
-				:height="this.windowSize.y-64"
+				:height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*3/5 : (this.windowSize.y-64)]"
 				src="https://www.kexhostel.is/media/box-covers/fullcol-wide/ic9769w3.jpg"
 			>
 				<v-container fill-height>
@@ -310,10 +332,10 @@
 							<div class="text">
 								<v-img
 									style="margin: auto;"
-									width="30%"
+									:width="[$vuetify.breakpoint.smAndDown ? '55%' : '30%']"
 									src="https://www.kexhostel.is/media/svg-icon/servicesfacilities.svg"
 								></v-img>
-								<p class="display-2">
+								<p :class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']">
 									To know the road ahead,
 									<br />ask those coming back.
 								</p>
@@ -334,8 +356,7 @@
 						scrolling="no"
 						marginheight="0"
 						marginwidth="0"
-					>
-					</iframe>
+					></iframe>
 				</div>
 				<br />
 			</v-img>
