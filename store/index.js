@@ -2,7 +2,7 @@ import axios from "axios"
 
 export const state = () => ({
 
-    name: "goBorshi",
+    name: "Wallaby Hostel",
     city: "Borsh",
     country: "Albania",
     developer: { name: "Sam", location: "Borsh, Albania" },

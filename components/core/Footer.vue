@@ -1,29 +1,71 @@
 <template>
 	<footer class="v-footer v-sheet v-sheet--tile theme--dark v-footer--padless" data-booted="true">
-		<div class="row ma-0">
-			<div class="primary lighten-1 pa-5 col-md-3 col-12">
-				<h3 class="headline mb-3">What are you looking for?</h3>
-
-				<v-layout column>
-					<v-flex my-2 xs12 v-for="(item, index) in nav" :key="index">
-						<nuxt-link :to="item.to">
-							<v-icon v-if="item.to == $route.path" color="success">mdi-chevron-right</v-icon>
-							<v-icon>{{item.icon}}</v-icon>
-							{{item.title}}
-						</nuxt-link>
-					</v-flex>
-				</v-layout>
-			</div>
-			<div class="primary lighten-2 pa-5 col-md-9 col-12">
-				<div class="row"></div>
-			</div>
-			<div
-				class="text-center primary darken-2 pa-3 col col-12"
-			>© 2020 {{$store.state.name}} — All Rights reserved.</div>
-		</div>
+		<v-layout row wrap>
+			<v-flex lg6>
+				<div style="background-color: #000000;">
+					<v-img :height="(this.windowSize.y-64)*2/3">
+						<v-container fill-height>
+							<v-row align="center" class="white--text mx-auto" justify="center">
+								<v-col class="white--text text-center" cols="12" tag="h1">
+									<div class="text">
+										<p class="display-1">
+											Kex Hostel — Skúlagata 28
+										</p>
+										<p class="display-1">
+											101 Reykjavík Iceland
+										</p>
+										<p class="display-1">
+											+354 561 6060
+										</p>
+							
+									</div>
+								</v-col>
+							</v-row>
+						</v-container>
+					</v-img>
+				</div>
+			</v-flex>
+			<v-flex lg6>
+				<div style="background-color: #b7b181;">
+					<v-img :height="(this.windowSize.y-64)*2/3">
+						<v-container fill-height>
+							<v-row align="center" class="white--text mx-auto" justify="center">
+								<v-col class="white--text text-center" cols="12" tag="h1">
+									<div class="text">
+										<p class="display-1 ">
+											<a class="ex1">Contact Us</a>
+										</p>
+										<p class="display-1 " >
+											<a class="ex1">Terms & Conditions</a>
+										</p>
+										<p class="display-1 " >
+											<a class="ex1">Info@kexhostel.is</a>
+										</p>
+									</div>
+								</v-col>
+							</v-row>
+						</v-container>
+					</v-img>
+				</div>
+			</v-flex>
+		</v-layout>
+		<div
+			class="text-center  pa-3 col col-12"
+		>© 2020 {{$store.state.name}} — All Rights reserved.</div>
 	</footer>
 </template>
-
+<style lang="css">
+a {
+	text-decoration: none;
+}
+a.ex1 {
+	color: black;
+}
+a.ex1:hover,
+a.ex1:active {
+	color: white;
+}
+</style>
 <script>
 import { Mixin } from "~/mixins/navigation.js";
 
@@ -32,6 +74,20 @@ export default {
 
 	components: {
 		SocialMedia: () => import("@/components/SocialMedia")
+	},
+	data: () => ({
+		windowSize: {
+			x: 0,
+			y: 0
+		}
+	}),
+	methods: {
+		onResize() {
+			this.windowSize = { x: window.innerWidth, y: window.innerHeight };
+		}
+	},
+	mounted() {
+		this.onResize();
 	}
 };
 </script>

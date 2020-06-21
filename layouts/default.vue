@@ -125,7 +125,7 @@ export default {
 			miniVariant: false,
 			right: true,
 			rightDrawer: false,
-			title: "go" + this.$store.state.city + "i",
+			title: 'Wallaby Hostel',
 			developer: this.$store.state.developer
 		};
 	},

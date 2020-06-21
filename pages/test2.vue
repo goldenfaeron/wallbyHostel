@@ -301,27 +301,45 @@
 		</v-container>
 		<v-container fluid fill-height class="ma-0 pa-0">
 			<v-img
-					:height="this.windowSize.y-64"
-					src="https://www.kexhostel.is/media/box-covers/fullcol-wide/ic9769w3.jpg"
-				>
-					<v-container fill-height>
-						<v-row align="center" class="white--text mx-auto" justify="center">
-							<v-col class="white--text text-center" cols="12" tag="h1">
-								<div class="text">
-									<v-img
-										style="margin: auto;"
-										width="30%"
-										src="https://www.kexhostel.is/media/svg-icon/servicesfacilities.svg"
-									></v-img>
-									<p class="display-2">
-										To know the road ahead,
-										<br />ask those coming back.
-									</p>
-								</div>
-							</v-col>
-						</v-row>
-					</v-container>
-				</v-img>
+				:height="this.windowSize.y-64"
+				src="https://www.kexhostel.is/media/box-covers/fullcol-wide/ic9769w3.jpg"
+			>
+				<v-container fill-height>
+					<v-row align="center" class="white--text mx-auto" justify="center">
+						<v-col class="white--text text-center" cols="12" tag="h1">
+							<div class="text">
+								<v-img
+									style="margin: auto;"
+									width="30%"
+									src="https://www.kexhostel.is/media/svg-icon/servicesfacilities.svg"
+								></v-img>
+								<p class="display-2">
+									To know the road ahead,
+									<br />ask those coming back.
+								</p>
+							</div>
+						</v-col>
+					</v-row>
+				</v-container>
+			</v-img>
+		</v-container>
+		<v-container fluid fill-height class="ma-0 pa-0">
+			<v-img :height="(this.windowSize.y-64)*2/3">
+				<div style="width: 100%">
+					<iframe
+						width="100%"
+						:height="(this.windowSize.y-64)*2/3"
+						src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;coord=39.877471, 20.007149&amp;q=wallaby%20hostel%20albania+(Here%20you%20will%20find%20us)&amp;ie=UTF8&amp;t=&amp;z=19&amp;iwloc=B&amp;output=embed"
+						frameborder="0"
+						scrolling="yes"
+						marginheight="0"
+						marginwidth="0"
+					>
+						<a href="http://www.gps.ie/">Find my location</a>
+					</iframe>
+				</div>
+				<br />
+			</v-img>
 		</v-container>
 	</div>
 </template>
