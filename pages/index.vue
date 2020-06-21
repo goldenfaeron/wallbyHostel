@@ -326,7 +326,7 @@
 		<v-container fluid fill-height class="ma-0 pa-0">
 			<v-img :height="(this.windowSize.y-64)*2/3">
 				<div style="width: 100%">
-					<iframe
+				<!--	<iframe
 						width="100%"
 						:height="(this.windowSize.y-64)*2/3"
 						src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;coord=39.877471, 20.007149&amp;q=wallaby%20hostel%20albania+(Here%20you%20will%20find%20us)&amp;ie=UTF8&amp;t=&amp;z=19&amp;iwloc=B&amp;output=embed"
@@ -336,7 +336,7 @@
 						marginwidth="0"
 					>
 						<a href="http://www.gps.ie/">Find my location</a>
-					</iframe>
+					</iframe>-->
 				</div>
 				<br />
 			</v-img>
