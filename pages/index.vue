@@ -1,5 +1,6 @@
 <template>
 	<div>
+		{{index}}
 		<v-container fluid class="ma-0 pa-0">
 			<v-layout row wrap fill-height>
 				<v-flex lg6>
@@ -42,11 +43,10 @@
 								<v-layout row wrap justify-center my-5 py-5 mx-5 px-5>
 									<v-flex xs12>
 										<p
-											:style="[$vuetify.breakpoint.smAndDown ? 'line-height: 50px;' : 'line-height: 100px;']  +'text-align:center;' "
-											:class="[$vuetify.breakpoint.smAndDown ? 'display-1' : 'display-3']  + ' font-weight-bold'"
+											:style="[$vuetify.breakpoint.lgAndDown ? 'line-height: 50px;' : 'line-height: 100px;']  +'text-align:center;' "
+											:class="[$vuetify.breakpoint.lgAndDown ? 'display-1' : 'display-3']  + ' font-weight-bold'"
 										>
-											Book your stay
-											<br />with us now!
+										Book you stay with us now!
 										</p>
 									</v-flex>
 
@@ -400,12 +400,19 @@
 </template>
 <script>
 export default {
-	data: () => ({
+
+
+data() {
+	return {
 		windowSize: {
 			x: 0,
 			y: 0
-		}
-	}),
+		},
+		index: this.$store.state.pageData
+	}
+},
+	middleware: "index",
+
 	methods: {
 		onResize() {
 			this.windowSize = { x: window.innerWidth, y: window.innerHeight };

@@ -28,7 +28,8 @@ export default {
   },
 
   env: {
-    collectionToken: "641a6e0c88f94f7d2adadd184752e1"
+    collectionToken: "641a6e0c88f94f7d2adadd184752e1",
+    pagesToken: "7d7d15f4fa6c768e39016bce4cf96f"
   },
 
 

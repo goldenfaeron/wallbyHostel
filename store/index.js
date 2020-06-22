@@ -35,6 +35,7 @@ export const state = () => ({
     collectionSchema: '31fdc0efbd3c289620e787921e3e8b',
     assetRoot: "https://cockpit.goborshi.hackmylanguage.com/storage/uploads",
     webRoot: "https://cockpit.goborshi.hackmylanguage.com",
+    webRoot2: "http://cms.alanfurneaux.co.uk",
     imageToken: '969461cb194b4b0cd0c695d09e9502',
     authToken: 'ac203b0773cc501428903c9de9ad09',
 
