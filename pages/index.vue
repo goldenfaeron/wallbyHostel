@@ -58,7 +58,7 @@
 									</v-flex>
 									<v-flex lg6 xs12>
 										<div align="center">
-											<v-btn outlined color="black" width="100%">hallo2</v-btn>
+											<v-btn outlined color="black" width="100%">No of nights</v-btn>
 										</div>
 									</v-flex>
 									<v-flex xs12></v-flex>
