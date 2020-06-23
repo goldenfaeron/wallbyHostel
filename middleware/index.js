@@ -5,26 +5,16 @@ export default async function ({ store, $axios, route }) {
         try {
 
             let request1 = await $axios.post(
-                store.state.webRoot2 +
-                "/api/singletons/get/" +
-                singleton +
-                "?token=" +
-                process.env.pagesToken +
-                "&rspc=1",
+               "http://cms.alanfurneaux.co.uk/api/singletons/get/home?token=7d7d15f4fa6c768e39016bce4cf96f",
                 { filter: { slug: route.params.id } }
             );
 
             let request2 = await $axios.post(
-                store.state.webRoot2 +
-                "/api/singletons/get/" +
-                singleton +
-                "?token=" +
-                process.env.pagesToken +
-                "&rspc=1",
+                "http://cms.alanfurneaux.co.uk/api/singletons/get/home?token=7d7d15f4fa6c768e39016bce4cf96f",
                 { limit: 20 }
             );
 
-            return store.commit("setPageData", [request1.data.entries[0], request2.data.entries])
+            return store.commit("setPageData", [request1, request2])
         }
 
 
@@ -46,7 +36,7 @@ export default async function ({ store, $axios, route }) {
                     process.env.pagesToken,
                 )
                 .then(res => {
-                    return store.commit("setPageData", res.entries)
+                    return store.commit("setPageData", res)
                 });
         }
 

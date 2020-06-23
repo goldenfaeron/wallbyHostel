@@ -1,6 +1,6 @@
 <template>
 	<div>
-		{{index}}
+		<!--{{index}}
 		<v-container fluid class="ma-0 pa-0">
 			<v-layout row wrap fill-height>
 				<v-flex lg6>
@@ -12,7 +12,7 @@
 								<v-row align="center" class="white--text mx-auto" justify="center">
 									<v-col class="white--text text-center" cols="12" tag="h1">
 										<div class="text">
-											<img :src="asset + index.logo.path" width="50%" />
+											<img :src="$store.state.assetRoot2 + index.logo.path" width="50%" />
 										</div>
 									</v-col>
 								</v-row>
@@ -21,7 +21,7 @@
 					</div>
 					<v-img
 						:height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*5/6 : (this.windowSize.y)*.75]"
-						:src="asset + index.image1.path"
+						:src="$store.state.assetRoot2 + index.logo.path"
 					>
 						<v-container fill-height>
 							<v-row align="center" class="white--text mx-auto" justify="center">
@@ -46,26 +46,26 @@
 											:style="[$vuetify.breakpoint.lgAndDown ? 'line-height: 50px;' : 'line-height: 100px;']  +'text-align:center;' "
 											:class="[$vuetify.breakpoint.lgAndDown ? 'display-1' : 'display-3']  + ' font-weight-bold'"
 										>
-										{{index.bookText}}
+										Book you stay with us now!
 										</p>
 									</v-flex>
 
 									<br />
 									<v-flex lg6 xs12>
 										<div align="center">
-											<v-btn outlined color="black" width="100%">{{index.button1}}</v-btn>
+											<v-btn outlined color="black" width="100%">Arrival date</v-btn>
 										</div>
 									</v-flex>
 									<v-flex lg6 xs12>
 										<div align="center">
-											<v-btn outlined color="black" width="100%">{{index.button2}}</v-btn>
+											<v-btn outlined color="black" width="100%">No of nights</v-btn>
 										</div>
 									</v-flex>
 									<v-flex xs12></v-flex>
 									<v-flex xs12>
 										<div align="center">
 											<v-btn color="#dfd269" width="100%">
-												<span class="black--text font-weight-bold">{{index.button3}}</span>
+												<span class="black--text font-weight-bold">Book</span>
 											</v-btn>
 										</div>
 									</v-flex>
@@ -76,7 +76,7 @@
 
 					<v-img
 						:height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*1/3 : (this.windowSize.y)/2]"
-						:src="asset + index.image2.path"
+						src="https://www.kexhostel.is/media/box-covers/hq-halfcol-wide/xtv3nwv8.jpg"
 					>
 						<v-container fill-height>
 							<v-row align="center" class="white--text mx-auto" justify="center">
@@ -85,7 +85,7 @@
 										<v-img
 											style="margin: auto;"
 											width="40%"
-											:src="asset + index.svg.path"
+											src="https://www.kexhostel.is/media/svg-icon/roomsrates.svg"
 										></v-img>
 									</div>
 								</v-col>
@@ -395,7 +395,7 @@
 				</div>
 				<br />
 			</v-img>
-		</v-container>
+		</v-container>-->
 	</div>
 </template>
 <script>
@@ -408,8 +408,7 @@ data() {
 			x: 0,
 			y: 0
 		},
-		index: this.$store.state.pageData, 
-		asset: this.$store.state.assetRoot2
+		index: this.$store.state.pageData
 	}
 },
 	middleware: "index",
@@ -417,8 +416,10 @@ data() {
 	methods: {
 		onResize() {
 			this.windowSize = { x: window.innerWidth, y: window.innerHeight };
-		}
+		},
+		
 	},
+	
 	mounted() {
 		this.onResize();
 	}
