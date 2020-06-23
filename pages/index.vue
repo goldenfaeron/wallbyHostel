@@ -28,7 +28,7 @@
 									<div class="text">
 										<p
 											:class="[$vuetify.breakpoint.smAndDown ? 'display-2 text-uppercase' : 'display-4 text-uppercase']  + ' font-weight-black yellow--text text--accent-1'"
-										>welcome to our social hostel in downtown reykjavík</p>
+										>{{index.image1_text}}</p>
 									</div>
 								</v-col>
 							</v-row>

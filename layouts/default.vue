@@ -101,7 +101,7 @@
 				<div class="lds-dual-ring"></div>
 			</div>
 		</span>
-		<!-- <GoBackButton></GoBackButton> -->
+		 <GoBackButton></GoBackButton> 
 	</v-app>
 </template>
 

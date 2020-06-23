@@ -1,8 +1,11 @@
 <template>
 	<v-flex>
-		<v-btn @click="back()" color="red lighten-3" small fixed bottom right fab v-show="scrollButton">
-			<v-icon color="white" x-large>mdi-chevron-left</v-icon>
+		<v-btn @click="back()" small fixed top text right fab v-show="scrollButton">
+			<v-icon color="grey" x-large>mdi-menu</v-icon>
 		</v-btn>
+		<v-card v-show="menu">
+			test
+		</v-card>
 	</v-flex>
 </template>
 
@@ -10,7 +13,8 @@
 export default {
 	data() {
 		return {
-			scrollButton: true
+			scrollButton: true,
+			menu: false
 		};
 	},
 
