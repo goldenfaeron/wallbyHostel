@@ -1,6 +1,7 @@
 <template>
 	<v-app>
 		<span v-show="show">
+		 <GoBackButton></GoBackButton> 
 		<!--	<v-navigation-drawer
 				color="accent lighten-4"
 				v-model="drawer"
@@ -101,7 +102,6 @@
 				<div class="lds-dual-ring"></div>
 			</div>
 		</span>
-		 <GoBackButton></GoBackButton> 
 	</v-app>
 </template>
 
@@ -109,6 +109,7 @@
 import { Mixin } from "~/mixins/navigation.js";
 
 export default {
+	mixins: [Mixin],
 	components: {
 		BottomNav: () => import("@/components/core/BottomNav"),
 		GoBackButton: () => import("@/components/core/GoBackButton"),
@@ -176,7 +177,7 @@ export default {
 		this.show = true;
 	},
 
-	mixins: [Mixin]
+	
 };
 </script>
 

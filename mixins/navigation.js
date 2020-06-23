@@ -1,61 +1,72 @@
+/*owner
+home
+contact
+saranda
+location
+pub_crawls
+*pub-crawls
+rooms-and-rates
+services-and-facilities
+social-areas
+23.06.2020 18:26
+*/
 export const Mixin = {
     computed: {
         nav() {
             return [
                 {
                     icon: "mdi-home",
-                    title: this.$t("nav.about") + this.$store.state.city,
-                    to: "/"
+                    title: "About",
+                    to: "/about"
+                },
+                {
+                    icon: "mdi-youtube",
+                    title: "Rooms and Rates",
+                    to: "/youtube"
+                },
+                {
+                    icon: "mdi-youtube",
+                    title: "Services and Facilities",
+                    to: "/youtube"
+                },
+                {
+                    icon: "mdi-instagram",
+                    title: "Pub crawls",
+                    to: "/instagram/posts"
+                },
+                {
+                    icon: "mdi-store",
+                    title: "Location",
+                    to: "/shops"
                 },
                 {
                     icon: "mdi-city",
-                    title: this.$t("nav.towns") + this.$store.state.city,
+                    title: "Owner",
                     to: "/towns"
                 },
                 {
                     icon: "mdi-map-legend",
-                    title: this.$t("nav.activities") + this.$store.state.city,
+                    title: "Home",
                     to: "/activities"
                 },
 
                 {
                     icon: "mdi-home",
-                    title: this.$t("nav.booking"),
+                    title: "Contact",
                     to: "/booking"
                 },
                 {
                     icon: "mdi-food",
-                    title: this.$t("nav.drink"),
+                    title: "Experience Saranda",
                     to: "/bars"
                 },
                 {
-                    icon: "mdi-store",
-                    title: this.$t("nav.shops"),
-                    to: "/shops"
-                },
-                {
-                    icon: "mdi-instagram",
-                    title: this.$t("nav.instagram") + this.$store.state.city,
-                    to: "/instagram/posts"
-                },
-                {
                     icon: "mdi-youtube",
-                    title: this.$t("nav.youtube"),
+                    title: "Social Areas",
                     to: "/youtube"
                 },
 
-                {
-                    icon: "",
-                    img: "/img/airbnbLogo.png",
-                    title: this.$t("nav.airbnbs") + this.$store.state.city,
-                    to: "/airbnb"
-                },
-                {
-                    icon: "mdi-airport",
 
-                    title: this.$t("nav.airports") + this.$store.state.city,
-                    to: "/airports"
-                },
                 {
                     icon: "mdi-weather-cloudy",
 
@@ -67,11 +78,6 @@ export const Mixin = {
                     icon: "mdi-biohazard",
                     title: this.$t("nav.corona") + this.$store.state.city,
                     to: "/corona"
-                },
-                {
-                    icon: "mdi-account-box",
-                    title: this.$store.state.name + this.$t("nav.team"),
-                    to: "/team"
                 },
                 {
                     icon: "mdi-account-box",
