@@ -1,6 +1,5 @@
 <template>
 	<div>
-		{{index}}
 		<v-container fluid class="ma-0 pa-0">
 			<v-layout row wrap fill-height>
 				<v-flex lg6>
