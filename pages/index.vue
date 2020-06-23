@@ -375,7 +375,7 @@
 					<iframe
 						width="100%"
 						:height="(this.windowSize.y)*2/3"
-						:src="'https://maps.google.com/maps?hl=en&amp;coord='+'&amp;q=wallaby%20hostel%20albania&amp;ie=UTF8&amp;t=&amp;z=19&amp;iwloc=B&amp;output=embed'"
+						:src="'https://maps.google.com/maps?hl=en&amp;coord='+map.location+'&amp;q=wallaby%20hostel%20albania&amp;ie=UTF8&amp;t=&amp;z=19&amp;iwloc=B&amp;output=embed'"
 						frameborder="0"
 						scrolling="no"
 						marginheight="0"
@@ -395,7 +395,8 @@ export default {
 				x: 0,
 				y: 0
 			},
-			index: this.$store.state.pageData,
+			index: this.$store.state.pageData[0],
+			map: this.$store.state.pageData[1],
 			asset: this.$store.state.assetRoot2
 		};
 	},

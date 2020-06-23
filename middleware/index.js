@@ -27,17 +27,16 @@ export default async function ({ store, $axios, route }) {
         //load all
 
         try {
-            return await $axios
-                .$post(
-                    store.state.webRoot2 +
-                    "/api/singletons/get/" +
-                    singleton +
-                    "?token=" +
-                    process.env.pagesToken,
-                )
-                .then(res => {
-                    return store.commit("setPageData", res)
-                });
+            let request3 = await $axios.post(
+                "http://cms.alanfurneaux.co.uk/api/singletons/get/home?token=7d7d15f4fa6c768e39016bce4cf96f",
+             );
+ 
+             let request4 = await $axios.post(
+                 "http://cms.alanfurneaux.co.uk/api/singletons/get/details?token=7d7d15f4fa6c768e39016bce4cf96f",
+             );
+ 
+            // return store.commit("setPageData", [request3, request4])
+             return store.commit("setPageData", [request3.data, request4.data])
         }
 
         catch (e) {
