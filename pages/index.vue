@@ -4,7 +4,9 @@
 			<v-layout row wrap fill-height>
 				<v-flex lg6>
 					<div style="background-color:black;" class="black--text">
-						<v-img :height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)/6 : (this.windowSize.y)/4]">
+						<v-container
+							:style="'height:'+[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)/6 : (this.windowSize.y)/4]+'px'"
+						>
 							<v-container fill-height>
 								<v-row align="center" class="white--text mx-auto" justify="center">
 									<v-col class="white--text text-center" cols="12" tag="h1">
@@ -14,7 +16,7 @@
 									</v-col>
 								</v-row>
 							</v-container>
-						</v-img>
+						</v-container>
 					</div>
 					<v-img
 						:height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*5/6 : (this.windowSize.y)*.75]"
@@ -35,8 +37,8 @@
 				</v-flex>
 				<v-flex lg6>
 					<div style="background-color:white;" class="black--text">
-						<v-img
-							:height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*2/3 : (this.windowSize.y)/2]"
+						<v-container
+							:style="'height:'+[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*2/3 : (this.windowSize.y)/2]+'px'"
 						>
 							<v-container grid-list-lg>
 								<v-layout row wrap justify-center my-5 py-5 mx-5 px-5>
@@ -68,7 +70,7 @@
 									</v-flex>
 								</v-layout>
 							</v-container>
-						</v-img>
+						</v-container>
 					</div>
 
 					<v-img
@@ -120,8 +122,8 @@
 			<v-layout row wrap>
 				<v-flex lg6>
 					<div style="background-color: #a6bc71;">
-						<v-img
-							:height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*3/4 : (this.windowSize.y)]"
+						<v-container
+							:style="'height:'+[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*3/4 : (this.windowSize.y)]+'px'"
 						>
 							<v-container fill-height>
 								<v-row align="center" class="mx-auto" justify="center">
@@ -139,7 +141,7 @@
 									</v-col>
 								</v-row>
 							</v-container>
-						</v-img>
+						</v-container>
 					</div>
 				</v-flex>
 				<v-flex lg6>
@@ -168,7 +170,7 @@
 							</v-row>
 						</v-container>
 					</v-img>
-					<v-img :height="(this.windowSize.y)/3">
+					<v-container :style="'height:'+(this.windowSize.y)/3+'px'">
 						<v-container fill-height>
 							<v-row align="center" class="white--text mx-auto" justify="center">
 								<v-col class="white--text text-center" cols="12" tag="h1">
@@ -181,7 +183,7 @@
 								</v-col>
 							</v-row>
 						</v-container>
-					</v-img>
+					</v-container>
 				</v-flex>
 			</v-layout>
 		</v-container>
@@ -235,7 +237,7 @@
 						</v-container>
 					</v-img>
 					<div style="background-color: #e2d26b;" class="hidden-sm-and-down">
-						<v-img :height="(this.windowSize.y)/2">
+						<v-container :style="'height:'+(this.windowSize.y)/2+'px'">
 							<v-container fill-height>
 								<v-row align="center" class="white--text mx-auto" justify="center">
 									<v-col class="white--text text-center" cols="12" tag="h1">
@@ -248,15 +250,15 @@
 									</v-col>
 								</v-row>
 							</v-container>
-						</v-img>
+						</v-container>
 					</div>
 				</v-flex>
 				<v-flex lg6>
 					<v-layout row wrap>
 						<v-flex lg6>
 							<div style="background-color: #ffffff;">
-								<v-img
-									:height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)/4 : (this.windowSize.y)/2]"
+								<v-container
+									:style="'height:'+[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)/4 : (this.windowSize.y)/2]+'px'"
 								>
 									<v-container fill-height>
 										<v-row align="center" class="white--text mx-auto" justify="center">
@@ -270,11 +272,11 @@
 											</v-col>
 										</v-row>
 									</v-container>
-								</v-img>
+								</v-container>
 							</div>
 						</v-flex>
 						<v-flex lg6>
-							<v-img :height="(this.windowSize.y)/4">
+							<v-img :style="'height:'+(this.windowSize.y)/4+'px'">
 								<v-container fill-height>
 									<v-row align="center" class="white--text mx-auto" justify="center">
 										<v-col class="white--text text-center" cols="12" tag="h1">
@@ -289,8 +291,8 @@
 								</v-container>
 							</v-img>
 							<div style="background-color: #b7b181;">
-								<v-img
-									:height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*1/6 : (this.windowSize.y)/4]"
+								<v-container
+								:style="'height:'+[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*1/6 : (this.windowSize.y)/4]+'px'"
 								>
 									<v-container fill-height>
 										<v-row align="center" class="white--text mx-auto" justify="center">
@@ -304,11 +306,11 @@
 											</v-col>
 										</v-row>
 									</v-container>
-								</v-img>
+								</v-container>
 							</div>
 						</v-flex>
 					</v-layout>
-					<v-img :height="(this.windowSize.y)/2" :src="asset + index.image7.path">
+					<v-img  :height="(this.windowSize.y)/2" :src="asset + index.image7.path">
 						<v-container fill-height>
 							<v-row align="center" class="white--text mx-auto" justify="center">
 								<v-col class="white--text text-center" cols="12" tag="h1">
@@ -327,7 +329,7 @@
 						</v-container>
 					</v-img>
 					<div style="background-color: #e2d26b;" class="hidden-sm-and-up">
-						<v-img :height="(this.windowSize.y)/4">
+						<v-container :style="'height:'+(this.windowSize.y)/4+'px'">
 							<v-container fill-height>
 								<v-row align="center" class="white--text mx-auto" justify="center">
 									<v-col class="white--text text-center" cols="12" tag="h1">
@@ -337,7 +339,7 @@
 									</v-col>
 								</v-row>
 							</v-container>
-						</v-img>
+						</v-container>
 					</div>
 				</v-flex>
 			</v-layout>
@@ -357,8 +359,7 @@
 									:src="asset + index.image8_logo.path"
 								></v-img>
 								<p :class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']">
-									To know the road ahead,
-									<br />ask those coming back.
+									{{index.image8_text}}
 								</p>
 							</div>
 						</v-col>
@@ -367,7 +368,7 @@
 			</v-img>
 		</v-container>
 		<v-container fluid fill-height class="ma-0 pa-0">
-			<v-img :height="(this.windowSize.y)*2/3">
+			<v-img :style="'height:'+(this.windowSize.y)*2/3+'px'">
 				<div style="width: 100%">
 					<iframe
 						width="100%"

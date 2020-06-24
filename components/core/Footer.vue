@@ -3,21 +3,20 @@
 		<v-layout row wrap>
 			<v-flex lg6>
 				<div style="background-color: #000000;">
-					<v-img :height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*2/3*2/5 : (this.windowSize.y)*2/3]">
+					<v-img
+						:style="'height:'+[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*2/3*2/5 : (this.windowSize.y)*2/3]+'px'"
+					>
 						<v-container fill-height>
 							<v-row align="center" class="white--text mx-auto" justify="center">
 								<v-col class="white--text text-center" cols="12" tag="h1">
 									<div class="text">
-										<p :class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']">
-											Kex Hostel — Skúlagata 28
-										</p>
-										<p :class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']">
-											101 Reykjavík Iceland
-										</p>
-										<p :class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']">
-											+354 561 6060
-										</p>
-							
+										<p
+											:class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']"
+										>Kex Hostel — Skúlagata 28</p>
+										<p
+											:class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']"
+										>101 Reykjavík Iceland</p>
+										<p :class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']">+354 561 6060</p>
 									</div>
 								</v-col>
 							</v-row>
@@ -27,7 +26,9 @@
 			</v-flex>
 			<v-flex lg6>
 				<div style="background-color: #b7b181;">
-					<v-img :height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*2/3*2/5 : (this.windowSize.y)*2/3]">
+					<v-img
+						:height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*2/3*2/5 : (this.windowSize.y)*2/3]"
+					>
 						<v-container fill-height>
 							<v-row align="center" class="white--text mx-auto" justify="center">
 								<v-col class="white--text text-center" cols="12" tag="h1">
@@ -49,9 +50,7 @@
 				</div>
 			</v-flex>
 		</v-layout>
-		<div
-			class="text-center  pa-3 col col-12"
-		>© 2020 {{$store.state.name}} — All Rights reserved.</div>
+		<div class="text-center pa-3 col col-12">© 2020 {{$store.state.name}} — All Rights reserved.</div>
 	</footer>
 </template>
 <style lang="css">
@@ -59,7 +58,7 @@ a {
 	text-decoration: none;
 }
 a.ex1 {
-	color: black ;
+	color: black;
 }
 a.ex1:hover,
 a.ex1:active {

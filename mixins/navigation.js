@@ -20,6 +20,11 @@ export const Mixin = {
                     to: "/about"
                 },
                 {
+                    icon: "mdi-map-legend",
+                    title: "Home",
+                    to: "/"
+                },
+                {
                     icon: "mdi-youtube",
                     title: "Rooms and Rates",
                     to: "/youtube"
@@ -43,11 +48,6 @@ export const Mixin = {
                     icon: "mdi-city",
                     title: "Owner",
                     to: "/towns"
-                },
-                {
-                    icon: "mdi-map-legend",
-                    title: "Home",
-                    to: "/activities"
                 },
 
                 {
