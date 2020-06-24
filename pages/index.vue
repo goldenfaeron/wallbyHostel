@@ -8,13 +8,13 @@
 							:style="'height:'+[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)/6 : (this.windowSize.y)/4]+'px'"
 						>
 							<v-container fill-height>
-								<v-row align="center" class="white--text mx-auto" justify="center">
-									<v-col class="white--text text-center" cols="12" tag="h1">
+								<v-layout row align="center" class="white--text mx-auto" justify="center">
+									<v-layout column class="white--text text-center" cols="12" tag="h1">
 										<div class="text">
 											<img :src="asset + index.logo.path" width="50%" />
 										</div>
-									</v-col>
-								</v-row>
+									</v-layout>
+								</v-layout>
 							</v-container>
 						</v-container>
 					</div>
@@ -23,15 +23,15 @@
 						:src="asset + index.image1.path"
 					>
 						<v-container fill-height>
-							<v-row align="center" class="white--text mx-auto" justify="center">
-								<v-col class="white--text text-center" cols="12" tag="h1">
+							<v-layout align-center justify-center row fill-height>
+								<v-layout column class="white--text text-center">
 									<div class="text">
 										<p
 											:class="[$vuetify.breakpoint.smAndDown ? 'display-2 text-uppercase' : 'display-4 text-uppercase']  + ' font-weight-black yellow--text text--accent-1'"
 										>{{index.image1_text}}</p>
 									</div>
-								</v-col>
-							</v-row>
+								</v-layout>
+							</v-layout>
 						</v-container>
 					</v-img>
 				</v-flex>
@@ -41,7 +41,7 @@
 							:style="'height:'+[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*2/3 : (this.windowSize.y)/2]+'px'"
 						>
 							<v-container grid-list-lg>
-								<v-layout row wrap justify-center my-5 py-5 mx-5 px-5>
+								<v-layout align-center justify-center row fill-height>
 									<v-flex xs12>
 										<p
 											:style="[$vuetify.breakpoint.lgAndDown ? 'line-height: 50px;' : 'line-height: 100px;']  +'text-align:center;' "
@@ -78,13 +78,13 @@
 						:src="asset + index.image2.path"
 					>
 						<v-container fill-height>
-							<v-row align="center" class="white--text mx-auto" justify="center">
-								<v-col class="white--text text-center" cols="12" tag="h1">
+							<v-layout align-center justify-center row fill-height>
+								<v-layout column class="white--text text-center">
 									<div class="text">
 										<v-img style="margin: auto;" width="40%" :src="asset + index.svg.path"></v-img>
 									</div>
-								</v-col>
-							</v-row>
+								</v-layout>
+							</v-layout>
 						</v-container>
 					</v-img>
 				</v-flex>
@@ -98,8 +98,8 @@
 					:src="asset + index.image3.path"
 				>
 					<v-container fill-height>
-						<v-row align="center" class="white--text mx-auto" justify="center">
-							<v-col class="white--text text-center" cols="12" tag="h1">
+						<v-layout align-center justify-center row fill-height>
+							<v-layout column class="white--text text-center">
 								<div class="text">
 									<v-img
 										style="margin: auto;"
@@ -111,8 +111,8 @@
 										:style="[$vuetify.breakpoint.smAndDown ? 'line-height: 40px;' : 'line-height: 80px;']  +'text-align:center;' "
 									>{{index.image3_text}}</p>
 								</div>
-							</v-col>
-						</v-row>
+							</v-layout>
+						</v-layout>
 					</v-container>
 				</v-img>
 			</v-layout>
@@ -126,8 +126,8 @@
 							:style="'height:'+[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*3/4 : (this.windowSize.y)]+'px'"
 						>
 							<v-container fill-height>
-								<v-row align="center" class="mx-auto" justify="center">
-									<v-col class="text-center" cols="12" tag="h1">
+								<v-layout align-center justify-center row fill-height>
+									<v-layout column class="text-center" cols="12" tag="h1">
 										<div class="text">
 											<p
 												:class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']  + ' font-weight-bold black--text'"
@@ -138,8 +138,8 @@
 												:src="asset + index.blocklogo.path"
 											/>
 										</div>
-									</v-col>
-								</v-row>
+									</v-layout>
+								</v-layout>
 							</v-container>
 						</v-container>
 					</div>
@@ -147,8 +147,8 @@
 				<v-flex lg6>
 					<v-img :height="(this.windowSize.y)*(2/3)" :src="asset + index.image4.path">
 						<v-container fill-height>
-							<v-row align="center" class="white--text mx-auto" justify="center">
-								<v-col class="white--text text-center" cols="12" tag="h1">
+							<v-layout align-center justify-center row fill-height>
+								<v-layout column class="white--text text-center">
 									<div class="text white--text">
 										<p
 											:class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']  + ' font-weight-bold'"
@@ -166,22 +166,22 @@
 											:style="[$vuetify.breakpoint.smAndDown ? 'line-height: 40px;' : 'line-height: 80px; ']"
 										>{{index.image4_text2}}</p>
 									</div>
-								</v-col>
-							</v-row>
+								</v-layout>
+							</v-layout>
 						</v-container>
 					</v-img>
 					<v-container :style="'height:'+(this.windowSize.y)/3+'px'">
 						<v-container fill-height>
-							<v-row align="center" class="white--text mx-auto" justify="center">
-								<v-col class="white--text text-center" cols="12" tag="h1">
+							<v-layout align-center justify-center row fill-height>
+								<v-layout column class="white--text text-center">
 									<div class="text">
 										<p
 											:class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']"
 											:style="[$vuetify.breakpoint.smAndDown ? 'line-height: 40px;' : 'line-height: 80px;']"
 										>{{index.block2_text}}</p>
 									</div>
-								</v-col>
-							</v-row>
+								</v-layout>
+							</v-layout>
 						</v-container>
 					</v-container>
 				</v-flex>
@@ -194,8 +194,8 @@
 					:src="asset + index.image5.path"
 				>
 					<v-container fill-height>
-						<v-row align="center" class="white--text mx-auto" justify="center">
-							<v-col class="white--text text-center" cols="12" tag="h1">
+						<v-layout align-center justify-center row fill-height>
+							<v-layout column class="white--text text-center">
 								<div class="text">
 									<p
 										:class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']"
@@ -210,8 +210,8 @@
 										:class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']"
 									>{{index.image5_text}}</p>
 								</div>
-							</v-col>
-						</v-row>
+							</v-layout>
+						</v-layout>
 					</v-container>
 				</v-img>
 			</v-layout>
@@ -224,31 +224,31 @@
 						:src="asset + index.image6.path"
 					>
 						<v-container fill-height>
-							<v-row align="center" class="white--text mx-auto" justify="center">
-								<v-col class="white--text text-center" cols="12" tag="h1">
+							<v-layout align-center justify-center row fill-height>
+								<v-layout column class="white--text text-center">
 									<div class="text">
 										<v-img style="margin: auto;" width="30%" :src="asset + index.image6_logo.path"></v-img>
 										<p
 											:class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']"
 										>{{index.image6_text}}</p>
 									</div>
-								</v-col>
-							</v-row>
+								</v-layout>
+							</v-layout>
 						</v-container>
 					</v-img>
 					<div style="background-color: #e2d26b;" class="hidden-sm-and-down">
 						<v-container :style="'height:'+(this.windowSize.y)/2+'px'">
 							<v-container fill-height>
-								<v-row align="center" class="white--text mx-auto" justify="center">
-									<v-col class="white--text text-center" cols="12" tag="h1">
+								<v-layout align-center justify-center row fill-height>
+									<v-layout column class="white--text text-center">
 										<div class="text">
 											<p
 												class="display-2 font-weight-bold black--text"
 												style="line-height: 80px"
 											>{{index.block6_text}}</p>
 										</div>
-									</v-col>
-								</v-row>
+									</v-layout>
+								</v-layout>
 							</v-container>
 						</v-container>
 					</div>
@@ -261,16 +261,16 @@
 									:style="'height:'+[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)/4 : (this.windowSize.y)/2]+'px'"
 								>
 									<v-container fill-height>
-										<v-row align="center" class="white--text mx-auto" justify="center">
-											<v-col class="white--text text-center" cols="12" tag="h1">
+										<v-layout align-center justify-center row fill-height>
+											<v-layout column class="white--text text-center">
 												<div class="text">
 													<p
 														:class="[$vuetify.breakpoint.smAndDown ? 'display-1 black--text' : 'display-2 black--text']"
 														:style="[$vuetify.breakpoint.smAndDown ? '' : 'line-height: 80px;']"
 													>{{index.block3_text}}</p>
 												</div>
-											</v-col>
-										</v-row>
+											</v-layout>
+										</v-layout>
 									</v-container>
 								</v-container>
 							</div>
@@ -278,42 +278,42 @@
 						<v-flex lg6>
 							<v-img :style="'height:'+(this.windowSize.y)/4+'px'">
 								<v-container fill-height>
-									<v-row align="center" class="white--text mx-auto" justify="center">
-										<v-col class="white--text text-center" cols="12" tag="h1">
+									<v-layout align-center justify-center row fill-height>
+										<v-layout column class="white--text text-center">
 											<div class="text">
 												<p
 													:class="[$vuetify.breakpoint.smAndDown ? 'display-1' : 'display-2']"
 													:style="[$vuetify.breakpoint.smAndDown ? '' : 'line-height: 80px;']"
 												>{{index.block4_text}}</p>
 											</div>
-										</v-col>
-									</v-row>
+										</v-layout>
+									</v-layout>
 								</v-container>
 							</v-img>
 							<div style="background-color: #b7b181;">
 								<v-container
-								:style="'height:'+[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*1/6 : (this.windowSize.y)/4]+'px'"
+									:style="'height:'+[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*1/6 : (this.windowSize.y)/4]+'px'"
 								>
 									<v-container fill-height>
-										<v-row align="center" class="white--text mx-auto" justify="center">
-											<v-col class="white--text text-center" cols="12" tag="h1">
+										<v-layout align-center justify-center row fill-height>
+											<v-layout column class="white--text text-center">
 												<div class="text">
 													<p
 														:class="[$vuetify.breakpoint.smAndDown ? 'display-1' : 'display-2']"
 														:style="[$vuetify.breakpoint.smAndDown ? '' : 'line-height: 80px;']"
 													>{{index.block5_text}}</p>
 												</div>
-											</v-col>
-										</v-row>
+											</v-layout>
+										</v-layout>
 									</v-container>
 								</v-container>
 							</div>
 						</v-flex>
 					</v-layout>
-					<v-img  :height="(this.windowSize.y)/2" :src="asset + index.image7.path">
+					<v-img :height="(this.windowSize.y)/2" :src="asset + index.image7.path">
 						<v-container fill-height>
-							<v-row align="center" class="white--text mx-auto" justify="center">
-								<v-col class="white--text text-center" cols="12" tag="h1">
+							<v-layout align-center justify-center row fill-height>
+								<v-layout column class="white--text text-center">
 									<div class="text">
 										<v-img
 											style="margin: auto;"
@@ -324,20 +324,20 @@
 											:class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']"
 										>{{index.image7_text}}</p>
 									</div>
-								</v-col>
-							</v-row>
+								</v-layout>
+							</v-layout>
 						</v-container>
 					</v-img>
 					<div style="background-color: #e2d26b;" class="hidden-sm-and-up">
 						<v-container :style="'height:'+(this.windowSize.y)/4+'px'">
 							<v-container fill-height>
-								<v-row align="center" class="white--text mx-auto" justify="center">
-									<v-col class="white--text text-center" cols="12" tag="h1">
+								<v-layout align-center justify-center row fill-height>
+									<v-layout column class="white--text text-center">
 										<div class="text">
 											<p class="headline font-weight-bold black--text">{{index.block6_text}}</p>
 										</div>
-									</v-col>
-								</v-row>
+									</v-layout>
+								</v-layout>
 							</v-container>
 						</v-container>
 					</div>
@@ -350,20 +350,18 @@
 				:src="asset + index.image8.path"
 			>
 				<v-container fill-height>
-					<v-row align="center" class="white--text mx-auto" justify="center">
-						<v-col class="white--text text-center" cols="12" tag="h1">
+					<v-layout row align="center" class="white--text mx-auto" justify="center">
+						<v-layout align-center justify-center row fill-height>
 							<div class="text">
 								<v-img
 									style="margin: auto;"
 									:width="[$vuetify.breakpoint.smAndDown ? '55%' : '30%']"
 									:src="asset + index.image8_logo.path"
 								></v-img>
-								<p :class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']">
-									{{index.image8_text}}
-								</p>
+								<p :class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']">{{index.image8_text}}</p>
 							</div>
-						</v-col>
-					</v-row>
+						</v-layout>
+					</v-layout>
 				</v-container>
 			</v-img>
 		</v-container>
