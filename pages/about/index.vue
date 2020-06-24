@@ -33,7 +33,7 @@
 				<v-flex lg6>
 					<div style="background-color: #000000;">
 						<v-container
-							:style="'height:'+[$vuetify.breakpoint.smAndDown ? (this.windowSize.y) : (this.windowSize.y)]+'px'"
+							
 						>
 							<v-container fill-height>
 								<v-layout align-center justify-center row fill-height>
@@ -57,13 +57,13 @@
 		<v-container fluid fill-height class="ma-0 pa-0">
 			<v-layout row wrap>
 				<v-flex lg6>
-					<v-img :height="(this.windowSize.y)" :src="asset + about.image3.path">
+					<v-img >
 					</v-img>
 				</v-flex>
 				<v-flex lg6>
 					<div style="background-color: #000000;">
 						<v-container
-							:style="'height:'+[$vuetify.breakpoint.smAndDown ? (this.windowSize.y) : (this.windowSize.y)]+'px'"
+							
 						>
 							<v-container fill-height>
 								<v-layout align-center justify-center row fill-height>
