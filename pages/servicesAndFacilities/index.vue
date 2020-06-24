@@ -1,5 +1,5 @@
 <template>
-    <div>
+	<div>
 		<v-container fluid fill-height class="ma-0 pa-0">
 			<v-layout row wrap fill-height>
 				<v-img
@@ -27,20 +27,22 @@
 			</v-layout>
 		</v-container>
 
-
 		<v-container fluid fill-height class="ma-0 pa-0">
 			<v-layout row wrap>
-				<v-flex lg6>
-					<div style="background-color: #000000;">
-						<v-container
-							:style="'height:'+[$vuetify.breakpoint.smAndDown ? (this.windowSize.y) : (this.windowSize.y)]+'px'"
-						>
+				<v-flex lg6 sm12>
+					<div style="background-color:#FFE082; height: 100%;">
+						<v-container>
 							<v-container fill-height>
 								<v-layout align-center justify-center row fill-height>
 									<v-layout column cols="12" tag="h1" pl-2>
-										<div class="text">
-										<p class="display-3 font-weight-black">{{services.block1_title}}</p>
-											<div v-html="services.block1_text" ></div>
+										<div class="text black--text">
+											<p
+												:class="[$vuetify.breakpoint.smAndDown ? 'display-1' : 'display-3']  + ' font-weight-bold'"
+											>{{services.block1_title}}</p>
+											<div
+												v-html="services.block1_text"
+												:class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-1']  + ' font-weight-bold'"
+											></div>
 										</div>
 									</v-layout>
 								</v-layout>
@@ -48,35 +50,120 @@
 						</v-container>
 					</div>
 				</v-flex>
-				<v-flex lg6>
-					<v-img :height="(this.windowSize.y)" :src="asset + services.image2.path">
-					</v-img>
+				<v-flex lg6 sm12>
+					<v-img height="100%" :src="asset + services.image2.path"></v-img>
 				</v-flex>
 			</v-layout>
 		</v-container>
 		<v-container fluid fill-height class="ma-0 pa-0">
 			<v-layout row wrap>
-				<v-flex lg6>
-					<v-img :height="(this.windowSize.y)" :src="asset + services.image3.path">
-					</v-img>
+				<v-flex lg6 sm12>
+					<v-img height="100%" :src="asset + services.image3.path"></v-img>
 				</v-flex>
-				<v-flex lg6>
-					<div style="background-color: #000000;">
-						<v-container
-							:style="'height:'+[$vuetify.breakpoint.smAndDown ? (this.windowSize.y) : (this.windowSize.y)]+'px'"
-						>
+				<v-flex lg6 sm12>
+					<div style="background-color: #AED581; height: 100%;">
+						<v-container>
 							<v-container fill-height>
 								<v-layout align-center justify-center row fill-height>
 									<v-layout column cols="12" tag="h1" pl-2>
-										<div class="text">
-										<p class="display-3 font-weight-black">{{services.block2_title}}</p>
-											<div v-html="services.block2_text" ></div>
+										<div class="text black--text">
+											<p
+												:class="[$vuetify.breakpoint.smAndDown ? 'display-1' : 'display-3']  + ' font-weight-bold'"
+											>{{services.block2_title}}</p>
+											<div
+												v-html="services.block2_text"
+												:class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-1']  + ' font-weight-bold'"
+											></div>
 										</div>
 									</v-layout>
 								</v-layout>
 							</v-container>
 						</v-container>
 					</div>
+				</v-flex>
+			</v-layout>
+		</v-container>
+		<v-container fluid fill-height class="ma-0 pa-0">
+			<v-layout row wrap>
+				<v-flex lg6 sm12>
+					<div style="background-color: #ffffff; height: 100%">
+						<v-container>
+							<v-container fill-height>
+								<v-layout align-center justify-center row fill-height>
+									<v-layout column cols="12" tag="h1" pl-2>
+										<div class="text black--text">
+											<p
+												:class="[$vuetify.breakpoint.smAndDown ? 'display-1' : 'display-3']  + ' font-weight-bold'"
+											>{{services.block3_title}}</p>
+											<div
+												v-html="services.block3_text"
+												:class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-1']  + ' font-weight-bold'"
+											></div>
+										</div>
+									</v-layout>
+								</v-layout>
+							</v-container>
+						</v-container>
+					</div>
+				</v-flex>
+				<v-flex lg6 sm12>
+					<v-img height="100%" :src="asset + services.image4.path"></v-img>
+				</v-flex>
+			</v-layout>
+		</v-container>
+		<v-container fluid fill-height class="ma-0 pa-0">
+			<v-layout row wrap>
+				<v-flex lg6 sm12>
+					<v-img height="100%" :src="asset + services.image5.path"></v-img>
+				</v-flex>
+				<v-flex lg6 sm12>
+					<div style="background-color: #000000; height: 100%;">
+						<v-container>
+							<v-container fill-height>
+								<v-layout align-center justify-center row fill-height>
+									<v-layout column cols="12" tag="h1" pl-2>
+										<div class="text">
+											<p
+												:class="[$vuetify.breakpoint.smAndDown ? 'display-1' : 'display-3']  + ' font-weight-bold'"
+											>{{services.block4_title}}</p>
+											<div
+												v-html="services.block4_text"
+												:class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-1']  + ' font-weight-bold'"
+											></div>
+										</div>
+									</v-layout>
+								</v-layout>
+							</v-container>
+						</v-container>
+					</div>
+				</v-flex>
+			</v-layout>
+		</v-container>
+		<v-container fluid fill-height class="ma-0 pa-0">
+			<v-layout row wrap>
+				<v-flex lg6 sm12>
+					<div style="background-color: #FFE082;">
+						<v-container>
+							<v-container fill-height>
+								<v-layout align-center justify-center row fill-height>
+									<v-layout column cols="12" tag="h1" pl-2>
+										<div class="text black--text">
+											<p
+												:class="[$vuetify.breakpoint.smAndDown ? 'display-1' : 'display-3']  + ' font-weight-bold'"
+											>{{services.block5_title}}</p>
+											<div
+												v-html="services.block5_text"
+												:class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-1']  + ' font-weight-bold'"
+											></div>
+										</div>
+									</v-layout>
+								</v-layout>
+							</v-container>
+						</v-container>
+					</div>
+				</v-flex>
+				<v-flex lg6 sm12>
+					<v-img height="100%" :src="asset + services.image6.path"></v-img>
 				</v-flex>
 			</v-layout>
 		</v-container>

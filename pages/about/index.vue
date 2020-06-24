@@ -39,8 +39,13 @@
 								<v-layout align-center justify-center row fill-height>
 									<v-layout column cols="12" tag="h1" pl-2>
 										<div class="text">
-										<p class="display-3 font-weight-black">{{about.block1_title}}</p>
-											<div v-html="about.block1_text" ></div>
+										<p
+												:class="[$vuetify.breakpoint.smAndDown ? 'display-1' : 'display-3']  + ' font-weight-bold'"
+											>{{about.block1_title}}</p>
+											<div
+												v-html="about.block1_text"
+												:class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-1']  + ' font-weight-bold'"
+											></div>
 										</div>
 									</v-layout>
 								</v-layout>
@@ -49,7 +54,7 @@
 					</div>
 				</v-flex>
 				<v-flex lg6>
-					<v-img :height="(this.windowSize.y)" :src="asset + about.image2.path">
+					<v-img height="100%" :src="asset + about.image2.path">
 					</v-img>
 				</v-flex>
 			</v-layout>
@@ -57,20 +62,24 @@
 		<v-container fluid fill-height class="ma-0 pa-0">
 			<v-layout row wrap>
 				<v-flex lg6>
-					<v-img >
+					<v-img height="100%" :src="asset + about.image3.path">
 					</v-img>
 				</v-flex>
 				<v-flex lg6>
-					<div style="background-color: #000000;">
+					<div style="background-color: #000000; height: 100%;">
 						<v-container
-							
 						>
 							<v-container fill-height>
 								<v-layout align-center justify-center row fill-height>
 									<v-layout column cols="12" tag="h1" pl-2>
 										<div class="text">
-										<p class="display-3 font-weight-black">{{about.block2_title}}</p>
-											<div v-html="about.block2_text" ></div>
+										<p
+												:class="[$vuetify.breakpoint.smAndDown ? 'display-1' : 'display-3']  + ' font-weight-bold'"
+											>{{about.block2_title}}</p>
+											<div
+												v-html="about.block2_text"
+												:class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-1']  + ' font-weight-bold'"
+											></div>
 										</div>
 									</v-layout>
 								</v-layout>
