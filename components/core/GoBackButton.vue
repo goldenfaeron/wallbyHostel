@@ -12,7 +12,7 @@
 								slot-scope="{ hover }"
 								@click="menu= false"
 								:class="`${hover ? 'white' : 'secondary'}--text text--lighten-3 font-weight-bold display-3`"
-							>{{item.to}}</div>
+							>{{item.title}}</div>
 						</v-hover>
 					</nuxt-link>
 				</v-flex>

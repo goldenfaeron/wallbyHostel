@@ -34,9 +34,9 @@ export const state = () => ({
     collectionsToken: '641a6e0c88f94f7d2adadd184752e1',
     collectionSchema: '31fdc0efbd3c289620e787921e3e8b',
     assetRoot: "https://cockpit.goborshi.hackmylanguage.com/storage/uploads",
-    assetRoot2: "http://cms.alanfurneaux.co.uk/storage/uploads",
+    assetRoot2: "https://cms.torres.hackmylanguage.com/storage/uploads",
     webRoot: "https://cockpit.goborshi.hackmylanguage.com",
-    webRoot2: "http://cms.alanfurneaux.co.uk",
+    webRoot2: "https://cms.torres.hackmylanguage.com",
     imageToken: '969461cb194b4b0cd0c695d09e9502',
     authToken: 'ac203b0773cc501428903c9de9ad09',
 
