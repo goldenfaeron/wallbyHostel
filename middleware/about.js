@@ -1,5 +1,5 @@
 export default async function ({ store, $axios, route }) {
-    let singleton = "home";
+    let singleton = "about";
     let singleton2 = "details";
     
     if (route.params.id) {

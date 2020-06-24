@@ -27,12 +27,12 @@ export const Mixin = {
                 {
                     icon: "mdi-youtube",
                     title: "Rooms and Rates",
-                    to: "/youtube"
+                    to: "/roomsAndRates"
                 },
                 {
                     icon: "mdi-youtube",
                     title: "Services and Facilities",
-                    to: "/youtube"
+                    to: "/servicesAndFacilities"
                 },
                 {
                     icon: "mdi-instagram",
