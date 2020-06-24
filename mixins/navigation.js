@@ -17,7 +17,7 @@ export const Mixin = {
                 {
                     icon: "mdi-home",
                     title: "About",
-                    to: "/about"
+                    to: "/about/"
                 },
                 {
                     icon: "mdi-map-legend",
@@ -27,12 +27,12 @@ export const Mixin = {
                 {
                     icon: "mdi-youtube",
                     title: "Rooms and Rates",
-                    to: "/roomsAndRates"
+                    to: "/rooms-and-rates/"
                 },
                 {
                     icon: "mdi-youtube",
                     title: "Services and Facilities",
-                    to: "/servicesAndFacilities"
+                    to: "/services-and-facilities/"
                 },
                 {
                     icon: "mdi-instagram",
