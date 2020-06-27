@@ -118,8 +118,11 @@
 			</v-layout>
 		</v-container>
 
-		<v-container fluid fill-height class="ma-0 pa-0">
-			<v-container class="ma-5 pa-5">
+		<v-container fluid fill-height class="ma-0 pa-0" >
+				<v-layout row wrap fill-height>
+					<v-layout align-center justify-center row fill-height>
+						<v-layout column class="white--text text-center">
+<br>
 				<p
 					:class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-3']  + ' font-weight-bold'"
 					style="text-align:center; "
@@ -129,9 +132,6 @@
 					style="text-align:center; "
 				>{{index.section2_subtitle}}</p>
 				<br />
-				<v-layout row wrap fill-height>
-					<v-layout align-center justify-center row fill-height>
-						<v-layout column class="white--text text-center">
 							<div class="text">
 								<p
 									:class="[$vuetify.breakpoint.smAndDown ? 'body-2' : 'headline']  + ' font-weight-bold ma-5 pa-5'"
@@ -139,10 +139,10 @@
 								>{{index.section2_text}}</p>
 								<v-btn class="black--text" color="secondary lighten-1">{{index.section2_buttonText}}</v-btn>
 							</div>
+			<br>
 						</v-layout>
 					</v-layout>
 				</v-layout>
-			</v-container>
 		</v-container>
 
 		<v-container fluid fill-height class="ma-0 pa-0">
@@ -337,6 +337,7 @@
 			<v-layout row wrap>
 				<v-flex lg6>
 					<v-img
+					v-if="index.image6_bool"
 						:height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*1/3 : (this.windowSize.y)/2]"
 						:src="asset + index.image6.path"
 					>
@@ -353,7 +354,7 @@
 							</v-layout>
 						</v-container>
 					</v-img>
-					<div style="background-color: #e2d26b;" class="hidden-sm-and-down">
+					<!--<div style="background-color: #e2d26b;" class="hidden-sm-and-down">
 						<v-container :style="'height:'+(this.windowSize.y)/2+'px'">
 							<v-container fill-height>
 								<v-layout align-center justify-center row fill-height>
@@ -368,7 +369,7 @@
 								</v-layout>
 							</v-container>
 						</v-container>
-					</div>
+					</div>-->
 				</v-flex>
 				<v-flex lg6>
 					<v-layout row wrap>
@@ -427,7 +428,7 @@
 							</div>
 						</v-flex>
 					</v-layout>
-					<v-img :height="(this.windowSize.y)/2" :src="asset + index.image7.path">
+				<!--	<v-img :height="(this.windowSize.y)/2" :src="asset + index.image7.path">
 						<v-container fill-height>
 							<v-layout align-center justify-center row fill-height>
 								<v-layout column class="white--text text-center">
@@ -444,7 +445,7 @@
 								</v-layout>
 							</v-layout>
 						</v-container>
-					</v-img>
+					</v-img>-->
 					<!--<div style="background-color: #e2d26b;" class="hidden-sm-and-up">
 						<v-container :style="'height:'+(this.windowSize.y)/4+'px'">
 							<v-container fill-height>
