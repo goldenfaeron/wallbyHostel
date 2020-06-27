@@ -232,6 +232,7 @@
 										:style="[$vuetify.breakpoint.smAndDown ? 'line-height: 40px;' : 'line-height: 80px;']"
 									>{{index.image5_title}}</p>
 									<v-img
+									v-if="index.image5_logo"
 										style="margin: auto;"
 										:width="[$vuetify.breakpoint.smAndDown ? '70%' : '30%']"
 										:src="asset + index.image5_logo.path"
@@ -347,7 +348,7 @@
 							<v-layout align-center justify-center row fill-height>
 								<v-layout column class="white--text text-center">
 									<div class="text">
-										<v-img style="margin: auto;" width="30%" :src="asset + index.image6_logo.path"></v-img>
+										<v-img v-if="index.image6_logo" style="margin: auto;" width="30%" :src="asset + index.image6_logo.path"></v-img>
 										<p
 											:class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']"
 										>{{index.image6_text}}</p>
