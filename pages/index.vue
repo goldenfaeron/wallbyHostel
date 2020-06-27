@@ -161,6 +161,7 @@
 												:style="[$vuetify.breakpoint.smAndDown ? 'line-height: 40px;' : 'line-height: 80px; ']"
 											>{{index.blocktext}}</p>
 											<img
+											v-if="index.blocklogo"
 												:width="[$vuetify.breakpoint.smAndDown ? '70%' : '20%']"
 												:src="asset + index.blocklogo.path"
 											/>
@@ -183,6 +184,7 @@
 										>{{index.image4_text1}}</p>
 
 										<v-img
+										v-if="index.image4_logo"
 											style="margin: auto;"
 											:width="[$vuetify.breakpoint.smAndDown ? '70%' : '30%']"
 											:src="asset + index.image4_logo.path"
@@ -371,7 +373,7 @@
 						</v-container>
 					</div>-->
 				</v-flex>
-				<v-flex lg6>
+				<v-flex :class="[index.image6_bool ? 'lg6' : 'xs12']">
 					<v-layout row wrap>
 						<v-flex lg6>
 							<div style="background-color: #ffffff;">
