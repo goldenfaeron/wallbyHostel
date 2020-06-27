@@ -3,25 +3,23 @@
 		<v-layout row wrap>
 			<v-flex lg6>
 				<div style="background-color: #000000;">
-				
-						<v-container
-							:style="'height:'+[$vuetify.breakpoint.smAndDown ? ' auto;' : (this.windowSize.y)*2/3]+'px;'"
-						>
-							<v-container fill-height>
-								<v-layout align-center justify-center row fill-height mx-5 px-5>
-									<div class="text" style="text-align: center;">  
-										<p
-											:class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']"
-										>{{footer.name}}Kex — Skúlagata 28</p>
-										<p
-											:class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']"
-										>101 Reykjavík Iceland</p>
-										<p :class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']">+354 561 6060</p>
-									</div>
-								</v-layout>
-							</v-container>
+					<v-container
+						:style="'height:'+[$vuetify.breakpoint.smAndDown ? ' auto;' : (this.windowSize.y)*2/3]+'px;'"
+					>
+						<v-container fill-height>
+							<v-layout align-center justify-center row fill-height mx-5 px-5>
+								<div class="text" style="text-align: center;">
+									<p
+										:class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']"
+									>{{footer.name}}Wallaby Hostel</p>
+									<p
+										:class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']"
+									>Rruga Pandeli Bocari 9701, Albania</p>
+									<p :class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']">+012 345 6789</p>
+								</div>
+							</v-layout>
 						</v-container>
-				
+					</v-container>
 				</div>
 			</v-flex>
 			<v-flex lg6>
@@ -32,15 +30,36 @@
 						<v-container fill-height>
 							<v-layout align-center justify-center row fill-height mx-5 px-5>
 								<div class="text" style="text-align: center;">
-									<p :class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']">
-										<a class="ex1">Contact Us</a>
-									</p>
-									<p :class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']">
-										<a class="ex1">Terms & Conditions</a>
-									</p>
-									<p :class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']">
-										<a class="ex1">Info@kexhostel.is</a>
-									</p>
+									<nuxt-link to="">
+										<v-hover>
+											<div
+												style="text-decoration: none;"
+												slot-scope="{ hover }"
+												@click="menu= false"
+												:class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']+[hover ? ' black--text' : ' white--text'] + ' text--lighten-3'"
+											>Contact us</div>
+										</v-hover>
+									</nuxt-link>
+									<nuxt-link to="">
+										<v-hover>
+											<div
+												style="text-decoration: none;"
+												slot-scope="{ hover }"
+												@click="menu= false"
+												:class="[$vuetify.breakpoint.mdAndDown ? 'headline' : 'display-2']+[hover ? ' black--text' : ' white--text'] + ' text--lighten-3'"
+											>Terms & Conditions</div>
+										</v-hover>
+									</nuxt-link>
+									<nuxt-link to="">
+										<v-hover>
+											<div
+												style="text-decoration: none;"
+												slot-scope="{ hover }"
+												@click="menu= false"
+												:class="[$vuetify.breakpoint.mdAndDown ? 'headline' : 'display-2']+[hover ? ' black--text' : ' white--text'] + ' text--lighten-3'"
+											>dummy@dummy.com</div>
+										</v-hover>
+									</nuxt-link>
 								</div>
 							</v-layout>
 						</v-container>

@@ -22,6 +22,7 @@
 							<nuxt-link :to="item.to">
 								<v-hover>
 									<div
+									style="text-decoration: none;"
 										slot-scope="{ hover }"
 										@click="menu= false"
 										:class="[$vuetify.breakpoint.mdAndDown ? 'headline' : 'display-2']+[hover ? ' white--text' : ' secondary--text'] + ' text--lighten-3 font-weight-bold'"
@@ -73,15 +74,8 @@ export default {
 };
 </script>
 <style lang="css">
-.hover {
+a{
 	text-decoration: none;
-}
-.hover.ex1 {
-	color: black;
-}
-.hover.ex1:hover,
-.hover.ex1:active {
-	color: white;
 }
 
 </style>
