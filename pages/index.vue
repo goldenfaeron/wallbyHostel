@@ -5,13 +5,13 @@
 				<v-flex lg6>
 					<div style="background-color:black;" class="black--text">
 						<v-container
-							:style="'height:'+[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)/6 : (this.windowSize.y)/4]+'px'"
+							:style="'height:'+[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*1/5 : (this.windowSize.y)/2]+'px'"
 						>
 							<v-container fill-height>
-								<v-layout row align="center" class="white--text mx-auto" justify="center">
-									<v-layout column class="white--text text-center" cols="12" tag="h1">
+								<v-layout align-center justify-center row fill-height>
+									<v-layout column class="white--text text-center">
 										<div class="text">
-											<img :src="asset + index.logo.path" width="50%" />
+											<v-img style="margin: auto;" width="60%" :src="asset + index.logo.path"></v-img>
 										</div>
 									</v-layout>
 								</v-layout>
@@ -19,7 +19,7 @@
 						</v-container>
 					</div>
 					<v-img
-						:height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*5/6 : (this.windowSize.y)*.75]"
+						:height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*4/5 : (this.windowSize.y)/2]"
 						:src="asset + index.image1.path"
 					>
 						<v-container fill-height>
@@ -41,30 +41,56 @@
 							:style="'height:'+[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*2/3 : (this.windowSize.y)/2]+'px'"
 						>
 							<v-container grid-list-lg>
-								<v-layout align-center justify-center row fill-height>
+								<v-layout align-center justify-center row fill-height mx-5 px-5>
 									<v-flex xs12>
 										<p
-											:style="[$vuetify.breakpoint.lgAndDown ? 'line-height: 50px;' : 'line-height: 100px;']  +'text-align:center;' "
-											:class="[$vuetify.breakpoint.lgAndDown ? 'display-1' : 'display-3']  + ' font-weight-bold'"
+											style="text-align:center;"
+											:class="[$vuetify.breakpoint.mdAndDown ? 'display-1' : 'display-3']  + ' font-weight-bold'"
 										>{{index.bookText}}</p>
 									</v-flex>
 
 									<br />
 									<v-flex lg6 xs12>
 										<div align="center">
-											<v-btn outlined color="black" width="100%">{{index.button1}}</v-btn>
+											<v-btn
+												outlined
+												color="black"
+												width="100%"
+												@click="datepicker = !datepicker"
+											>{{index.button1}}</v-btn>
 										</div>
+										<v-menu close-on-click="false" bottom v-model="datepicker">
+											<template v-slot:activator="{ on }">
+												<div v-on="on"></div>
+											</template>
+											<v-date-picker v-model="date" light :reactive="true"></v-date-picker>
+										</v-menu>
 									</v-flex>
 									<v-flex lg6 xs12>
 										<div align="center">
-											<v-btn outlined color="black" width="100%">{{index.button2}}</v-btn>
+											<v-btn
+												outlined
+												color="black"
+												width="100%"
+												@click="daypicker = !daypicker"
+											>{{index.button1}}</v-btn>
 										</div>
+										<v-menu close-on-click="false" bottom v-model="daypicker">
+											<template v-slot:activator="{ on }">
+												<div v-on="on"></div>
+											</template>
+											<v-list>
+												<v-list-item v-for="(item, index) in 7" :key="index">
+													<v-list-item-title>{{ index+1 }}</v-list-item-title>
+												</v-list-item>
+											</v-list>
+										</v-menu>
 									</v-flex>
 									<v-flex xs12></v-flex>
 									<v-flex xs12>
 										<div align="center">
 											<v-btn color="#dfd269" width="100%">
-												<span class="black--text font-weight-bold">{{index.button3}}</span>
+												<span class="black--text font-weight-bold">{{index.button3}}{{date}}</span>
 											</v-btn>
 										</div>
 									</v-flex>
@@ -91,31 +117,38 @@
 			</v-layout>
 		</v-container>
 
-		<v-container fluid fill-height class="ma-0 pa-0">
-			<v-layout row wrap fill-height>
-				<v-img
-					:height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*2/3 : (this.windowSize.y)]"
-					:src="asset + index.image3.path"
-				>
-					<v-container fill-height>
-						<v-layout align-center justify-center row fill-height>
-							<v-layout column class="white--text text-center">
-								<div class="text">
-									<v-img
-										style="margin: auto;"
-										:width="[$vuetify.breakpoint.smAndDown ? '70%' : '30%']"
-										:src="asset + index.image3_logo.path"
-									></v-img>
-									<p
-										:class="[$vuetify.breakpoint.smAndDown ? 'display-1' : 'display-3']  + ' font-weight-bold'"
-										:style="[$vuetify.breakpoint.smAndDown ? 'line-height: 40px;' : 'line-height: 80px;']  +'text-align:center;' "
-									>{{index.image3_text}}</p>
-								</div>
-							</v-layout>
+		<v-container
+			fluid
+			fill-height
+			class="ma-0 pa-0"
+			:style="'height:'+[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*2/3 : (this.windowSize.y)]+'px'"
+		>
+			<v-container>
+				<p
+					:class="[$vuetify.breakpoint.smAndDown ? 'title' : 'display-3']  + ' font-weight-bold'"
+					style="text-align:center; "
+				>{{index.section2_title}}</p>
+				<p
+					:class="[$vuetify.breakpoint.smAndDown ? 'title' : 'display-2']  + ' font-weight-bold'"
+					style="text-align:center; "
+				>{{index.section2_subtitle}}</p>
+			</v-container>
+
+			<v-container>
+				<v-layout row wrap fill-height>
+					<v-layout align-center justify-center row fill-height>
+						<v-layout column class="white--text text-center">
+							<div class="text">
+								<p
+									:class="[$vuetify.breakpoint.smAndDown ? 'title' : 'headline']  + ' font-weight-bold'"
+									style="text-align:center; "
+								>{{index.section2_text}}</p>
+								<v-btn class="black--text" color="secondary lighten-1">{{index.section2_buttonText}}</v-btn>
+							</div>
 						</v-layout>
-					</v-container>
-				</v-img>
-			</v-layout>
+					</v-layout>
+				</v-layout>
+			</v-container>
 		</v-container>
 
 		<v-container fluid fill-height class="ma-0 pa-0">
@@ -328,7 +361,7 @@
 							</v-layout>
 						</v-container>
 					</v-img>
-					<div style="background-color: #e2d26b;" class="hidden-sm-and-up">
+					<!--<div style="background-color: #e2d26b;" class="hidden-sm-and-up">
 						<v-container :style="'height:'+(this.windowSize.y)/4+'px'">
 							<v-container fill-height>
 								<v-layout align-center justify-center row fill-height>
@@ -340,11 +373,11 @@
 								</v-layout>
 							</v-container>
 						</v-container>
-					</div>
+					</div>-->
 				</v-flex>
 			</v-layout>
 		</v-container>
-		<v-container fluid fill-height class="ma-0 pa-0">
+		<!--	<v-container fluid fill-height class="ma-0 pa-0">
 			<v-img
 				:height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*3/5 : (this.windowSize.y)]"
 				:src="asset + index.image8.path"
@@ -364,7 +397,7 @@
 					</v-layout>
 				</v-container>
 			</v-img>
-		</v-container>
+		</v-container>-->
 		<v-container fluid fill-height class="ma-0 pa-0">
 			<v-img :style="'height:'+(this.windowSize.y)*2/3+'px'">
 				<div style="width: 100%">
@@ -393,7 +426,10 @@ export default {
 			},
 			index: this.$store.state.pageData[0],
 			map: this.$store.state.pageData[1],
-			asset: this.$store.state.assetRoot2
+			asset: this.$store.state.assetRoot2,
+			datepicker: false,
+			daypicker: false,
+			date: ""
 		};
 	},
 	middleware: "index",

@@ -142,7 +142,7 @@
 		<v-container fluid fill-height class="ma-0 pa-0">
 			<v-layout row wrap>
 				<v-flex lg6 sm12>
-					<div style="background-color: #FFE082;">
+					<div style="background-color: #FFE082; height: 100%;">
 						<v-container>
 							<v-container fill-height>
 								<v-layout align-center justify-center row fill-height>

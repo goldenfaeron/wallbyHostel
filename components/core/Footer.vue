@@ -1,5 +1,6 @@
 <template>
 	<footer class="v-footer v-sheet v-sheet--tile theme--dark v-footer--padless" data-booted="true">
+ 
 		<v-layout row wrap>
 			<v-flex lg6>
 				<div style="background-color: #000000;">
@@ -69,17 +70,24 @@ a.ex1:active {
 import { Mixin } from "~/mixins/navigation.js";
 
 export default {
+data() {
+	return {
+		
+		windowSize: {
+			x: 0,
+			y: 0
+		},
+		footer: this.$store.state.pageData,
+	}
+},
+middleware: "businessDetails",
+
 	mixins: [Mixin],
 
 	components: {
 		SocialMedia: () => import("@/components/SocialMedia")
 	},
-	data: () => ({
-		windowSize: {
-			x: 0,
-			y: 0
-		}
-	}),
+	
 	methods: {
 		onResize() {
 			this.windowSize = { x: window.innerWidth, y: window.innerHeight };

@@ -79,7 +79,7 @@
 				<nuxt />
 			</v-content>
 
-			<v-navigation-drawer v-model="rightDrawer" :right="right" temporary fixed>
+			<!--<v-navigation-drawer v-model="rightDrawer" :right="right" temporary fixed>
 				<v-list>
 					<v-list-item v-for="(item, i) in nav" :key="i" :to="item.to" router exact>
 						<v-list-item-action>
@@ -91,8 +91,8 @@
 						</v-list-item-content>
 					</v-list-item>
 				</v-list>
-			</v-navigation-drawer>
-			<BottomNav></BottomNav>
+			</v-navigation-drawer>-->
+			<!--<BottomNav></BottomNav>-->
 			<Footer></Footer>
 		</span>
 
