@@ -124,26 +124,23 @@
 			fluid
 			fill-height
 			class="ma-0 pa-0"
-			:style="'height:'+[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*2/3 : (this.windowSize.y)]+'px'"
 		>
-			<v-container>
+			<v-container class="ma-5 pa-5">
 				<p
-					:class="[$vuetify.breakpoint.smAndDown ? 'title' : 'display-3']  + ' font-weight-bold'"
+					:class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-3']  + ' font-weight-bold'"
 					style="text-align:center; "
 				>{{index.section2_title}}</p>
 				<p
-					:class="[$vuetify.breakpoint.smAndDown ? 'title' : 'display-2']  + ' font-weight-bold'"
+					:class="[$vuetify.breakpoint.smAndDown ? 'title' : 'display-2']  + ' font-weight-bold '"
 					style="text-align:center; "
 				>{{index.section2_subtitle}}</p>
-			</v-container>
-
-			<v-container>
+				<br>
 				<v-layout row wrap fill-height>
 					<v-layout align-center justify-center row fill-height>
 						<v-layout column class="white--text text-center">
 							<div class="text">
 								<p
-									:class="[$vuetify.breakpoint.smAndDown ? 'title' : 'headline']  + ' font-weight-bold'"
+									:class="[$vuetify.breakpoint.smAndDown ? 'body-2' : 'headline']  + ' font-weight-bold ma-5 pa-5'"
 									style="text-align:center; "
 								>{{index.section2_text}}</p>
 								<v-btn class="black--text" color="secondary lighten-1">{{index.section2_buttonText}}</v-btn>
