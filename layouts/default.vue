@@ -1,7 +1,7 @@
 <template>
 	<v-app>
 		<span v-show="show">
-		 <GoBackButton></GoBackButton> 
+		 <Nav></Nav> 
 		<!--	<v-navigation-drawer
 				color="accent lighten-4"
 				v-model="drawer"
@@ -112,7 +112,7 @@ export default {
 	mixins: [Mixin],
 	components: {
 		BottomNav: () => import("@/components/core/BottomNav"),
-		GoBackButton: () => import("@/components/core/GoBackButton"),
+		Nav: () => import("@/components/core/nav"),
 		Footer: () => import("@/components/core/Footer")
 	},
 

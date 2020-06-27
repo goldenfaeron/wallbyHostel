@@ -63,7 +63,7 @@
 											<template v-slot:activator="{ on }">
 												<div v-on="on"></div>
 											</template>
-											<v-date-picker v-model="date" light :reactive="true"></v-date-picker>
+											<v-date-picker color="secondary lighten-1" v-model="date" light :reactive="true"></v-date-picker>
 										</v-menu>
 									</v-flex>
 									<v-flex lg6 xs12>
@@ -73,7 +73,7 @@
 												color="black"
 												width="100%"
 												@click="daypicker = !daypicker"
-											>{{index.button1}}</v-btn>
+											>{{index.button2}}</v-btn>
 										</div>
 										<v-menu close-on-click="false" bottom v-model="daypicker">
 											<template v-slot:activator="{ on }">
@@ -143,7 +143,7 @@
 									:class="[$vuetify.breakpoint.smAndDown ? 'title' : 'headline']  + ' font-weight-bold'"
 									style="text-align:center; "
 								>{{index.section2_text}}</p>
-								<v-btn class="black--text" color="secondary lighten-1">{{index.section2_buttonText}}</v-btn>
+								<v-btn class="black--text"  color="secondary lighten-1">{{index.section2_buttonText}}</v-btn>
 							</div>
 						</v-layout>
 					</v-layout>

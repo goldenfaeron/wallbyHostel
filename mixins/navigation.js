@@ -35,11 +35,6 @@ export const Mixin = {
                     to: "/services-and-facilities"
                 },
                 {
-                    icon: "mdi-instagram",
-                    title: "Pub crawls",
-                    to: "/instagram/posts"
-                },
-                {
                     icon: "mdi-store",
                     title: "Location",
                     to: "/shops"
