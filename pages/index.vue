@@ -18,7 +18,9 @@
 							</v-container>
 						</v-container>
 					</div>
+
 					<v-img
+					
 						:height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*4/5 : (this.windowSize.y)/2]"
 						:src="asset + index.image1.path"
 					>
@@ -100,6 +102,7 @@
 					</div>
 
 					<v-img
+					
 						:height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*1/3 : (this.windowSize.y)/2]"
 						:src="asset + index.image2.path"
 					>
@@ -107,7 +110,7 @@
 							<v-layout align-center justify-center row fill-height>
 								<v-layout column class="white--text text-center">
 									<div class="text">
-										<v-img style="margin: auto;" width="40%" :src="asset + index.svg.path"></v-img>
+										<v-img v-if="index.svg" style="margin: auto;" width="40%" :src="asset + index.svg.path"></v-img>
 									</div>
 								</v-layout>
 							</v-layout>
@@ -143,7 +146,7 @@
 									:class="[$vuetify.breakpoint.smAndDown ? 'title' : 'headline']  + ' font-weight-bold'"
 									style="text-align:center; "
 								>{{index.section2_text}}</p>
-								<v-btn class="black--text"  color="secondary lighten-1">{{index.section2_buttonText}}</v-btn>
+								<v-btn class="black--text" color="secondary lighten-1">{{index.section2_buttonText}}</v-btn>
 							</div>
 						</v-layout>
 					</v-layout>

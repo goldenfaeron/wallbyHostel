@@ -11,10 +11,10 @@
 							<v-row align="center" class="white--text mx-auto" justify="center">
 								<v-col class="white--text text-center" cols="12" tag="h1">
 									<div class="text">
-										{{footer}}
+										
 										<p
 											:class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']"
-										>{{footer.name}} — Skúlagata 28</p>
+										>{{footer.name}}Kex  — Skúlagata 28</p>
 										<p
 											:class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']"
 										>101 Reykjavík Iceland</p>
@@ -52,19 +52,26 @@
 				</div>
 			</v-flex>
 		</v-layout>
-		<div class="text-center pa-3 col col-12">© 2020 {{$store.state.name}} — All Rights reserved.</div>
+		<div class="text-center pa-3 col col-12">© 2020 {{$store.state.name}} — <a class="ex2" href="https://goborshi.netlify.app/team" target="_blank" >Developers</a></div>
 	</footer>
 </template>
 <style lang="css">
-a {
-	text-decoration: none;
-}
+
 a.ex1 {
 	color: black;
 }
 a.ex1:hover,
 a.ex1:active {
 	color: white;
+}
+
+
+a.ex2 {
+	color:white;
+}
+a.ex2:hover ,
+a.ex2:active {
+	color:#b7b181;
 }
 </style>
 <script>

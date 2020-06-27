@@ -35,17 +35,16 @@ export default async function ({ store, $axios, route }) {
         //load all
 
         try {
-            return await $axios
-                .$post(
-                    store.state.webRoot2 +
-                    "/api/singletons/get/" +
-                    singleton +
-                    "?token=" +
-                    process.env.pagesToken,
-                )
-                .then(res => {
-                    return store.commit("setFooterData", res)
-                });
+            let request3 = await $axios.post(
+                store.state.webRoot2 +
+                "/api/singletons/get/" +
+                singleton +
+                "?token=" +
+                process.env.pagesToken,
+             );
+               
+                    return store.commit("setFooterData", request3.data)
+              
         }
 
         catch (e) {
