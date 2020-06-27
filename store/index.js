@@ -41,7 +41,8 @@ export const state = () => ({
     authToken: 'ac203b0773cc501428903c9de9ad09',
 
     //Page content preload / req = request
-    pageData: []
+    pageData: [],
+    footerData: []
 
 
 
@@ -61,6 +62,12 @@ export const mutations = {
     setPageData(state, data) {
 
         state.pageData = data;
+
+
+    },
+    setFooterData(state, data) {
+
+        state.footerData = data;
 
 
     },

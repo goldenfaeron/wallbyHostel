@@ -1,20 +1,28 @@
 export default async function ({ store, $axios, route }) {
-    let singleton = "Business Details";
+    let singleton = "details";
     if (route.params.id) {
 
         try {
 
             let request1 = await $axios.post(
-               "http://cms.alanfurneaux.co.uk/api/singletons/get/Business Details?token=7d7d15f4fa6c768e39016bce4cf96f",
+                store.state.webRoot2 +
+                "/api/singletons/get/" +
+                singleton +
+                "?token=" +
+                process.env.pagesToken,
                 { filter: { slug: route.params.id } }
             );
 
             let request2 = await $axios.post(
-                "http://cms.alanfurneaux.co.uk/api/singletons/get/Business Details?token=7d7d15f4fa6c768e39016bce4cf96f",
+                store.state.webRoot2 +
+                    "/api/singletons/get/" +
+                    singleton +
+                    "?token=" +
+                    process.env.pagesToken,
                 { limit: 20 }
             );
 
-            return store.commit("setPageData", [request1, request2])
+            return store.commit("setFooterData", [request1, request2])
         }
 
 
@@ -36,7 +44,7 @@ export default async function ({ store, $axios, route }) {
                     process.env.pagesToken,
                 )
                 .then(res => {
-                    return store.commit("setPageData", res)
+                    return store.commit("setFooterData", res)
                 });
         }
 

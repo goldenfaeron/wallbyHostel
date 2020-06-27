@@ -11,9 +11,10 @@
 							<v-row align="center" class="white--text mx-auto" justify="center">
 								<v-col class="white--text text-center" cols="12" tag="h1">
 									<div class="text">
+										{{footer}}
 										<p
 											:class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']"
-										>Kex Hostel — Skúlagata 28</p>
+										>{{footer.name}} — Skúlagata 28</p>
 										<p
 											:class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']"
 										>101 Reykjavík Iceland</p>
@@ -77,7 +78,7 @@ data() {
 			x: 0,
 			y: 0
 		},
-		footer: this.$store.state.pageData,
+		footer: this.$store.state.footerData,
 	}
 },
 middleware: "businessDetails",
