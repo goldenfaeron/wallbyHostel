@@ -3,9 +3,7 @@
 		<v-layout row wrap>
 			<v-flex lg6>
 				<div style="background-color: #000000;">
-					<v-img
-						:style="'height:'+[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*2/3*2/5 : (this.windowSize.y)*2/3]+'px'"
-					>
+				
 						<v-container
 							:style="'height:'+[$vuetify.breakpoint.smAndDown ? ' auto;' : (this.windowSize.y)*2/3]+'px;'"
 						>
@@ -23,7 +21,7 @@
 								</v-layout>
 							</v-container>
 						</v-container>
-					</v-img>
+				
 				</div>
 			</v-flex>
 			<v-flex lg6>
