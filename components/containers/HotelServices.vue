@@ -11,10 +11,11 @@
 								<v-layout align-center justify-center row fill-height>
 									<v-layout column class="text-center" cols="12" tag="h1">
 										<div class="text">
-											<p
+											<div
 												:class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']  + ' font-weight-bold black--text'"
 												:style="[$vuetify.breakpoint.smAndDown ? 'line-height: 40px;' : 'line-height: 80px; ']"
-											>{{props.blocktext}}</p>
+												v-html="props.blocktext"
+											></div>
 											<img
 												v-if="props.blocklogo"
 												:width="[$vuetify.breakpoint.smAndDown ? '70%' : '20%']"
@@ -83,10 +84,8 @@ export default {
 	props: ["props"],
 	data() {
 		return {
-		
 			asset: this.$store.state.assetRoot2
 		};
-	},
-
+	}
 };
 </script>
