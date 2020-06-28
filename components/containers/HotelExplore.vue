@@ -121,26 +121,17 @@
 	</div>
 </template>
 
-
 <script>
+import { Mixin } from "~/mixins/windowSize.js";
+
 export default {
+	mixins: [Mixin],
 	props: ["props"],
 	data() {
 		return {
-			windowSize: {
-				x: 0,
-				y: 0
-			},
+			
 			asset: this.$store.state.assetRoot2
 		};
 	},
-	methods: {
-		onResize() {
-			this.windowSize = { x: window.innerWidth, y: window.innerHeight };
-		}
-	},
-	mounted() {
-		this.onResize();
-	}
 };
 </script>
