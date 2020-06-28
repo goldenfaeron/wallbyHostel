@@ -1,5 +1,28 @@
 <template>
 	<div>
+		<v-dialog v-model="book" max-width="250" transition="dialog-transition">
+			<v-card>
+				<v-card-title primary-title>
+					<p>Your Booking:</p>
+				</v-card-title>
+				<v-card-text>
+					<p>
+						Arrival Date:
+						<span class="secondary--text text--lighten-1 font-weight-bold">{{date}}</span>
+					</p>
+					<p>
+						Number of nights:
+						<span class="secondary--text text--lighten-1 font-weight-bold">{{nights}}</span>
+					</p>
+				</v-card-text>
+				<v-card-actions>
+					<v-layout justify-center>
+						<v-btn color="secondary lighten-1">Book Now</v-btn>
+					</v-layout>
+				</v-card-actions>
+				<br>
+			</v-card>
+		</v-dialog>
 		<v-container fluid class="ma-0 pa-0">
 			<v-layout row wrap fill-height>
 				<v-flex lg6>
@@ -82,7 +105,9 @@
 											</template>
 											<v-list>
 												<v-list-item v-for="(item, index) in 7" :key="index">
-													<v-list-item-title>{{ index+1 }}</v-list-item-title>
+													<v-list-item-title>
+														<v-btn color="white" width="100%" @click="nights = index+1" text>{{ index+1 }}</v-btn>
+													</v-list-item-title>
 												</v-list-item>
 											</v-list>
 										</v-menu>
@@ -90,8 +115,8 @@
 									<v-flex xs12></v-flex>
 									<v-flex xs12>
 										<div align="center">
-											<v-btn color="#dfd269" width="100%">
-												<span class="black--text font-weight-bold">{{props.button3}}{{date}}</span>
+											<v-btn color="#dfd269" width="100%" @click="book = true">
+												<span class="black--text font-weight-bold">{{props.button3}}</span>
 											</v-btn>
 										</div>
 									</v-flex>
@@ -129,12 +154,13 @@ export default {
 	props: ["props"],
 	data() {
 		return {
-		
-            asset: this.$store.state.assetRoot2,
-            datepicker: false,
+			asset: this.$store.state.assetRoot2,
+			datepicker: false,
 			daypicker: false,
-			date: ""
+			date: "",
+			nights: "",
+			book: false
 		};
-	},
+	}
 };
 </script>
