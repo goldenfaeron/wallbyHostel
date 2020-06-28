@@ -2,111 +2,28 @@
 	<div>
 
 		<Splash :props="about"></Splash>
-		<!-- <Text-Block :props="about"></Text-Block>
-		<Block-Text :props="about"> </Block-Text> -->
-		<!-- <v-container fluid fill-height class="ma-0 pa-0">
-			<v-layout row wrap fill-height>
-				<v-img
-					:height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*2/3 : (this.windowSize.y)]"
-					:src="asset + about.image1.path"
-				>
-					<v-container fill-height>
-						<v-layout align-center justify-center row fill-height>
-							<v-layout column class="white--text text-center">
-								<div class="text">
-									<v-img
-										style="margin: auto;"
-										:width="[$vuetify.breakpoint.smAndDown ? '70%' : '30%']"
-										:src="asset + about.image1_logo.path"
-									></v-img>
-									<p
-										:class="[$vuetify.breakpoint.smAndDown ? 'display-1' : 'display-3']  + ' font-weight-bold'"
-										:style="[$vuetify.breakpoint.smAndDown ? 'line-height: 40px;' : 'line-height: 80px;']  +'text-align:center;' "
-									>{{about.image1_text}}</p>
-								</div>
-							</v-layout>
-						</v-layout>
-					</v-container>
-				</v-img>
-			</v-layout>
-		</v-container> -->
+		<BlockImage :props="about"> </BlockImage>
+		<ImageBlock :props="about"> </ImageBlock>
+	
 
 
-		<v-container fluid fill-height class="ma-0 pa-0">
-			<v-layout row wrap>
-				<v-flex lg6>
-					<div style="background-color: #000000;">
-						<v-container
-							
-						>
-							<v-container fill-height>
-								<v-layout align-center justify-center row fill-height>
-									<v-layout column cols="12" tag="h1" pl-2>
-										<div class="text">
-										<p
-												:class="[$vuetify.breakpoint.smAndDown ? 'display-1' : 'display-3']  + ' font-weight-bold'"
-											>{{about.block1_title}}</p>
-											<div
-												v-html="about.block1_text"
-												:class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-1']  + ' font-weight-bold'"
-											></div>
-										</div>
-									</v-layout>
-								</v-layout>
-							</v-container>
-						</v-container>
-					</div>
-				</v-flex>
-				<v-flex lg6>
-					<v-img height="100%" :src="asset + about.image2.path">
-					</v-img>
-				</v-flex>
-			</v-layout>
-		</v-container>
-		<v-container fluid fill-height class="ma-0 pa-0">
-			<v-layout row wrap>
-				<v-flex lg6>
-					<v-img height="100%" :src="asset + about.image3.path">
-					</v-img>
-				</v-flex>
-				<v-flex lg6>
-					<div style="background-color: #000000; height: 100%;">
-						<v-container
-						>
-							<v-container fill-height>
-								<v-layout align-center justify-center row fill-height>
-									<v-layout column cols="12" tag="h1" pl-2>
-										<div class="text">
-										<p
-												:class="[$vuetify.breakpoint.smAndDown ? 'display-1' : 'display-3']  + ' font-weight-bold'"
-											>{{about.block2_title}}</p>
-											<div
-												v-html="about.block2_text"
-												:class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-1']  + ' font-weight-bold'"
-											></div>
-										</div>
-									</v-layout>
-								</v-layout>
-							</v-container>
-						</v-container>
-					</div>
-				</v-flex>
-			</v-layout>
-		</v-container>
+	
+	
 	</div>
 </template>
 <script>
+import { Mixin } from "~/mixins/windowSize.js";
+
 export default {
+	mixins: [Mixin],
 		components: {
 		Splash: () => import("@/components/wallaby/Splash"),
-
+			BlockImage: () => import("@/components/wallaby/Block-Image"),
+			ImageBlock: () => import("@/components/wallaby/Image-Block"),
 	},
 	data() {
 		return {
-			windowSize: {
-				x: 0,
-				y: 0
-			},
+		
 			about: this.$store.state.pageData[0],
 			map: this.$store.state.pageData[1],
 			asset: this.$store.state.assetRoot2
@@ -114,13 +31,6 @@ export default {
 	},
 	middleware: "about",
 
-	methods: {
-		onResize() {
-			this.windowSize = { x: window.innerWidth, y: window.innerHeight };
-		}
-	},
-	mounted() {
-		this.onResize();
-	}
+
 };
 </script>

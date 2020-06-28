@@ -37,15 +37,5 @@ import { Mixin } from "~/mixins/windowSize.js";
 export default {
 	mixins: [Mixin],
     props: ['props'],
-    	data() {
-		return {
-	
-			
-
-		
-		};
-    },
-    
-
 }
 </script>
