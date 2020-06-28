@@ -20,7 +20,7 @@
 						<v-btn color="secondary lighten-1">Book Now</v-btn>
 					</v-layout>
 				</v-card-actions>
-				<br>
+				<br />
 			</v-card>
 		</v-dialog>
 		<v-container fluid class="ma-0 pa-0">

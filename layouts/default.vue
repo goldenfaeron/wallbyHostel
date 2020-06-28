@@ -1,80 +1,71 @@
 <template>
 	<v-app>
 		<span v-show="show">
-		 <Nav></Nav> 
-		<!--	<v-navigation-drawer
-				color="accent lighten-4"
-				v-model="drawer"
-				:mini-variant="miniVariant"
-				:clipped="clipped"
-				fixed
-				app
-			>
-				<v-list>
-					<v-list-item v-for="(item, i) in nav" :key="i" :to="item.to" router exact>
-						<v-list-item-action>
-							<v-icon color="primary" v-if="item.icon">{{ item.icon }}</v-icon>
-							<v-img height="32" width="24" v-else :src="item.img"></v-img>
-						</v-list-item-action>
-						<v-list-item-content>
-							<v-list-item-title v-text="item.title" />
-						</v-list-item-content>
-					</v-list-item>
-				</v-list>
-			</v-navigation-drawer>
-
-			<v-app-bar :clipped-left="clipped" app fixed color="accent lighten-3 " type>-->
-				<!-- Mobile display left -->
-			<!--	<v-icon
-					color="accent"
-					class="hidden-sm-and-up"
-					@click.stop="drawer = !drawer"
-					style="margin-left:10px"
-				>mdi-heart-multiple</v-icon>
-
-				<v-app-bar-nav-icon
-					class="hidden-xs-only"
-					color="accent darken-2"
-					@click.stop="drawer = !drawer"
-				/>
-				<v-toolbar-title style="cursor:pointer" @click="go('/')">
-					<b>{{title}}</b>
-				</v-toolbar-title>
-				<v-icon
-					color="accent"
-					class="hidden-xs-only"
-					@click.stop="drawer = !drawer"
-					style="margin-left:10px"
-				>mdi-heart-multiple</v-icon>
-
-				<v-toolbar-title
-					class="ml-2 grey--text hidden-xs-only"
-				>{{$t('toolbar')}} {{$store.state.city}}, {{$t('country')}}</v-toolbar-title>
-				<v-spacer />
-				<v-btn small v-if="$store.state.user.loggedIn == false" fab text @click="go('/login')">
-					<v-icon>mdi-account-circle</v-icon>
-				</v-btn>
-				<v-btn @click="changeLanguage('en')" fab text color="success">EN</v-btn>
-				<v-btn @click="changeLanguage('sq')" fab text color="success">SQ</v-btn>
-				<v-btn @click="changeLanguage('de')" fab text color="success">DE</v-btn>
-
-				<v-btn
-					v-if="$store.state.user.loggedIn"
-					@click="go('/account/'+$store.state.user.id)"
-					color="success"
-				>{{$store.state.user.user}}</v-btn>
-				<v-btn
-					small
-					fab
-					text
-					class="hidden-sm-and-up"
-					color="accent lighten-3"
-					@click.stop="rightDrawer = !rightDrawer"
-				>
-					<v-icon color="accent darken-2">mdi-menu</v-icon>
-				</v-btn>
-			</v-app-bar>-->
-
+			<Nav></Nav>
+			<v-toolbar v-if="this.$store.state.pageData[0].title != 'home'">
+				<v-container>
+					<v-layout row wrap justify-space-between>
+						<v-flex lg3>
+							<div align="center">
+								<v-btn outlined color="white" width="100%" @click="datepicker = !datepicker">Arrival date</v-btn>
+							</div>
+							<v-menu close-on-click="false" bottom v-model="datepicker">
+								<template v-slot:activator="{ on }">
+									<div v-on="on"></div>
+								</template>
+								<v-date-picker color="secondary lighten-1" v-model="date" light :reactive="true"></v-date-picker>
+							</v-menu>
+						</v-flex>
+						<v-flex lg3>
+							<div align="center">
+								<v-btn outlined color="white" width="100%" @click="daypicker = !daypicker">No of nights</v-btn>
+							</div>
+							<v-menu close-on-click="false" bottom v-model="daypicker">
+								<template v-slot:activator="{ on }">
+									<div v-on="on"></div>
+								</template>
+								<v-list>
+									<v-list-item v-for="(item, index) in 7" :key="index">
+										<v-list-item-title>
+											<v-btn color="white" width="100%" @click="nights = index+1" text>{{ index+1 }}</v-btn>
+										</v-list-item-title>
+									</v-list-item>
+								</v-list>
+							</v-menu>
+						</v-flex>
+						<v-flex lg3>
+							<div align="center">
+								<v-btn color="#dfd269" width="100%" @click="book = true">
+									<span class="black--text font-weight-bold">Book now</span>
+								</v-btn>
+							</div>
+						</v-flex>
+					</v-layout>
+				</v-container>
+			</v-toolbar>
+			<v-dialog v-model="book" max-width="250" transition="dialog-transition">
+				<v-card>
+					<v-card-title primary-title>
+						<p>Your Booking:</p>
+					</v-card-title>
+					<v-card-text>
+						<p>
+							Arrival Date:
+							<span class="secondary--text text--lighten-1 font-weight-bold">{{date}}</span>
+						</p>
+						<p>
+							Number of nights:
+							<span class="secondary--text text--lighten-1 font-weight-bold">{{nights}}</span>
+						</p>
+					</v-card-text>
+					<v-card-actions>
+						<v-layout justify-center>
+							<v-btn color="secondary lighten-1">Book Now</v-btn>
+						</v-layout>
+					</v-card-actions>
+					<br />
+				</v-card>
+			</v-dialog>
 			<v-content>
 				<nuxt />
 			</v-content>
@@ -126,8 +117,13 @@ export default {
 			miniVariant: false,
 			right: true,
 			rightDrawer: false,
-			title: 'Wallaby Hostel',
-			developer: this.$store.state.developer
+			title: "Wallaby Hostel",
+			developer: this.$store.state.developer,
+			datepicker: false,
+			daypicker: false,
+			date: "",
+			nights: "",
+			book: false
 		};
 	},
 
@@ -175,9 +171,7 @@ export default {
 
 	mounted() {
 		this.show = true;
-	},
-
-	
+	}
 };
 </script>
 
