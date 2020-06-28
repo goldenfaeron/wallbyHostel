@@ -26,7 +26,7 @@ export const Mixin = {
                 {
 
                     title: "Location",
-                    to: "/shops"
+                    to: "/location"
                 },
                 {
                   
