@@ -12,10 +12,6 @@
 export default {
 	data() {
 		return {
-			windowSize: {
-				x: 0,
-				y: 0
-			},
 			index: this.$store.state.pageData[0],
 			map: this.$store.state.pageData[1],
 			asset: this.$store.state.assetRoot2,
@@ -34,14 +30,5 @@ export default {
 		HotelLocation: () => import("@/components/containers/HotelLocation"),
 	},
 	middleware: "index",
-
-	methods: {
-		onResize() {
-			this.windowSize = { x: window.innerWidth, y: window.innerHeight };
-		}
-	},
-	mounted() {
-		this.onResize();
-	}
 };
 </script>
