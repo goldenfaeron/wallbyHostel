@@ -19,13 +19,13 @@ export const Mixin = {
         
                 {
 
-                    title: "History",
+                    title: "Saranda",
                     to: "/about"
                 },
 
                 {
 
-                    title: "Location",
+                    title: "Hostel Location",
                     to: "/location"
                 },
                 {
