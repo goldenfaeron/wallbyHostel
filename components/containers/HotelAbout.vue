@@ -15,10 +15,10 @@
 						>{{props.section2_subtitle}}</p>
 						<br />
 						<div class="text">
-							<p
+							<div v-html="props.section2_text"
 								:class="[$vuetify.breakpoint.smAndDown ? 'body-2' : 'headline']  + ' font-weight-bold ma-5 pa-5'"
 								style="text-align:center; "
-							>{{props.section2_text}}</p>
+							></div>
 							<v-btn class="black--text" color="secondary lighten-1">{{props.section2_buttonText}}</v-btn>
 						</div>
 						<br />
