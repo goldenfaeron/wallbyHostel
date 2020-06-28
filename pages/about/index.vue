@@ -1,6 +1,10 @@
 <template>
 	<div>
-		<v-container fluid fill-height class="ma-0 pa-0">
+
+		<Splash :props="about"></Splash>
+		<!-- <Text-Block :props="about"></Text-Block>
+		<Block-Text :props="about"> </Block-Text> -->
+		<!-- <v-container fluid fill-height class="ma-0 pa-0">
 			<v-layout row wrap fill-height>
 				<v-img
 					:height="[$vuetify.breakpoint.smAndDown ? (this.windowSize.y)*2/3 : (this.windowSize.y)]"
@@ -25,7 +29,7 @@
 					</v-container>
 				</v-img>
 			</v-layout>
-		</v-container>
+		</v-container> -->
 
 
 		<v-container fluid fill-height class="ma-0 pa-0">
@@ -93,6 +97,10 @@
 </template>
 <script>
 export default {
+		components: {
+		Splash: () => import("@/components/wallaby/Splash"),
+
+	},
 	data() {
 		return {
 			windowSize: {
