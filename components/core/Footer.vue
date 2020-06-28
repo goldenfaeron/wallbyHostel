@@ -30,7 +30,7 @@
 						<v-container fill-height>
 							<v-layout align-center justify-center row fill-height mx-5 px-5>
 								<div class="text" style="text-align: center;">
-									<nuxt-link to="">
+									<nuxt-link to="contact">
 										<v-hover>
 											<div
 												style="text-decoration: none;"
@@ -40,7 +40,7 @@
 											>Contact us</div>
 										</v-hover>
 									</nuxt-link>
-									<nuxt-link to="">
+									<!-- <nuxt-link to="">
 										<v-hover>
 											<div
 												style="text-decoration: none;"
@@ -49,7 +49,7 @@
 												:class="[$vuetify.breakpoint.mdAndDown ? 'headline' : 'display-2']+[hover ? ' black--text' : ' white--text'] + ' text--lighten-3'"
 											>Terms & Conditions</div>
 										</v-hover>
-									</nuxt-link>
+									</nuxt-link> -->
 									<nuxt-link to="">
 										<v-hover>
 											<div
@@ -57,7 +57,7 @@
 												slot-scope="{ hover }"
 												@click="menu= false"
 												:class="[$vuetify.breakpoint.mdAndDown ? 'headline' : 'display-2']+[hover ? ' black--text' : ' white--text'] + ' text--lighten-3'"
-											>dummy@dummy.com</div>
+											>info@wallabyhostel.com</div>
 										</v-hover>
 									</nuxt-link>
 								</div>
