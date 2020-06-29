@@ -12,12 +12,11 @@
 								<div class="text">
 									<v-img
 										style="margin: auto;"
-										:width="[$vuetify.breakpoint.smAndDown ? '70%' : '30%']"
+										:width="this.resize.svgSize"
 										:src="asset + services.image1_logo.path"
 									></v-img>
 									<p
-										:class="[$vuetify.breakpoint.smAndDown ? 'display-1' : 'display-3']  + ' font-weight-bold'"
-										:style="[$vuetify.breakpoint.smAndDown ? 'line-height: 40px;' : 'line-height: 80px;']  +'text-align:center;' "
+										:class="this.resize.headline  + ' font-weight-bold'"
 									>{{services.image1_text}}</p>
 								</div>
 							</v-layout>
@@ -37,11 +36,11 @@
 									<v-layout column cols="12" tag="h1" pl-2>
 										<div class="text black--text">
 											<p
-												:class="[$vuetify.breakpoint.smAndDown ? 'display-1' : 'display-3']  + ' font-weight-bold'"
+												:class="this.resize.headline  + ' font-weight-bold'"
 											>{{services.block1_title}}</p>
 											<div
 												v-html="services.block1_text"
-												:class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-1']  + ' font-weight-bold'"
+												:class="this.resize.bigText + ' font-weight-bold'"
 											></div>
 										</div>
 									</v-layout>
@@ -68,11 +67,11 @@
 									<v-layout column cols="12" tag="h1" pl-2>
 										<div class="text black--text">
 											<p
-												:class="[$vuetify.breakpoint.smAndDown ? 'display-1' : 'display-3']  + ' font-weight-bold'"
+												:class="this.resize.headline  + ' font-weight-bold'"
 											>{{services.block2_title}}</p>
 											<div
 												v-html="services.block2_text"
-												:class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-1']  + ' font-weight-bold'"
+												:class="this.resize.bigText + ' font-weight-bold'"
 											></div>
 										</div>
 									</v-layout>
@@ -93,11 +92,11 @@
 									<v-layout column cols="12" tag="h1" pl-2>
 										<div class="text black--text">
 											<p
-												:class="[$vuetify.breakpoint.smAndDown ? 'display-1' : 'display-3']  + ' font-weight-bold'"
+												:class="this.resize.headline  + ' font-weight-bold'"
 											>{{services.block3_title}}</p>
 											<div
 												v-html="services.block3_text"
-												:class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-1']  + ' font-weight-bold'"
+												:class="this.resize.bigText + ' font-weight-bold'"
 											></div>
 										</div>
 									</v-layout>
@@ -124,11 +123,11 @@
 									<v-layout column cols="12" tag="h1" pl-2>
 										<div class="text">
 											<p
-												:class="[$vuetify.breakpoint.smAndDown ? 'display-1' : 'display-3']  + ' font-weight-bold'"
+												:class="this.resize.headline  + ' font-weight-bold'"
 											>{{services.block4_title}}</p>
 											<div
 												v-html="services.block4_text"
-												:class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-1']  + ' font-weight-bold'"
+												:class="this.resize.bigText + ' font-weight-bold'"
 											></div>
 										</div>
 									</v-layout>
@@ -149,11 +148,11 @@
 									<v-layout column cols="12" tag="h1" pl-2>
 										<div class="text black--text">
 											<p
-												:class="[$vuetify.breakpoint.smAndDown ? 'display-1' : 'display-3']  + ' font-weight-bold'"
+												:class="this.resize.headline  + ' font-weight-bold'"
 											>{{services.block5_title}}</p>
 											<div
 												v-html="services.block5_text"
-												:class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-1']  + ' font-weight-bold'"
+												:class="this.resize.bigText + ' font-weight-bold'"
 											></div>
 										</div>
 									</v-layout>
@@ -170,7 +169,9 @@
 	</div>
 </template>
 <script>
+import { Mixin } from "~/mixins/windowSize.js";
 export default {
+	mixins: [Mixin],
 	data() {
 		return {
 			windowSize: {

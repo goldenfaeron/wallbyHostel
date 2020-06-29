@@ -9,7 +9,9 @@
 	</div>
 </template>
 <script>
+import { Mixin } from "~/mixins/windowSize.js";
 export default {
+	mixins: [Mixin],
 	data() {
 		return {
 			index: this.$store.state.pageData[0],
@@ -27,8 +29,8 @@ export default {
 		HotelServices: () => import("@/components/containers/HotelServices"),
 		HotelExplore: () => import("@/components/containers/HotelExplore"),
 		HotelSocial: () => import("@/components/containers/HotelSocial"),
-		HotelLocation: () => import("@/components/containers/HotelLocation"),
+		HotelLocation: () => import("@/components/containers/HotelLocation")
 	},
-	middleware: "index",
+	middleware: "index"
 };
 </script>

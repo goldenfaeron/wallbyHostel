@@ -6,17 +6,17 @@
 					<v-layout column class="white--text text-center">
 						<br />
 						<p
-							:class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-3']  + ' font-weight-bold'"
+							:class="this.resize.headline+ ' font-weight-bold'"
 							style="text-align:center; "
 						>{{props.section2_title}}</p>
 						<p
-							:class="[$vuetify.breakpoint.smAndDown ? 'title' : 'display-2']  + ' font-weight-bold '"
+							:class="this.resize.subtitle  + ' font-weight-bold '"
 							style="text-align:center; "
 						>{{props.section2_subtitle}}</p>
 						<br />
 						<div class="text">
 							<div v-html="props.section2_text"
-								:class="[$vuetify.breakpoint.smAndDown ? 'body-2' : 'headline']  + ' font-weight-bold ma-5 pa-5'"
+								:class="this.resize.text+ ' font-weight-bold ma-5 pa-5'"
 								style="text-align:center; "
 							></div>
 							<v-btn class="black--text" color="secondary lighten-1">{{props.section2_buttonText}}</v-btn>

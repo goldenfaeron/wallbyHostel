@@ -12,13 +12,12 @@
 									<v-layout column class="text-center" cols="12" tag="h1">
 										<div class="text">
 											<div
-												:class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']  + ' font-weight-bold black--text'"
-												:style="[$vuetify.breakpoint.smAndDown ? 'line-height: 40px;' : 'line-height: 80px; ']"
+												:class="this.resize.subtitle  + ' font-weight-bold black--text'"
 												v-html="props.blocktext"
 											></div>
 											<img
 												v-if="props.blocklogo"
-												:width="[$vuetify.breakpoint.smAndDown ? '70%' : '20%']"
+												:width="this.resize.svgSize"
 												:src="asset + props.blocklogo.path"
 											/>
 										</div>
@@ -34,22 +33,16 @@
 							<v-layout align-center justify-center row fill-height>
 								<v-layout column class="white--text text-center">
 									<div class="text white--text">
-										<p
-											:class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']  + ' font-weight-bold'"
-											:style="[$vuetify.breakpoint.smAndDown ? 'line-height: 40px;' : 'line-height: 80px; ']"
-										>{{props.image4_text1}}</p>
+										<p :class="this.resize.subtitle  + ' font-weight-bold'">{{props.image4_text1}}</p>
 
 										<v-img
 											v-if="props.image4_logo"
 											style="margin: auto;"
-											:width="[$vuetify.breakpoint.smAndDown ? '70%' : '30%']"
+											:width="this.resize.svgSize"
 											:src="asset + props.image4_logo.path"
 										></v-img>
 
-										<p
-											:class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']  + ' font-weight-bold'"
-											:style="[$vuetify.breakpoint.smAndDown ? 'line-height: 40px;' : 'line-height: 80px; ']"
-										>{{props.image4_text2}}</p>
+										<p :class="this.resize.subtitle  + ' font-weight-bold'">{{props.image4_text2}}</p>
 									</div>
 								</v-layout>
 							</v-layout>
@@ -60,10 +53,7 @@
 							<v-layout align-center justify-center row fill-height>
 								<v-layout column class="white--text text-center">
 									<div class="text">
-										<p
-											:class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']"
-											:style="[$vuetify.breakpoint.smAndDown ? 'line-height: 40px;' : 'line-height: 80px;']"
-										>{{props.block2_text}}</p>
+										<p :class="this.resize.subtitle">{{props.block2_text}}</p>
 									</div>
 								</v-layout>
 							</v-layout>

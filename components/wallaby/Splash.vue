@@ -13,12 +13,11 @@
 								<div class="text">
 									<v-img
 										style="margin: auto;"
-										:width="[$vuetify.breakpoint.smAndDown ? '70%' : '30%']"
+										:width="this.resize.svgSize"
 										:src="asset + props.image1_logo.path"
 									></v-img>
 									<p
-										:class="[$vuetify.breakpoint.smAndDown ? 'display-1' : 'display-3']  + ' font-weight-bold'"
-										:style="[$vuetify.breakpoint.smAndDown ? 'line-height: 40px;' : 'line-height: 80px;']  +'text-align:center;' "
+										:class="this.resize.bigText  + ' font-weight-bold'"
 									>{{props.image1_text}}</p>
 								</div>
 							</v-layout>

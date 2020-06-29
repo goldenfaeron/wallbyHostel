@@ -19,7 +19,7 @@
 											:src="asset + props.image6_logo.path"
 										></v-img>
 										<p
-											:class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']"
+											:class="this.resize.subtitle"
 										>{{props.image6_text}}</p>
 									</div>
 								</v-layout>
@@ -55,8 +55,7 @@
 											<v-layout column class="white--text text-center">
 												<div class="text">
 													<p
-														:class="[$vuetify.breakpoint.smAndDown ? 'display-1 black--text' : 'display-2 black--text']"
-														:style="[$vuetify.breakpoint.smAndDown ? '' : 'line-height: 80px;']"
+														:class="this.resize.subtitle + ' black--text'"
 													>{{props.block3_text}}</p>
 												</div>
 											</v-layout>
@@ -72,8 +71,7 @@
 										<v-layout column class="white--text text-center">
 											<div class="text">
 												<p
-													:class="[$vuetify.breakpoint.smAndDown ? 'display-1' : 'display-2']"
-													:style="[$vuetify.breakpoint.smAndDown ? '' : 'line-height: 80px;']"
+													:class="this.resize.subtitle"
 												>{{props.block4_text}}</p>
 											</div>
 										</v-layout>
@@ -89,8 +87,7 @@
 											<v-layout column class="white--text text-center">
 												<div class="text">
 													<p
-														:class="[$vuetify.breakpoint.smAndDown ? 'display-1' : 'display-2']"
-														:style="[$vuetify.breakpoint.smAndDown ? '' : 'line-height: 80px;']"
+														:class="this.resize.subtitle"
 													>{{props.block5_text}}</p>
 												</div>
 											</v-layout>

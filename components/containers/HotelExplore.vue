@@ -11,17 +11,17 @@
 							<v-layout column class="white--text text-center">
 								<div class="text">
 									<p
-										:class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']"
+										:class="this.resize.subtitle"
 										:style="[$vuetify.breakpoint.smAndDown ? 'line-height: 40px;' : 'line-height: 80px;']"
 									>{{props.image5_title}}</p>
 									<v-img
 										v-if="props.image5_logo"
 										style="margin: auto;"
-										:width="[$vuetify.breakpoint.smAndDown ? '70%' : '30%']"
+										:width="this.resize.svgSize"
 										:src="asset + props.image5_logo.path"
 									></v-img>
 									<p
-										:class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']"
+										:class="this.resize.subtitle"
 									>{{props.image5_text}}</p>
 								</div>
 								<v-container grid-listlg>

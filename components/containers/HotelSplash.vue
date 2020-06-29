@@ -3,7 +3,7 @@
 		<v-dialog v-model="book" max-width="250" transition="dialog-transition">
 			<v-card>
 				<v-card-title primary-title>
-					<p>Your Booking:</p>
+					<p  >Your Booking:</p>
 				</v-card-title>
 				<v-card-text>
 					<p>
@@ -51,7 +51,7 @@
 								<v-layout column class="white--text text-center">
 									<div class="text">
 										<p
-											:class="[$vuetify.breakpoint.smAndDown ? 'display-2 text-uppercase' : 'display-4 text-uppercase']  + ' font-weight-black yellow--text text--accent-1'"
+											:class="this.resize.lgtext +' text-uppercase font-weight-black secondary--text text--lighten-1'"
 										>{{props.image1_text}}</p>
 									</div>
 								</v-layout>
@@ -69,8 +69,7 @@
 									<v-flex xs12>
 										<p
 											style="text-align:center;"
-											:class="[$vuetify.breakpoint.mdAndDown ? 'display-1' : 'display-3']  + ' font-weight-bold'"
-										>{{props.bookText}}</p>
+											:class="this.resize.headline+' font-weight-bold'">{{props.bookText}}</p>
 									</v-flex>
 
 									<br />
@@ -148,6 +147,7 @@
 
 <script>
 import { Mixin } from "~/mixins/windowSize.js";
+//import mobilefriendly from "~/mixins/mobilefriendly.js";
 
 export default {
 	mixins: [Mixin],
